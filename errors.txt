@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 306: vbox expects a non-empty block.
-    if renpy.get_screen("help") is None:
-                                        ^
+File "game/script.rpy", line 139: expected statement.
+    mom & dad "Iya, Hati - hati di jalan"
+        ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Mon May 10 16:51:36 2021
+Mon May 31 10:46:57 2021
