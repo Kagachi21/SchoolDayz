@@ -90,12 +90,22 @@ screen test():
 define dad = Character('Ayah')
 define mom = Character('Ibu', image="mom")
 define cat = Character('Kucing')
-define mg1 = Character('????')
-define mg2 = Character('????')
-define mg3 = Character("" or "????")
-define na = Character("Nada Ali")
-define sr = Character("Senda Rontge")
-define ol = Character('????')
+define mg1 = Character('[misterius_1]')
+define mg1_First = ""
+define mg1_Last = ""
+define mg2 = Character('[misterius_2]')
+define mg2_First = ""
+define mg2_Last = ""
+define mg3 = Character('[misterius_3]')
+define mg3_First = ""
+define mg3_Last = ""
+define na = Character("[sahabat]")
+define sr = Character('[guru]')
+define ol = Character('[tmn_mg2]')
+define skco1 = Character("Murid Laki-laki 1")
+define skce1 = Character("Murid Perempuan 1")
+define skco2 = Character("Murid Laki-laki 2")
+define skce2 = Character("Murid Perempuan 2")
 define pb = Character('Pembully')
 define pb2 = Character('Pembully 2')
 define pb3 = Character('Pembully 3')
@@ -115,9 +125,9 @@ label start:
     $ mc = Character(mcFirst +" "+mcLast, image="mc")
     
     scene bg jendela kamar terlihat burung
-    mc "Hari yang sangat ku tidak sukai, yaitu hari pertama sekolah. Diriku seperti sebuah wadah yang tidak ada isinya. Apakah hari pertama sekolah akan lancar - lancar saja? Aku tidak yakin, atau akan menjadi seperti dulu ketika aku masih Sekolah Menengah Pertama"
-    mc "Pengalaman yang buruk sekali dan inginku berhenti sekolah, bahkan aku tidak ingin mengingatnya lagi kenangan yang buruk itu. Tapi, kenapa masih saja teringat ? apa yang tuhan inginkan kepadaku hingga selalu memberikanku ingatan buruk tersebut"
-    mc "Mungkin tidak salahnya harus mencoba untuk berangkat mungkin saja berbeda"
+    "Hari yang sangat ku tidak sukai, yaitu hari pertama sekolah. Diriku seperti sebuah wadah yang tidak ada isinya. Apakah hari pertama sekolah akan lancar - lancar saja? Aku tidak yakin, atau akan menjadi seperti dulu ketika aku masih Sekolah Menengah Pertama"
+    "Pengalaman yang buruk sekali dan inginku berhenti sekolah, bahkan aku tidak ingin mengingatnya lagi kenangan yang buruk itu. Tapi, kenapa masih saja teringat ? apa yang tuhan inginkan kepadaku hingga selalu memberikanku ingatan buruk tersebut"
+    "Mungkin tidak salahnya harus mencoba untuk berangkat mungkin saja berbeda"
     scene dapur
     dad "Apa kamu sudah menyiapkan semuanya ?"
     mc "....."
@@ -142,9 +152,10 @@ label start:
     mom "iya pa, kita harus percaya dan berdoa untuk anak kita."
 
     scene jalan
-    mc "Apakah benar hari ini akan baik - baik saja ?"
+    $ misterius_1 = "????"
+    "Apakah benar hari ini akan baik - baik saja ?"
     mc "...."
-    mc "Aku mendengar suara kucing mungkin berada didalam kerdus"
+    "Aku mendengar suara kucing mungkin berada didalam kerdus"
     mc "Kasihan sekali hidupmu, di buang oleh pemilikmu sendiri! sama sepertiku yang dulu pernah merasakan kesakitan karena kejadian ketika aku masih SMP"
     cat "Meoooowwwww"
     mc "Kenapa kamu masih bisa tersenyum meskipun sudah dibuang oleh majikanmu. Ataukah hanya diriku saja yang lemah atau tidak sepertimu yang polos tanpa mengetahui dunia ini kejam"
@@ -158,44 +169,124 @@ label start:
     cat "Meooow"
 
     scene gerbang
-    mc "Setelah berada di depan gerbang pun tetap saja memiliki keraguan yang tinggi, jika saja berbalik mungkin akan masih sempat untuk tidak bersekolah"
-    mc "Apa aku harus melakukan hal itu ? lalu, bagaimana orang tuaku melihat diriku yang masih terkekang dalam keadaan masa lalu ?"
-    mc "Jika, aku berbalik arah sekarang dan menuju kerumah pasti akan membuat orangtuaku kecewa. Kalau aku selalu begini, kedepannya tidak akan ada masa depan yang indah"
-    mc "Hanya terpuruk dan meratapi nasib lalu terjebak dalam masa lalu terus menerus, hingga aku meninggal pun tetap takut akan trauma itu. Mungkin setidaknya mencoba dulu tidak salah juga"
+    $ misterius_2 = "????"
+    $ tmn_mg2 = "????"
+    "Setelah berada di depan gerbang pun tetap saja memiliki keraguan yang tinggi, jika saja berbalik mungkin akan masih sempat untuk tidak bersekolah"
+    "Apa aku harus melakukan hal itu ? lalu, bagaimana orang tuaku melihat diriku yang masih terkekang dalam keadaan masa lalu ?"
+    "Jika, aku berbalik arah sekarang dan menuju kerumah pasti akan membuat orangtuaku kecewa. Kalau aku selalu begini, kedepannya tidak akan ada masa depan yang indah"
+    "Hanya terpuruk dan meratapi nasib lalu terjebak dalam masa lalu terus menerus, hingga aku meninggal pun tetap takut akan trauma itu. Mungkin setidaknya mencoba dulu tidak salah juga"
     mg2 "Ahh.. Bukankah itu MC ?"
     ol "Ada apa ?"
     mg2 "Ahh.. tidak apa-apa, aku hanya melamun saja tadi"
 
     scene aula sekolah
+    "Ceramah dari kepala sekolah, dan ketua Osis sangat membosankan. banyak orang yang mengabaikan dan bercanda gurau"
+    "Ada beberapa murid dengan tampang yang pernah dibully dan ada juga murid - murid si pembully"
+    "Kenapa hidup ini selalu ada yang namanya pembully dan korban bullying ? Apakah ini sudah takdir hukum dunia ini ?"
     mc "Ceramah dari kepala sekolah, dan ketua Osis ini sangat membosankan."
     mc "Hmmm.. Aku ingin segera pulang"
 
-    scene lorong sekolah 
+    scene lorong sekolah
+    $ misterius_3 = "????" 
     mg3 "Kyaaaa"
     mc "Ahh.. kamu tidak apa - apa ? Apakah ada yang terluka ? Maaf, Aku tadi tidak melihat jalannya"
     mg3 "Ahh.. tidak apa-apa. Aku tidak ada yang terluka sama sekali. Maaf, aku tadi juga tidak fokus kedepan"
     mc "Tidak apa-apa"
 
     scene kelas
+    $ sahabat = "????"
+    "Seperti biasa banyak orang melakukan sosialisasi pada awal masuk sekolah. Seperti, mencari bantuan dari yang kuat"
+    "Itu sangat merepotkan sekali, dari yang awal baik - baik saja. setelah itu, semuanya meninggalkan dan lebih memilih menertawakan dan melihat saja"
     mc "Semoga kehidupan SMA ku baik baik saja dan membuat orang tuaku tidak merasa sedih"
+    "Tiba -  tiba ada murid laki - laki mendekatiku, sepertinya ada sesuatu"
     na "Haii,, banyak orang bersosialisasi. aku lihat kamu mulai tadi diam saja sambil menatap keluar jendela"
     mc "...."
     na "Kenapa ga ikut bersosialisasi dengan yang lainnya ?"
     mc "Oiya,, aku lupa perkenalan diri. Namaku Nada Ali bisa dipanggil Nada atau Ali, umm bisa juga panggil aku Nali atau Dali ahahahha"
+    $ sahabat = "Nada Ali"
     na "Kalau namamu siapa ?"
     mc "...."
     mc "aku [mc] terserah mau dipanggil apa saja"
     na "ahahhaa, ok aku akan memanggilmu [mcFirst]"
     "Ding~ Dong~"
     na "Aku kembali ke bangkuku dulu ya"
+    "Tak Lama Kemudian Guru sebagai wali kelas menampakkan diri di depan dan pekernalan diri"
+    $ guru = "????"
     sr "Hai.. dimohon perhatiannya. Nama ibu Senda Rontge, ibu adalah guru materi biologi dan sekaligus yang akan menjadi wali kelas di kelas ini"
+    $ guru = "Ibu Senda Rontge"
     sr "kalau gitu mari kita semuanya perkenalan, meskipun kalian sudah melakukan perkenalan diawal tadi. Ibu juga ingin mengenal kalian"
-    "~Sesi Perkenalan diri~"
+    "Setelah itu semua murid mulai memperkenalkan dirinya masing-masing. Sangat Merepotkan sekelas bakalan tau Namaku meskipun sudah ada seorang di kelas ini tau namaku"
+    sr "Jangan lupa Berdiri lalu memperkenalkan diri"
+    mg2 "Nama ku Kirana Ardana"
+    $ misterius_2 = "Kirana Ardana"
+    $ misterius_2 = misterius_2.strip()
+    python:
+        if " " in misterius_2:  #checks there is space char in name, indicating a full name.
+            mg2_First,mg2_Last = misterius_2.split(" ")
+    mg2 "Kalian Bebas mau manggil aku Kirana, Ardana, Arda, Kiran, Rana, dll"
+    mg2 "Rumahku di Jalan Mastrip Nomor 5"
+    mg2 "Sekian~"
+    sr "Terima Kasih [mg2_Last] Kalau gitu selanjutnya"
+    mg1 "Nama ku Miselia Meirisca"
+    $ misterius_1 = "Miselia Meirisca"
+    $ misterius_1 = misterius_1.strip()
+    python:
+        if " " in misterius_1:  #checks there is space char in name, indicating a full name.
+            mg1_First,mg1_Last = misterius_1.split(" ")
+    mg1 "Panggil aku [mg1_First]"
+    mg1 "Hobiku Bermain bersama Kucing"
+    mg1 "Rumahku di daerah Antirogo aku lupa nomornya berapa sama jalannya hehehhe "
+    mg1 "Sekian dariku"
+    sr "Terima Kasih sudah memperkenalkan diri [mg1_First]"
+    sr "Kalau gitu selanjutnya"
+    mg3 "Namaku Airin Adeline"
+    $ misterius_3 = "Airin Adeline"
+    $ misterius_3 = misterius_3.strip()
+    python:
+        if " " in misterius_3:  #checks there is space char in name, indicating a full name.
+            mg3_First,mg3_Last = misterius_3.split(" ")
+    mg3 "Hobiku tidak ada"
+    mg3 "Sekian"
+    sr "Okay, Terima Kasih [mg3_First]"
+    sr "Selanjutnya"
+    mc "Namaku [mc]"
+    mc "Sekian"
+    skce1 "Ehh.. Singkat sekali"
+    skco2 "Iya Singkat Sekali"
+    sr "Sudah - Sudah, Terima Kasih [mcFirst] Silahkan duduk"
+    sr "Selanjutnya"
+    na "Namaku Nada Ali bisa dipanggil Nada atau Ali, bisa juga panggil aku Nali atau Dali ahahahha"
+    na "Hobiku Sports"
+    na "Aku suka semua olahraga, kalau kalian mau berolahraga jangan lupa ajak aku"
+    na "Rumahku di daerah Jalan Jawa, aku lupa lebih tepatnya hehehhe"
+    na "Aku juga suka makan apapun itu asalkan makanannya normal hahahhaha"
+    na "Sekian Bu Senda"
+    sr "Terima Kasih Nada, kalau gitu selanjutnya "
+    "Kemudian, Perkenalan Selanjutnya Diikuti oleh murid lainnya. Perkenalannya lumayan ramai juga"
     sr "Terima Kasih sudah memperkenalkan diri semuanyaa. Saat ini, ibu tidak mau memulai mata pelajaran jadi sudah ibu siapkan game / permainan simple"
     sr "Disini ibu punya 2 bola, jadi ibu lempar secara random tanpa melihat nanti yang terkena lemparan bola pertama disuruh maju kedepan menampilkan sesuatu"
     sr "Sedangkan, bola kedua yang menentukan penampilan yg terkena bola pertama dengan mengambil kertas yang berisi perintah"
     sr "Oiyaa,, ibu lupaa anak - anak silahkan bikin sobekan kertas yang berisi perintah lalu digulung bawa ke meja ibu. bikin 10 yaa, terserah mau siapa yang bikin"
-    "Kemudian anak -  anak membuat kertas sobekan berisi perintah dan ditaruh kedepan, Setelah itu permainannya dimulai. Ada yang menyanyi, Menari, lawak, dll. hingga kelas ini menjadi heboh. [mc] pun bersyukur karena tidak pernah dapat giliran tampil di depan"
+    skce2 "Baik bu~"
+    skco1 "Baik Bu!"
+    "Kemudian anak -  anak membuat kertas sobekan berisi perintah dan ditaruh kedepan, Setelah itu permainannya dimulai"
+    sr "Ibu lempar bola yang pertama ya, ibu juga sudah menutup mata"
+    "tuiing~~"
+    na "Aduh duh, lahh aku yang kena"
+    sr "Ayoo Nada maju kedepan"
+    na "haii.."
+    sr "Sekarang Bola ke dua ibu lempar"
+    skce2 "Kyaaa~"
+    sr "Silahkan Maju kedepan ambil kertas perintahnya 1 saja"
+    skce2 "Baik bu"
+    na "Semoga perintahnya ga aneh-aneh"
+    skce2 "Perintahnya Menari bu"
+    na "Wahh,, ini mah mudahh. Lagunya biar aku saja yg sediain bu"
+    sr "Oke, kamu boleh duduk sekarang"
+    sr "Nada Ayo dimulai"
+    na "Baik, bu"
+    "Setelah, Nada menari di depan dan duduk. Permainan dilanjutkan ada murid yang menyanyi, Menari, lawak, dll."
+    "Hingga kelas ini menjadi heboh. Bel istirahat pun berbunyi"
     "~Ding - Dong~"
     sr "Ya, Bel istirahat sudah berbunyi, sampai jumpa lagi di lain waktu"
     mc "Untunglah aku tidak kena bola yang dilempar. aku ingin tetap diam dan tidak bersosialisasi. haaa.."
@@ -206,7 +297,8 @@ label start:
     pb2 "Ok, yang banyak sekalian hahahhah"
     pb3 "sekalian kasih lem di loker mejanya, mumpung aku lagi bawa lem"
     pb "[mc] dah datang kembali ke bangku cepat"
-    pb2 pb3 "Ok ok"
+    pb2 "Ok"
+    pb3 "Ok kawand"
     mc "...."
     mc "Hmm.. Pakunya banyak sekali. bawa kerumah aja lah"
     mc "Apa ini di Loker ? tanganku ga bisa keluar"
