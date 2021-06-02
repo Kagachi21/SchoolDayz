@@ -1,7 +1,6 @@
 ﻿# The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-
+# Declare characters used by this game. The color argument colorizes the 
 #Image(BG, Cat, etc)
 image splash = im.Scale("BGSplash.png",1920,1080)
 image kucing = im.Scale("1.png", 745,745)
@@ -89,7 +88,7 @@ screen test():
 # name of the character.
 define dad = Character('Ayah')
 define mom = Character('Ibu', image="mom")
-define cat = Character('Kucing')
+define cat = Character('[kucing]')
 define mg1 = Character('[misterius_1]')
 define mg1_First = ""
 define mg1_Last = ""
@@ -106,11 +105,17 @@ define skco1 = Character("Murid Laki-laki 1")
 define skce1 = Character("Murid Perempuan 1")
 define skco2 = Character("Murid Laki-laki 2")
 define skce2 = Character("Murid Perempuan 2")
+define ks = Character("Kasir Alkamart")
+define kt = Character("Ibu Kantin")
+
+#Masa Lalu
 define pb = Character('Pembully')
 define pb2 = Character('Pembully 2')
 define pb3 = Character('Pembully 3')
 define sk = Character('Teman Sekelas')
 define gu = Character('Guru UKS')
+
+default money = 0
 
 # The game starts here.
 label start:
@@ -123,15 +128,18 @@ label start:
     scene bg langit
     call screen test
     $ mc = Character(mcFirst +" "+mcLast, image="mc")
+
+    jump prolog
     
+label prolog:
     scene bg jendela kamar terlihat burung
     "Hari yang sangat ku tidak sukai, yaitu hari pertama sekolah. Diriku seperti sebuah wadah yang tidak ada isinya. Apakah hari pertama sekolah akan lancar - lancar saja? Aku tidak yakin, atau akan menjadi seperti dulu ketika aku masih Sekolah Menengah Pertama"
     "Pengalaman yang buruk sekali dan inginku berhenti sekolah, bahkan aku tidak ingin mengingatnya lagi kenangan yang buruk itu. Tapi, kenapa masih saja teringat ? apa yang tuhan inginkan kepadaku hingga selalu memberikanku ingatan buruk tersebut"
     "Mungkin tidak salahnya harus mencoba untuk berangkat mungkin saja berbeda"
-    scene dapur
+    scene ruang makan
     dad "Apa kamu sudah menyiapkan semuanya ?"
     mc "....."
-    "~Awkward~"
+    "Awkward, suasananya jadi sunyi"
     show mom at right
     mom "Mau tambah lagi ?"
     mc "Ga usah, aku sudah kenyang dan aku sudah menyiapkan semuanya untuk ke sekolah"
@@ -140,18 +148,22 @@ label start:
     mc "....."
     mc "Gapapa, sudah terlanjur"
     mom "Oiya, Bekalnya sudah ibu siapkan juga, jangan lupa dibawa ya"
+    $ money += 10000 
+    mom "Ini uang sangu mu %(money)d"
     mc "...."
     mc "Iya"
     mc "Aku berangkat dulu"
 
     scene depan rumah
     show mom at right
-    mom and dad "Iya, Hati - hati di jalan"
+    $ ai = "[dad]" +" & "+ "[mom]"
+    ai "Iya, Hati - hati di jalan"
     mom "Apakah anak kita akan baik - baik saja ya pa ?"
     dad "Kita harus percaya, semoga kejadian yang dulu tidak menimpa anak kita. Kejadian yang sangat mengerikan sekali. Bahkan kita sebagai orang tua tidak tahan melihatnya dan menangis"
     mom "iya pa, kita harus percaya dan berdoa untuk anak kita."
 
     scene jalan
+    $ kucing = "Kucing"
     $ misterius_1 = "????"
     "Apakah benar hari ini akan baik - baik saja ?"
     mc "...."
@@ -173,8 +185,16 @@ label start:
     $ tmn_mg2 = "????"
     "Setelah berada di depan gerbang pun tetap saja memiliki keraguan yang tinggi, jika saja berbalik mungkin akan masih sempat untuk tidak bersekolah"
     "Apa aku harus melakukan hal itu ? lalu, bagaimana orang tuaku melihat diriku yang masih terkekang dalam keadaan masa lalu ?"
-    "Jika, aku berbalik arah sekarang dan menuju kerumah pasti akan membuat orangtuaku kecewa. Kalau aku selalu begini, kedepannya tidak akan ada masa depan yang indah"
-    "Hanya terpuruk dan meratapi nasib lalu terjebak dalam masa lalu terus menerus, hingga aku meninggal pun tetap takut akan trauma itu. Mungkin setidaknya mencoba dulu tidak salah juga"
+    menu:
+        "Pulang":
+            "~Tamat~"
+            return
+
+        "Masuk Sekolah":
+            "Jika, aku berbalik arah sekarang dan menuju kerumah pasti akan membuat orangtuaku kecewa. Kalau aku selalu begini, kedepannya tidak akan ada masa depan yang indah"
+            "Hanya terpuruk dan meratapi nasib lalu terjebak dalam masa lalu terus menerus, hingga aku meninggal pun tetap takut akan trauma itu"
+            "Mungkin setidaknya mencoba dulu tidak salah juga"
+
     mg2 "Ahh.. Bukankah itu MC ?"
     ol "Ada apa ?"
     mg2 "Ahh.. tidak apa-apa, aku hanya melamun saja tadi"
@@ -332,6 +352,7 @@ label start:
     scene depan rumah
 
     scene kamar
+    "Astaga ternyata Aku lupa membawa kucingnya. Lebih baik aku meminta izin dulu"
 
     scene ruang makan 
     mc "Ibu, Ayah, Boleh memlihara kucing ?"
@@ -344,6 +365,8 @@ label start:
     mom "Pa,  aku kaget anak kita setelah sekian lama meminta sesuatu, aku sangat bersyukur anak kita perlahan juga membaik"
     dad "Iyaa.. Ma, aku juga sangat bersyukur. Tadi aku juga sampai terharu ma"
     mom "iyaa aku juga paa, Mari kita berdoa supaya selalu terjadi hal baik untuk anak kitaa sekarang untuk kedepannya"
-    mom dad "Aamiin"
+    ai "Aamiin"
+
+    jump pengenalan
 
     return
