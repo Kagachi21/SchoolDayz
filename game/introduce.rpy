@@ -295,7 +295,7 @@ label pengenalan:
     mom "Ehhh.. Iyaa"
     cat "Nyaaa?"
     mom "Tenang ada Ibu disini yang akan bermain denganmu"
-    mom "Mungkin [mcFirs] Lelah"
+    mom "Mungkin [mcFirst] Lelah"
     mom "aku ada mainan iniii"
     mom "Tadaaa !! Laser sama pancingan bulu"
     cat "meoooww ^o^"
@@ -356,6 +356,8 @@ label pengenalan:
 
     scene depan rumah
     mc "Aku berangkat dulu"
+    mom "ini Uang sangumu"
+    $ money += 15000
     ai "iya nakk hati-hati dijalann"
     cat "Nyaa~ :')"
     dad "Kalau gitu aku berangkat juga bu"
@@ -363,6 +365,20 @@ label pengenalan:
     mom "Hati - hati dijalan"
     mom "[cat] main sama ibu aja dirumah yaa "
     cat "Nyaaa ^o^"
+
+label pemilihan:
+    
+    scene sky
+
+    $ renpy.choice_for_skipping()
+    
+    show screen gotoKirana
+
+    show screen gotoMiselia
+
+    show screen gotoAirin
+
+    $ renpy.pause(hard=True)
 
     #z = renpy.input("Please enter a NUMBER: ")
     #$ z = renpy.input("", "", allow="0123456789")
