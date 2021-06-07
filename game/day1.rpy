@@ -16,7 +16,7 @@ label day1_Kirana:
     hide screen gotoAirin
 
     scene lorong kelas
-    "Akhh.. Aku Menabarak sesuatu"
+    "Akhh.. Aku Menabrak sesuatu"
     mc "ahh.. Maaf Kak, aku tidak sengaja"
     $ kk = "Kakak Kelas"
     kk "Kamu anak kelas kamu anak kelas brapa ? kalo jalan tuh pakai mata dong !!"
@@ -228,7 +228,7 @@ label day1_Kirana:
     mc "Terima Kasih [mg2_Last]"
     mc "Hati - Hati dijalan"
     "~Bruumm Brumm~"
-    "Lelahnya Lebih baik aku tidur saja"
+    "Lelahnya lebih baik aku tidur saja"
 
     jump day2_Kirana
 
