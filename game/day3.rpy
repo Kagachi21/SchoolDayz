@@ -241,5 +241,59 @@ label day3_Kirana:
 
 
 label day3_Miselia:
+    scene kamar
+    mc  "Huuhh, hari sudah senin lagi"
+    mom "Naak.?"
+    mc "Iya buu, kenapa?"
+    mom  "Oohh, kirain kamu belum bangun nak"
+    mc "Heheh, sudah kok bukk, bentar lagi aku mandi"
+
+    scene depan rumah
+    mc " Bu, aku berangkat ke sekolah dulu ya "
+    mom "Iya nak , hati hati di jalan ya, sekolah yang pinter"
+
+    scene lorong
+    kk"Heh dasar sok kegantengan! awas ya sampek kamu ganggu cewekku lagi"
+    mc "Ehh  maksudnya apa ya mas ? emang aku salah apa "
+    kk "Halah, sok pura pura gatau lagi ! "
+    mc "Beneran mas, saya ga tau apa apa "
+    mg3 "Heh mau di bawa kemana mc?"
+    kk "Kamu bocil jangan ikut campur ya!!! ini urusan aku sama si penggoda ini"
+    mg3 "Hehh. ga bisa gitu dong , mc sini ikut aku ke kealas."
+    kk "Ehhh sudah sudahh, nanti pak saiful mergoki kita lagi , ayokk kabur"
+    mg3 "Kamu gapapa bro?emang kamu ada masalah apa sama dia"
+    mc "Aku pun juga gatau , ada masalah apa , tiba tiba aku di berhentikan tadi di depan gerbang terus mau di seret ke toilt tadi"
+    mg3 "Huhh dasar ya , cari maslaah tu orang , yaudaahh gapapa , bu sendra talagi datag , mendng kita ke kelas"
+    
+    scene kelas
+    sr "Selamat pgi anak2 ,sudah siap memulai pelajaran !"
+    sk "Siap bu!"
+    sr "Oke kalo begitu buka  bab virus"
+
+    "Materi Virus"
+    mg3 "Hey mc apa kamu bisa mengerjakan soal nomor 3?"
+    mc "Oohh okey makasih y"
+    sr "Anak2 jam ibu sudah selesai , kalo belum selesei diuat pr minggu depan dikumpulkan ya"
+    sk "Okey bu siap"
+    mg3 "Hey mc ayo makan ke kantin"
+    mc "Duluan deh aku ingn mengerjakan pr yg tadi dulu ."
+    mg3 "Huuu kmu ni rajin2 amat padahal dikumpulin minggu depan"
+    mc "Seharusnya kita tidak boleh menunda- nunda , selagi bisa sekarang kenapa tidak"
+    mg3 "iyeudah terserah lu, aku mau ke kantin dlu laper perutku , makan tuh nomor satu"
+    
+    scene kantin
+    mg3 "Bk, saya beli tahu koceknya 2 ya pedes semua"
+    $ Ik "iya nak , fi tunggu ya "
+
+    scene kelas
+    mg3 "Nih , aku punya tahu kocek, tadi aku beli 2"
+    mc "Wah , terimakassih ya "
+
+    "Kuis virus"
+    scene gerbang sekolah
+    $ mt" Eh , kamu pulang sama siapa ?"
+    mc "Aku pulang naik angkota met, kenapa ?"
+    $ mt "Oh gapapa , yaudah ayo breng , aku juga mau naik angkot"
+    mc "Okedeh"
 
 label day3_Airin:

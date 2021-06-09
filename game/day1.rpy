@@ -6,6 +6,39 @@ label day1_Miselia:
     hide screen gotoKirana
     hide screen gotoAirin
     "Test"
+    scene angkot
+    mc "Bu sepertinya ibu kedinginan, ini saya ada jaket pakai saja"
+    $itt "Wah terimakasih nak, baik banget kamu,sekolah dimana kamu nak ? kok naik angkot berangkatnya "
+    mc "Saya sekolah di SMA 5 bu,itu di depan sudah samapi sekolah saya"
+    $itt "wah, yasudah sekolah yang pinter dan rajin ya nak "
+
+    scene lorong
+    "Wah jaket ku ketinggalan di angkot , ya Allah kelupaan"
+    mg3 "Hey kamau ngapain berdiri di sini?"
+    mc "Itu , jaketku tertinggal di angkot yang ku naiki tadi sel"
+    scene kelas
+    mc "Ini kamu yang ngelempr kertasnya ?"
+    sr "Selamat pagi anak2 ,bagaimana kabarnya hari ini ?"
+    sk "Selamat pagi juga buu, alhamdulillah sehat "
+
+    "Materi klasifikasi"
+    mg3 "Mc ayo kita makan ke kantin , ku traktir deh "
+    mc "Okey deh, ayo"
+    scene kantin
+    mg3 "Kamu kenapa kok diem aja ,apakah ada masalah?"
+    mc "Nggak kok gk ada apa2 "
+    mg3 "Makanannya enak ya , kamu suka gak"
+    mc "Iya enak,ayo lekas ke kelas waktu istirahat hampir habis "
+    mg3 "Huuu cpet bgt si pdhl msh kurang 10 menit "
+    mc "Iya aku ada sesuatu yg mau aku kerjakan "
+
+    "KUIS KUIS"
+    scene lorong
+    
+    mg3 "Hei mc , apakah kamu baik baik saja?"
+    mg3 "Hey mc aku ingin bertanya , apakah aku membuat kesalahan ke kamu ?"
+    mc "Tidak kok tidak ada apa2 sampai jumpa ya aku buru2 ni"
+
 
 label day1_Kirana:
     

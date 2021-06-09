@@ -318,5 +318,81 @@ label day2_Kirana:
     jump day3_Kirana
 
 label day2_Miselia:
+    
+    scene ruang keluarga
+    mom "Nak, ayo makan"
+    mc "iya bu sebentar, aku ambil tas dulu"
+    mc "Bu, bapak sekarang apa udah sampe jogja ?"
+    mc "Oalah, okedeh semoga urusan bapak lancar"
+    mom "Nak, bagaimana dengan sekolahmu? apakah kamu senang dan nyaman?"
+    mc "I..iyaaa.. lumayan bu, alhamdulillah aku nyaman kok buk, kenapa memang? apa wajhku keliatan  gelisah?"
+    mom "Oalah syukurlah kalo baik baik saja kamu nak, tidaak.. anak ibu tetap yang terbaik dimata ibu, anak yang sederhana dan kuat"
+    mc "Alaaahh ibu mah bisa aja , tidakk buu, aku hanya manusia biasa, ibukkk.. tenang aja yaa, mc udah bisa pulih dari masalalu mc , semogaa rasa takut ini segera berakhir bu dengan berjlannya waktu"
+    mom "Iya nak , cerita sama ibu ya , kalo ada apa apoa , jangan cuman diam dan di pendem sendiri ya"
+    mc "Iya buu, kalo begitu aku pamit berangkat ke sekolah dulu ya, assalamualaikum"
+    mom "Waalaikumsalam, hati hati di jalan ya nak , semangat belajarnya"
+    scene angkot
+    $ akt "Naakk, ayo masuk , duduk di depan aja "
+    mc "Wahhh,, iya pak , okee dehh"
+    $ akt "Nak, hari ini bapak baru dapet penumpng baru 2 , kamu dan 1 ibu tadi udah turun di pasar gebang"
+    mc "Loh pak, kok tumben sepi ya, pada kemana orang orang ini?"
+    $ akt "Ya itu , bapak juga ndak tau, mungkin garagara baru bermunculan itu lo nak , aplikasi apa itu ya namanya yang warna ijo, baoak ndak tau kudet hehehe"
+    mc "Hmm, ya namanya rejekipak , datangnya ndak di sangka sangka, insha allah habis ini rame kok pak, aamiin"
+    $ akt "Wah sudah sampai nak , yasudah silahkan belajar , yang semangat semoga sukses biar ndak ajdi kayak bapak hehehe"
+    mc "Waduh pak ,bapak juga sukses , terimakasih pak , aku masuk kedalam dulu ya , bapak hati hat di jalan, semoga makin banyak penumpang ya "
 
+    scene lorong
+    mg3 "MC.. mc... "
+    mc "Kamu memanggilku?"
+    mg3 "Iyalah, yakali aku manggil pak kebon dengan namamu"
+    mc "Iya iya, ada apa emangnya ?"
+    mg3 "Enggak, gapapa , aku cuman mau manggil aja"
+    $ mt "Waduhh bagaimana ini broo, aku gatauu soal no 2. apa kamu bisa"
+    $ hsn "Huu, kamu aja ndak tau, apalagi aku"
+    mg3 "Eh kaliann pada ngapain sih?"
+    $ mt "Ini lo sel, kamu sudah selesai belum?"
+    mg3 "Hah.. pr ? waduh aku lupa juga , ehhh kamu udah selesai belum?"
+    $ mt "Ehh,,, mc kamu kan ganteng , baik, dan pinter hehehe, boleh dong kalo kita kita pinjem buku pr mu "
+    mc "Coba kerjakan sendiri dulu , nanti yang ga bsa ,tanyakan aku"
+    $ mt "Huu, dasar pelit , sok banget sih, orang kita kita juga cuman sekali mintanya kok dasarrr pamtes banyak yang suka ke kamu"
+    mg3 "Eh, mettt kok kamu jadi nyolot si ke mc, mc kan bukannya gamau ngasih tau jawabannya , cuman dia bilang kalo yang gabisa baru tanaykan kan"
+    mc "Udah udahh,, gausah ribut. bentar aku kasih bukunya ."
+    $ mt "Heheh makasih ya , maapin aku kalo omonganku kasar tadi"
+    mc "iya sama sama "
+    sr "Selamat pagi anak anak, bagaimana kabar hari ini?"
+    sk "Pagi buu" 
+    sr "Oiyaaaa, hari ini ibu ingat kalo ada tugas rumah , yang ibu berikan 2 hari yang lalu ya ?"
+    sr "Oke deh, sekarang silhkan di tukar dengan teman seelahnya , untuk di koreksi"
+    sk "Baik bu"
+    sr "Kalau sudah di bagikan , nanti ibu tunjuk 1 per 1 untuk maju kedepan dan mengerjakan soal yang telah ibu berikan"
+    $ hsn "Waduhh gawat nih , kalo sampek aku yang ketunjuk"
+    sr "Mc.. silahkan kamu maju kedepan dan kerjakan soal no 1"
+    mc "Baik Bu"
+    $ mt "Huuhh untungnya bukan kita mat yang di panggil"
+    $ hsn "Iya met, untung"
+    mg3 "Ayo ke kantin"
+    mc "Iya sebentar, aku beresin ini dulu "
+
+    scene kantin
+    mg3 "Hey mc kamu kok hebat bgt gmn si kok bisa dpt nilai tertinggi ?"
+    mc "Kuncinya hanya satu yaitu raji belajar ,udah itu aja"
+    mg3 "Hummmm begitu ,boleh gak aku belajar bareng sama kamu"
+    mc "Hmm iyadeh tapi nanti aku kabarin ya bisanya kapan hehe"
+
+    "Kuis kuis "
+    mg3 "Kamu pulang bareng siapa ? "
+    mc " Sendiri jalan kaki , kenapa sel?"
+    mg3 "Yauda bareng aku aja gapapa ayo"
+    mc " Ok deh makasi ya"
+
+    scene jalan
+    mg3 "Kok tumben kamu naik angkot tadi berangkatnya ?"
+    mc "Iya , bapak ku lagi pergi dan motornya di bawa"
+    mg3 "Oalah"
+
+    scene rumah
+    mc "Udah sampai , makasih ya udah mau nebengin, aku masuk dulu, kamu hati - hati ya"
+    mg3 "Oke sama sama , assalamualaikum"
+    mc "Waalaikumsalam"
+    
 label day2_Airin:
