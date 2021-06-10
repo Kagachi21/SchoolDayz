@@ -1,13 +1,6 @@
 ﻿# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the 
-#Image(BG, Cat, etc)
-image splash = im.Scale("BGSplash.png",1920,1080)
-image kucing = im.Scale("1.png", 745,745)
-
-#Image(Character)
-image mom = im.Scale("/Character/mom.png", 1660, 950)
-image side mc = "/Character/mc.png"
 
 #image animation = Movie(play="BGSplash.webm")
 # SplashScreen.

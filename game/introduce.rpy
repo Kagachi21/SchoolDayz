@@ -171,11 +171,12 @@ label pengenalan:
     mg2 "Teman Sekelasku" 
     mg2 "Biarin aja.. Aku gapapa kok"
 
-    scene atap sekolah
     "Sepertinya orang tadi satu sekolah denganku dulu"
     "Kalau ga satu sekolah ga mungkin dia bisa tau"
     "...."
     "Mending aku habiskan dulu makanan yang ku beli tadi"
+    "Kayaknya makan diatas Atap Sekolah Enak"
+    scene atap
     "Tenangnya di atap sekolah"
     "~Ding Dong~"
     "Saatnya aku masuk kelas huh"
@@ -190,6 +191,7 @@ label pengenalan:
     "Aku harus tidur dimana ?"
     menu:
         "Atap Sekolah":
+            scene atap
             "Begitu Tenang dan sejuk"
             "Kalau gitu aku tidur disini sampai Bel Berbunyi"
             mg3 "Hmmm.. ada orang ternyata"
