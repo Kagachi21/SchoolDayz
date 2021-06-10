@@ -262,7 +262,6 @@ label prolog:
     mg3 "Namaku Airin Adeline"
     $ misterius_3 = "Airin Adeline"
     $ misterius_3 = misterius_3.strip()
-    
     python:
         if " " in misterius_3:  #checks there is space char in name, indicating a full name.
             mg3_First,mg3_Last = misterius_3.split(" ")

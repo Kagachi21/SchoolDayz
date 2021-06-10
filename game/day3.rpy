@@ -239,8 +239,10 @@ label day3_Kirana:
     cat "Fuurrr Fuurrr"
     mc "Lahh cepet banget pasti kecapekan nonton tv hahahha"
 
+    jump day4_Kirana
 
 label day3_Miselia:
+
     scene kamar
     mc  "Huuhh, hari sudah senin lagi"
     mom "Naak.?"
@@ -295,5 +297,7 @@ label day3_Miselia:
     mc "Aku pulang naik angkota met, kenapa ?"
     $ mt "Oh gapapa , yaudah ayo breng , aku juga mau naik angkot"
     mc "Okedeh"
+
+    jump day4_Miselia
 
 label day3_Airin:

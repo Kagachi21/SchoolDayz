@@ -318,7 +318,7 @@ label day2_Kirana:
     jump day3_Kirana
 
 label day2_Miselia:
-    
+
     scene ruang keluarga
     mom "Nak, ayo makan"
     mc "iya bu sebentar, aku ambil tas dulu"
@@ -394,5 +394,7 @@ label day2_Miselia:
     mc "Udah sampai , makasih ya udah mau nebengin, aku masuk dulu, kamu hati - hati ya"
     mg1 "Oke sama sama , assalamualaikum"
     mc "Waalaikumsalam"
-    
+
+    jump day3_Miselia
+
 label day2_Airin:

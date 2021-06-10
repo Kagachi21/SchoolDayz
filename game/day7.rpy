@@ -25,5 +25,7 @@ label day7_Miselia:
     scene lorong kelas 
     $mln "Astaga , maaf ya aku ga sengaja"
     mc "Duhh..iyaaa gapapa deh kalo kamu ga sengaja "
-    
+
+    jump day8_Miselia
+
 label day7_Airin:

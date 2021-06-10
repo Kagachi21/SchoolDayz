@@ -1,11 +1,15 @@
 label day1_Miselia:
-    
-    scene jalan
 
     hide screen gotoMiselia
     hide screen gotoKirana
     hide screen gotoAirin
-    "Test"
+
+    scene jalan 
+    mc "Pak Angkot pak"
+    $ sa = "Sopir Angkot"
+    sa "Mau kemana nak ?"
+    mc "ke SMAN 05 Pak"
+
     scene angkot
     mc "Bu sepertinya ibu kedinginan, ini saya ada jaket pakai saja"
     $itt "Wah terimakasih nak, baik banget kamu,sekolah dimana kamu nak ? kok naik angkot berangkatnya "
@@ -39,6 +43,8 @@ label day1_Miselia:
     mg1"Hey mc aku ingin bertanya , apakah aku membuat kesalahan ke kamu ?"
     mc "Tidak kok tidak ada apa2 sampai jumpa ya aku buru2 ni"
 
+    jump day2_Miselia
+    
 
 label day1_Kirana:
     
