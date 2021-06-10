@@ -14,7 +14,7 @@ label day1_Miselia:
 
     scene lorong
     "Wah jaket ku ketinggalan di angkot , ya Allah kelupaan"
-    mg3 "Hey kamau ngapain berdiri di sini?"
+    mg1 "Hey kamau ngapain berdiri di sini?"
     mc "Itu , jaketku tertinggal di angkot yang ku naiki tadi sel"
     scene kelas
     mc "Ini kamu yang ngelempr kertasnya ?"
@@ -22,21 +22,21 @@ label day1_Miselia:
     sk "Selamat pagi juga buu, alhamdulillah sehat "
 
     "Materi klasifikasi"
-    mg3 "Mc ayo kita makan ke kantin , ku traktir deh "
+    mg1 "Mc ayo kita makan ke kantin , ku traktir deh "
     mc "Okey deh, ayo"
     scene kantin
-    mg3 "Kamu kenapa kok diem aja ,apakah ada masalah?"
+    mg1 "Kamu kenapa kok diem aja ,apakah ada masalah?"
     mc "Nggak kok gk ada apa2 "
-    mg3 "Makanannya enak ya , kamu suka gak"
+    mg1 "Makanannya enak ya , kamu suka gak"
     mc "Iya enak,ayo lekas ke kelas waktu istirahat hampir habis "
-    mg3 "Huuu cpet bgt si pdhl msh kurang 10 menit "
+    mg1 "Huuu cpet bgt si pdhl msh kurang 10 menit "
     mc "Iya aku ada sesuatu yg mau aku kerjakan "
 
     "KUIS KUIS"
     scene lorong
     
-    mg3 "Hei mc , apakah kamu baik baik saja?"
-    mg3 "Hey mc aku ingin bertanya , apakah aku membuat kesalahan ke kamu ?"
+    mg1"Hei mc , apakah kamu baik baik saja?"
+    mg1"Hey mc aku ingin bertanya , apakah aku membuat kesalahan ke kamu ?"
     mc "Tidak kok tidak ada apa2 sampai jumpa ya aku buru2 ni"
 
 

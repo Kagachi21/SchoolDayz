@@ -20,7 +20,7 @@ label day5_Miselia:
     mom" Iya nak, hati hati ya "
 
     scene jalan raya 
-    mg3 "Hei , ayo berangkat bareng aku ke sekolah"
+    mg1 "Hei , ayo berangkat bareng aku ke sekolah"
     mc "Oke, makasih ya "
 
     scene gerbang sekolah
@@ -30,18 +30,18 @@ label day5_Miselia:
     mc "Loh, emang aku nglakuin salah apa ?"
     $ jno "Kamu gatau , kalo misel ini gebetanku ? kok brani brani nya kamu boncengin dia ke sekolah , nyari mati kamu ha???"
     mc "Loh,, sell ini cuman salah paham tolong kamu bilang ke gebetanmu ini "
-    mg3 "Mas aldo  , kita kan cuman temen , ya seharusnya mas aldo gausa marah marah apalagi pake cara kyak gini dong mas,"
+    mg1 "Mas aldo  , kita kan cuman temen , ya seharusnya mas aldo gausa marah marah apalagi pake cara kyak gini dong mas,"
     $ jno "Ya tapi liat dong , kamu itu kn punya ku"
-    mg3 "Udah udah, gausa ribut dan di perpanjang, aku sama mc mau masuk kelas dulu , bentar lagi masuk"
-    mg3 "Ayooo mc kita ke kelas"
+    mg1 "Udah udah, gausa ribut dan di perpanjang, aku sama mc mau masuk kelas dulu , bentar lagi masuk"
+    mg1 "Ayooo mc kita ke kelas"
     $jno "Sialann.. awas kamu ya urusan kita belum selesai !"
-    mg3 "Eh, maafin aldo tadi ya , udah tenang aja kamu ga bakal diapa-apain kok"
+    mg1 "Eh, maafin aldo tadi ya , udah tenang aja kamu ga bakal diapa-apain kok"
     mc "Iya sel"
-    mg3 "Kamu ngasih kado ke sapa? "
+    mg1 "Kamu ngasih kado ke sapa? "
     mc "Ke Bu sendra, kamu ke siapa ?"
-    mg3 "Ke Pak santoso"
+    mg1 "Ke Pak santoso"
     sr "Hallo selamat pagii anak anak sekalian , bagaimana kabar hari ini ? ssemua sehat?"
-    mg3 "Alhamduliilah bu sehat"
+    mg1 "Alhamduliilah bu sehat"
     sr "Mc kamu apa baik baik saja ?"
     mc  "Tidak bu , saya baik baik saja hehehe, cuman tadi agak sedikit pusing aja "
     sr "Yaudah , kalo kamu tidak kuat silahkan bisa istirahat di ruang uks ya "
@@ -62,18 +62,18 @@ label day5_Miselia:
     "Kuis Virus"
 
     scene lorong 
-    mg3 "Kamu mau pulang bareng aku ga ?ayo kalo mau"
+    mg1 "Kamu mau pulang bareng aku ga ?ayo kalo mau"
     mc "Beneran gapapa ta ? ayo deh"
-    mg3 "Yauda aku ambil sepedah dulu ya"
+    mg1 "Yauda aku ambil sepedah dulu ya"
 
     scene jalan 
     mg3 "Kamu mau mampir dulu ga beli es?"
     mc "Ya kalo kamu mau oke ayo beli sekalian aku"
-    mg3 "Oke deh ayo kita beli"
+    mg1 "Oke deh ayo kita beli"
     
     scene depan rumah 
     mc "Makasih ya sudah nganterin aku"
-    mg3 "Iya, sama sama , aku pulang dulu"
+    mg1 "Iya, sama sama , aku pulang dulu"
   
   scene ruang tamu
   mc "Assalamualaikum bu"

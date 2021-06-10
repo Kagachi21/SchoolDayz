@@ -19,16 +19,16 @@ label day6_Miselia:
     mc "Baik pak"
 
     scene lorong Kelas
-    mg3 "Mc...."
+    mg1 "Mc...."
     mc "Hei .. iya , kamu kok tumben brangkatnya siang?"
-    mg3 "Iya , aku dianterin sama mama ku tadi , macet tau di Mastrip"
-    mg3 "Kamu udah ngerjain PR belum ?"
+    mg1 "Iya , aku dianterin sama mama ku tadi , macet tau di Mastrip"
+    mg1 "Kamu udah ngerjain PR belum ?"
 
     scene kelas 
     mc "Pr apa ? emang ada ya ?"
-    mg3 "Iya pr dari Bu sendra , yang kita suruh ngeragkum materi virus tu"
+    mg1 "Iya pr dari Bu sendra , yang kita suruh ngeragkum materi virus tu"
     mc "Oh iya , sudah dong , kamu sudah juga ?"
-    mg3 "Iya sama aku juga sudah kok"
+    mg1 "Iya sama aku juga sudah kok"
     sr "Selamat pagi anak anak, bagaimana kabar hari ini ? semoga baik baik saja ya"
     kk "Pagi bu, Alhamdulillah sehat bu"
     sr "Oh iya , kemaren ibu meminta untuk merangkum materi virus ya ? apa sudah siap untuk di presentasikan?"
@@ -38,20 +38,20 @@ label day6_Miselia:
 
     "Materi presentasi virus"
 
-    mg3 "Mc kamu mau ke kantin ga ? ayo bareng kalo mau"
+    mg1 "Mc kamu mau ke kantin ga ? ayo bareng kalo mau"
     mc "Iya bentar , aku beresin barangku dulu"
 
     scene kantin
     mc "Kamu mau beli apa ? minum apa makanan?"
-    mg3 "Aku mau beli minuman aja deh di kantinya Bu nunung"
+    mg1 "Aku mau beli minuman aja deh di kantinya Bu nunung"
     mc "Oh yaudah aku beli pentol dulu ya"
-    mg3 "Kamu ngerasa ga sih , kalau pelajaran makin hari makin susah?"
+    mg1 "Kamu ngerasa ga sih , kalau pelajaran makin hari makin susah?"
     mc "Sebenernya bukan tambah sulit sih, cuman ya kita kurang belajar aja"
-    mg3 "Hmm, aku tu ya agak maales tau kalo disuruh belajar , kadang cuman aku buka aja nih LKS nya terus yaudah aku tutup lagi haaha"
+    mg1 "Hmm, aku tu ya agak maales tau kalo disuruh belajar , kadang cuman aku buka aja nih LKS nya terus yaudah aku tutup lagi haaha"
     mc "Kamu ni, coba dikit dikit biasain suka baca "
-    mg3 "Hahaha, iya kalo kamu , gatau mager aja tu kalo disuruh belajar"
+    mg1 "Hahaha, iya kalo kamu , gatau mager aja tu kalo disuruh belajar"
     mc "Eh ayo balik ke kelas , tar lagi bel nih"
-    mg3 "Iya ayo"
+    mg1 "Iya ayo"
 
     scene kelas 
     sr "Selamat siang , Assalamualaikum wr. wb"
@@ -66,9 +66,9 @@ label day6_Miselia:
     sk"Iya buu, waalaikumsalam wr.wb"
 
     scene lorong
-    mg3 "Kamu mau pulang bareng aku ?"
+    mg1 "Kamu mau pulang bareng aku ?"
     mc "Engga sel aku di jemput sama bapakku kok, makasih tawarannya ya"
-    mg3 "Oalah, yauda deh kalo gitu aku duuluan ke parkiran ya"
+    mg1 "Oalah, yauda deh kalo gitu aku duuluan ke parkiran ya"
     mc "Iyaa kamu hti hati ya "
 
     scene jalan raya 

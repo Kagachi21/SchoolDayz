@@ -342,20 +342,20 @@ label day2_Miselia:
     mc "Waduh pak ,bapak juga sukses , terimakasih pak , aku masuk kedalam dulu ya , bapak hati hat di jalan, semoga makin banyak penumpang ya "
 
     scene lorong
-    mg3 "MC.. mc... "
+    mg1 "MC.. mc... "
     mc "Kamu memanggilku?"
-    mg3 "Iyalah, yakali aku manggil pak kebon dengan namamu"
+    mg1 "Iyalah, yakali aku manggil pak kebon dengan namamu"
     mc "Iya iya, ada apa emangnya ?"
-    mg3 "Enggak, gapapa , aku cuman mau manggil aja"
+    mg1 "Enggak, gapapa , aku cuman mau manggil aja"
     $ mt "Waduhh bagaimana ini broo, aku gatauu soal no 2. apa kamu bisa"
     $ hsn "Huu, kamu aja ndak tau, apalagi aku"
-    mg3 "Eh kaliann pada ngapain sih?"
+    mg1 "Eh kaliann pada ngapain sih?"
     $ mt "Ini lo sel, kamu sudah selesai belum?"
-    mg3 "Hah.. pr ? waduh aku lupa juga , ehhh kamu udah selesai belum?"
+    mg1 "Hah.. pr ? waduh aku lupa juga , ehhh kamu udah selesai belum?"
     $ mt "Ehh,,, mc kamu kan ganteng , baik, dan pinter hehehe, boleh dong kalo kita kita pinjem buku pr mu "
     mc "Coba kerjakan sendiri dulu , nanti yang ga bsa ,tanyakan aku"
     $ mt "Huu, dasar pelit , sok banget sih, orang kita kita juga cuman sekali mintanya kok dasarrr pamtes banyak yang suka ke kamu"
-    mg3 "Eh, mettt kok kamu jadi nyolot si ke mc, mc kan bukannya gamau ngasih tau jawabannya , cuman dia bilang kalo yang gabisa baru tanaykan kan"
+    mg1 "Eh, mettt kok kamu jadi nyolot si ke mc, mc kan bukannya gamau ngasih tau jawabannya , cuman dia bilang kalo yang gabisa baru tanaykan kan"
     mc "Udah udahh,, gausah ribut. bentar aku kasih bukunya ."
     $ mt "Heheh makasih ya , maapin aku kalo omonganku kasar tadi"
     mc "iya sama sama "
@@ -370,29 +370,29 @@ label day2_Miselia:
     mc "Baik Bu"
     $ mt "Huuhh untungnya bukan kita mat yang di panggil"
     $ hsn "Iya met, untung"
-    mg3 "Ayo ke kantin"
+    mg1 "Ayo ke kantin"
     mc "Iya sebentar, aku beresin ini dulu "
 
     scene kantin
-    mg3 "Hey mc kamu kok hebat bgt gmn si kok bisa dpt nilai tertinggi ?"
+    mg1 "Hey mc kamu kok hebat bgt gmn si kok bisa dpt nilai tertinggi ?"
     mc "Kuncinya hanya satu yaitu raji belajar ,udah itu aja"
-    mg3 "Hummmm begitu ,boleh gak aku belajar bareng sama kamu"
+    mg1 "Hummmm begitu ,boleh gak aku belajar bareng sama kamu"
     mc "Hmm iyadeh tapi nanti aku kabarin ya bisanya kapan hehe"
 
     "Kuis kuis "
-    mg3 "Kamu pulang bareng siapa ? "
+    mg1 "Kamu pulang bareng siapa ? "
     mc " Sendiri jalan kaki , kenapa sel?"
-    mg3 "Yauda bareng aku aja gapapa ayo"
+    mg1 "Yauda bareng aku aja gapapa ayo"
     mc " Ok deh makasi ya"
 
     scene jalan
-    mg3 "Kok tumben kamu naik angkot tadi berangkatnya ?"
+    mg1 "Kok tumben kamu naik angkot tadi berangkatnya ?"
     mc "Iya , bapak ku lagi pergi dan motornya di bawa"
-    mg3 "Oalah"
+    mg1 "Oalah"
 
     scene rumah
     mc "Udah sampai , makasih ya udah mau nebengin, aku masuk dulu, kamu hati - hati ya"
-    mg3 "Oke sama sama , assalamualaikum"
+    mg1 "Oke sama sama , assalamualaikum"
     mc "Waalaikumsalam"
     
 label day2_Airin:
