@@ -74,22 +74,10 @@ label day5_Miselia:
     scene depan rumah 
     mc "Makasih ya sudah nganterin aku"
     mg3 "Iya, sama sama , aku pulang dulu"
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  scene ruang tamu
+  mc "Assalamualaikum bu"
+  mom "Waalaikumsalam, sudh pulang nak , sana bersihkan cuci kaki, taruh tas nya di kamar dan langsung ke meja makan ya , ibu udah siapkan makannya"
+  mc "Iya buk, terimakasih ya , mc ke kamar dulu"
+  
 label day5_Airin:
