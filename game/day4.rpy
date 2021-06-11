@@ -298,12 +298,17 @@ label day4_Miselia:
     dad "Wah terimakasih pak buukk, aku berangkat yaa"
 
     scene Jalan Raya
+    $ brhn = "Burhan"
     $ brhn "Hahahha, dasar miskin sekolah aja sambil lari"
+
     scene angkot 
+    $ sa = "Supir angkot"
     mc "Terimakasih pak sudah mengantarkan saya "
     $ sa "sama sama nak, bapak juga terimakasih"
 
     scene lorong kelas
+    $ ska ="Siska"
+    $ hrln = "Herlin"
     mg1 "Kamu kenapa kok mukanya murung gitu , lagi sakit?"
     mc "Engga, gapapa, ini tadi aku kena masalah aja "
     mg1 "Haa. masalah apa ?"
@@ -353,6 +358,9 @@ label day4_Miselia:
     mg1 "Iya aku paham, tapi malah anak anak yang menerimanya berbeda"
 
     scene kelas 
+    $ sml ="Samsul"
+    $ udn ="Udin"
+    
     mc "Rek, ini ada titipan materi buat jam sekarang aku share di grup wa, dan disitu ada tugasnya untuk di kumpulkan besok"
     wkk "Haa, ada tugas lagi? anjirrr"
     mc "Iya rek, itu sudah aku share ,terimakasih"

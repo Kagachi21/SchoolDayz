@@ -28,6 +28,7 @@ label day1_Miselia:
     "Materi klasifikasi"
     mg1 "Mc ayo kita makan ke kantin , ku traktir deh "
     mc "Okey deh, ayo"
+
     scene kantin
     mg1 "Kamu kenapa kok diem aja ,apakah ada masalah?"
     mc "Nggak kok gk ada apa2 "
@@ -38,11 +39,13 @@ label day1_Miselia:
 
     "KUIS KUIS"
     scene lorong
-    
+    $ rta = "Rita"
     mg1"Hei mc , apakah kamu baik baik saja?"
     mg1"Hey mc aku ingin bertanya , apakah aku membuat kesalahan ke kamu ?"
     mc "Tidak kok tidak ada apa2 sampai jumpa ya aku buru2 ni"
-
+    mg1 "Mc ... mc.. jangannn pergi dulu bentarrr"
+    $ rta "Kamu manggili siapa sel, teriakanmu kok kenceng banget"
+    mg1 "Iya itu , mc ku panggil malah nerus aja jalannya "
     jump day2_Miselia
     
 

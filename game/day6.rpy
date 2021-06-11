@@ -348,7 +348,8 @@ label day6_Miselia:
     mom "Kamu ini bisa aja , yasudah hati hati di jalan ya nak , yang rajin semangat ya. kalau adaapa apa wa ibu ya"
 
     scene jalan raya
-    $akt "Nak , sini duduk di depan aja , masih ada bangku kosong khusus buat kamu "
+    $ sa = "Supir angkot"
+    $ sa "Nak , sini duduk di depan aja , masih ada bangku kosong khusus buat kamu "
     mc "Baik pak"
 
     scene lorong Kelas
@@ -387,21 +388,22 @@ label day6_Miselia:
     mg1 "Iya ayo"
 
     scene kelas 
+    $ snta = "Sinta"
     sr "Selamat siang , Assalamualaikum wr. wb"
     sk "Selamat siang bu,Waalaikumsalam wr.wb"
     sr "Anak anak , hari ini Bu sendra akan memberikan kuis ya"
     $ snta "Waduh bu, saya belum belajar kok sudah kuis lagi"
-    sr"Hei sinta , namanya latihan kerjakan sendiri sendiri ya , jangan ada yang nyonto"
+    sr "Hei sinta , namanya latihan kerjakan sendiri sendiri ya , jangan ada yang nyonto"
     $ snta "Iya buuuu"
 
     "Kuis Virus"
     sr "Okey , karen waktunya sudah habis , dan sudah menunjukkan waktu pulang, silahkan berkemas kemas ya , hai hati di jlan , dan selamat siang aasalamualaikum wr.wb"
-    sk"Iya buu, waalaikumsalam wr.wb"
+    sk "Iya buu, waalaikumsalam wr.wb"
 
     scene lorong
     mg1 "Kamu mau pulang bareng aku ?"
     mc "Engga sel aku di jemput sama bapakku kok, makasih tawarannya ya"
-    mg1 "Oalah, yauda deh kalo gitu aku duuluan ke parkiran ya"
+    mg1"Oalah, yauda deh kalo gitu aku duuluan ke parkiran ya"
     mc "Iyaa kamu hti hati ya "
 
     scene jalan raya 
@@ -416,6 +418,7 @@ label day6_Miselia:
     dad "Oke yasudah ayo kita beli"
 
     scene warung
+    $ ij = "Ibu penjual degan"
     dad "Buk , bungkus es degan nya 3 ya "
     $ ij "Iya pak, tunggu sebentar ya , mau pake susu semua ?"
     mc "Oh tidak bu , yang satu pakai jeruk nipis ya"

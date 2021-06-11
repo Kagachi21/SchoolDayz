@@ -238,6 +238,7 @@ label day5_Miselia:
     mc "Oke, makasih ya "
 
     scene gerbang sekolah
+    $ jno = "Jino"
     $ jno "Stop!!"
     mc "Ehh, ada apa ini ? kenapa kamu memberentikan aku ? "
     $ jno "Sok pura pura gatau lagi! kamu jangan sok tampan ya , kamu di sini tu rendahan jangan coba coba cari perkara sama kaka tingkat ."
@@ -245,11 +246,11 @@ label day5_Miselia:
     $ jno "Kamu gatau , kalo misel ini gebetanku ? kok brani brani nya kamu boncengin dia ke sekolah , nyari mati kamu ha???"
     mc "Loh,, sell ini cuman salah paham tolong kamu bilang ke gebetanmu ini "
     mg1 "Mas aldo  , kita kan cuman temen , ya seharusnya mas aldo gausa marah marah apalagi pake cara kyak gini dong mas,"
-    $ jno "Ya tapi liat dong , kamu itu kn punya ku"
+    $ jno "Ya tapi liat dong , kamu itu kan punya ku"
     mg1 "Udah udah, gausa ribut dan di perpanjang, aku sama mc mau masuk kelas dulu , bentar lagi masuk"
     mg1 "Ayooo mc kita ke kelas"
     $jno "Sialann.. awas kamu ya urusan kita belum selesai !"
-    mg1 "Eh, maafin aldo tadi ya , udah tenang aja kamu ga bakal diapa-apain kok"
+    mg1 "Eh, maafin Jino tadi ya , udah tenang aja kamu ga bakal diapa-apain kok"
     mc "Iya sel"
     mg1 "Kamu ngasih kado ke sapa? "
     mc "Ke Bu sendra, kamu ke siapa ?"
@@ -263,6 +264,7 @@ label day5_Miselia:
     "Materi Virus"
 
     scene ruang guru 
+    $ ss ="Bu Sari"
     mc "Assalamualaikum"
     $ss "Waalaikumsalam, iya nak, ada perlu dengan guru siapa ?"
     mc "Itu bu saya sedang mencari bu sendra "

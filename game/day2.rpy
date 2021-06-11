@@ -331,17 +331,22 @@ label day2_Miselia:
     mom "Iya nak , cerita sama ibu ya , kalo ada apa apoa , jangan cuman diam dan di pendem sendiri ya"
     mc "Iya buu, kalo begitu aku pamit berangkat ke sekolah dulu ya, assalamualaikum"
     mom "Waalaikumsalam, hati hati di jalan ya nak , semangat belajarnya"
+
     scene angkot
-    $ akt "Naakk, ayo masuk , duduk di depan aja "
+
+    $ sa = "Supir angkot"
+    $ sa "Naakk, ayo masuk , duduk di depan aja "
     mc "Wahhh,, iya pak , okee dehh"
-    $ akt "Nak, hari ini bapak baru dapet penumpng baru 2 , kamu dan 1 ibu tadi udah turun di pasar gebang"
+    $ sa "Nak, hari ini bapak baru dapet penumpng baru 2 , kamu dan 1 ibu tadi udah turun di pasar gebang"
     mc "Loh pak, kok tumben sepi ya, pada kemana orang orang ini?"
-    $ akt "Ya itu , bapak juga ndak tau, mungkin garagara baru bermunculan itu lo nak , aplikasi apa itu ya namanya yang warna ijo, baoak ndak tau kudet hehehe"
+    $ sa "Ya itu , bapak juga ndak tau, mungkin garagara baru bermunculan itu lo nak , aplikasi apa itu ya namanya yang warna ijo, baoak ndak tau kudet hehehe"
     mc "Hmm, ya namanya rejekipak , datangnya ndak di sangka sangka, insha allah habis ini rame kok pak, aamiin"
-    $ akt "Wah sudah sampai nak , yasudah silahkan belajar , yang semangat semoga sukses biar ndak ajdi kayak bapak hehehe"
+    $ sa "Wah sudah sampai nak , yasudah silahkan belajar , yang semangat semoga sukses biar ndak ajdi kayak bapak hehehe"
     mc "Waduh pak ,bapak juga sukses , terimakasih pak , aku masuk kedalam dulu ya , bapak hati hat di jalan, semoga makin banyak penumpang ya "
 
     scene lorong
+    $ mt = "Meta"
+    $ hsn ="Husni"
     mg1 "MC.. mc... "
     mc "Kamu memanggilku?"
     mg1 "Iyalah, yakali aku manggil pak kebon dengan namamu"

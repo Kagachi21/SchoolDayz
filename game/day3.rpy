@@ -284,6 +284,7 @@ label day3_Miselia:
     mg1"iyeudah terserah lu, aku mau ke kantin dlu laper perutku , makan tuh nomor satu"
     
     scene kantin
+    $ Ik = "Ibu kantin"
     mg1 "Bk, saya beli tahu koceknya 2 ya pedes semua"
     $ Ik "iya nak , fi tunggu ya "
 
@@ -292,8 +293,10 @@ label day3_Miselia:
     mc "Wah , terimakassih ya "
 
     "Kuis virus"
+
     scene gerbang sekolah
-    $ mt" Eh , kamu pulang sama siapa ?"
+    $ mt = "Meta"
+    $ mt "Eh , kamu pulang sama siapa ?"
     mc "Aku pulang naik angkota met, kenapa ?"
     $ mt "Oh gapapa , yaudah ayo breng , aku juga mau naik angkot"
     mc "Okedeh"
