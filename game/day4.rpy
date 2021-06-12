@@ -299,12 +299,11 @@ label day4_Miselia:
 
     scene Jalan Raya
     $ brhn = "Burhan"
-    $ brhn "Hahahha, dasar miskin sekolah aja sambil lari"
+    brhn "Hahahha, dasar miskin sekolah aja sambil lari"
 
     scene angkot 
-    $ sa = "Supir angkot"
     mc "Terimakasih pak sudah mengantarkan saya "
-    $ sa "sama sama nak, bapak juga terimakasih"
+    sa "sama sama nak, bapak juga terimakasih"
 
     scene lorong kelas
     $ ska ="Siska"
@@ -319,7 +318,7 @@ label day4_Miselia:
     sr "Sebelum di mulaii, assalamualaikum wr wb, selamat pagii anak anak sekalian"
     sk "Pagi buuu, waalaikumsalam wr wb"
     sr "Jadi ibu hari ini harus menghadiri rapat di luar kota , dan jadinya hari ini ibu tidak bisa mnegajar kalian semua , sedih bukan?"
-    $ ska "Wahhh,, sedih sekali buuu... ya ampun sedih sekali ya teman teman"
+    ska "Wahhh,, sedih sekali buuu... ya ampun sedih sekali ya teman teman"
     mg1 "Hahah kamu ini sis sis"
     sr "Heh, sudah sudah , ibu tauu kalianpasti senang , yang jlas ibu akan beri materi dan silahkan di pelajari okey"
     sk "Baikk  bu sendra ,hati hati di jalan ibuuu"
@@ -331,11 +330,11 @@ label day4_Miselia:
     mc "Baik buu"
     sr "Kalau bgitu saya pamkt dulu , materinya saya share di ketua kelas untuk jam ini, setelah istirahat nanti akan di shrare oleh mc tolong janga ramai !"
     mc "Heyy, tolong jangan ramai, ingat pesan bu sendra , kita kan di suruh mempelajari materi"
-    $ hrln "Heh, siapa kamu ketua kelas? sok sok an ngatur"
+    hrln "Heh, siapa kamu ketua kelas? sok sok an ngatur"
     mc "Bukan begitu, tapi kita sebaiknya menghargai guru kita"
-    $ hrln "Halah, munafik luu, sana kamu aja yang ngerjakan"
+    hrln "Halah, munafik luu, sana kamu aja yang ngerjakan"
     mg1 "Udah udah, kalian ini pada kenapa sih , apa yang di bilang mc juga ada benernya"
-    $hrln "Pembelaan terosss" 
+    hrln "Pembelaan terosss" 
     mc "Sudah stop, jangan ribut ribut!!"
     mc "Udahh, kalian gausah ribut, terserah kalian mau gimana , aku cuman ngingetin"
 
@@ -364,8 +363,8 @@ label day4_Miselia:
     mc "Rek, ini ada titipan materi buat jam sekarang aku share di grup wa, dan disitu ada tugasnya untuk di kumpulkan besok"
     wkk "Haa, ada tugas lagi? anjirrr"
     mc "Iya rek, itu sudah aku share ,terimakasih"
-    $ sml "Laiya itu, mna soalnya ada 3 lagi, kenapa ga 1 aja ya"
-    $udn "Mending gausa di kasih soal sekalian hahaha"
+    sml "Laiya itu, mna soalnya ada 3 lagi, kenapa ga 1 aja ya"
+    udn "Mending gausa di kasih soal sekalian hahaha"
 
     "Kuis virus"
     mg1 "Kamu pulang sama siapa ?"

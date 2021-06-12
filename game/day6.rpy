@@ -348,8 +348,7 @@ label day6_Miselia:
     mom "Kamu ini bisa aja , yasudah hati hati di jalan ya nak , yang rajin semangat ya. kalau adaapa apa wa ibu ya"
 
     scene jalan raya
-    $ sa = "Supir angkot"
-    $ sa "Nak , sini duduk di depan aja , masih ada bangku kosong khusus buat kamu "
+    sa "Nak , sini duduk di depan aja , masih ada bangku kosong khusus buat kamu "
     mc "Baik pak"
 
     scene lorong Kelas
@@ -388,13 +387,12 @@ label day6_Miselia:
     mg1 "Iya ayo"
 
     scene kelas 
-    $ snta = "Sinta"
     sr "Selamat siang , Assalamualaikum wr. wb"
     sk "Selamat siang bu,Waalaikumsalam wr.wb"
     sr "Anak anak , hari ini Bu sendra akan memberikan kuis ya"
-    $ snta "Waduh bu, saya belum belajar kok sudah kuis lagi"
+    st "Waduh bu, saya belum belajar kok sudah kuis lagi"
     sr "Hei sinta , namanya latihan kerjakan sendiri sendiri ya , jangan ada yang nyonto"
-    $ snta "Iya buuuu"
+    st "Iya buuuu"
 
     "Kuis Virus"
     sr "Okey , karen waktunya sudah habis , dan sudah menunjukkan waktu pulang, silahkan berkemas kemas ya , hai hati di jlan , dan selamat siang aasalamualaikum wr.wb"
@@ -420,9 +418,9 @@ label day6_Miselia:
     scene warung
     $ ij = "Ibu penjual degan"
     dad "Buk , bungkus es degan nya 3 ya "
-    $ ij "Iya pak, tunggu sebentar ya , mau pake susu semua ?"
+    ij "Iya pak, tunggu sebentar ya , mau pake susu semua ?"
     mc "Oh tidak bu , yang satu pakai jeruk nipis ya"
-    $ ij "Oke nak"
+    ij "Oke nak"
 
     scene jalan raya 
     mc "Ayo pak kita jalan"

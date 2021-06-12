@@ -164,7 +164,7 @@ label day5_Kirana:
     mg2 "Ahh,, Iya aku hampir lupa"
     mg2 "Besok free ga ? kalau free, jalan-jalan kuy"
     mc "Ada siapa aja ?"
-    mg2 "Ada [na], [bl], [wkk], [kk], [skce1], dan [skco2]"
+    mg2 "Ada [na], [bl], [wkk], [kk], [skce1], [ol], dan [skco2]"
     mg2 "Meskipun aku belum ngabarin semuanya"
     mc "Mana bisa begitu ?"
     mc "Kabarin dulu lah"
@@ -239,17 +239,17 @@ label day5_Miselia:
 
     scene gerbang sekolah
     $ jno = "Jino"
-    $ jno "Stop!!"
+    jno "Stop!!"
     mc "Ehh, ada apa ini ? kenapa kamu memberentikan aku ? "
-    $ jno "Sok pura pura gatau lagi! kamu jangan sok tampan ya , kamu di sini tu rendahan jangan coba coba cari perkara sama kaka tingkat ."
+    jno "Sok pura pura gatau lagi! kamu jangan sok tampan ya , kamu di sini tu rendahan jangan coba coba cari perkara sama kaka tingkat ."
     mc "Loh, emang aku nglakuin salah apa ?"
-    $ jno "Kamu gatau , kalo misel ini gebetanku ? kok brani brani nya kamu boncengin dia ke sekolah , nyari mati kamu ha???"
+    jno "Kamu gatau , kalo misel ini gebetanku ? kok brani brani nya kamu boncengin dia ke sekolah , nyari mati kamu ha???"
     mc "Loh,, sell ini cuman salah paham tolong kamu bilang ke gebetanmu ini "
     mg1 "Mas aldo  , kita kan cuman temen , ya seharusnya mas aldo gausa marah marah apalagi pake cara kyak gini dong mas,"
-    $ jno "Ya tapi liat dong , kamu itu kan punya ku"
+    jno "Ya tapi liat dong , kamu itu kan punya ku"
     mg1 "Udah udah, gausa ribut dan di perpanjang, aku sama mc mau masuk kelas dulu , bentar lagi masuk"
     mg1 "Ayooo mc kita ke kelas"
-    $jno "Sialann.. awas kamu ya urusan kita belum selesai !"
+    jno "Sialann.. awas kamu ya urusan kita belum selesai !"
     mg1 "Eh, maafin Jino tadi ya , udah tenang aja kamu ga bakal diapa-apain kok"
     mc "Iya sel"
     mg1 "Kamu ngasih kado ke sapa? "
@@ -266,9 +266,9 @@ label day5_Miselia:
     scene ruang guru 
     $ ss ="Bu Sari"
     mc "Assalamualaikum"
-    $ss "Waalaikumsalam, iya nak, ada perlu dengan guru siapa ?"
-    mc "Itu bu saya sedang mencari bu sendra "
-    $ss "Owalah , yasudah masuk saja , itu bu sendranya lagi duduk di ruangannya"
+    ss "Waalaikumsalam, iya nak, ada perlu dengan guru siapa ?"
+    mc "Itu bu saya sedang mencari bu senda "
+    ss "Owalah , yasudah masuk saja , itu bu sendranya lagi duduk di ruangannya"
     mc "Tok tok tok"
     sr "Iya silahkan masuk aja nak"
     mc "Bu ini saya ada kado buat ibu, sederhana semga ibu suka ya"
@@ -283,7 +283,7 @@ label day5_Miselia:
     mg1 "Yauda aku ambil sepedah dulu ya"
 
     scene jalan 
-    mg3 "Kamu mau mampir dulu ga beli es?"
+    mg1 "Kamu mau mampir dulu ga beli es?"
     mc "Ya kalo kamu mau oke ayo beli sekalian aku"
     mg1 "Oke deh ayo kita beli"
     

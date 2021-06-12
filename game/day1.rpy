@@ -11,10 +11,11 @@ label day1_Miselia:
     mc "ke SMAN 05 Pak"
 
     scene angkot
+    $ itt = "Ibu Tua Renta"
     mc "Bu sepertinya ibu kedinginan, ini saya ada jaket pakai saja"
-    $itt "Wah terimakasih nak, baik banget kamu,sekolah dimana kamu nak ? kok naik angkot berangkatnya "
+    itt "Wah terimakasih nak, baik banget kamu,sekolah dimana kamu nak ? kok naik angkot berangkatnya "
     mc "Saya sekolah di SMA 5 bu,itu di depan sudah samapi sekolah saya"
-    $itt "wah, yasudah sekolah yang pinter dan rajin ya nak "
+    itt "wah, yasudah sekolah yang pinter dan rajin ya nak "
 
     scene lorong
     "Wah jaket ku ketinggalan di angkot , ya Allah kelupaan"
@@ -38,14 +39,16 @@ label day1_Miselia:
     mc "Iya aku ada sesuatu yg mau aku kerjakan "
 
     "KUIS KUIS"
+
     scene lorong
     $ rta = "Rita"
     mg1"Hei mc , apakah kamu baik baik saja?"
     mg1"Hey mc aku ingin bertanya , apakah aku membuat kesalahan ke kamu ?"
     mc "Tidak kok tidak ada apa2 sampai jumpa ya aku buru2 ni"
     mg1 "Mc ... mc.. jangannn pergi dulu bentarrr"
-    $ rta "Kamu manggili siapa sel, teriakanmu kok kenceng banget"
+    rta "Kamu manggili siapa sel, teriakanmu kok kenceng banget"
     mg1 "Iya itu , mc ku panggil malah nerus aja jalannya "
+
     jump day2_Miselia
     
 
@@ -161,7 +164,179 @@ label day1_Kirana:
     sr "isshh.. Kamu ini. Oiya, Kalau sudah selesai nanti kita koreksi bersama ya"
     sr "Setelah itu kalian bebas mau ngapain aja sampai jam pelajaran habis"
     sk "Yuuuhuuu~ Siapp Bu"
-    "~Soal Soal Materi~"
+    sr "Ini Soalnya bagikan ke belakang"
+    sr "kalau sudah selamat mengerjakan"
+
+    #Initialize score
+    $ quiz1_score = 0
+
+    label quiz1:
+
+        "1. Pengertian Virus"
+        menu:
+            "A. Merupakan organisme parasit, yang memiliki Bahasa Latin venom yang berarti cairan beracun":
+                $ quiz1_score += 10
+            "B. Merupakan kelompok makhluk hidup yang terdiri atas makhluk hidup bersel satu (tunggal) atau uniseluler":
+                $ quiz1_score += 0
+            "C. Salah Satu Sel yang membantu pencernaan pada tubuh manusia":
+                $ quiz1_score += 0
+            "D. Prokariot atau prokariotik merupakan salah satu klasifikasi makhluk hidup berdasarkan ada tidaknya membran yang membungkus inti sel":
+                $ quiz1_score += 0
+
+        "2. Sejarah Virus Dimitri ivanovsky"
+        menu:
+            "A. Berhasil meneliti penyakit pada tembakau yang menyebabkan daun memiliki bercak kekuningan":
+                $ quiz1_score += 0
+            "B. Berhasil mengristalkan makhluk penyebab penyakit pada tembakau pada tahun 1935. Kemudian, penyakit tersebut diberi nama Tobacco Mosaic Virus (TMV)":
+                $ quiz1_score += 0
+            "C. Menonaktifkan makhluk penyebab penyakit tersebut menggunakan alkohol. Hasilnya alkohol tidak bisa menonaktifkan makhluk tersebut":
+                $ quiz1_score += 10
+            "D. Disusun berdasarkan struktur organisasi internal sel, struktur organisasi sel, dan tipe nutrisi sel":
+                $ quiz1_score += 0 
+
+        "Berdasarkan pernyataan di atas ciri-ciri dari virus terdapat pada nomor" (multiple=2)
+        "3. Perhatikanlah ciri-ciri struktur organisme di bawah ini !
+                \n
+                1. Ultramikroskopis
+                \n
+                2. Berkembang biak pada sel hidup
+                \n
+                3. Sel bersifat prokariotik
+                \n
+                4. Memiliki materi gen RNA atau DNA
+                \n
+                5. Memiliki sitoplasma" (multiple=2)
+        menu:
+            "A. 2, 3, dan 5":
+                $ quiz1_score += 0
+            "B. Semuanya benar":
+                $ quiz1_score += 0
+            "C. 1, 2, dan 4":
+                $ quiz1_score += 10
+            "D. 3, 4, dan 5":
+                $ quiz1_score += 0
+
+        "4. Sejarah Virus Martinus Beijerinck"
+        menu:
+            "A. Disusun berdasarkan struktur organisasi internal sel, struktur organisasi sel, dan tipe nutrisi sel":
+                $ quiz1_score += 0
+            "B. Menonaktifkan makhluk penyebab penyakit tersebut menggunakan alkohol. Hasilnya alkohol tidak bisa menonaktifkan makhluk tersebut":
+                $ quiz1_score += 10
+            "C. Berhasil mengristalkan makhluk penyebab penyakit pada tembakau pada tahun 1935. Kemudian, penyakit tersebut diberi nama Tobacco Mosaic Virus (TMV)":
+                $ quiz1_score += 0
+            "D. Berhasil meneliti penyakit pada tembakau yang menyebabkan daun memiliki bercak kekuningan":
+                $ quiz1_score += 0
+            
+        "Berdasarkan pernyataan di atas yang bukam ciri-ciri dari virus terdapat pada nomor" (multiple=2)
+        "5. Perhatikanlah ciri-ciri struktur organisme di bawah ini !
+            \n
+            1. Ultramikroskopis
+            \n
+            2. Sel bersifat prokariotik
+            \n
+            3. Memiliki sitoplasma
+            \n
+            4. Berkembang biak pada sel hidup
+            \n
+            5. Tersusun atas mukopolisakarida dan peptidoglikan"(multiple=2)
+        menu:
+            "A. 2, 3, dan 5":
+                $ quiz1_score += 10
+            "B. 1, 3, dan 4":
+                $ quiz1_score += 0
+            "C. Semuanya benar":
+                $ quiz1_score += 0
+            "D. 1 dan 4":
+                $ quiz1_score += 0
+
+        "6. Sejarah Virus Wendell Meredith Stanley"
+        menu:
+            "A. Berhasil meneliti penyakit pada tembakau yang menyebabkan daun memiliki bercak kekuningan":
+                $ quiz1_score += 0
+            "B. Disusun berdasarkan struktur organisasi internal sel, struktur organisasi sel, dan tipe nutrisi sel":
+                $ quiz1_score += 0
+            "C. Menonaktifkan makhluk penyebab penyakit tersebut menggunakan alkohol. Hasilnya alkohol tidak bisa menonaktifkan makhluk tersebut":
+                $ quiz1_score += 0
+            "D. Berhasil mengristalkan makhluk penyebab penyakit pada tembakau pada tahun 1935. Kemudian, penyakit tersebut diberi nama Tobacco Mosaic Virus (TMV)":
+                $ quiz1_score += 10
+
+        "7. Virus dikategorikan bukan sebagai sel karena tidak memiliki bagian dari"
+        menu:
+            "A. Asam nukleat":
+                $ quiz1_score += 0
+            "B. Protoplasma":
+                $ quiz1_score += 10
+            "C. Protein":
+                $ quiz1_score += 0
+            "D. Organel":
+                $ quiz1_score += 0
+
+        "8. Cabang ilmu Biologi yang mengkaji mengenai virus yatu"
+        menu:
+            "A. Serologi":
+                $ quiz1_score += 0
+            "B. Struktur hewan":
+                $ quiz1_score += 0
+            "C. Virology":
+                $ quiz1_score += 10
+            "D. Anatomi virus":
+                $ quiz1_score += 0
+
+        "9. Salah satu sifat virus yang sama dengan makhluk hidup lainnya adalah"
+        menu:
+            "A. Tidak pernah bisa dihambat dengan antiboitik":
+                $ quiz1_score += 0
+            "B. Bisa mengalami perubahan wujud":
+                $ quiz1_score += 0
+            "C. Meiliki ukuran yang ultramikroskopis":
+                $ quiz1_score += 0
+            "D. Mampu bereproduksi":
+                $ quiz1_score += 10
+
+        "10. Virus tidak dapat hidup di alam bebas, melainkan harus hidup secara parasit. Oleh karena itu, untuk memelihara virus digunakan"
+        menu:
+            "A. Embrio Ayam":
+                $ quiz1_score += 10
+            "B. Medium kentang dan agar–agar":
+                $ quiz1_score += 0
+            "C. Medium agar–agar":
+                $ quiz1_score += 0
+            "D. Medium air kelapa":
+                $ quiz1_score += 0
+
+        "Jawaban : 
+            1. A    3. C    5. A    7. B    9. D
+            2. C    4. B    6. D    8. C    10. A"
+
+        "Nilaiku adalah [quiz1_score]"
+
+    # Check the quiz 1 score
+    if quiz1_score >= 75:
+        # Win
+        sr "Selamat Bagi yang Nilainya Bagus"
+        sr "Kalian bebas melakukan apa saja sampai waktu pelajaran habis"
+        # Did he win? Yes.
+        #$ quiz1_win = True
+        #$ quiz1_lose = False   
+    else:
+        # Lose
+        sr "Bagi yang Nilainya jelek bisa mengulang lagi"
+        menu:
+            "Mengulang Lagi":
+                jump quiz1
+            "Tidak Ingin Mengulang":
+                "Anda gagal sebagai murid"
+                "~END~"
+                return
+        # Did he win? No.
+        #$ quiz1_win = False
+        #$ quiz1_lose = True
+
+    #if quiz1_win:
+        #jump happylove
+        
+    #if quiz1_lose:
+        #jump breakup
 
     "~Ding Dong~"
     sk "Yeay Sudah Pulang"

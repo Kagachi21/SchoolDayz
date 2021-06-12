@@ -273,20 +273,20 @@ label day3_Miselia:
     sr "Oke kalo begitu buka  bab virus"
 
     "Materi Virus"
-    mg1"Hey mc apa kamu bisa mengerjakan soal nomor 3?"
+    mg1 "Hey mc apa kamu bisa mengerjakan soal nomor 3?"
     mc "Oohh okey makasih y"
     sr "Anak2 jam ibu sudah selesai , kalo belum selesei diuat pr minggu depan dikumpulkan ya"
     sk "Okey bu siap"
-    mg1"Hey mc ayo makan ke kantin"
+    mg1 "Hey mc ayo makan ke kantin"
     mc "Duluan deh aku ingn mengerjakan pr yg tadi dulu ."
     mg1 "Huuu kmu ni rajin2 amat padahal dikumpulin minggu depan"
     mc "Seharusnya kita tidak boleh menunda- nunda , selagi bisa sekarang kenapa tidak"
-    mg1"iyeudah terserah lu, aku mau ke kantin dlu laper perutku , makan tuh nomor satu"
+    mg1 "iyeudah terserah lu, aku mau ke kantin dlu laper perutku , makan tuh nomor satu"
     
     scene kantin
     $ Ik = "Ibu kantin"
     mg1 "Bk, saya beli tahu koceknya 2 ya pedes semua"
-    $ Ik "iya nak , fi tunggu ya "
+    Ik "iya nak , fi tunggu ya "
 
     scene kelas
     mg1 "Nih , aku punya tahu kocek, tadi aku beli 2"
@@ -295,10 +295,9 @@ label day3_Miselia:
     "Kuis virus"
 
     scene gerbang sekolah
-    $ mt = "Meta"
-    $ mt "Eh , kamu pulang sama siapa ?"
+    mt "Eh , kamu pulang sama siapa ?"
     mc "Aku pulang naik angkota met, kenapa ?"
-    $ mt "Oh gapapa , yaudah ayo breng , aku juga mau naik angkot"
+    mt "Oh gapapa , yaudah ayo breng , aku juga mau naik angkot"
     mc "Okedeh"
 
     jump day4_Miselia
