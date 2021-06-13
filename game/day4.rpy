@@ -243,10 +243,221 @@ label day4_Kirana:
     "~Sementara [bl] Pesan makanan dan minuman~"
     bl "Sudah aku pesanin"
     bl "Kuy Kerjain sembari nunggu pesenan datang"
-    "~Soal~"
-    mc "yang rangkum buat presentasi siapa ?"
-    bl "Kita selesaikan juga hari ini semuanya"
-    mc "Okie"
+
+    label quiz4:
+
+        "1. Flu burung merupakan jenis penyakit menular yang akibatkan oleh virus yang menjangkit unggas. Penyebab penyakit tersebut masuk dalam golongan virus influenza tipe ….."
+        menu:
+            "A. B":
+                $ quiz4_score += 0
+            "B. C":
+                $ quiz4_score += 0
+            "C. A":
+                $ quiz4_score += 8
+            "D. Jawaban A dan B benar":
+                $ quiz4_score += 0
+
+        "2. H5NI (Avian Influenza A) merupakan penyebab penyakit ……"
+        menu:
+            "A. tumor pada hewan":
+                $ quiz4_score += 0
+            "B. flu burung":
+                $ quiz4_score += 8
+            "C. rabies":
+                $ quiz4_score += 0
+            "D. polio":
+                $ quiz4_score += 0 
+
+        "3. Penyakit AIDS dapat ditularkan melalui ...."
+        menu:
+            "A. Garuk garuk kepala":
+                $ quiz4_score += 0
+            "B. Menatap Muka":
+                $ quiz4_score += 0
+            "C. Gigitan nyamuk":
+                $ quiz4_score += 0
+            "D. Hubungan seksual":
+                $ quiz4_score += 8
+        
+        "4. HIV yang ada pada penderita AIDS mengakibatkan penderita mengalami ……"
+        menu:
+            "A. Rapuhnya sistem kekebalan":
+                $ quiz4_score += 8
+            "B. Penurunan kadar trombosit":
+                $ quiz4_score += 0
+            "C. Kerusakan hati":
+                $ quiz4_score += 0
+            "D. Peningkatan kadar trombosit":
+                $ quiz4_score += 0
+        
+        show virusd4_1
+        "5. Perhatikan gambar di diatas!  Nomor 1,2, dan 3 merupakan ..."
+        menu:
+            "A. DNA, kapsid, ekor":
+                $ quiz4_score += 8
+            "B. kapsid, DNA, ekor":
+                $ quiz4_score += 0
+            "C. DNA, ekor, kapsid":
+                $ quiz4_score += 0
+            "D. kapsid, RNA, ekor":
+                $ quiz4_score += 0
+        hide virusd4_1
+
+        "6. Selubung protein penyusun virus dinamakan…."
+        menu:
+            "A. dinding sel":
+                $ quiz4_score += 0
+            "B. Virion":
+                $ quiz4_score += 0
+            "C. Kapsid":
+                $ quiz4_score += 8
+            "D. membran":
+                $ quiz4_score += 0
+
+        show virusd4_2
+        "7. Perhatikan gambar di atas ini. Berdasarkan daur hidup, secara berurutan virus x, y, dan z secara berurutan adalah…."
+        menu:
+            "A. absorbsi, sintesis, lisis":
+                $ quiz4_score += 0
+            "B. absorbsi, penetrasi, sintesis":
+                $ quiz4_score += 0
+            "C. penetrasi, perakitan, lisis":
+                $ quiz4_score += 8
+            "D. penetrsi, absorbsi, sintesis":
+                $ quiz4_score += 0
+        hide virusd4_2
+
+        "8. Berdasarkan sistem klasifikasi, organisme yang menyebabkan AIDS dimasukkan ke kelompok ….."
+        menu:
+            "A. protista":
+                $ quiz4_score += 0
+            "B. Monera":
+                $ quiz4_score += 0
+            "C. animalia":
+                $ quiz4_score += 0
+            "D. virus":
+                $ quiz4_score += 8
+
+        "9. Di bawah ini yang merupakn pernyataan yang benar tentang virus yaitu ….."
+        menu:
+            "A. Partikel virus memiliki DNA dan RNA":
+                $ quiz4_score += 8
+            "B. Perakitan kapsid virus dari protein memerlukan sel inang":
+                $ quiz4_score += 0
+            "C. Pertumbuhan partikel virus setelah perakitan kapsid, berlanjut sampai pada pelepasan partikel-partikel virus baru":
+                $ quiz4_score += 0
+            "D. Partikel virus bisa dilihat dengan menggunakan mikroskop cahaya":
+                $ quiz4_score += 0
+
+        "Berdasarkan pernyataan di atas bentuk dari virus terdapat pada nomor" (multiple=2)
+        "10. Perhatikanlah macam-macam virus di bawah ini !
+                \n
+                1) Simplexvirus
+                \n
+                2) Bakteriofag
+                \n
+                3) Lyssavirus
+                \n
+                4) Enterovirus
+                \n
+                5) Ortohepadnavirus" (multiple=2)
+        menu:
+            "A. Semuanya benar":
+                $ quiz4_score += 0
+            "B. 3,4, dan 5":
+                $ quiz4_score += 8
+            "C. 2,3, dan 5":
+                $ quiz4_score += 0
+            "D. 4 dan 5":
+                $ quiz4_score += 0
+
+        "11. Virus HIV sangat berbahaya karena menyerang ….."
+        menu:
+            "A. Otak":
+                $ quiz4_score += 0
+            "B. Otot":
+                $ quiz4_score += 0
+            "C. Hati":
+                $ quiz4_score += 0
+            "D. Sel darah":
+                $ quiz4_score += 8
+
+        "12. Virus flu burung banyak sekali tipenya, tetapa yang paling berbahaya adalah tipe …."
+        menu:
+            "A. H4N5":
+                $ quiz4_score += 0
+            "B. H1N1":
+                $ quiz4_score += 0
+            "C. H1N5":
+                $ quiz4_score += 0
+            "D. H5N1":
+                $ quiz4_score += 8
+
+        "13. Berikut ini yang bukan merupakan sifat-sifat dari virus adalah ….."
+        menu:
+            "A. Untuk reproduksinya hanya membutuhkan bahan anorganik saja":
+                $ quiz4_score += 8
+            "B. Virus bukan sel, jadi tidak memiliki protoplasma":
+                $ quiz4_score += 0
+            "C. Bentuk dan ukuran virus bervariasi":
+                $ quiz4_score += 0
+            "D. Virus mempunyai selubung dari protein dan materi genetik DNA/RNA":
+                $ quiz4_score += 0
+
+        "14. Virus yang menyebabkan pecahnya sel inang disebut ….."
+        menu:
+            "A. Bakteriofag":
+                $ quiz4_score += 0
+            "B. Profag":
+                $ quiz4_score += 8
+            "C. Virus heliks":
+                $ quiz4_score += 0
+            "D. Virus virulen":
+                $ quiz4_score += 0
+
+        "15. Enzim yang di hasilkan oleh virus yang dapat memecahkan dinding sel bakteri disebut ….."
+        menu:
+            "A. Neuraminidase":
+                $ quiz4_score += 0
+            "B. Lisozim":
+                $ quiz4_score += 8
+            "C. Lisogenik":
+                $ quiz4_score += 0
+            "D. Litik":
+                $ quiz4_score += 0
+
+        "Jawaban : 
+            1. C    3. D    5. A    7. C    9. A    11. D   13. A   15. B
+            2. B    4. A    6. C    8. D    10. B   12. D   14. B"
+
+        "Nilaiku adalah [quiz4_score]"
+
+        $ quiz4_score_total = quiz4_score - 20
+
+    # Check the quiz 1 score
+    if quiz4_score_total >= 75:
+        # Win
+        mc "Yang rangkum buat presentasi siapa ?"
+        bl "Kita selesaikan juga hari ini semuanya"
+        mc "Okie"
+        # Did he win? Yes.
+        #$ quiz4_win = True
+        #$ quiz4_lose = False   
+    else:
+        # Lose
+        bl "Mereka ga ada sama sekali"
+        bl "Biar dah ga usah di kerjakan, capek aku"
+        bl "Mereka berdua ga ada lagi"
+        menu:
+            "Semangat":
+                rr "Coba dulu lagi, Nanti kalau misal mentok yaudah tinggal aja"
+                mc 'Terima Kasih'
+                jump quiz4
+            "Pulang saja!":
+                "Anda gagal sebagai murid"
+                "~END~"
+                return
+
     $ psc = "Pelayan Cafe"
     psc "Ini Pesanannya, selamat dinikmati kalau gitu permisi dulu"
     mc "Iya mas, terima kasih"

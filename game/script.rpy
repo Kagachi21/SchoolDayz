@@ -79,7 +79,6 @@ screen test():
             action Return()
 
 # name of the character.
-define quiz = Character(None, kind = nvl)
 define dad = Character('Ayah')
 define mom = Character('Ibu', image="mom")
 define cat = Character('[kucing]')

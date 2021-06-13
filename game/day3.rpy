@@ -170,7 +170,265 @@ label day3_Kirana:
     nd "Boleh"
     mg2 "Yok,, Keluarkan Tugasnya biar cepat selesai"
     ad "Gass Keun"
-    "~Tugas Soal~"
+
+    #Initialize score
+    $ quiz3_score = 0
+
+    label quiz3:
+
+        "1. Fag memperbanyak dan menyusun DNA merupakan fase ....... dalam infeksi secara......"
+        menu:
+            "A. Hanya dapat hidup dalam sel–sel hidup":
+                $ quiz3_score += 0
+            "B. Fase repllika - litik":
+                $ quiz3_score += 5
+            "C. Kulitnya terdiri atas protein":
+                $ quiz3_score += 0
+            "D. tubuhnya terdiri atas DNA atau RNA":
+                $ quiz3_score += 0
+
+        "2. Setelah melakukan reproduksi, virus akan menghancurkan sel induk. Pernyataan tersebut termasuk dalam infeksi secara.."
+        menu:
+            "A. Parasit Obligat":
+                $ quiz3_score += 0
+            "B. Virus":
+                $ quiz3_score += 0
+            "C. Litik":
+                $ quiz3_score += 5
+            "D. Eukariot":
+                $ quiz3_score += 0 
+
+        "3. Setelah dinding sel rusak (terhidrolis) maka DNA fag masuk ke dalam sel bakteri yang dinamakan fase ......"
+        menu:
+            "A. Fase pembebasan":
+                $ quiz3_score += 0
+            "B. Fase perakitan":
+                $ quiz3_score += 0
+            "C. Fase Absorbtion":
+                $ quiz3_score += 0
+            "D. Fase penetrasi":
+                $ quiz3_score += 5
+        
+        show virusd3 at truecenter
+        "4. Bagian a pada gambar dinamakan ….."
+        menu:
+            "A. Kepala":
+                $ quiz3_score += 5
+            "B. Ekor virus":
+                $ quiz3_score += 0
+            "C. RNA":
+                $ quiz3_score += 0
+            "D. Serabut ekor":
+                $ quiz3_score += 0
+            
+        "5. Bagian b pada gambar dinamakan ….."
+        menu:
+            "A. RNA":
+                $ quiz3_score += 0
+            "B. DNA":
+                $ quiz3_score += 0
+            "C. Serabut Ekor":
+                $ quiz3_score += 0
+            "D. Leher":
+                $ quiz3_score += 5
+
+        "6. Bagian c pada gambar dinamakan ….."
+        menu:
+            "A. Kepala":
+                $ quiz3_score += 0
+            "B. Serabut Ekor":
+                $ quiz3_score += 5
+            "C. Kapsid":
+                $ quiz3_score += 0
+            "D. Asam nukleat":
+                $ quiz3_score += 0
+
+        hide virusd3
+
+        "7. Pada siklus lisogenik terjadi fase penggabungan antara DNA virus dan DNA bakteri membentuk.."
+        menu:
+            "A. Profage":
+                $ quiz3_score += 5
+            "B. Reproduksi virus":
+                $ quiz3_score += 0
+            "C. Profase":
+                $ quiz3_score += 0
+            "D. Virion":
+                $ quiz3_score += 0
+
+        "8. Virus dapat digunakan sebagai vektor untuk melakukan rekombinasi bahan genetik dari sel donor ke sel reseptor yang dikenal dengan istilah..."
+        menu:
+            "A. Nukleokapsid":
+                $ quiz3_score += 0
+            "B. Nucleoprotein":
+                $ quiz3_score += 0
+            "C. Kapsomer":
+                $ quiz3_score += 0
+            "D. Transplantasi":
+                $ quiz3_score += 5
+
+        "9. Di bawah ini yang termasuk Virus pemakan bakteri yaitu ….."
+        menu:
+            "A. Virus paramyxovirus":
+                $ quiz3_score += 0
+            "B. Adenovirus":
+                $ quiz3_score += 0
+            "C. Bakteriofag":
+                $ quiz3_score += 5
+            "D. TMV":
+                $ quiz3_score += 0
+
+        "10. Di bawah ini yang tidak termasuk contoh dari Nukleokapsid yang telanjang yaitu ......"
+        menu:
+            "A. Wart Virus":
+                $ quiz3_score += 0
+            "B. Virus kutil":
+                $ quiz3_score += 0
+            "C. Virus influenza":
+                $ quiz3_score += 5
+            "D. TMV":
+                $ quiz3_score += 0
+
+        "11. Penyebab campak yaitu virus …."
+        menu:
+            "A. TMV":
+                $ quiz3_score += 0
+            "B. Paramyxovirus":
+                $ quiz3_score += 5
+            "C. HIV":
+                $ quiz3_score += 0
+            "D. Adenovirus":
+                $ quiz3_score += 0
+
+        "12. Virus mempunyai sifat sebagai benda mati yaitu…."
+        menu:
+            "A. dapat dikristalkan":
+                $ quiz3_score += 5
+            "B. Reproduksi virus":
+                $ quiz3_score += 0
+            "C. terdiri atas ADN atau ARN saja":
+                $ quiz3_score += 0
+            "D. hanya dapat hidup pada sel hidup":
+                $ quiz3_score += 0
+
+        "13. Di bawah ini merupakn pernyataan yang benar mengenai susunan tubuh virus yaitu…."
+        menu:
+            "A. Kapsid virus tersusun dari lipoprotein dan materi genetik berupa kromosom":
+                $ quiz3_score += 0
+            "B. Virus mempunyai selubung dari lemak dan materi genetik berupa DNA/RNA":
+                $ quiz3_score += 0
+            "C. kapsid virus tersusun dari karbohidrat polisakarida dan materi genetik berupa plasmid":
+                $ quiz3_score += 0
+            "D. Virus mempunyai selubung dari protein dan materi genetik DNA/RNA":
+                $ quiz3_score += 5
+
+        "14. Tubuh bakteri akan pecah karena penuh dengan virus pada fase ..."
+        menu:
+            "A. Adsorpsi":
+                $ quiz3_score += 0
+            "B. Lisogenik":
+                $ quiz3_score += 0
+            "C. Lisis":
+                $ quiz3_score += 5
+            "D. Penetrasi":
+                $ quiz3_score += 0
+
+        "15. Fase pembiakan virus yang materi genetiknya (DNA) menempel pada bakteri (sel inang), karena bakteri memiliki daya tahan dan tidak terbentuk bagian-bagiannya disebut fase…"
+        menu:
+            "A. Konjugasi":
+                $ quiz3_score += 0
+            "B. Trasnformasi":
+                $ quiz3_score += 0
+            "C. Lisogenik":
+                $ quiz3_score += 5
+            "D. Litik":
+                $ quiz3_score += 0
+
+        "16. Perbedaan antara litik dan lisogenik yaitu..."
+        menu:
+            "A. TMV":
+                $ quiz3_score += 0
+            "B. Paramyxovirus":
+                $ quiz3_score += 0
+            "C. DNA virus menempel pada DNA sel inang pada fase lisogenik":
+                $ quiz3_score += 5
+            "D. Adenovirus":
+                $ quiz3_score += 0
+
+        "17. Jenis penyakit berikut yang disebabkan oleh virus yaitu ..."
+        menu:
+            "A. influenza, demam berdarah, polio, AIDS, dan cacar":
+                $ quiz3_score += 5
+            "B. tifus, AIDS, influenza, kolera, dan cacar":
+                $ quiz3_score += 0
+            "C. demam berdarah, cacar, kolera, polio, dan tifus":
+                $ quiz3_score += 0
+            "D. influenza, tifus, Udunen, kolera, dan cacar":
+                $ quiz3_score += 0
+
+        "18. Vaksinasi bisa mencegah suatu penyakit yang dikarenakan oleh virus. Vaksinasi bisa diberikan secara oral contohnya vaksin untuk penyakit…"
+        menu:
+            "A. hepatitis":
+                $ quiz3_score += 0
+            "B. cacar":
+                $ quiz3_score += 0
+            "C. disentri":
+                $ quiz3_score += 0
+            "D. polio":
+                $ quiz3_score += 5
+
+        "19. Kapsid tersusun atas subunit-subunit protein yang disebut dengan ….."
+        menu:
+            "A. Nucleoprotein":
+                $ quiz3_score += 0
+            "B. Selubung protein":
+                $ quiz3_score += 0
+            "C. Kapsomer":
+                $ quiz3_score += 5
+            "D. Nukleokapsid":
+                $ quiz3_score += 0
+
+        "20. Virus yang menyebabkan penyakit leukemia adalah ….."
+        menu:
+            "A. Orthopoxvirus":
+                $ quiz3_score += 0
+            "B. Retrovirus":
+                $ quiz3_score += 5
+            "C. Papillomavirus":
+                $ quiz3_score += 0
+            "D. Lyssavirus":
+                $ quiz3_score += 0
+
+        "Jawaban : 
+            1. A    3. D    5. D    7. A    9. C    11. B   13. D   15. C   17. A   19. C
+            2. C    4. A    6. B    8. D    10. C   12. A   14. C   16. C   18. D   20. B"
+
+        "Nilaiku adalah [quiz3_score]"
+
+    # Check the quiz 1 score
+    if quiz3_score >= 75:
+        # Win
+        "Kemudian makanannya datang, tugasnya pun sudah selesai juga dan aku makan bersama teman kelas"
+        "Aku pikir ini tidak begitu buruk"
+        # Did he win? Yes.
+        #$ quiz3_win = True
+        #$ quiz3_lose = False   
+    else:
+        # Lose
+        "Lumayan susah juga"
+        ol "Nyerah nih ?"
+        mc "Terserah, tapi nilainya dapat jelek"
+        menu:
+            "Tidak Menyerah":
+                ol "Iya, dah. Istirahat dulu aja"
+                mg2 "Iya bener, Istirahat dulu"
+                mg2 "Setelah itu lanjut"
+                jump quiz3
+            "Nyerah":
+                "Anda gagal sebagai murid"
+                "~END~"
+                return
+
     "Kemudian makanannya datang, tugasnya pun sudah selesai juga dan aku makan bersama teman kelas"
     "Aku pikir ini tidak begitu buruk"
     ol "Capeknya ngerjakan tugasnya. Mari kita makan"

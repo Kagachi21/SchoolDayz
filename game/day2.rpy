@@ -176,7 +176,7 @@ label day2_Kirana:
     "Ahh Kelompok Merepotkan sekali"
     "Moga dapat orang yang ga merepotkan"
     $ rr = "Rere"
-    rr "aku sekelompok sama nomor 3 , siapa absenn nomo 3?"
+    rr "aku sekelompok sama nomor 3 , siapa absenn nomor 3 ?"
     mc "Aku"
     rr "Oh Ok"
     mc "...."
@@ -187,7 +187,7 @@ label day2_Kirana:
     na "Oiyaa, orangnya juga pintar soalnya sering juara aku denger dengernya gitu"
     mc "dahlah. nth ini beruntung atau merugikanku"
     mg2 "hussh!!"
-    "Berlanjutlah pemilihan kelompok" 
+    "~Berlanjutlah pemilihan kelompok~" 
     sr "Sudah dapat kelompoknya masing masing kan ya ?"
     sr "Kalau gitu Ibu ke ruang guru dulu ya. Soalnya jangan lupa dikerjakan loh"
     sr "kalau ada yang ga ngerjakan ada hukumannya"
@@ -209,12 +209,173 @@ label day2_Kirana:
     mc "Ini tugas kelompok"
     rr "Serah serah aku lah"
     mc "...."
-    "Beberapa Soal ada yang ga kuisi. Lumayan susah juga"
-    rr "Kamu ga bisa jawabnya ?"
-    mc "Kamu tau jawabannya ?"
-    rr "iya, sini dah, aku coba dulu"
-    mc 'Terima Kasih'
-    "~1 Jam Kemudian~"
+
+    #Initialize score
+    $ quiz2_score = 0
+
+    label quiz2:
+
+        "1. Virus dapat dianggap sebagai makhluk hidup, sebab virus:"
+        menu:
+            "A. Hanya dapat hidup dalam sel–sel hidup":
+                $ quiz2_score += 0
+            "B. Dapat dikristalkan":
+                $ quiz2_score += 0
+            "C. Kulitnya terdiri atas protein":
+                $ quiz2_score += 0
+            "D. tubuhnya terdiri atas DNA atau RNA":
+                $ quiz2_score += 10
+
+        "2. Struktur terkecil yang memuat materi genetika dan berevolusi menjadi parasit dengan mengendalikan biosintesis pada sel inang untuk menjaga keberlanjutannya adalah"
+        menu:
+            "A. Parasit Obligat":
+                $ quiz2_score += 0
+            "B. Virus":
+                $ quiz2_score += 10
+            "C. Archaebacteria":
+                $ quiz2_score += 0
+            "D. Eukariot":
+                $ quiz2_score += 0 
+
+        "Berdasarkan pernyataan di atas bentuk dari virus terdapat pada nomor" (multiple=2)
+        "3. Perhatikanlah ciri-ciri struktur organisme di bawah ini !
+                \n
+                1. Berbentuk batang
+                \n
+                2. Berbentuk batang dan berujung oval seperti peluru
+                \n
+                3. Berbentuk bulat
+                \n
+                4. Berbentuk filamen atau benang
+                \n
+                5. Berbentuk seperti huruf T" (multiple=2)
+        menu:
+            "A. 2, 3, dan 5":
+                $ quiz2_score += 0
+            "B. Semuanya benar":
+                $ quiz2_score += 10
+            "C. 1, 2, dan 4":
+                $ quiz2_score += 0
+            "D. 3, 4, dan 5":
+                $ quiz2_score += 0
+
+        "4. Pada virus, asam nukleat yang diselubungi oleh kapsid dinamakan"
+        menu:
+            "A. DNA":
+                $ quiz2_score += 0
+            "B. Selubung membrane":
+                $ quiz2_score += 0
+            "C. RNA":
+                $ quiz2_score += 0
+            "D. Nukleokapsid":
+                $ quiz2_score += 10
+            
+        "Berdasarkan pernyataan di atas yang bukam bentuk dari virus terdapat pada nomor" (multiple=2)
+        "5. Perhatikanlah ciri-ciri struktur organisme di bawah ini !
+                \n
+                1. Berbentuk batang
+                \n
+                2. Berbentuk persegi
+                \n
+                3. Berbentuk bulat
+                \n
+                4. Berbentuk kubus
+                \n
+                5. Berbentuk seperti huruf T"(multiple=2)
+        menu:
+            "A. 2, 3, dan 5":
+                $ quiz2_score += 0
+            "B. 1, 3, dan 4":
+                $ quiz2_score += 0
+            "C. Semuanya benar":
+                $ quiz2_score += 0
+            "D. 2 dan 4":
+                $ quiz2_score += 10
+
+        "6. Fungsi Kaki serabut pada bakterifag yang merupakan perpanjangan ekor yaitu untuk.."
+        menu:
+            "A. Menancapkan diri ke berbagai substrat":
+                $ quiz2_score += 0
+            "B. Reproduksi virus":
+                $ quiz2_score += 0
+            "C. Bergeraknya bakteri":
+                $ quiz2_score += 0
+            "D. Bergeraknya virus":
+                $ quiz2_score += 10
+
+        "7. Berikut ini adalah struktur virus, kecuali"
+        menu:
+            "A. Virus bersifat aseluler":
+                $ quiz2_score += 0
+            "B. Virus hanya memiliki RNA dan DNA saja":
+                $ quiz2_score += 10
+            "C. Bisa di kristalkan":
+                $ quiz2_score += 0
+            "D. Tubuh tersusun dari asam nukleat":
+                $ quiz2_score += 0
+
+        "8. Kapsid pada virus yang tersusun dari subunit protein disebut dengan istilah"
+        menu:
+            "A. Nukleokapsid":
+                $ quiz2_score += 0
+            "B. Nucleoprotein":
+                $ quiz2_score += 0
+            "C. Kapsomer":
+                $ quiz2_score += 10
+            "D. Selubung protein":
+                $ quiz2_score += 0
+
+        "9. Berikut ini yang tidak termasuk dalam contoh Nukleokapsid tanpa lapisan yaitu …"
+        menu:
+            "A. Virus kutil":
+                $ quiz2_score += 0
+            "B. Adenovirus":
+                $ quiz2_score += 0
+            "C. Virus influenza":
+                $ quiz2_score += 10
+            "D. Wart virus":
+                $ quiz2_score += 0
+
+        "10. Penyakit di bawah ini disebabkan oleh Virus, kecuali.."
+        menu:
+            "A. Pneumonia":
+                $ quiz2_score += 10
+            "B. Morbili":
+                $ quiz2_score += 0
+            "C. Influenza":
+                $ quiz2_score += 0
+            "D. Rabies":
+                $ quiz2_score += 0
+
+        "Jawaban : 
+            1. D    3. B    5. D    7. B    9. C
+            2. B    4. D    6. D    8. C    10. A"
+
+        "Nilaiku adalah [quiz2_score]"
+
+    # Check the quiz 1 score
+    if quiz2_score >= 75:
+        # Win
+        sr "Selamat Kelompok yang Nilainya Bagus"
+        sr "Kalian bebas melakukan apa saja sampai waktu pelajaran habis"
+        # Did he win? Yes.
+        #$ quiz2_win = True
+        #$ quiz2_lose = False   
+    else:
+        # Lose
+        "Beberapa Soal ada yang ga kuisi. Lumayan susah juga"
+        rr "Kamu ga bisa jawabnya ?"
+        mc "Kamu tau jawabannya ?"
+        menu:
+            "Meemberikannya":
+                rr "iya, sini dah, aku coba dulu"
+                mc "Terima Kasih"
+                jump quiz2
+            "Tidak Ingin Memberikannya":
+                "Anda gagal sebagai murid"
+                "~END~"
+                return
+
     "~Ding Dong~"
     wkk "haa Akhirnya Pulang juga"
     kk "Tugasnya kumpulkan ke meja depan ya"

@@ -141,7 +141,7 @@ style window:
 style block2_multiple2_say_window:
     xalign 0.5
     xfill True
-    yalign 0.7
+    yalign 0.65
     ysize gui.textbox_height
     background Image("gui/textbox.png", xalign=0.5, yalign=0.0)
 
