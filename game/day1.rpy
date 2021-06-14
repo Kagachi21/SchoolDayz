@@ -38,7 +38,147 @@ label day1_Miselia:
     mg1 "Huuu cpet bgt si pdhl msh kurang 10 menit "
     mc "Iya aku ada sesuatu yg mau aku kerjakan "
 
-    "KUIS KUIS"
+    #Initialize score
+    $ quiz_fungi1_score = 0
+
+    label quiz_fungi1:
+
+        "1. Jamur yang berperan dalam pembuatan tempe adalah ..."
+        menu:
+            "A. Aspergilus sp":
+                $ quiz_fungi1_score += 0
+            "B. Rhizopus sp":
+                $ quiz_fungi1_score += 10
+            "C. Therospora sp ":
+                $ quiz_fungi1_score += 0
+            "D. Mucor sp":
+                $ quiz_fungi1_score += 0
+
+        show fungid1
+        "2. Perhatikan dan amati gambar di atas! Bagian sporangiosfor terdapat pada nomor ..."
+        menu:
+            "A. 1":
+                $ quiz_fungi1_score += 0
+            "B. 4":
+                $ quiz_fungi1_score += 0
+            "C. 2":
+                $ quiz_fungi1_score += 10
+            "D. 3":
+                $ quiz_fungi1_score += 0
+        hide fungid1 
+
+        "3. Klasifikasi jamur dikelompokkan berdasarkan ...."
+        menu:
+            "A. habitatnya":
+                $ quiz_fungi1_score += 0
+            "B. ciri morfologi":
+                $ quiz_fungi1_score += 0
+            "C. ciri reproduksi":
+                $ quiz_fungi1_score += 10
+            "D. ciri biokimia":
+                $ quiz_fungi1_score += 0
+
+        "4. Jamur tidak dapat digolongkan ke dalam dunia tumbuhan karena ...."
+        menu:
+            "A. bersifat autrotof":
+                $ quiz_fungi1_score += 0
+            "B. tidak mempunyai klorofil":
+                $ quiz_fungi1_score += 10
+            "C. mempunyai spora":
+                $ quiz_fungi1_score += 0
+            "D. mempunyai floem":
+                $ quiz_fungi1_score += 0
+            
+        "5. Kumpulan benang­benang halus yg terdapat pada jamur disebut …"
+        menu:
+            "A. miselium":
+                $ quiz_fungi1_score += 10
+            "B. askospora":
+                $ quiz_fungi1_score += 0
+            "C. spora":
+                $ quiz_fungi1_score += 0
+            "D. basidiospora":
+                $ quiz_fungi1_score += 0
+
+        "6. Sekat yang menonjol dalam sporangium pada Mucor mocedo disebut …."
+        menu:
+            "A. sporangium":
+                $ quiz_fungi1_score += 0
+            "B. basidium":
+                $ quiz_fungi1_score += 0
+            "C. konidium":
+                $ quiz_fungi1_score += 0
+            "D. kulomela":
+                $ quiz_fungi1_score += 10
+
+        "7. Jamur tidak memiliki kormus, tetapi hanya memiliki …."
+        menu:
+            "A. daun":
+                $ quiz_fungi1_score += 0
+            "B. talus":
+                $ quiz_fungi1_score += 10
+            "C. cabang":
+                $ quiz_fungi1_score += 0
+            "D. batang":
+                $ quiz_fungi1_score += 0
+
+        "8. Salah satu contoh jamur Zygomycota adalah …."
+        menu:
+            "A. jamur ragi":
+                $ quiz_fungi1_score += 0
+            "B. jamur merang":
+                $ quiz_fungi1_score += 0
+            "C. jamur tempe":
+                $ quiz_fungi1_score += 10
+            "D. jamur kuping":
+                $ quiz_fungi1_score += 0
+
+        "9. Di bawah ini yang merupakan pernyataan yang benar adalah …."
+        menu:
+            "A. anteridium mengandung dua inti":
+                $ quiz_fungi1_score += 0
+            "B. askogonium mengandung dua inti":
+                $ quiz_fungi1_score += 0
+            "C. inti askogonium berpindah tempat ke anteridium":
+                $ quiz_fungi1_score += 0
+            "D. anteridium mengandung inti yang haploid":
+                $ quiz_fungi1_score += 10
+
+        "10. Dinding sel pada jamur Zygomycota mengandung zat …."
+        menu:
+            "A. Kitin":
+                $ quiz_fungi1_score += 10
+            "B. tanduk":
+                $ quiz_fungi1_score += 0
+            "C. selulosa":
+                $ quiz_fungi1_score += 0
+            "D. Fiositin":
+                $ quiz_fungi1_score += 0
+
+        "Jawaban : 
+            1. B    3. C    5. A    7. B    9. D
+            2. C    4. B    6. D    8. C    10. A"
+
+        "Nilaiku adalah [quiz_fungi1_score]"
+
+    # Check the quiz 1 score
+    if quiz_fungi1_score >= 75:
+        # Win
+        sr "Selamat Bagi yang Nilainya Bagus"
+        sr "Kalian bebas melakukan apa saja sampai waktu pelajaran habis"
+        # Did he win? Yes.
+        #$ quiz_fungi1_win = True
+        #$ quiz_fungi1_lose = False   
+    else:
+        # Lose
+        sr "Bagi yang Nilainya jelek bisa mengulang lagi"
+        menu:
+            "Mengulang Lagi":
+                jump quiz_fungi1
+            "Tidak Ingin Mengulang":
+                "Anda gagal sebagai murid"
+                "~END~"
+                return
 
     scene lorong
     $ rta = "Rita"

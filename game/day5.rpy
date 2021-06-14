@@ -86,7 +86,7 @@ label day5_Kirana:
     mg2 "Biarin saja sudah yang penting tugasnya sudah selesai"
     mg2 "Misal yang dapat nilai lebih pasti kamu sama [bl]"
     "~Ding Dong~"
-    na "Dah Masuk aja, harus siap nih"
+    na "Dah bel masuk aja, harus siap nih"
     mc "Hahahah sans aja"
     sr "Selamat pagi anak-anak"
     sk "Pagi bu"
@@ -97,6 +97,220 @@ label day5_Kirana:
     "~Presentasi~"
     sr "Okay, selanjutnya kelompok 4 maju"
     "~Presentasi~"
+
+    label quiz5:
+
+        "1. Ciri khas virus yang tidak terdapat pada organisme lain adalah…."
+        menu:
+            "A. memiliki DNA dan RNA":
+                $ quiz5_score += 0
+            "B. bentuknya beraneka ragam":
+                $ quiz5_score += 0
+            "C. hanya dapat berkembang biak dalam satu sel hidup":
+                $ quiz5_score += 8
+            "D. bersifat parasit":
+                $ quiz5_score += 0
+
+        "2. Bentuk virus yang menyerang bakteri (bakteriofage) adalah…."
+        menu:
+            "A. tumor pada hewan":
+                $ quiz5_score += 0
+            "B. flu burung":
+                $ quiz5_score += 0
+            "C. Bentuk T":
+                $ quiz5_score += 8
+            "D. polio":
+                $ quiz5_score += 0 
+
+        "Yang termasuk asam inti RNA adalah.." (multiple=2)
+        "3. Macam-macam virus diantaranya:
+            \n
+            (1) Simplexvirus
+            \n
+            (2) Bakteriofag
+            \n
+            (3) Lyssavirus
+            \n
+            (4) Enterovirus
+            \n
+            (5) Ortohepadnavirus" (multiple=2)
+        menu:
+            "A. Semuanya Benar":
+                $ quiz5_score += 0
+            "B. 3,4, dan 5":
+                $ quiz5_score += 8
+            "C. 1,2,3, dan 4":
+                $ quiz5_score += 0
+            "D. 2,3, dan 5":
+                $ quiz5_score += 0
+        
+        "4. Virus tidak dapat masuk dalam kelompok makhluk hidup karena .... "
+        menu:
+            "A. virus dapat bergerak ":
+                $ quiz5_score += 0
+            "B. virus dapat melakukan pembuahan ":
+                $ quiz5_score += 0
+            "C. virus dapat berkembang biaki":
+                $ quiz5_score += 0
+            "D. virus dapat dikristalkan":
+                $ quiz5_score += 8
+        
+        "5. Ukuran virus sangat kecil, yaitu .... "
+        menu:
+            "A. 20 – 300 milimikron":
+                $ quiz5_score += 8
+            "B. <10 milimikron":
+                $ quiz5_score += 0
+            "C. 1 – 3 milimikron":
+                $ quiz5_score += 0
+            "D. 10 milimikron ":
+                $ quiz5_score += 0
+
+        "6. Virus mengambil alih fungsi DNA bakteri. Tujuan tindakan virus ini adalah...."
+        menu:
+            "A. mensintesis protein dan membuat struktur tubuh virus yang baru ":
+                $ quiz5_score += 8
+            "B. agar DNA bakteri melakukan replikasi sebagai persiapan pembelahan sel ":
+                $ quiz5_score += 0
+            "C. untuk mengaktifkan inti sel bakteri hingga dapat memproduksi enzim baru ":
+                $ quiz5_score += 0
+            "D. melipatgandakan bakteri":
+                $ quiz5_score += 0
+
+        "7. Bagian yang tidak dimiliki oleh virus adalah .... "
+        menu:
+            "A. selubung protein":
+                $ quiz5_score += 8
+            "B. membran sel":
+                $ quiz5_score += 0
+            "C. inti sel":
+                $ quiz5_score += 0
+            "D. organel sel":
+                $ quiz5_score += 0
+
+        "8. Ekor virus menempel pada dinding bakteri terjadi pada tahap ..."
+        menu:
+            "A. sintesis":
+                $ quiz5_score += 0
+            "B. injeksi ":
+                $ quiz5_score += 0
+            "C. melebur":
+                $ quiz5_score += 0
+            "D. adsorpsi":
+                $ quiz5_score += 8
+
+        "9. Dalam suatu larutan terdapat virus dan bakteri. Cara memisahkan bakteri dan virus tersebut adalah .... "
+        menu:
+            "A. memasukkan antibiotik ke dalam larutan agar bakteri mati ":
+                $ quiz5_score += 0
+            "B. menyaring larutan menggunakan saringan biasa agar virus dapat lolos":
+                $ quiz5_score += 0
+            "C. menyaring larutan menggunakan saringan keramik ":
+                $ quiz5_score += 8
+            "D. memasukkan sel hidup untuk inang virus ":
+                $ quiz5_score += 0
+
+        "10. Virus yang hanya menyerang kera dan manusia dengan gejala pendarahan di dalam dan di luar tubuh disebut dengan virus .... "
+        menu:
+            "A. demam berdarah r":
+                $ quiz5_score += 0
+            "B. kanker ":
+                $ quiz5_score += 0
+            "C. ebola":
+                $ quiz5_score += 8
+            "D. hepatitis ":
+                $ quiz5_score += 0
+
+        "11. Penyakit cacar air disebabkan oleh virus .... "
+        menu:
+            "A. E. coli ":
+                $ quiz5_score += 0
+            "B. Variola ":
+                $ quiz5_score += 0
+            "C. Mata belek ":
+                $ quiz5_score += 0
+            "D. Varisela":
+                $ quiz5_score += 8
+
+        "12. Sintesis DNA virus terjadi di dalam .... "
+        menu:
+            "A. di alam bebas ":
+                $ quiz5_score += 0
+            "B. tubuh inang ":
+                $ quiz5_score += 8
+            "C. tubuh virus dan inang ":
+                $ quiz5_score += 0
+            "D. ekor virus ":
+                $ quiz5_score += 0
+
+        show virusd5
+        "13. Perhatikan tabel di atas ini!
+        \n
+        Pasangan yang tepat antara virus dan peranan yang merugikan pada manusia adalah ...."
+        menu:
+            "A. 1B - 2A - 3D - 4E - 5C":
+                $ quiz5_score += 8
+            "B. 1C - 2A - 3D - 4B - 5E":
+                $ quiz5_score += 0
+            "C. 1D - 2B - 3A - 4E - 5C":
+                $ quiz5_score += 0
+            "D. 1B - 2A - 3D - 4E - 5C":
+                $ quiz5_score += 0
+
+        "14. Virus diamati dengan jelas apabila menggunakan..."
+        menu:
+            "A. lup":
+                $ quiz5_score += 0
+            "B. mikroskop fase kontras":
+                $ quiz5_score += 0
+            "C. mikroskop binokuler":
+                $ quiz5_score += 0
+            "D. mikroskop elektron":
+                $ quiz5_score += 8
+
+        "15. Jenis virus dan penyakit yang ditimbulkannya yang benar adalah..."
+        menu:
+            "A. Virus RNA - hepatitis A":
+                $ quiz5_score += 0
+            "B. Virus DNA - influenza":
+                $ quiz5_score += 0
+            "C. Rabdovirus - Rabies":
+                $ quiz5_score += 8
+            "D. Virus non B - hepatitis B":
+                $ quiz5_score += 0
+
+        "Jawaban : 
+            1. C    3. B    5. A    7. A    9. C    11. D   13. A   15. C
+            2. C    4. D    6. A    8. D    10. C   12. B   14. D"
+
+        "Nilaiku adalah [quiz5_score]"
+
+        $ quiz5_score_total = quiz5_score - 20
+
+    # Check the quiz 1 score
+    if quiz5_score_total >= 75:
+        # Win
+        mc "Yang rangkum buat presentasi siapa ?"
+        bl "Kita selesaikan juga hari ini semuanya"
+        mc "Okie"
+        # Did he win? Yes.
+        #$ quiz5_win = True
+        #$ quiz5_lose = False   
+    else:
+        # Lose
+        bl "Mereka ga ada sama sekali"
+        bl "Biar dah ga usah di kerjakan, capek aku"
+        bl "Mereka berdua ga ada lagi"
+        menu:
+            "Semangat":
+                rr "Coba dulu lagi, Nanti kalau misal mentok yaudah tinggal aja"
+                mc 'Terima Kasih'
+                jump quiz5
+            "Pulang saja!":
+                "Anda gagal sebagai murid"
+                "~END~"
+                return
+
     "~Ding Dong~"
     sk "Sudah Bel Pulang Yeay!!"
     sr "Yaudah kalau gitu anak-anak. Kelasnya saya akhiri sekarang"

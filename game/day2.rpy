@@ -544,7 +544,161 @@ label day2_Miselia:
     mg1 "Hummmm begitu ,boleh gak aku belajar bareng sama kamu"
     mc "Hmm iyadeh tapi nanti aku kabarin ya bisanya kapan hehe"
 
-    "Kuis kuis "
+    #Initialize score
+    $ quiz_fungi2_score = 0
+
+    label quiz_fungi2:
+
+        "1. Ciri-­ciri Deuteromycotina adalah…"
+        menu:
+            "A. reproduksi seksual dengan spora":
+                $ quiz_fungi2_score += 0
+            "B. memiliki askus yang menghasilkan askospora":
+                $ quiz_fungi2_score += 0
+            "C. Hifanya bercabang cabang, tidak bersekat":
+                $ quiz_fungi2_score += 0
+            "D. reproduksi aseksual dengan pembentukan konidia":
+                $ quiz_fungi2_score += 10
+
+        "2. Dibawah ini yang tidak masuk dalam golongan Zygomycotina adalah..."
+        menu:
+            "A. Penicillium sp.":
+                $ quiz_fungi2_score += 10
+            "B. Glomus sp":
+                $ quiz_fungi2_score += 0
+            "C. Cunninghamella sp":
+                $ quiz_fungi2_score += 0
+            "D. Pilobolus sp":
+                $ quiz_fungi2_score += 0
+
+        "3. Penelitian tentang jamur sangat banyak diminati oleh para ilmuwan, penelitian tersebut termasuk ke dalam bidang ilmu .."
+        menu:
+            "A. botani":
+                $ quiz_fungi2_score += 0
+            "B. fisiologi":
+                $ quiz_fungi2_score += 0
+            "C. planktonologi":
+                $ quiz_fungi2_score += 0
+            "D. mikologi":
+                $ quiz_fungi2_score += 10
+
+        "4. Jamur Zygomicota menyerap makanannya menggunakan …."
+        menu:
+            "A. sporangium":
+                $ quiz_fungi2_score += 0
+            "B. seluruh bagian tubuh":
+                $ quiz_fungi2_score += 0
+            "C. rizoid":
+                $ quiz_fungi2_score += 10
+            "D. stolon":
+                $ quiz_fungi2_score += 0
+            
+        "5. Jamur yang memiliki hifa tidak bersekat termasuk dalam kelompok jamur…"
+        menu:
+            "A. Zygomycota":
+                $ quiz_fungi2_score += 10
+            "B. Basidiomycota":
+                $ quiz_fungi2_score += 0
+            "C. Deuteromycota":
+                $ quiz_fungi2_score += 0
+            "D. Ascomycota":
+                $ quiz_fungi2_score += 0
+
+        "6. Hifa pada Oomycota mempunyai ciri …."
+        menu:
+            "A. reproduksi generatif dengan fertilisasi":
+                $ quiz_fungi2_score += 10
+            "B. hidup di darat":
+                $ quiz_fungi2_score += 0
+            "C. tidak memiliki selulosa":
+                $ quiz_fungi2_score += 0
+            "D. memiliki senositik":
+                $ quiz_fungi2_score += 0
+
+        show fungid2
+        "7. Gambar diatas ini merupakan fungi dari jenis…."
+        menu:
+            "A. Volvariella volvacea":
+                $ quiz_fungi2_score += 0
+            "B. Rhizopus stolonifer":
+                $ quiz_fungi2_score += 10
+            "C. Saccharomyces cerevisiae":
+                $ quiz_fungi2_score += 0
+            "D. Mocor mucedo":
+                $ quiz_fungi2_score += 0
+        hide fungid2
+
+        "Spesies fungi yang berkembang biak dengan membentuk spora di askus dan bermanfaat dalam industri makanan adalah…." (multiple=2)
+        "8. Berikut ini adalah jenis fungi yang berperan dalam kehidupan manusia.
+                \n
+                (1) Aspergillus wentii
+                \n
+                (2) Saccharomyces cerevisiae
+                \n
+                (3) Penicillium chrysogenum
+                \n
+                (4) Volvariella volvacea
+                \n
+                (5) Rhizopus oryzae
+                \n
+                (6) Penicillium camemberti" (multiple=2)
+        menu:
+            "A. 4, 5 dan 6":
+                $ quiz_fungi2_score += 0
+            "B. 2, 3 dan 4":
+                $ quiz_fungi2_score += 0
+            "C. 1, 3 dan 4":
+                $ quiz_fungi2_score += 0
+            "D. 1, 2 dan 6":
+                $ quiz_fungi2_score += 10
+
+        "9. Pada proses pembuatan roti, pemberian ragi membuat adonan menjadi mengembang. Hal ini disebabkan oleh…"
+        menu:
+            "A. tepung dan ragi bereaksi dan menghasilkan O2":
+                $ quiz_fungi2_score += 0
+            "B. ragi merupakan fungi dari kelompok Ascomycota":
+                $ quiz_fungi2_score += 0
+            "C. hasil fermentasi glukosa menghasilkan CO2 yang dapat mengembangkan adonan":
+                $ quiz_fungi2_score += 10
+            "D. pemanasan menyebabkan ragi dan tepung mengembang":
+                $ quiz_fungi2_score += 0
+
+        "10. Dinding sel pada jamur Zygomycota mengandung zat …."
+        menu:
+            "A. Hidup di daerah lembab":
+                $ quiz_fungi2_score += 0
+            "B. Bisa membuat makanan sendiri":
+                $ quiz_fungi2_score += 0
+            "C. Bergantung pada substrat":
+                $ quiz_fungi2_score += 10
+            "D. Mempunyai klorofil":
+                $ quiz_fungi2_score += 0
+
+        "Jawaban : 
+            1. D    3. D    5. A    7. B    9. C
+            2. A    4. C    6. A    8. D    10. C"
+
+        "Nilaiku adalah [quiz_fungi2_score]"
+
+    # Check the quiz 1 score
+    if quiz_fungi2_score >= 75:
+        # Win
+        sr "Selamat Bagi yang Nilainya Bagus"
+        sr "Kalian bebas melakukan apa saja sampai waktu pelajaran habis"
+        # Did he win? Yes.
+        #$ quiz_fungi2_win = True
+        #$ quiz_fungi2_lose = False   
+    else:
+        # Lose
+        sr "Bagi yang Nilainya jelek bisa mengulang lagi"
+        menu:
+            "Mengulang Lagi":
+                jump quiz_fungi2
+            "Tidak Ingin Mengulang":
+                "Anda gagal sebagai murid"
+                "~END~"
+                return
+    
     mg1 "Kamu pulang bareng siapa ? "
     mc " Sendiri jalan kaki , kenapa sel?"
     mg1 "Yauda bareng aku aja gapapa ayo"
