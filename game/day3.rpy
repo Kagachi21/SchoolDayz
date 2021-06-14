@@ -555,134 +555,130 @@ label day3_Miselia:
 
     label quiz_fungi3:
 
-        "1. Ciri-­ciri Deuteromycotina adalah…"
+        "1. Sifat jamur jika ditinjau sebagai makhluk heterotrof adalah … "
         menu:
-            "A. reproduksi seksual dengan spora":
+            "A. mampu memproduksi makanan sendiri":
                 $ quiz_fungi3_score += 0
-            "B. memiliki askus yang menghasilkan askospora":
-                $ quiz_fungi3_score += 0
-            "C. Hifanya bercabang cabang, tidak bersekat":
-                $ quiz_fungi3_score += 0
-            "D. reproduksi aseksual dengan pembentukan konidia":
+            "B. hidupnya sangat tergantung pada inangnya":
                 $ quiz_fungi3_score += 10
+            "C. hidup di wilayah yang memiliki kelembapan":
+                $ quiz_fungi3_score += 0
+            "D. mampu berfotosintesis":
+                $ quiz_fungi3_score += 0
 
-        "2. Dibawah ini yang tidak masuk dalam golongan Zygomycotina adalah..."
+        "2. Berikut ini yang merupakan contoh spesies dari deuteromycotina ialah … "
         menu:
             "A. Penicillium sp.":
-                $ quiz_fungi3_score += 10
-            "B. Glomus sp":
                 $ quiz_fungi3_score += 0
-            "C. Cunninghamella sp":
+            "B. neurospora sitophila":
                 $ quiz_fungi3_score += 0
-            "D. Pilobolus sp":
+            "C. gigaspora":
                 $ quiz_fungi3_score += 0
-
-        "3. Penelitian tentang jamur sangat banyak diminati oleh para ilmuwan, penelitian tersebut termasuk ke dalam bidang ilmu .."
-        menu:
-            "A. botani":
-                $ quiz_fungi3_score += 0
-            "B. fisiologi":
-                $ quiz_fungi3_score += 0
-            "C. planktonologi":
-                $ quiz_fungi3_score += 0
-            "D. mikologi":
+            "D. gonoderma sp":
                 $ quiz_fungi3_score += 10
 
-        "4. Jamur Zygomicota menyerap makanannya menggunakan …."
+        "3. Berikut ini contoh bereproduksi jamur secara begetatif adalah … "
         menu:
-            "A. sporangium":
+            "A. Konjungsi":
                 $ quiz_fungi3_score += 0
-            "B. seluruh bagian tubuh":
+            "B. Basidium":
                 $ quiz_fungi3_score += 0
-            "C. rizoid":
+            "C. Budding":
                 $ quiz_fungi3_score += 10
-            "D. stolon":
+            "D. Membelah diri":
+                $ quiz_fungi3_score += 0
+
+        "jika didasarkan pada uraian di atas, sifat fungi ditunjukkan oleh nomor … " (multiple=2)
+        "4. Perhatikan uraian berikut!
+            \n
+            1) autotrof
+            \n
+            2) heterotrof
+            \n
+            3) mutual
+            \n
+            4) berklorofil
+            \n
+            5) saprofit" (multiple=2)
+        menu:
+            "A. 3, 1, dan 4":
+                $ quiz_fungi3_score += 10
+            "B. 2, 1, dan 4":
+                $ quiz_fungi3_score += 0
+            "C. 2, 3, dan 4":
+                $ quiz_fungi3_score += 0
+            "D. 1, 3, dan 5":
                 $ quiz_fungi3_score += 0
             
-        "5. Jamur yang memiliki hifa tidak bersekat termasuk dalam kelompok jamur…"
+        "5. Di bawahi ini adalah beberapa hal yang membedakan antara jamur dengan tumbuhan lainnya, kecuali … "
         menu:
-            "A. Zygomycota":
+            "A. pola pertumbuhan":
+                $ quiz_fungi3_score += 0
+            "B. struktur tubuhnya":
+                $ quiz_fungi3_score += 0
+            "C. melakukan pergerakan pasif":
                 $ quiz_fungi3_score += 10
-            "B. Basidiomycota":
-                $ quiz_fungi3_score += 0
-            "C. Deuteromycota":
-                $ quiz_fungi3_score += 0
-            "D. Ascomycota":
+            "D. cara reproduksi":
                 $ quiz_fungi3_score += 0
 
-        "6. Hifa pada Oomycota mempunyai ciri …."
+        "6. Deuteromycotina memiliki nama lain yakni jamur … "
         menu:
-            "A. reproduksi generatif dengan fertilisasi":
+            "A. tiram merah":
+                $ quiz_fungi3_score += 0
+            "B. tak sempurna":
                 $ quiz_fungi3_score += 10
-            "B. hidup di darat":
+            "C. tiram putih":
                 $ quiz_fungi3_score += 0
-            "C. tidak memiliki selulosa":
-                $ quiz_fungi3_score += 0
-            "D. memiliki senositik":
+            "D. lendir":
                 $ quiz_fungi3_score += 0
 
-        show fungid2
-        "7. Gambar diatas ini merupakan fungi dari jenis…."
+        "7. Berikut ini yang merupakan salah satu bentuk simbiosis jamur ialah … "
         menu:
-            "A. Volvariella volvacea":
+            "A. Basidiomycotina":
                 $ quiz_fungi3_score += 0
-            "B. Rhizopus stolonifer":
+            "B. Miselium":
                 $ quiz_fungi3_score += 10
-            "C. Saccharomyces cerevisiae":
+            "C. Zygomycotina":
                 $ quiz_fungi3_score += 0
-            "D. Mocor mucedo":
-                $ quiz_fungi3_score += 0
-        hide fungid2
-
-        "Spesies fungi yang berkembang biak dengan membentuk spora di askus dan bermanfaat dalam industri makanan adalah…." (multiple=2)
-        "8. Berikut ini adalah jenis fungi yang berperan dalam kehidupan manusia.
-                \n
-                (1) Aspergillus wentii
-                \n
-                (2) Saccharomyces cerevisiae
-                \n
-                (3) Penicillium chrysogenum
-                \n
-                (4) Volvariella volvacea
-                \n
-                (5) Rhizopus oryzae
-                \n
-                (6) Penicillium camemberti" (multiple=2)
-        menu:
-            "A. 4, 5 dan 6":
-                $ quiz_fungi3_score += 0
-            "B. 2, 3 dan 4":
-                $ quiz_fungi3_score += 0
-            "C. 1, 3 dan 4":
-                $ quiz_fungi3_score += 0
-            "D. 1, 2 dan 6":
-                $ quiz_fungi3_score += 10
-
-        "9. Pada proses pembuatan roti, pemberian ragi membuat adonan menjadi mengembang. Hal ini disebabkan oleh…"
-        menu:
-            "A. tepung dan ragi bereaksi dan menghasilkan O2":
-                $ quiz_fungi3_score += 0
-            "B. ragi merupakan fungi dari kelompok Ascomycota":
-                $ quiz_fungi3_score += 0
-            "C. hasil fermentasi glukosa menghasilkan CO2 yang dapat mengembangkan adonan":
-                $ quiz_fungi3_score += 10
-            "D. pemanasan menyebabkan ragi dan tepung mengembang":
+            "D. Mikoriza":
                 $ quiz_fungi3_score += 0
 
-        "10. Dinding sel pada jamur Zygomycota mengandung zat …."
+        "8. Berikut ini adalah jamur-jamur yang bermanfaat bagi manusia, kecuali … "
         menu:
-            "A. Hidup di daerah lembab":
+            "A. Saccharomyces":
                 $ quiz_fungi3_score += 0
-            "B. Bisa membuat makanan sendiri":
+            "B. Lycoperdon perlatum":
                 $ quiz_fungi3_score += 0
-            "C. Bergantung pada substrat":
+            "C. Volyariella volvacea":
                 $ quiz_fungi3_score += 10
-            "D. Mempunyai klorofil":
+            "D. Albugo":
+                $ quiz_fungi3_score += 0
+
+        "9. Berikut ini adalah jenis jamur yang merugikan manusia ialah … "
+        menu:
+            "A. Albugo":
+                $ quiz_fungi3_score += 10
+            "B. Lycoperdon perlatum":
+                $ quiz_fungi3_score += 0
+            "C. saccharomyces":
+                $ quiz_fungi3_score +=  0
+            "D. Higroporus":
+                $ quiz_fungi3_score += 0
+
+        "10. Jamur darat mampu menghasilkan spora yang dibentuk dari sel khusus. Sel khusus tersebut disebut dengan … "
+        menu:
+            "A. basidium":
+                $ quiz_fungi3_score += 0
+            "B. askus":
+                $ quiz_fungi3_score += 10
+            "C. hifa":
+                $ quiz_fungi3_score += 0
+            "D. miselium":
                 $ quiz_fungi3_score += 0
 
         "Jawaban : 
-            1. D    3. D    5. A    7. B    9. C
-            2. A    4. C    6. A    8. D    10. C"
+            1. B    3. C    5. C    7. B    9. A
+            2. D    4. A    6. B    8. C    10. B"
 
         "Nilaiku adalah [quiz_fungi3_score]"
 

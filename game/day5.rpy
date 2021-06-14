@@ -489,7 +489,147 @@ label day5_Miselia:
     sr "Wah terimakasih ya nak "
 
     scene kelas 
-    "Kuis Virus"
+
+    $ quiz_fungi5_score = 0
+
+    label quiz_fungi5:
+
+        "1. Berikut ini yang bukan merupakan ciri-ciri jamur Basidiomycota adalah …."
+        menu:
+            "A. hifa bersekat melintang":
+                $ quiz_fungi5_score += 0
+            "B. reproduksi seksual menghasilkan basidium":
+                $ quiz_fungi5_score += 0
+            "C. reproduksi aseksual dengan konidia":
+                $ quiz_fungi5_score += 0
+            "D. merupakan jamur makroskopik":
+                $ quiz_fungi5_score += 10
+
+        "2. Talus yang berbentuk seperti kerak adalah ciri lumut kerak yang bertipe …."
+        menu:
+            "A. Fruktikosa":
+                $ quiz_fungi5_score += 0
+            "B. Foliosa":
+                $ quiz_fungi5_score += 0
+            "C. Krustosa":
+                $ quiz_fungi5_score += 10
+            "D. Variola":
+                $ quiz_fungi5_score += 0
+
+        "3. Di bawah ini yang bukan merupakan manfaat lumut kerak bagi manusia adalah …."
+        menu:
+            "A. dibuat obat":
+                $ quiz_fungi5_score += 0
+            "B. dibuat kertas lakmus":
+                $ quiz_fungi5_score += 0
+            "C. penambah rasa atau aroma":
+                $ quiz_fungi5_score += 0
+            "D. bahan cat tembok":
+                $ quiz_fungi5_score += 10
+
+        "4. tubuh buah yang berbentuk seperti mangkok tempat dihasilkannya spora disebut…"
+        menu:
+            "A. askus":
+                $ quiz_fungi5_score += 10
+            "B. stolon":
+                $ quiz_fungi5_score += 0
+            "C. basidium":
+                $ quiz_fungi5_score += 0
+            "D. konidium":
+                $ quiz_fungi5_score += 0
+            
+        "5. Di bawah ini yang merupakan pernyataan yang benar adalah …."
+        menu:
+            "A. askogonium mengandung dua inti":
+                $ quiz_fungi5_score += 0
+            "B. inti askogonium berpindah tempat ke anteridium":
+                $ quiz_fungi5_score += 0
+            "C. askus dapat terbentuk dari hifa haploid":
+                $ quiz_fungi5_score += 0
+            "D. anteridium mengandung inti yang haploid":
+                $ quiz_fungi5_score += 10
+
+        "6. Di bawah ini yang merupakan pernyataan yang benar perbedaaan jamur Basidiomycota dan Lichenes"
+        menu:
+            "A. pencernaan makananannya":
+                $ quiz_fungi5_score += 0
+            "B. Basdiomycota = jamurnya memiliki tudung buah dan Lichenes = hasil simbiosis antara jumur basidio atau asco dengan chlorophyta atau cyanobacteria":
+                $ quiz_fungi5_score += 10
+            "C. reproduksi aseksualnya":
+                $ quiz_fungi5_score += 0
+            "D. reproduksi seksualnya":
+                $ quiz_fungi5_score += 0
+
+        "7. Jenis Ascomycota yang dapat mengubah ampas kacang menjadi oncom adalah.."
+        menu:
+            "A. Aspergillus Niger":
+                $ quiz_fungi5_score += 0
+            "B. Ustilago maydis":
+                $ quiz_fungi5_score += 0
+            "C. Puccinia graminis":
+                $ quiz_fungi5_score += 0
+            "D. Neurospora sitophyla":
+                $ quiz_fungi5_score += 10
+
+        "8. Pernyataan dibawah ini tentang sifat-sifat dari jamur yang benar adalah"
+        menu:
+            "A. Tidak berklorofil dan prokariotik":
+                $ quiz_fungi5_score += 0
+            "B. Tidak berklorofil dan eukariotik":
+                $ quiz_fungi5_score += 10
+            "C. Tidak berklorofil dan autotrof":
+                $ quiz_fungi5_score += 0
+            "D. berklorofil dan eukariotik":
+                $ quiz_fungi5_score += 0
+
+        show fungid5
+        "9. Haustorium ditunjukkan oleh nomor..."
+        menu:
+            "A. 1":
+                $ quiz_fungi5_score += 0
+            "B. 2":
+                $ quiz_fungi5_score += 10
+            "C. 3":
+                $ quiz_fungi5_score += 0
+            "D. 4":
+                $ quiz_fungi5_score += 0
+        hide fungid5
+
+        "10. Dalam siklus hidup jamur, spora yang jatuh di tempat yang lembab akan membentuk…"
+        menu:
+            "A. Protalium":
+                $ quiz_fungi5_score += 0
+            "B. Arkegonium":
+                $ quiz_fungi5_score += 0
+            "C. Miselium":
+                $ quiz_fungi5_score += 10
+            "D. Protonema":
+                $ quiz_fungi5_score += 0
+
+        "Jawaban : 
+            1. D    3. D    5. D    7. D    9. B
+            2. C    4. A    6. B    8. B    10. C"
+
+        "Nilaiku adalah [quiz_fungi5_score]"
+
+    # Check the quiz 1 score
+    if quiz_fungi5_score >= 75:
+        # Win
+        sr "Selamat Bagi yang Nilainya Bagus"
+        sr "Kalian bebas melakukan apa saja sampai waktu pelajaran habis"
+        # Did he win? Yes.
+        #$ quiz_fungi5_win = True
+        #$ quiz_fungi5_lose = False   
+    else:
+        # Lose
+        sr "Bagi yang Nilainya jelek bisa mengulang lagi"
+        menu:
+            "Mengulang Lagi":
+                jump quiz_fungi5
+            "Tidak Ingin Mengulang":
+                "Anda gagal sebagai murid"
+                "~END~"
+                return
 
     scene lorong 
     mg1 "Kamu mau pulang bareng aku ga ?ayo kalo mau"

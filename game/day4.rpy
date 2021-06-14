@@ -577,7 +577,146 @@ label day4_Miselia:
     sml "Laiya itu, mna soalnya ada 3 lagi, kenapa ga 1 aja ya"
     udn "Mending gausa di kasih soal sekalian hahaha"
 
-    "Kuis virus"
+    #Initialize score
+    $ quiz_fungi4_score = 0
+
+    label quiz_fungi4:
+
+        "1. Jamur mampu berkembang biak dengan cara tak kawin / vegetatif dengan membentuk … "
+        menu:
+            "A. Konidium":
+                $ quiz_fungi4_score += 10
+            "B. Sporangium":
+                $ quiz_fungi4_score += 0
+            "C. Sorus":
+                $ quiz_fungi4_score += 0
+            "D. Gemma":
+                $ quiz_fungi4_score += 0
+
+        "2. Pohon pinus akan mendapatkan … dengan adanya mikroza yang terdapat pada akarnya. Jawaban yang tepat untuk mengisi ruang rumpang pada kalimat di atas ialah …"
+        menu:
+            "A. air dan bahan organik":
+                $ quiz_fungi4_score += 10
+            "B. toksin untuk mengusir hama":
+                $ quiz_fungi4_score += 0
+            "C. enzim pencernaan makanan":
+                $ quiz_fungi4_score += 0
+            "D. toksin untuk mengusir hama":
+                $ quiz_fungi4_score += 0
+
+        "3. Spora yang dapat bergerak dengan menggunakan flagel disebut dengan … "
+        menu:
+            "A. oospora":
+                $ quiz_fungi4_score += 0
+            "B. sporofit":
+                $ quiz_fungi4_score += 0
+            "C. gemma":
+                $ quiz_fungi4_score += 10
+            "D. zoospore":
+                $ quiz_fungi4_score += 0
+
+        "4. Dibawah ini bukanlah contoh dari perkembangbiakan jamur secara aseksual, ialah … "
+        menu:
+            "A. Pertunasan":
+                $ quiz_fungi4_score += 0
+            "B. Fragmentasi":
+                $ quiz_fungi4_score += 10
+            "C. Pembentukan spora":
+                $ quiz_fungi4_score += 0
+            "D. Pembentukan konida":
+                $ quiz_fungi4_score += 0
+            
+        "5. Ganggang tetap mampu hidup meskipun tidak bersimbiosis dengan lumut. Hal tersebut dapat terjadi karena ganggan mampu … "
+        menu:
+            "A. Dapat berkembang biak dengan membelah diri":
+                $ quiz_fungi4_score += 0
+            "B. Hidup secara fotoautotrof":
+                $ quiz_fungi4_score += 0
+            "C. Hidup secara heterotrof":
+                $ quiz_fungi4_score += 0
+            "D. Hidup secara saprofit":
+                $ quiz_fungi4_score += 10
+
+        "6. Berikut ini yang merupakan perbedaan antara zygomycota dan oomycota secara spesifik ialah … "
+        menu:
+            "A. struktur hifanya":
+                $ quiz_fungi4_score += 0
+            "B. pencernaan makananannya":
+                $ quiz_fungi4_score += 0
+            "C. reproduksi aseksualnya":
+                $ quiz_fungi4_score += 0
+            "D. reproduksi seksualnya":
+                $ quiz_fungi4_score += 10
+
+        "7. Aspergillus dapat hidup secara … "
+        menu:
+            "A. Mandiri":
+                $ quiz_fungi4_score += 0
+            "B. Parasit":
+                $ quiz_fungi4_score += 0
+            "C. Autotrof":
+                $ quiz_fungi4_score += 0
+            "D. Saprofit":
+                $ quiz_fungi4_score += 10
+
+        "8. Jamur makroskopik tergolong ke dalam jenis kelompok … "
+        menu:
+            "A. Ascomycota":
+                $ quiz_fungi4_score += 0
+            "B. Zygomycota":
+                $ quiz_fungi4_score += 10
+            "C. Basidiomycota":
+                $ quiz_fungi4_score += 0
+            "D. Deuteromycota":
+                $ quiz_fungi4_score += 0
+
+        "9. Dibawah ini yang tidak tergolong ke dalam kelompok jamur divisi basidiomycota ialah … "
+        menu:
+            "A. Jamur beracun":
+                $ quiz_fungi4_score += 0
+            "B. Jamur Pinicilin":
+                $ quiz_fungi4_score += 0
+            "C. Jamur Tempe":
+                $ quiz_fungi4_score += 10
+            "D. Jamur kuping":
+                $ quiz_fungi4_score += 0
+
+        "10. Jamur yang menyebabkan penyakit kaki pada atlet berasal dari divisi jamur … "
+        menu:
+            "A. Deteromycota":
+                $ quiz_fungi4_score += 10
+            "B. Zygomycota":
+                $ quiz_fungi4_score += 0
+            "C. Basidiomycota":
+                $ quiz_fungi4_score += 0
+            "D. Phicomycota":
+                $ quiz_fungi4_score += 0
+
+        "Jawaban : 
+            1. A    3. C    5. D    7. D    9. C
+            2. A    4. B    6. D    8. B    10. A"
+
+        "Nilaiku adalah [quiz_fungi4_score]"
+
+    # Check the quiz 1 score
+    if quiz_fungi4_score >= 75:
+        # Win
+        sr "Selamat Bagi yang Nilainya Bagus"
+        sr "Kalian bebas melakukan apa saja sampai waktu pelajaran habis"
+        # Did he win? Yes.
+        #$ quiz_fungi4_win = True
+        #$ quiz_fungi4_lose = False   
+    else:
+        # Lose
+        sr "Bagi yang Nilainya jelek bisa mengulang lagi"
+        menu:
+            "Mengulang Lagi":
+                jump quiz_fungi4
+            "Tidak Ingin Mengulang":
+                "Anda gagal sebagai murid"
+                "~END~"
+                return
+
     mg1 "Kamu pulang sama siapa ?"
     mc "Gaada, aku jalan kaki, ayahku lembur"
     mg1 "Yauda ayo aku tebengin sampai depan rumahmu"

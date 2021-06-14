@@ -89,7 +89,7 @@ label day1_Miselia:
             "D. mempunyai floem":
                 $ quiz_fungi1_score += 0
             
-        "5. Kumpulan benang­benang halus yg terdapat pada jamur disebut …"
+        "5. Kumpulan benang­-benang halus yg terdapat pada jamur disebut …"
         menu:
             "A. miselium":
                 $ quiz_fungi1_score += 10

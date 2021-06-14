@@ -7,6 +7,7 @@ image virusd4_2 = im.Scale("/Soal/Soal_virus1.jpg",1280,720)
 image virusd5 = im.Scale("/Soal/soal_virusd5.jpg",1280,720)
 image fungid1 = im.Scale("/Soal/Fungi/Soal_Fungi1.jpg",1280,720)
 image fungid2 = im.Scale("/Soal/Fungi/Soal_Fungi2.jpg",720,1280)
+image fungid5 = im.Scale("/Soal/Fungi/Soal_Fungi3.jpg",1280,720)
 
 #image BG
 image sky = "/background/PAGI/SKY.jpg"
