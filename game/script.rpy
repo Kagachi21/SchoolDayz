@@ -112,7 +112,7 @@ default money = 0
 
 # The game starts here.
 label start:
-
+    stop music fadeout 1.0
     #Input Type Biasa
     #$ mcFirst = renpy.input("What is your first name ?", length=30) or "default name"
     #$ mcLast = renpy.input("What is your last name ?", length=30) or "default surname"
@@ -136,10 +136,14 @@ label prolog:
     show mom at right
     mom "Mau tambah lagi ?"
     mc "Ga usah, aku sudah kenyang dan aku sudah menyiapkan semuanya untuk ke sekolah"
+    play sound cuci_piring
     "~Cuci Piring~"
+    window hide dissolve
+    $ renpy.pause(35.0, hard=True)
+    window show dissolve
     mom "Ga usah, Ibu aja yang cuci piringnya. Kamu berangkat aja"
     mc "....."
-    mc "Gapapa, sudah terlanjur"
+    mc "Gapapa, sudah selesai"
     mom "Oiya, Bekalnya sudah ibu siapkan juga, jangan lupa dibawa ya"
     $ money += 10000 
     mom "Ini uang sangu mu %(money)d"

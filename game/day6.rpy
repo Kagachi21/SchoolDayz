@@ -332,6 +332,8 @@ label day6_Kirana:
     dad "Semoga anak kita baik-baik saja bu"
     mom "Iyaa yah.. besok mari kita coba dengarkan permasalahannya"
 
+    jump day7_Kirana
+
 label day6_Miselia:
 
     scene ruang keluarga

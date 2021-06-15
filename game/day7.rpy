@@ -108,9 +108,175 @@ label day7_Kirana:
     na "Kalau gitu gass kita berangkat"
     wkk "Let's Goo"
 
-    scene pantai
+    scene parkir
     ol "Yeay,, Akhirnya sampai juga"
     wkk "Mantap emang"
+
+    scene pantai
+    bl "Segarnya aroma pantai ini"
+    bl "Kita foto dulu atau gimana ?"
+    na "Ganti baju dulu lahh, tapi klo mau foto duluan sih gapapa"
+    bl "Mending kita foto duluan saja jadi ada Awal datang sama akhir"
+    skce1 "Boleh itu gass keun"
+    skco2 "Cari tempat dulu kuy yang cocok buat foto"
+    kk "Sini kayaknya cocok cepat sini sini"
+    kk "Aku ga sabar mau basah-basahan hahahah"
+    bl "Sudah siap kan ?"
+    na "Sudah lah"
+    play sound ambil_foto
+    mg2 "Okk dah kalau gitu skuy ganti baju.. main basah-basahan kita"
+    bl "Yuukk!!"
+    skce1 "Tunggu akuu!!"
+    ol "Aku juga mau ikut oee"
+    wkk "[kk] kamu ga ikut mereka ganti baju ?"
+    kk "Aku pake baju ini aja sudah aman kok"
+    na "Wihhh.. Segarnya airnya kuy renang [mcFirst]"
+    mc "Okk wait buka baju"
+    mc "Gass"
+    skco2 "Aku juga ikutan oee"
+    kk "Kamu ga ikut renang ama mereka ?"
+    wkk "Bentar lagi, kita bahas dulu cara dekatin mereka berdua lagi"
+    kk "Kamu tauu ?"
+    wkk "HAhahah,, kelihatan dari wajah mereka berdua"
+    kk "Iyaa juga sih lebih canggung sekarang"
+    kk "gimana kalau aku saja yang jaga barang-barang kita"
+    kk "Nanti gantian aku mau renang juga lah, nanti kan si [mg2_Last] main-main juga kan"
+    kk "Kalau bisa kamu dekatin jadi misal mereka berdua dekat kalian ajak yang lainnya pergi"
+    wkk "Boleh juga idenya bisaa nihh dicobaa"
+    wkk "yaudah aku kesana dulu mau bilang ke anak-anak suruh ikut aku misal [mg2_Last] sudah datang"
+    wkk "Yuhuuuu.. Sea I'm coming"
+    na "Hahah segar kan"
+    kk "Enaknya lihat mereka"
+    mg2 "[kk] kamu ga renang ?"
+    kk "Aku jaga barang-barang dulu"
+    kk "Sana dah kalau mau renang nanti gantian yang jaga hehehe"
+    mg2 "Kenapa, ga kita berdua saja yang jaga ?"
+    kk "Aku aja cukup sana main dulu sambil dinginkan kepalamu itu"
+    mg2 "Okie [kk]"
+    ol "Kami duluann [kk]"
+    kk "Iyaa"
+
+    scene air pantai
+    wkk "Kuy kuy ntr lagi ikut aku, explore kita"
+    skco2 "Gasskeun"
+    mg2 "Mainn duluan nih bocah hahahha"
+    na "Sini kau"
+    "~cepyar~"
+    mg2 "Awas kau nada"
+    na "Pfft,, serbu para ciwi-ciwi gaes"
+    skco2 "Lets goo"
+    wkk "Kuyy kitaa kaburr pergii"
+    mc "Lahh ?"
+    mg2 "...."
+    mc "...."
+    ol "yang lain mana ?"
+    mg2 "Kabur mereka"
+    bl "hohoho sisa 1 disini,, serbuu!!!"
+    ol "Gogogogogo"
+    mc "Eh eh kok jadi aku"
+    mc "Gyahhh.. Blurp~ Blurp~"
+    $ all_girls = "[ol], [mg2_Last], [skce1], dan [bl]"
+    all_girls "HAhahhahaha"
+
+    scene pantai
+    kk "Kayaknya berjalan lancarr.."
+    wkk "yoo"
+    kk "Astaga, kaget aku"
+    wkk "Gimana ?"
+    kk "Kelihatannya lancar sih"
+    wkk "Hahah benar kan syukurlah kalau mendingan"
+
+    scene air pantai
+    "Aku rasa hari fokus bersenang-senang saja lah meskipun ada beberapa problem sama [mg2_Last]"
+    "Ga begitu buruk juga, jadi gini rasanya ada teman yang ngesupport juga"
+    "Kami pun bergantian yang menjaga barang, bermain di pantai hingga sore pun menyenangkan"
+
+    scene pantai sore
+    bl "Kuy foto lagi, foto kenangan diakhir mengunjungi pantai"
+    kk "Gas gas berangkat"
+    wkk "[ol]... [ol].... ppstt nanti pulang sama yang lainnya aja"
+    ol "ehh,, Kenapa ?"
+    wkk "Gapapa,, biar [mcFirst] sama {mg2_Last}"
+    ol "Iya deh, yang penting pulang hahaha"
+    bl "Kalian ini ngomong mulu ga siap-siap"
+    wkk "hehehh maaf-maaf"
+    bl "1... 2... 3..."
+    skce1 "Cepat sini lari lari"
+    play sound ambil_foto
+    na "Yokk,, pulang yok pulang"
+
+    scene parkir
+    wkk "[mg2_Last] pulangmu bareng [mcFirst]"
+    mg2 "Lah,, kenapa ?"
+    mc "...."
+    wkk "Soalnya aku langsung pulang beda arah juga kan"
+    mg2 "hnnggh.. iya dehh"
+    wkk "[mcFirst] kamu ga amasalh kan ?"
+    mc "Iya gapapa"
+    wkk "ppstt psst... [kk]"
+    kk "Apa ?"
+    wkk "Giamana mantap kan idenya ?"
+    kk "Boleh-boleh"
+    na "kalau gitu skuy Pulang"
+    mc "...."
+
+    scene jalan
+    mg2 "[mcFirst] Maaf Yaa yang kemarin"
+    mc "Hahh !?"
+    mg2 "Maaff yang Kemarin"
+    mc "Ohh.."
+    mg2 "Aku juga udah berlebihan nanyain hal yang sensitif"
+    mg2 "Bodohnya aku, aku minta maaf yaa.. Hiks... Hikss.."
+    mc "Ahh..Iyaa.."
+    mc "Aku juga minta maaf kayaknya kemarin aku juga berlebihan"
+    mg2 "Kamu ga salah kok"
+    mg2 "Aku jika ditanyai hal sensitif begitu terus maksa pasti bakalan marah hehe"
+    mc "...."
+    mc "dah dah.. kita baikan ?"
+    mg2 "Huum Hehehhe"
+
+    scene rumah mg2
+    mc "Ini rumahmu kan ?"
+    mg2 "Iyaa.. mau mampir ?"
+    mc "Ga usah aku pulang dulu aja"
+    mg2 "Iyaa.. Hati-hati dijalan yaa"
+    mc "Hooh.. iyaa"
+    mg2 "bai bai"
+
+    scene depan rumah
+
+    scene ruang tamu
+    mc "Aku Pulangg"
+    play sound laridilorong
+    mom "Gimana kamu gapapa ?"
+    mc "Aman buu,, ada Nada juga"
+    mom "Syukurlahh"
+    mc "Ayah.. kemana bu ?"
+    mom "Ayahmu nonton tv"
+    mc "ohh.. Iya udah aku mau tidur dulu ya bu"
+    mc "aku agak capek bu hehhe"
+    mom "Iyaa.."
+
+    scene kamar
+    "Huuu Capeknyaaa"
+    "Hmm... Kitaa jadi baikan huh"
+    "Dahlah aku tidur aja"
+
+    scene kamar malam
+    play sound telpon
+    "Huhh. siapa ini ?"
+    "Ahh.. [mg2_Last]"
+    mc "Ada apa ?"
+    mg2 "Hoo Sudah bangun kukira masih tidur"
+    mc "Kamu telpon aku jadi bangun"
+    mg2 "Hehehehe masih capek"
+    mc "Ga terlalu sih tapi masih ingin tidur"
+    mg2 "Yaudah.. tidur lagi sana"
+    mg2 "Ketemu besokk"
+    mc "Iyaa Iyaa"
+    mg2 "Bai bai"
+    mc "Bai"
+    "Huu ? kalau gitu aku tidur lagi aja capek beneran ternyata"
 
 label day7_Miselia:
 

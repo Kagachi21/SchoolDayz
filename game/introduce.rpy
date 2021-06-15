@@ -353,6 +353,7 @@ label pengenalan:
     cat "Meeeoooww ^-^' ?"
     mc "aku sudah selesai"
     "~Cuci Piring~"
+    play sound cuci_piring
     mc "aku mau bersiap siap berangkat sekolah"
     ai "Iyaaa"
 
