@@ -47,8 +47,43 @@ label day8_Kirana:
     ard "II-iiya Buu"
 
     scene ruang BP
-    gbp "Maksud kalian itu apa "
+    gbp "Maksud kalian itu apa kok bisa bisa nya ke warung nya bu ica"
+    ard "kk-kami hanya membeli air bu"
+    gbp "Kamu ini banyak alasan saja , coba bagaiamna kalo orang tua kalian mengetahuinya"
+    udn "Jangan beritau kepada ortu kami bu ,saya dan ardi minta maaf"
+    gbp "Yasudah, kali ini ibu kasih keringanan, jangan sampe kamu melakukannya kembali"
+    ard "Baik bu, terimkasih ."
+    gbp "Pelajaran apa hari ini?sana segera menyusul dan mengikuti peljaran, awas sampe ketahuan bolos lagi"
+    mc "Assalamualaikum bu.. permisi"
+    ard "Loh, mc kamu kok disini , ngapain? "
+    mc "Ini ada titipan dari bu sendra buat Bu antin,"
+    gbp "iya nak, terimakasih ya , kalian satu kelas toh"
+    mc "Iya bu saya ardi dan udin 1 kelas"
+    gbp "Yasudah sana kembali ke kelas, dan ikuti peljarannya !"
+    mc "Iya bu, kami permisi dulu"
 
+    scene kelas 
+    ard "Assalamualaikum bu"
+    sr "waalaikumsalam, sana cepat duduk , tolong di perhatikan baik baik , bukan hanya untuk ardi dan udin, tapi semua nya , patuhi aturan sekolah, karen kalian statusnya sebagai siswa , kalo kalian tidak mau mengikuti aturan yang sudah ada , jangan berada di sekolahan. paham?!!!!"
+    udn "PAHAMMM BUUU!!!"
+
+    "Materii"
+
+    scene Kantin
+    mg2 "Mc, emang tadi udin sama ardi di skors ta di BP"
+    mc  "Kurang tau juga aku ya , soalnya tadi ku pas kesana dia udah mau pamitan balik kelas"
+    mg2 "Oalah gitu, yauda kamu mau pesen apa nih? "
+    mc  "Tumben kantin bu erna rame banget, hmm kalo gitu aku nitip beli es teh aja deh "
+    mg2 "Yauda tunggu meja sini ya , aku beli dulu"
+    mc  "Oke"
+
+    scene kelas
+    sr "Anak anak, hari ini ibu akan memberi soal ya , kita latihan soal"
+    mc "Baik buuu"
+    mg2 "Yahhh , aku belom belajar anjir , maana ada soal"
+    mc "Udah , ini kan namannya latian , jadi santai aja ,"
+    mg2 "Tapppiii"
+    sr "Mc tolong bagikan"
 
 
 
