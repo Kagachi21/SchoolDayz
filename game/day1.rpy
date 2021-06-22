@@ -156,8 +156,10 @@ label day1_Miselia:
                 $ quiz_fungi1_score += 0
 
         "Jawaban : 
-            1. B    3. C    5. A    7. B    9. D
-            2. C    4. B    6. D    8. C    10. A"
+            \n
+            1. B \ \ \ \ 3. C \ \ \ \ 5. A \ \ \ \ 7. B \ \ \ \ 9. D
+            \n  
+            2. C \ \ \ \ 4. B \ \ \ \ 6. D \ \ \ \ 8. C \ \ \ \ 10. A"
 
         "Nilaiku adalah [quiz_fungi1_score]"
 
@@ -174,6 +176,7 @@ label day1_Miselia:
         sr "Bagi yang Nilainya jelek bisa mengulang lagi"
         menu:
             "Mengulang Lagi":
+                $ quiz_fungi1_score = 0
                 jump quiz_fungi1
             "Tidak Ingin Mengulang":
                 "Anda gagal sebagai murid"
@@ -200,7 +203,7 @@ label day1_Kirana:
 
     scene jalan
 
-    scene gerbang sekolah
+    scene gerbang_sekolah
 
     scene lorong kelas
     "Akhh.. Aku Menabrak sesuatu"
@@ -447,8 +450,10 @@ label day1_Kirana:
                 $ quiz1_score += 0
 
         "Jawaban : 
-            1. A    3. C    5. A    7. B    9. D
-            2. C    4. B    6. D    8. C    10. A"
+            \n
+            1. A \ \ \ \ 3. C \ \ \ \ 5. A \ \ \ \ 7. B \ \ \ \ 9. D
+            \n
+            2. C \ \ \ \ 4. B \ \ \ \ 6. D \ \ \ \ 8. C \ \ \ \ 10. A"
 
         "Nilaiku adalah [quiz1_score]"
 
@@ -465,6 +470,7 @@ label day1_Kirana:
         sr "Bagi yang Nilainya jelek bisa mengulang lagi"
         menu:
             "Mengulang Lagi":
+                $ quiz1_score = 0
                 jump quiz1
             "Tidak Ingin Mengulang":
                 "Anda gagal sebagai murid"
@@ -492,7 +498,7 @@ label day1_Kirana:
     mc "...."
     mc "ga usah repot repot, Terima kasih atas tawarannya aku jalan saja"
 
-    scene jalan 
+    scene jalan_sore
     mc "Ngapain ikutin aku segala ?"
     mg2 "Aku pengen tau rumahmu juga"
     mc "...."
@@ -526,7 +532,7 @@ label day1_Kirana:
     mg2 "Kalau gitu aku lihat lihat hal sekitar ya te"
     mom "Iyaa nak"
 
-    scene dapur
+    scene dapur_sore
     mg2 "Tante Tante ini foto siapa ? "
     mom "Itu Fotonya [mcFirst]"
     mg2 "Hahahahah Lucu Banget te"
@@ -548,7 +554,7 @@ label day1_Kirana:
     mc "Bisa bisanya dia lihat fotoku"
     mc "Merepotkan"
 
-    scene dapur 
+    scene dapur_sore
     mg2 "Sini Sini Makan. maaf aku makan duluann hehhe"
     mg2 "Habisnya terlihat enak sih"
     mc "...."
@@ -599,7 +605,7 @@ label day1_Airin:
 
     scene jalan
 
-    scene gerbang sekolah
+    scene gerbang_sekolah
     na "oeee [mcFirst] Tunggu akuu!!"
     mc "...."
     na "Akhirnya sampai juga, dihh ga di tungguin lur"
@@ -759,9 +765,11 @@ label day1_Airin:
             "D. Teleskop":
                 $ quiz1_klasifikasi_score += 0
 
-        "Jawaban : 
-            1. A    3. C    5. A    7. D    9. B
-            2. B    4. D    6. A    8. C    10. A"
+        "Jawaban :
+            \n
+            1. A \ \ \ \ 3. C \ \ \ \ 5. A \ \ \ \ 7. D \ \ \ \ 9. B
+            \n  
+            2. B \ \ \ \ 4. D \ \ \ \ 6. A \ \ \ \ 8. C \ \ \ \ 10. A"
 
         "Nilaiku adalah [quiz1_klasifikasi_score]"
 
@@ -778,6 +786,7 @@ label day1_Airin:
         sr "Bagi yang Nilainya jelek bisa mengulang lagi"
         menu:
             "Mengulang Lagi":
+                $ quiz1_klasifikasi_score = 0
                 jump quiz1_klasifikasi
             "Tidak Ingin Mengulang":
                 "Anda gagal sebagai murid"
@@ -808,7 +817,7 @@ label day1_Airin:
     scene lorong sekolah
     "Hmm.. Terdengar lagi nyanyiannya, aku penasaran apakah yang cewe yang kemarin ya ?"
 
-    scene atap
+    scene atap_sore
     "Wahh.... Apa dia setiap hari latihan disini ? Mungkin dia dari ekskul padsu atau sejenisnya"
     "Suaranya enak apa aku harus diam dulu disini sampai dia selesai ?"
     "Sudah selesai ? Mungkin aku intip saja"
@@ -822,10 +831,10 @@ label day1_Airin:
     "Hoshh.. Hoshh.. Hosshh Syukurlah ga ketemu hahahaha"
     "Sudah lah aku pulang saja"
 
-    scene gerbang sekolah
+    scene gerbang_sekolah_sore
     "Ternyata dia masih mau latihan nyanyi lagi"
 
-    scene Atap 
+    scene atap_sore
     mg3 "Ternyata laki yang kemarin baru saja pulang"
     mg3 "Hmmm.. apa dia yaa yang ngeliatin aku tadi ya?"
 
@@ -837,17 +846,17 @@ label day1_Airin:
     cat "Meooww ///"
     mc "Kuy ikut aku di dapur"
 
-    scene dapur
+    scene dapur_sore
     mc "Ini makanannya. Btw, kok sepi ya"
     mc "Semuanya pada kemana [cat] kok sepi ? Kalau ayah pasti masih kerja"
     cat "Meooowww ??"
     mc "Kalau gitu aku langsung tidur aja [cat] selamat menikmati makanannya"
     cat "Meooowww"
 
-    scene kamar
+    scene kamar_sore
     "Haaa.. capeknyaa... \n ganti baju dulu lalu tidur"
 
-    scene kamar malam
+    scene kamar_malam
     "Hoaamm... Sudah malam ternyata"
 
     scene ruang keluarga
@@ -859,7 +868,7 @@ label day1_Airin:
     mc "ohh.. okk si [cat] tenang sekali"
     dad "Nahh,, iyaa kyaknya nyaman sama [dad] hahahha"
 
-    scene dapur
+    scene dapur_malam
     mc "Bu, tadi kemana ?"
     mom "Umm... Tadi [mom] belanja di pasar"
     mom "Bentar lagi [mom] selesai masaknya, Tolong, [dad] dan [cat] panggilkan"
@@ -870,11 +879,11 @@ label day1_Airin:
     dad "Hoo.. sudah siapp.. Ayo [cat] makan"
     cat "Meoooowww ^_^"
     
-    scene dapur
-    mc "Ini kutuanglan untukmu [cat]"
+    scene dapur_malam
+    mc "Ini kutuangkan untukmu [cat]"
     cat "Meoooww"
     dad "Enaknyaa,, sampe lapar hahaha"
-    mom "ihhh.. ahhaha makan di makan ayoo"
+    mom "ihhh.. ahhaha ayooo di makan"
     mom "Oiya,, gimana sekolahmu ? apa ada masalah ?"
     mc "Ga ada bu, aman cuma ada yang merepotkan"
     mom "apa itu ?"
@@ -882,8 +891,8 @@ label day1_Airin:
     mom "Baiklah, kalau gitu misal ada apa-apa bilang sama [dad] dan [mom] ya"
     mc "Iya bu"
 
-    scene kamar 
+    scene kamar_malam 
     "Kenyangnya.. Fuuhh~~"
-    "Masalahkah ? semoga kedepannya ga ada masalah sama sekali kejadian dulu tak terulang"
+    "Masalah kah ? semoga kedepannya ga ada masalah sama sekali kejadian dulu tak terulang"
 
     jump day2_Airin

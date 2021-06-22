@@ -333,4 +333,5 @@ label day7_Miselia:
 
     jump day8_Miselia
 
-label day7_Airin:
+ #label day7_Airin:
+

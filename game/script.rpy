@@ -118,11 +118,11 @@ label start:
     #$ mcLast = renpy.input("What is your last name ?", length=30) or "default surname"
     
     #Input Type Screen
-    scene bg langit
+    scene sky with dissolve
     call screen test
     $ mc = Character(mcFirst +" "+mcLast, image="mc")
 
-    jump prolog
+    jump prolog 
     
 label prolog:
     scene bg jendela kamar terlihat burung
@@ -130,7 +130,7 @@ label prolog:
     "Pengalaman yang buruk sekali dan inginku berhenti sekolah, bahkan aku tidak ingin mengingatnya lagi kenangan yang buruk itu. Tapi, kenapa masih saja teringat ? apa yang tuhan inginkan kepadaku hingga selalu memberikanku ingatan buruk tersebut"
     "Mungkin tidak salahnya harus mencoba untuk berangkat mungkin saja berbeda"
     
-    scene ruang makan
+    scene dapur with dissolve
     show dad at left:
         xpos 0.1
         ypos 1.25
@@ -197,7 +197,7 @@ label prolog:
     hide dad
     hide mom
 
-    scene jalan
+    scene jalan with dissolve
     $ kucing = "Kucing"
     $ misterius_1 = "????"
     "Apakah benar hari ini akan baik - baik saja ?"
@@ -225,7 +225,7 @@ label prolog:
     cat "Meooow"
     hide cat_relived
 
-    scene gerbang
+    scene gerbang_sekolah with dissolve
     $ misterius_2 = "????"
     $ tmn_mg2 = "????"
     "Setelah berada di depan gerbang pun tetap saja memiliki keraguan yang tinggi, jika saja berbalik mungkin akan masih sempat untuk tidak bersekolah"
@@ -445,7 +445,7 @@ label prolog:
         ypos 1.2
     sr "Ya, Bel istirahat sudah berbunyi, sampai jumpa lagi di lain waktu"
     sk "Baik bu!!"
-    hide bu_senda with dissolve
+    hide bu_senda with moveoutright
     mc "Untunglah aku tidak kena bola yang dilempar. aku ingin tetap diam dan tidak bersosialisasi. haaa.."
     mc "ahhh.. aku ngantuk sebaiknya aku tidur saja"
 
@@ -479,18 +479,17 @@ label prolog:
     mc "Ternyata ada di-"
 
     "~Ding Dong~"
-    scene kelas
+    scene kelas_sore
     mc "haa haa haa.. aku menangis ? Mimpi itu lagii"
     mc "Untung aku tidak ketauhan kalau aku tertidur. Ternyata sudah jam pulang juga. aku harus bergegas pulang"
     
-    scene lorong 
+    scene jalan_sore
+    "Bisa-bisanya aku mimpi seperti itu.. \n Haaa.. ternyat aku masih ada trauma sedikit jadi bisa mimpi seperti itu"
 
-    scene depan rumah
-
-    scene kamar
+    scene kamar_sore with dissolve
     "Astaga ternyata Aku lupa membawa kucingnya. Lebih baik aku meminta izin dulu"
 
-    scene ruang makan 
+    scene dapur_malam with dissolve 
     mc "Ibu, Ayah, Boleh memlihara kucing ?"
     show dad:
         xpos 0.725

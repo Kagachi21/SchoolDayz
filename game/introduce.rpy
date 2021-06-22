@@ -1,20 +1,20 @@
 label pengenalan:
 
-    scene kamar
+    scene kamar with dissolve
     "Seperti biasanya pagi yang cerah sekali, cuaca yang paling aku benci"
     "Harus pergi ke sekolah dan berinteraksi dengan lainnya"
     "Tapi aku sudah memilih jalan ini mau tidak mau ya harus lanjut meskipun terpaksa"
     "Oiya, Kucing yang kemarin apa baik - baik saja ya ? aku  lupa membawa kucing kemarin pulang kerumah"
     "Sebelum menuju sekolah sebaiknya aku beli makanan kaleng kucing dulu"
     
-    scene ruang makan
+    scene dapur with dissolve
     mom "Makan yang banyak yaaa, biar sehat"
     mc "...."
     mom "Nanti Ibu sama Ayah menyiapkan untuk kucing yg kamu bawa pulang nanti"
     dad "Iyaa benar, ta-tapii Ayah ga bisa lihat langsung karena nanti pulang kerjanya malam"
     mc "Iyaa, terima kasih Ayah Ibuu"
     mc "aku sudah selesai, aku langsung berangkat"
-    mom "Ini uang sangu mu 10000"
+    mom "Ini uang sangu mu"
     $ money += 10000
     dad "Iya hati - hati dijalan"
 
@@ -35,7 +35,7 @@ label pengenalan:
     ks "Ini Kembaliannya kak %(money)d"
     ks "Terima Kasih kak Selamat berbelanja kembali"
 
-    scene jalan
+    scene jalan with dissolve
     "Ternyata sudah ada seseorang yang memberi makanan kucing"
     "Apa itu Majikannya ? Seragamnya sama denganku"
     "Kalau gitu aku ga perlu mengganggunya"
@@ -56,7 +56,7 @@ label pengenalan:
     mg1 "humph Dasar. Tunggu aku kan kita sekelas"
     mg1 "Tunggu akuu!!! [mcFirst]"
 
-    scene gerbang sekolah
+    scene gerbang_sekolah with dissolve
     na "Oeee [mcFirst], wihhh dahh akrab aja nih sama [mg1_First]"
     na "Kalian dah jadiann yaa ? Baru Masukk sekolahh sudah jadian aja Hebat"
     mc "...."
@@ -180,12 +180,12 @@ label pengenalan:
     "Mending aku habiskan dulu makanan yang ku beli tadi"
     "Kayaknya makan diatas Atap Sekolah Enak"
 
-    scene atap
+    scene atap with dissolve
     "Tenangnya di atap sekolah"
     "~Ding Dong~"
     "Saatnya aku masuk kelas huh"
 
-    scene kelas 
+    scene kelas
     sr "Selamat siang Anak-anak, mari kita lanjutkan pengenalan materi selanjutnya"
     sr "Ibu mulai ya kelasnya"
     sk "Baikk,, Bu"
@@ -197,7 +197,7 @@ label pengenalan:
     "Aku harus tidur dimana ?"
     menu:
         "Atap Sekolah":
-            scene atap
+            scene atap_siang with dissolve
             "Begitu Tenang dan sejuk"
             "Kalau gitu aku tidur disini sampai Bel Berbunyi"
             mg3 "Hmmm.. ada orang ternyata"
@@ -251,7 +251,7 @@ label pengenalan:
     "Sepertinya datangnya dari atas mungkin ada di atap sekolah"
     "Aku penasaran. Mungkin aku akan coba ke atap"
 
-    scene atap sekolah
+    scene atap_sore
     "Wahh... "
     mg3 "aahh.. kamu melihatnya kan ?"
     mc "iyaa.. aku melihatnya, suaramu bagus"
@@ -268,7 +268,7 @@ label pengenalan:
     "ahh.. aku hampir lupa membawa kucing ituu"
     "Sebaiknya aku kembali dan melihatnya"
 
-    scene Jalan
+    scene jalan_sore
     mc "ternyata kamu masih ada kukira tadi sudah dibawa oleh cewe tadi pagi"
     cat "meooow ??"
     mc "kalau gitu ikut kerumahku ya"
@@ -296,7 +296,7 @@ label pengenalan:
     cat "Meooww ^_^ "
     mc "Sepertinya kamu tau apa yang kuucapkan"
 
-    scene dapur
+    scene dapur_sore
     mc "ini makananmu, kau pasti suka kan"
     cat "Meoow :3"
     mom "Aku Pulang!!"
@@ -319,16 +319,18 @@ label pengenalan:
     cat "meoooww ^o^"
     mom "Habiskan dulu makananmu"
 
-    scene kamar
+    scene kamar_sore
     "benar, juga kalau tidak ada nama kurang enak klo manggil kucingnya"
     "sebaiknya aku tidur dulu mungkin bisa dapet ide"
     "~Beberapa jam kemudian~"
+    
+    scene kamar_malam
     mc "Hoaamm,, Jam berapa ini ?"
     mc "sebaiknya aku cuci muka dulu lalu ke tempat makan"
 
     scene kamar mandi
 
-    scene dapur
+    scene dapur_malam
     "Ayah masih belum pulang"
     mom "Sini makan dulu makanan sudah siap"
     mom "Ibu juga sudah siapin makanan untuk kucingnya"

@@ -39,10 +39,10 @@ label day5_Kirana:
     mc "Okk yah"
 
     scene dapur 
-    mom "Giamana ayah ?"
+    mom "Diamana ayah ?"
     mc "Katanya duluan aja, sebentar lagi kesini"
-    mc "Aku duluan aja kalau gitu bu"
-    mc "Mau berangkat ke sekolah"
+    mc "Aku duluan aja kalau gitu bu makannya"
+    mc "Mau berangkat ke sekolah soalnya"
     mom "Iyaa,, bawa bekal ga ?"
     mc "Tidak usah bu"
     mc "Soalnya nanti pulangnya sebentar saja"
@@ -65,7 +65,7 @@ label day5_Kirana:
 
     scene jalan
 
-    scene gerbang sekolah
+    scene gerbang_sekolah
     na "Halo Bro"
     mc "Oh Hi"
     na "mau mampir beli jajan dulu ?"
@@ -93,10 +93,12 @@ label day5_Kirana:
     sr "Kemarin kan ada tugas, apakah sudah selsai semua ?"
     sk "Sudah selesai bu Senda"
     sr "Kalau gitu ibu panggil random yang maju duluan"
-    sr "Kelompok 1 silahkan maju duluan"
-    "~Presentasi~"
     sr "Okay, selanjutnya kelompok 4 maju"
     "~Presentasi~"
+    "Setelah semuanya presentasi selesai Bu Senda Memberikan Soal untuk dikerjakan pada kami semua"
+
+    #Initialize score
+    $ quiz5_score = 0
 
     label quiz5:
 
@@ -280,8 +282,10 @@ label day5_Kirana:
                 $ quiz5_score += 0
 
         "Jawaban : 
-            1. C    3. B    5. A    7. A    9. C    11. D   13. A   15. C
-            2. C    4. D    6. A    8. D    10. C   12. B   14. D"
+            \n
+            1. C \ \ \ \ 3. B \ \ \ \ 5. A \ \ \ \ 7. A \ \ \ \ 9. C \ \ \ \ 11. D \ \ \ \ 13. A \ \ \ \ 15. C
+            \n
+            2. C \ \ \ \ 4. D \ \ \ \ 6. A \ \ \ \ 8. D \ \ \ \ 10. C \ \ \ \ 12. B \ \ \ \ 14. D"
 
         "Nilaiku adalah [quiz5_score]"
 
@@ -305,6 +309,7 @@ label day5_Kirana:
             "Semangat":
                 rr "Coba dulu lagi, Nanti kalau misal mentok yaudah tinggal aja"
                 mc 'Terima Kasih'
+                $ quiz5_score = 0
                 jump quiz5
             "Pulang saja!":
                 "Anda gagal sebagai murid"
@@ -321,13 +326,13 @@ label day5_Kirana:
     mc "Kuncinya ?"
     mg2 "Ini"
 
-    scene gerbang sekolah
+    scene gerbang_sekolah_siang
     mg2 "[mcFirst]!!"
     mc "Skuy Naik, kamu mampir rumahku juga ga ?"
     mg2 "Woiya dong, kangen masakan tante hahaha"
     mc "Dasar kau ini"
 
-    scene jalan
+    scene jalan_siang
     mg2 "Besok kamu ada dirumah ga ?"
     mc "Ada, kenapa emangnya ?"
     mg2 "Kuy, Jalan-jalan"
@@ -372,7 +377,7 @@ label day5_Kirana:
     mg2 "[mcFirst] Ayo makan"
     mc "Okk Aku keluar"
 
-    scene dapur 
+    scene dapur_siang
     mg2 "Umm.. Enaknyaa"
     mc "Oiya, ada apa tadi ?"
     mg2 "Ahh,, Iya aku hampir lupa"
@@ -407,10 +412,10 @@ label day5_Kirana:
     scene ruang keluarga
     "Fuhh.. Capeknyaa, tidur dulu aja lah "
 
-    scene kamar malam
+    scene kamar_malam
     "Hoaamm.. sudah malam ternyata"
     
-    scene dapur
+    scene dapur_malam
     mc "Loh sudah pulang yah"
     dad "Hooo.. tadi kamu ngajak cewe yang waktu itu lagi"
     dad "Sayangnya ayah baru pulang sekarang padahal ingin tahu cewenya yang mana ?"
@@ -607,8 +612,10 @@ label day5_Miselia:
                 $ quiz_fungi5_score += 0
 
         "Jawaban : 
-            1. D    3. D    5. D    7. D    9. B
-            2. C    4. A    6. B    8. B    10. C"
+            \n
+            1. D \ \ \ \ 3. D \ \ \ \ 5. D \ \ \ \ 7. D \ \ \ \ 9. B
+            \n
+            2. C \ \ \ \ 4. A \ \ \ \ 6. B \ \ \ \ 8. B \ \ \ \ 10. C"
 
         "Nilaiku adalah [quiz_fungi5_score]"
 
@@ -625,6 +632,7 @@ label day5_Miselia:
         sr "Bagi yang Nilainya jelek bisa mengulang lagi"
         menu:
             "Mengulang Lagi":
+                $ quiz_fungi5_score = 0
                 jump quiz_fungi5
             "Tidak Ingin Mengulang":
                 "Anda gagal sebagai murid"
@@ -653,3 +661,497 @@ label day5_Miselia:
     jump day6_Miselia
 
 label day5_Airin:
+
+    scene kamar
+    cat "Meoowww Meooww Meooww"
+    mc "Hooamm.. Sudah bangun ternyata"
+    mc "Loh ada [cat] Oiyaa,, kemarin pintu kamar kubuka"
+    mc "Jam Berapa ini ?"
+    cat "meooww meooww"
+    mc "Hoo jam 5.45"
+    cat "Meooww"
+    mc "Mau Keluar ternyata hahahha.."
+    mc "Kuy ke dapur"
+    cat "Nyaaaa"
+
+    scene dapur 
+    mom "Makanannya belum siap"
+    mc "Aku mau ngasih makan [cat] dulu setelah itu mandi"
+    cat "Nyaaaa"
+    mc "Makann yang banyakk [cat]"
+    cat "Nyaaaa Nyaaa Nyaaa"
+
+    scene kamar mandi 
+    "Aku lupa mau siapin buat sekolah, sudahlah nanti saja"
+
+    scene kamar
+    "Okay,, sudah siap semuanya, tinggal ke dapur terus makan"
+
+    scene dapur
+    mc "Sudah, siapp makanannya bu ?"
+    mom "Sudah siap dong"
+    mc "Ayah dimana ?"
+    mom "Ayah didepan rumah lagi siram-siram bunga"
+    mc "Okk Kalau gitu aku panggil ayah dulu untuk makan"
+
+    scene depan rumah
+    mc "Yah, sarapan dulu.. makanan sudah siap"
+    dad "Hooo.. Sebentar lagi kesana makan duluan aja gapapa"
+    mc "Okk yah"
+
+    scene dapur 
+    mom "Dimana [dad] ?"
+    mc "Katanya [dad] duluan saja"
+    mc "Kalau gitu aku duluan makan aja bu soalnya mau masuk sekolah"
+    dad "Ayo makan Hehhe maaf nungguin aku"
+    mom "Dasar.. ayoo makan"
+    "Kami pun makan bersama tak lupa dengan [cat] juga"
+    mc "Bu Aku sudah selesai.."
+    "~Cuci Piring~"
+    mom "Bentar Ibu siapkan bekalnya.."
+    dad "Ini uang sangumu"
+    $ money += 10000
+    mc "Terima kasih [ai]"
+    mom "Ini bekalmu"
+    mc "Kalau gitu aku berangkat dulu [ai]"
+    ai "Iyaa nak hati-hati dijalan"
+
+    scene jalan
+    mg3 "Dooor"
+    mc "Ackkkhh Astaga"
+    mg3 "Hahahahhah lucu banget kagetnya"
+    mc "Dasar kau ini"
+    mg3 "Maaf-maaf Hahahah"
+    mc "...."
+    mg3 "Heee... kamu marah ?"
+    mc "Ga juga. Ngomong-ngomong kamu berangkatnya berjalan lagi ?"
+    mg3 "Iyaa"
+    mc "Tumben"
+    mg3 "Seru juga sih berangkat dengan jalan kaki"
+    mc "Benar kan"
+    mg3 "Hehehehehe"
+
+    scene gerbang_sekolah
+    na "Oee oeee"
+    na "Barengan lagi nih berangkatnya"
+    mg3 "Iyaa,, seru juga jalan kaki berhubung Sekolahnya deket juga dari arah rumah"
+    na "Ha  hahahaha Berarti rumah kalian dekat"
+    mc "Ga terlalu dekat agak jauh dikit"
+
+    scene kelas
+    sr "Selamat pagi anak-anak"
+    sk "Pagi bu"
+    sr "Hari ini kita mulai saja ya"
+    sk "Iya bu"
+    "~Materi Klasifikasi~"
+    "~Ding Dong~"
+    sr "Waktunya sudah habis anak-anak kalian boleh istirahat"
+    sk "Terima kasih bu Senda"
+    sr "Kalau gitu Bu senda pergi dulu"
+    sk "Baik bu"
+    na "Nanti main kerumahmu bro"
+    mc "Hmmmm.. Okk"
+    na "Bentar aku ajak yang lain juga"
+    mc "Hah ? jangan rame-rame"
+    na "Gapapa biar heboh"
+    mc "Sigh..."
+    na "[mg3_First] mau ikut kerumah [mcFirst] ?"
+    mg3 "Boleh ada siapa aja ?"
+    na "Aku, kamu, [wkk], [kk], [bl] kayaknya ini"
+    na "Aku ajak mereka dulu"
+    mg3 "Okk"
+    na "Bro Mau ikut main ga ke rumah [mcFirst] ?"
+    wkk "Boleh-Boleh gasskan"
+    na "Bro ajak [kk] juga.. Aku mau ajak [bl]"
+    wkk "Okk Bro"
+    na "[bl] Mau ikut kerumah [mcFirst] nanti ?"
+    bl "Gapapa sih.. Okk dah"
+    na "[wkk] Gimana si [kk] ?"
+    wkk "Ga jadi ikut bro"
+    na "Yaudah kalau gitu"
+    na "Kuy Kantin"
+    wkk "Gass.. [mcFirst] gmna ?"
+    mc "Aku ga ikut sekarang bawa bekal \n Ehh.. tapi titip aja ini uangnya \n Terserah mau dibelikan apa"
+    $ money -= 10000
+    na "Okk Bro"
+    mc "[mg3_First] mungkin mau titip juga"
+    na "Dia ke kantin kayaknya sudah ga ada orangnya"
+    mc "ehh.. iya yaudah"
+    na "aku duluan bro"
+    mc "Okk"
+    "Sudahh sepi Huh.. Saatnya aku makan bekalku"
+    mc "Fuuh.. Kenyangnya"
+    "~Ding Dong~"
+    "Sudah bel masuk ternyata"
+    na "Broo ini titipnya"
+    mc "Makasih,, Kembaliannya ambil saja lur"
+    na "Mantap Lucky"
+    sr "Hayoo duduk duluu"
+    sk "Heheheh Iya bu"
+    sr "Selamat Siang anak-anak sudah kah siap untuk belajar lagi siang hari ini ?"
+    sk "Tidak bu!!"
+    sr "Kalau gitu tidur aja yaa "
+    wkk "Ihh Bu Senda.. Kami Bercanda bu"
+    sr "Sama Ibu juga Hahahaha"
+    sr "Sebelumnya bikin kelompok dulu ya bebas. 1 kelompok terdiri 4 orang"
+    na "[mcFirst] gimana kalau kita sekolompokan dengan [wkk], [mg3_First], dan [bl] \n dah pas juga sih misal disuruh kerjakan dirumah kan sekalian hehe"
+    mc "Boleh-boleh aja"
+    na "[mg3_First] Skuy kelompokan.."
+    mg3 "Iyaa"
+    na "[wkk] Kuy kelompokan"
+    wkk "Siapa aja ?"
+    na "Yaa kayak tadi itu"
+    wkk "Gasss"
+    na "[bl] ayo kelompokan denganku"
+    bl "Okk"
+    "Setelah itu kelas ramai dengan memilih kelompok masing-masing"
+    sr "Apa sudah membuat kelompok semuanya ?"
+    sk "Sudah bu"
+    sr "Kalau gitu Bu Senda kasih soalnya.. \n kerjakan dirumah yaa karena ada rapat ntar lagi mungkin sebentar lagi akan pulang"
+    sr "Dikumpulkan Besok semuanya harus sudah selesai.. sama bikin presentasi materi ya"
+    sk "Baik buu"
+    na "Tuhkan, aku instingku benar hahahha \n Jadi,, nanti sekalian ngerjain di rumah [mcFirst]"
+    "~Ding Dong~"
+    sr "Sudah bel anak-anak kalian boleh pulang"
+    sk "Yeayy.. Baik bu.."
+    wkk "Kita berangkat sekarang ini ?"
+    bl "Ayo-ayo aja sih aku"
+    mc "Nunggu sepi baru pulang"
+    bl "Heee.. kok gitu"
+    mc "gapapa"
+    na "Sudah sudah.. \n kalau gitu ada yang beli camilan sisanya langsung ke rumah [mcFirst]"
+    wkk "Aku aja kalau gitu"
+    bl "Aku ikut juga dong"
+    wkk "Okk dah kalau gitu"
+    wkk "Aku sama [bl] duluan beli camilan dulu"
+    na "Okk dah"
+    mg3 "Ayo [mcFirst]"
+    mc "Haii.. Haii.."
+
+    scene jalan_siang
+    mc "Nanti jangan lupa kabarin mereka \n Shareloc ke mereka"
+    mg3 "Iyaa, kalau ga di shareloc nanti bisa tersesat hahaha"
+    na "Nanti kalau sudah sampe rumahmu aku shareloc ke mereka"
+
+    scene depan rumah
+    mc "Aku Pulang!!"
+    $ nmg3 = "Nada dan [mg3_First]"
+    nmg3 "Permisi"
+
+    scene ruang tamu
+    cat "Miiaauuuww"
+    mc "Ahhh... [cat]"
+    na "Kamu pnya kucing ? Astaga Lucu bro"
+    mg3 "Aaaaa [cat].."
+    cat "Miaauuww"
+    mg3 "Aaawww [cat]"
+    na "Kucingnya akrab banget sama [mg3_First]"
+    mc "Seperti biasa [cat] selalu manja kalau ada [mg3_First]"
+    na "[mg3_First] pernah kesini ?"
+    mc "Iyaa pernah"
+    na "Hayolohh.. ngapain ?"
+    mc "Cuma mampir saja"
+    mg3 "Hehehhe.. Oiyaa,, mereka sudah dikirim shareloc ?"
+    na "Ahh,, iya lupa langsung ku shareloc"
+    mc "Sudah di shareloc da ?"
+    na "Sudah"
+    mc "Kuy.. Mari kerjakan di kamarku saja"
+
+    scene ruang keluarga
+    mom "Loh,, sudah pulang ? ada teman-temanmu juga"
+    na "Halo te"
+    mc "Iya bu sekalian kerja kelompok"
+    mom "Hohohoh.... \n ehh.. ada [mg3_First] lagi"
+    mg3 "Iya te hehheh berhubung sekelompok sama [mcFirst]"
+    mc "Ayoo sini ke kamar"
+    mom "Hohohoho"
+    mc "Oiya,, bu nanti ada temanku lagi 2 mau datang kesini"
+    mom "Okie Doki"
+    mom "Kalau gitu Ibu siapkan cemilan dulu"
+    na "waduh ga usah repot-repot tante"
+    mc "Halah gayamu"
+    na "Hehehe"
+
+    scene kamar_siang
+    mg3 "Baru kali ini aku masuk kamar cowo \n kamarmu rapi sekali ya"
+    na "dah biasa cowo kamarnya rapilah kamarku ya juga rapi hahaha"
+    mg3 "Kukira kamar cowo itu berantakan"
+    mc "ga juga \n Semuanya itu tergantung orangnya juga"
+    mg3 "Bener sih"
+    "~[mcFirst]!!!!! ~[mcFirst]!!!!! ~[mcFirst]!!!!!"
+    mc "Kayaknya mereka sudah datang"
+
+    scene rumah depan
+    mom "OyaaOyaa... Temannya [mcFirst]"
+    wkk "Iya te.. [mcFirst] ada ?"
+    mom "Ada silahkan masuk.. "
+    bl "Kalau gitu permisi tante"
+    wkk "Permisi tante"
+    wkk "[mcFirst] ada dimana te?"
+    mom "Langsung aja ke kamarnya"
+    bl "Kalau gitu permisi dulu tante"
+    mom "Silahkan silahkan"
+
+    scene kamar_siang
+    bl "Kami Boleh masuk ini ?"
+    wkk "Hayoo.. Kalian lagi ngapain ?"
+    mc "Masuk saja"
+    bl "Wahh... Rapi banget.. \n bahkan kamarku ga serapi ini"
+    mc "Biasa aja"
+    na "Benar biasa aja cowo biasanya kamarnya selalu rapi"
+    wkk "Hooh.. kamar cowo selalu rapi daripada cewe"
+    $ mgb = "[mg3_First] dan [bl]"
+    mgb "Halahh.."
+    mgb "Lebih rapi kamarku lah"
+    mgb "Nyesal aku puji kamar kalian rapi"
+    mc "Pffffttt.. \n HAHAHAHAHA"
+    mgb "Ihhh..... Malah ketawa"
+    $ wkn = "[wkk] dan [na]"
+    wkn "Hahahahahahaha"
+    mgb "HAHhahahhaha"
+    mc "aduh.. aduh.. perutku sakit"
+    bl "Sudah ah.. ayo kerjakan"
+    mg3 "Iyaa biar cepet selesai"
+    cat "Miaauuuuwww"
+    mg3 "Lohh ada kamu dibelakangku"
+    bl "Aaaaaa... Kucingnya comel"
+    bl "Siapa namanya ?"
+    mc "Namanya [cat]"
+    bl "Artinya apa ?"
+    mc "Bahagia"
+    bl "heeee.. baguss.."
+    mom "Ini Cemilan sudah tante siapin"
+    mom "Dimakan yaa"
+    wkk "Ehh.. Tanter ga usah repot-repot kami sudah beli cemilan"
+    mom "Tak apa,, ini Home madenya tante sendiri"
+    wkk "Wahh.. kalau gitu terima kasih tante"
+    mom "Oyaoya Tante baru tau banyak temen kesini tau gitu tante masak besar"
+    mom "Yaudah,, kalau gitu selamat mengerjakan \n Sini [cat].."
+    cat "Miauuuww hssss"
+    mom "Ehh.. jadi ganas"
+    $ all = "Semuanya"
+    all "Hahahahha"
+    mg3 "[cat] maunya sama aku te hahahah"
+    mom "Huhuhuuhuhu... Sedih..."
+    mom "Hehehhe silahkan menikmati waktunya"
+    mc "Dah dah.. Mari Kerjakan.."
+    na "Ayoo.. ada camilan juga ini bakal semangat"
+    mg3 "Lets go!!"
+
+    #Initialize score
+    $ quiz5_klasifikasi_score = 0
+
+    label quiz5_klasifikasi:
+
+        "1. Di bawah ini yang temasuk dalam kelompok crustacea adalah …."
+        menu:
+            "A. udang dan belalang":
+                $ quiz5_klasifikasi_score += 0
+            "B. kepiting dan udang":
+                $ quiz5_klasifikasi_score += 10
+            "C. kutu dan kelabang":
+                $ quiz5_klasifikasi_score += 0
+            "D. belalang dan kelabang":
+                $ quiz5_klasifikasi_score += 0
+
+        "2. Hewan yang mendapatkan julukan mamalia berkantung adalah …."
+        menu:
+            "A. monyet":
+                $ quiz5_klasifikasi_score += 0
+            "B. tikus":
+                $ quiz5_klasifikasi_score += 0
+            "C. lumba-lumba":
+                $ quiz5_klasifikasi_score += 0
+            "D. kanguru":
+                $ quiz5_klasifikasi_score += 10 
+
+        "3. Tingkatan terendah dari klasifikasi tumbuhan dan hewan adalah …."
+        menu:
+            "A. Kingdom":
+                $ quiz5_klasifikasi_score += 0
+            "B. Spesies":
+                $ quiz5_klasifikasi_score += 10
+            "C. Filum":
+                $ quiz5_klasifikasi_score += 0
+            "D. Divisi":
+                $ quiz5_klasifikasi_score += 0
+
+        "4. Suku kata pertama pada tata cara pemberian nama ganda menunjukkan …."
+        menu:
+            "A. kelas":
+                $ quiz5_klasifikasi_score += 0
+            "B. ordo":
+                $ quiz5_klasifikasi_score += 0
+            "C. genus":
+                $ quiz5_klasifikasi_score += 10
+            "D. spesies":
+                $ quiz5_klasifikasi_score += 0
+            
+        "5. Pisang, mangga, kelengkeng, dan durian dikelompokkan dalam tumbuhan buah-buahan. Pengklasifikasian ini tergolong dalam klasifikasi sistem …."
+        menu:
+            "A. natural":
+                $ quiz5_klasifikasi_score += 0
+            "B. artifisial":
+                $ quiz5_klasifikasi_score += 0
+            "C. praktis":
+                $ quiz5_klasifikasi_score += 10
+            "D. manfaat":
+                $ quiz5_klasifikasi_score += 0
+
+        "6. Filum dalam klasifikasi hewan yang disebut juga …."
+        menu:
+            "A. divisio":
+                $ quiz5_klasifikasi_score += 10
+            "B. genus":
+                $ quiz5_klasifikasi_score += 0
+            "C. marga":
+                $ quiz5_klasifikasi_score += 0
+            "D. ordo":
+                $ quiz5_klasifikasi_score += 0
+
+        "7. Daftar yang memuat sejumlah keterangan suatu makhluk hidup yang dapat digunakan untuk mengidentifikasi dan menentukan kelompok makhluk hidup berdasarkan ciri-ciri yang dimilikinya disebut …."
+        menu:
+            "A. kunci dikotomi":
+                $ quiz5_klasifikasi_score += 0
+            "B. kunci determinasi":
+                $ quiz5_klasifikasi_score += 10
+            "C. klasifikasi":
+                $ quiz5_klasifikasi_score += 0
+            "D. Pengelompokan":
+                $ quiz5_klasifikasi_score += 0
+
+        "8. Jenis makhluk hidup yang menyerupai tumbuhan dan hewan, tetapi bukan tumbuhan dan bukan hewan disebut …."
+        menu:
+            "A. Monera":
+                $ quiz5_klasifikasi_score += 0
+            "B. Fungi":
+                $ quiz5_klasifikasi_score += 0
+            "C. Protista":
+                $ quiz5_klasifikasi_score += 10
+            "D. Plantae":
+                $ quiz5_klasifikasi_score += 0
+
+        "9. Pasangan yang memiliki kekerabatan paling dekat adalah …."
+        menu:
+            "A. Rubah dan Serigala":
+                $ quiz5_klasifikasi_score += 0
+            "B. Rubah dan berang-berang":
+                $ quiz5_klasifikasi_score += 0
+            "C. Rubah dan anjing":
+                $ quiz5_klasifikasi_score += 10
+            "D. Serigala dan Anjing":
+                $ quiz5_klasifikasi_score += 0
+
+        "10. Difa adalah seorang ahli ekologi. Manfaat taksonomi bagi Difa adalah …."
+        menu:
+            "A. Menemukan adanya spesies baru":
+                $ quiz5_klasifikasi_score += 0
+            "B. Menemukan adanya senyawa antibodi berciri khusus pada suatu makhluk hidup":
+                $ quiz5_klasifikasi_score += 0
+            "C. Dapat memperkirakan tentang nenek moyang makhluk hidup tertentu":
+                $ quiz5_klasifikasi_score += 10
+            "D. Mempelajari deversitas makhluk hidup yang ada":
+                $ quiz5_klasifikasi_score += 0
+
+        "Jawaban : 
+            \n
+            1. B \ \ \ \ 3. B \ \ \ \ 5. C \ \ \ \ 7. B \ \ \ \ 9. C
+            \n  
+            2. D \ \ \ \ 4. C \ \ \ \ 6. A \ \ \ \ 8. C \ \ \ \ 10. C"
+
+        "Nilaiku adalah [quiz5_klasifikasi_score]"
+
+    # Check the quiz 1 score
+    if quiz5_klasifikasi_score >= 75:
+        # Win
+        # Win
+        bl "Akhirnya sudah selesai.."
+        wkk "Jajannya enak"
+        mg3 "Benerkan, jajannya enak disini"
+        na "Sasuga Ibu [mcFirst] bikinannya enak"
+        # Did he win? Yes.
+        #$ quiz4_win = True
+        #$ quiz4_lose = False   
+    else:
+        # Lose
+        "Susahnya.. Kita biarin aja atau lanjut ?"
+        menu:
+            "Lanjut":
+                $ quiz5_klasifikasi_score = 0
+                jump quiz5_klasifikasi
+            "Biarin":
+                "Kalian gagal sebagai murid"
+                "~END~"
+                return
+    
+    wkk "Sisa camilannya masih banyak yang beli masih sisa"
+    na "Kenyangnya.."
+    bl "Iyaaa.."
+    mg3 "Gimana kalau kita sambil main juga"
+    mc "Boleh ini"
+    na "Ada kartu ga brader"
+    wkk "Main Kartu bisa ini"
+    mc "Ada sih Kartu"
+    bl "Gass Keun"
+    "Kami pun bermain Kartu hingga sore"
+    wkk "Wahh.. sudah jam segini.. Aku pulang dulu kalau gitu"
+    bl "Ehh.. iya sudah jam segini.. kalau gitu aku pulang dulu"
+    na "Aku juga"
+    mc "Okayy.."
+    
+    scene ruang keluarga
+    mc "Bu, Temanku pulang"
+    mom "Ehh.. kok cepet ? \n Ga sampai malam ?"
+    wkk "hehehhe Ga tante"
+    mom "Yaudah kalau gitu"
+    bl "Maaf ngerepotin tante"
+    mom "Gapapa, tante malah senang kalian datang"
+    bl "Hehehe.. iya te"
+    $ wbn = "[wkk], [bl], dan Nada"
+    wbn "Kalau gitu kami pulang dulu tante dan [mcFirst]"
+    mom "Iyaa Hati-hati"
+    mom "Oyaoya... [mg3_First] ga pulang juga ?"
+    mg3 "Sebentar lagi tante, Rumahku juga ga jauh dari sini kok te"
+    mom "Pulang setelah makan malam ya"
+    mg3 "Iyaa te.. mau main sama [cat] juga tapi sudah ketiduran gara-gara tadi main"
+    mom "Yaudah kalau gitu.. bantuin tante nyiapin ya.."
+    mg3 "Okie Tante"
+    mc "Yaudah kalau gitu aku tidur dulu"
+
+    scene dapur_sore
+    mom "Kerjaanya jadi lebih cepat kalau ada kamu"
+    mg3 "Ahh.. bisa saja Tante"
+    "~Aku Pulang !!!"
+    mom "Kayaknya, Om sudah pulang"
+    dad "Loh Loh,, Calon Mantu ini bu ?"
+    mom "Oyaoya.. Iyaa. ada Calon Mantu jadi cepat"
+    mg3 "awawawawaw.. Tante sama Om ada ada saja"
+    dad "Hahahahhaha"
+    mom "Oiya,, bisa minta tolong bangunkan [mcFirst] ?"
+    mg3 "Boleh te"
+
+    scene kamar_malam
+    mg3 "[mcFirst] Bangunn !!"
+    mc "Hai.. Haii.. sudah bangun"
+    mg3 "Kalau gitu kita makan kuy"
+    mc "Iyaa aku mau raup dulu"
+
+    scene dapur_malam
+    mom "Gimana ?"
+    mg3 "Katanya duluan masih cuci wajah"
+    mc "Ayo makan"
+    dad "Nah,, ini sudah datang"
+    "~AKhirnya Kami semua makan bersama meskipun lebih ramai tapi aku suka setelah itu aku mengantarkan [ng3_First] pulang kerumahnya~"
+
+    scene jalan_malam
+    mg3 "Oiya,, ceritain masalahmu ketika dulu lah sepertinya ada hal yang ga begitu baik"
+    mc "Kamu sendiri ga mau ceritain"
+    mg3 "yaudah gimana kalau besok kita saling bercerita"
+    mc "Boleh kalu gitu"
+
+    scene depan rumah Airin
+    mg3 "Sudah sampai.. \n Terima kasih atas semuanya"
+    mc "Aku juga kalu gitu aku pulang dulu ya"
+    mg3 "Iya hati-hati dijalan"
+
+    jump day6_Airin

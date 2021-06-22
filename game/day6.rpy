@@ -52,7 +52,7 @@ label day6_Kirana:
     mom "Kayaknya diluar sama [dad]"
     mc "Ohh.. Okk"
 
-    scene kamar
+    scene kamar_siang
     "Siapin baju buat nanti malam sekalian dah"
     "Nanti malam biar langsung berangkat"
     "~Menyiapkan baju~"
@@ -101,10 +101,11 @@ label day6_Kirana:
 
     scene depan kamar
     mg2 "[mcFirst] ayo bangun aku dah sampai ini"
+    "~Knock Knock~"
     mg2 "Bangunn !!"
     mg2 "Ihh.. ga mau bangun"
 
-    scene kamar
+    scene kamar_malam
     cat "Meoooww Meoooww"
     mc "Ummm.. "
     cat "meoow Meooww"
@@ -146,7 +147,7 @@ label day6_Kirana:
     mm2 "Kami Berangkat dulu"
     ai "Iya Hati - Hati dijalan"
 
-    scene jalan
+    scene jalan_malam
     mc "Tadi ada apa an emangnya ?"
     mg2 "ga ada apa-apa"
     mc "Dih, ga mau cerita"
@@ -159,7 +160,7 @@ label day6_Kirana:
     mg2 "Ihh.. ya masuk lah"
     mc "Iya-iya aku masuk juga"
 
-    scene mall
+    scene mall_malam
     mc "Ini kita mau kemana ?"
     mg2 "Bantuin pilihin baju jadi kita ke bagian baju dulu"
     mg2 "Soalnya ada promo hehehhe"
@@ -231,7 +232,7 @@ label day6_Kirana:
     mg2 "Mampir cafe dulu dong kan aku bilang mau traktir"
     mc "Okk dah"
 
-    scene cafe
+    scene cafe_malam
     mg2 "Mau pesan apa ?"
     mc "Yakult Strawberry aja"
     mg2 "Okk dah kalau gitu"
@@ -437,3 +438,387 @@ label day6_Miselia:
     jump day7_Miselia
 
 label day6_Airin:
+
+    scene bg jendela kamar terlihat burung
+    "Sudah Pagi Ternyata, sebaiknya aku bergegas menuju sekolah"
+
+    scene kamar
+    cat "Meoowww Meooww Meooww"
+    mc "Hooamm.. Sudah bangun ternyata"
+    mc "Jam Berapa ini ?"
+    cat "meooww meooww"
+    mc "Hoo jam 5.45"
+    cat "Meooww"
+    mc "Mau Keluar ternyata hahahha.."
+    mc "Kuy ke dapur"
+    cat "Nyaaaa"
+
+    scene dapur 
+    mom "Makanannya belum siap"
+    mc "Aku mau ngasih makan [cat] dulu setelah itu mandi"
+    cat "Nyaaaa"
+    mc "Makann yang banyakk [cat]"
+    cat "Nyaaaa Nyaaa Nyaaa"
+
+    scene kamar mandi 
+    "Aku lupa mau siapin buat sekolah, sudahlah nanti saja"
+
+    scene kamar
+    "Okay,, sudah siap semuanya, tinggal ke dapur terus makan"
+
+    scene dapur
+    mc "Sudah, siapp makanannya bu ?"
+    mom "Sudah siap dong"
+    mc "Ayah dimana ?"
+    mom "Ayah didepan rumah lagi siram-siram bunga"
+    mc "Okk Kalau gitu aku panggil ayah dulu untuk makan"
+
+    scene depan rumah
+    mc "Yah, sarapan dulu.. makanan sudah siap"
+    dad "Hooo.. Sebentar lagi kesana makan duluan aja gapapa"
+    mc "Okk yah"
+
+    scene dapur 
+    mom "Diamana ayah ?"
+    mc "Katanya duluan aja, sebentar lagi kesini"
+    mc "Aku duluan aja kalau gitu bu makannya"
+    mc "Mau berangkat ke sekolah soalnya"
+    mom "Iyaa,, bawa bekal ga ?"
+    mc "Tidak usah bu"
+    mc "Soalnya nanti pulangnya sebentar saja"
+    mom "Kalau gitu uang sangu saja ya"
+    mc "Iyaa Bu"
+    mom "Bentar ibu ambil dulu yaa"
+    #Sound Meninggalkan MC
+    mc "Lohh.. kakiku ada apa ini ?"
+    mc "Ternyata [cat] toh"
+    cat "Meoooww"
+    mc "Mau makan lagii tah ?"
+    cat "Nyyaaa"
+    mc "Okie deh kalau gitu aku isi ulang lagi ya"
+    cat "Nyaa"
+    mom "Ini Uangnya"
+    mc "Makasih bu.."
+    mc "Aku berangkat dulu bu"
+    mom "Hati - hati dijalan"
+
+    scene jalan
+    "Tumben ga kelihatan [mg3_First] apa aku terlalu pagi ?"
+    "Terbiasa berangkat bersama pagi-pagi jadi ada yang kurang"
+
+    scene gerbang_sekolah
+    na "Halo Bro"
+    mc "Oh Hi"
+    na "mau mampir beli jajan dulu ?"
+    mc "ga usah, langsung ke kelas aja"
+    mc "Kan hari ini mapelnya ga sebanyak hari lainnya"
+    na "Oh iya ya"
+
+    scene kelas
+    "[mg3_First] Ternyata belum datang memang aku berangkatnya terlalu pagi"
+    "Kalau gitu aku belajar dulu lah"
+    "~Ding Dong~"
+    na "Dah bel masuk aja, harus siap nih"
+    mc "Hahahah sans aja"
+    sr "Selamat pagi anak-anak"
+    sk "Pagi bu"
+    sr "Kemarin kan ada tugas, apakah sudah selsai semua ?"
+    sk "Sudah selesai bu Senda"
+    sr "Kalau gitu ibu panggil random yang maju duluan"
+    sr "Okay, selanjutnya kelompok 4 maju"
+    "~Presentasi~"
+    "Setelah semua presentasi selesai Bu Senda Memberikan Soal untuk dikerjakan pada kami semua"
+
+    #Initialize score
+    $ quiz6_klasifikasi_score = 0
+
+    label quiz6_klasifikasi:
+
+        "1. Berikut ini yang bukan termasuk variasi dalam spesies adalah …."
+        menu:
+            "A. cara reproduksi":
+                $ quiz6_klasifikasi_score += 10
+            "B. jenis makanan":
+                $ quiz6_klasifikasi_score += 0
+            "C. bentuk tubuh":
+                $ quiz6_klasifikasi_score += 0
+            "D. ukuran tubuh":
+                $ quiz6_klasifikasi_score += 0
+
+        "2. Spesies adalah unit dasar dari klasifikasi biologi. Alasan dua individu yang berbeda dikelompokkan dalam satu spesies yang sama adalah …."
+        menu:
+            "A. mempunyai kesamaan nenek moyang":
+                $ quiz6_klasifikasi_score += 0
+            "B. mempunyai banyak perbedaan":
+                $ quiz6_klasifikasi_score += 0
+            "C. dapat saling kawin dan menghasilkan keturunan fertil":
+                $ quiz6_klasifikasi_score += 0
+            "D. dapat saling kawin dan menghasilkan keturunan fertil":
+                $ quiz6_klasifikasi_score += 10 
+
+        "3. Kata maniculata dari nama Latin Felis manuculata domesticus menunjukkan …."
+        menu:
+            "A. kelas":
+                $ quiz6_klasifikasi_score += 0
+            "B. Spesies":
+                $ quiz6_klasifikasi_score += 0
+            "C. genus":
+                $ quiz6_klasifikasi_score += 10
+            "D. Divisi":
+                $ quiz6_klasifikasi_score += 0
+
+        "4. Klasifikasi makhluk hidup dapat didasarkan pada … \n (1) warna kulit (3) ukuran tubuh \n (2) bentuk tubuh (4) cacat tubuh"
+        menu:
+            "A. Jika (1), (2), dan (3) benar":
+                $ quiz6_klasifikasi_score += 10
+            "B. Jika (1) dan (3) benar":
+                $ quiz6_klasifikasi_score += 0
+            "C. Jika (2) dan (4) benar":
+                $ quiz6_klasifikasi_score += 0
+            "D. Jika (4) saja benar":
+                $ quiz6_klasifikasi_score += 0
+            
+        "5. Ilmu yang mempelajari prinsip dan pengelompokan makhluk hidup disebut …. \n (1) sistematik (3) taksonomi \n (2) takson (4) botani"
+        menu:
+            "A. Jika (1), (2), dan (3) benar":
+                $ quiz6_klasifikasi_score += 0
+            "B. Jika (1) dan (3) benar":
+                $ quiz6_klasifikasi_score += 10
+            "C. Jika (2) dan (4) benar":
+                $ quiz6_klasifikasi_score += 0
+            "D. Jika semuanya salah":
+                $ quiz6_klasifikasi_score += 0
+
+        "6. Mencandra suatu masalah berarti melakukan langkah-langkah mengidentifikasi dan …. \n (1) merumuskan (3) menyimpulkan \n (2) membuat diskripsi (4) memberi nama"
+        menu:
+            "A. Jika (1), (2), dan (3) benar":
+                $ quiz6_klasifikasi_score += 0
+            "B. Jika (1) dan (3) benar":
+                $ quiz6_klasifikasi_score += 0
+            "C. Jika (2) dan (4) benar":
+                $ quiz6_klasifikasi_score += 10
+            "D. Jika semuanya salah":
+                $ quiz6_klasifikasi_score += 0
+
+        "7. Metode yang merupakan dasar dari klasifikasi adalah …. \n (1) survei (3) deskriptif \n (2) kualitatif (4) empiris"
+        menu:
+            "A. Jika (1), (2), dan (3) benar":
+                $ quiz6_klasifikasi_score += 0
+            "B. Jika (1) dan (3) benar":
+                $ quiz6_klasifikasi_score += 0
+            "C. Jika (2) dan (4) benar":
+                $ quiz6_klasifikasi_score += 0
+            "D. Jika (4) saja benar":
+                $ quiz6_klasifikasi_score += 10
+
+        "8. Di bawah ini yang tidak termasuk sistem dalam metode rasional adalah …. \n (1) sistem praktis (3) sistem natural \n (2) sistem artifisial (4) sistem modern"
+        menu:
+            "A. Jika semuanya salah":
+                $ quiz6_klasifikasi_score += 10
+            "B. Jika (1) dan (3) benar":
+                $ quiz6_klasifikasi_score += 0
+            "C. Jika (2) dan (4) benar":
+                $ quiz6_klasifikasi_score += 0
+            "D. Jika (4) saja benar":
+                $ quiz6_klasifikasi_score += 0
+
+        "" (multiple=2)
+        "9. Berikut ini yang merupakan pernyataan yang salah adalah …. \n
+        (1) Dua atau lebih spesies dengan ciri-ciri tertentu dikelompokkan membentuk takson genus
+        \n
+        (2) Beberapa famili dengan ciri tertentu dikelompokkan untuk membentuk takson ordo
+        \n
+        (3) Beberapa genus yang memiliki ciri-ciri tertentu dikelompokkan untuk membentuk takson famili
+        \n
+        (4) Beberapa kelas yang memiliki ciri-ciri tertentu dikelompokkan untuk membentuk kingdom" (multiple=2)
+        menu:
+            "A. Jika (1), (2), dan (3) benar":
+                $ quiz6_klasifikasi_score += 10
+            "B. Jika (1) dan (3) benar":
+                $ quiz6_klasifikasi_score += 0
+            "C. Jika (2) dan (4) benar":
+                $ quiz6_klasifikasi_score += 0
+            "D. Jika (4) saja benar":
+                $ quiz6_klasifikasi_score += 0
+
+        "10. Di bawah ini yang merupakan nama Latin hewan adalah …. \n (1) Musa paradisiaca (3) Phaseolus vulgaris \n (2) Schistocerca americana (4) Canis familiaris"
+        menu:
+            "A. Jika (1), (2), dan (3) benar":
+                $ quiz6_klasifikasi_score += 0
+            "B. Jika (1) dan (3) benar":
+                $ quiz6_klasifikasi_score += 0
+            "C. Jika (2) dan (4) benar":
+                $ quiz6_klasifikasi_score += 10
+            "D. Jika semuanya salah":
+                $ quiz6_klasifikasi_score += 0
+
+        "Jawaban : 
+            \n
+            1. A \ \ \ \ 3. C \ \ \ \ 5. B \ \ \ \ 7. D \ \ \ \ 9. A
+            \n  
+            2. D \ \ \ \ 4. A \ \ \ \ 6. C \ \ \ \ 8. A \ \ \ \ 10. C"
+
+        "Nilaiku adalah [quiz6_klasifikasi_score]"
+
+    # Check the quiz 1 score
+    if quiz6_klasifikasi_score >= 75:
+        # Win
+        # Win
+        sr "Bagi yang sudah kalian boleh istirahat sampai bel pulang berbunyi"
+        sk "Baik bu.."
+        # Did he win? Yes.
+        #$ quiz4_win = True
+        #$ quiz4_lose = False   
+    else:
+        # Lose
+        sr "Bagi yang nilainya jelek kalian bisa mengulang"
+        menu:
+            "Lanjut":
+                $ quiz6_klasifikasi_score = 0
+                jump quiz6_klasifikasi
+            "Biarin":
+                "Kalian gagal sebagai murid"
+                "~END~"
+                return
+
+    mg3 "Fuuuhh.. Akhirnya sudah selesai \n Oiyaa,, aku ke [mcFirst] dulu"
+    mg3 "Sudah selsai ?"
+    mc "Sudah lah, mudah ini"
+    mg3 "Dihh,, sombong"
+    mc "pfftt"
+    mg3 "Malah ketawa, oiyaa nanti malam kita jalan - jalan kuy"
+    mc "Boleh aja sih"
+    mg3 "okk dah berangkat"
+    na "Sihuyy mau kemana ini ?"
+    mg3 "Ihh.. apaan ?"
+    na "Hahahhaah jalan-jalan cie"
+    mg3 "Astaga.."
+    "~Ding Dong~"
+    sr "Bel Sudah berbunyi kalau yang sudah dikumpulin tugasnya"
+    sk "Baik bu.."
+    mc "Nada titip kumpulin kedepan lah"
+    na "Okk dah"
+    "Setelah itu semuanya pada ngumpulin tugasnya ke Bu Senda"
+    sr "Terima kasih anak-anak \n Kalau gitu kalian boleh pulang"
+    sk "Yeaayyy"
+    mg3 "Ke atap ?"
+    mc "Mau latihan ? \n Boleh"
+    na "Bro Pulang duluan"
+    kk "Pulang duluan gaes"
+    mc "Ohh.. okk"
+
+    scene atap_siang
+    mg3 "Aku Mulaii.. dengarkan lohh yaa"
+    mc "Iyaa"
+    "~Mendengarkan~"
+    "Baguss.. Enak didengerin"
+    "~Sudah Mendengarkan~"
+    mc "Seperti biasa bagus.. Oiyaa,, alasanmu ?"
+    mg3 "Heheh nanti saja"
+    mc ".... \n okk dah"
+    mc "Kalau gitu mari kita pulang"
+    mg3 "haii.."
+
+    scene depan rumah
+    mc "Aku duluan"
+    mg3 "Iyaa.. jangan lupa nanti malam"
+    mc "Iyaa.. \n hati-hati dijalan"
+    mg3 "Iyaa.."
+
+    scene ruang tamu
+    mc "Aku Pulangg!!!"
+    mc "tumben [cat] ga datang"
+
+    scene ruang keluarga
+    mc "Ternya [cat] tidur toh Hahahaha"
+    mom "Iyaa tadi habis makan banyak lalu main sama ibu"
+    mc "OIyaa, bu aku langsung tidur saja nanti malam soalnya mau keluar"
+    mom "Wiihh.. sama siapa ?"
+    mc "sama [mg3_First]"
+    mom "Sihuyyy.."
+    mc "Ahh.. ibu bisa saja yaudah aku tidur dulu ya bu"
+    mom "heheh ibu canda doang.. \n iyaa sana dah tidur duluan"
+
+    scene kamar_siang
+    "Saatnya tidur Hahahah bisa-bisanya semuanya cie cie padahal ga ada apa-apa"
+
+    scene kamar_malam
+    mg3 "Banguunnn !!! Banguunnn !!! Banguunnn !!!"
+    mc "Hmmm... "
+    mg3 "Banguunn !!! Bangunnn !!!"
+    mc "Hoaamm.. Loh kok kamu tiba-tiba ada disini ?"
+    mg3 "Ini sudah malam"
+    mc "Ahh iya kah ? \n Kalau gitu aku mau siap-siap dulu"
+    mg3 "Kutunggu di ruang keluarga ya ?"
+    mc "Iyaaa.."
+    "Setelah 20 Menit Kemudian aku pun sudah siap"
+
+    scene ruang keluarga
+    mc "Ayo berangkat !!"
+    mg3 "Ihh.. Lama banget kayak cewe"
+    mc "Mana ada ?"
+    mg3 "Tuh,, buktinya lama"
+    mc "Kamu aja yang terburu-buru"
+    mg3 "Kan sudah malam"
+    mom "[dad] lihat mereka berdebat"
+    dad "Keren.. Calon Mantu sudah bisa mendominasi"
+    mc "Astaga.. Kuy Berangkat"
+    mg3 "Awwawawa.. iyaa"
+
+    scene depan rumah
+    mc "ini mau kemana emangnya ?"
+    mg3 "Jalan-Jalan"
+    mc "Sigh.. Jalan kaki ?"
+    mg3 "Iyaa kan namanya jalan-jalan sambil cerita"
+    mc "Iyaa juga yaa"
+
+    scene jalan_malam
+    mc "Oiyaa, ceritain dong alasanmu"
+    mg3 "Ihh.. kamu dulu lahh"
+    mc "Sighh.. tapi beneran cerita juga lah"
+    mg3 "Iyaaa"
+    mc "Semuanya berawal dari masuk pertama kali SMP. Semuanya baik-baik saja"
+    mg3 "Terus ?"
+    mc "Ada murid Idola 1 sekolah.. \n awal-awalnya baik-baik saja.. \n tiba-tiba dia mulai membully hal sekitar ntah karena apa ?"
+    mg3 "Dia Bully siapa itu ?"
+    mc "Dia bully cewe cakep tapi introvert lalu karena aku tak tahan \n aku menolongnya dari situlah berawal aku selalu dibully menggantikan dia yang awalnya kebully"
+    mc "Makin lama makin dibully dan diasingkan dari kelas \n dan tiba-tiba ada laki yang sok kuat membully ku karena dibelakang dia bantuan"
+    mc "Jadi mereka selalu membullyku bersamaan dengan cewe tersebut \n dikelas hanya bisa diam ntah kenapa bisa begitu"
+    mc "Mungkin karena mereka punya backup an kuat di belakangnya \n Kepala sekolahnya juga busuk dan guru bp nya"
+    mc "Cewe yang sebelumnya kubantu pernah membantuku balik tapi mereka membalas lagi \n hingga dia akhirnya ketakutan"
+    mg3 "Parah juga,, kenapa kamu ga bilang ortumu ?"
+    mc "Aku awalnya selalu menyembunyikan dari ortuku karena ga ingin membuatnya khawatir"
+    mc "Makin lama bullynya makin keras hingga bisa merenggut nyawa di sekolah itu yang baik hanya guru di UKS selalu membiarkanku masuk kelas terlambat"
+    mc "Pada kelas 3 SMP akhirnya aku ketahuan ortuku dan mereka mengadu terus pihak sekolah bilang mereka tidak apa-apa dan itu cuma bercanda"
+    mc "Ortuku tak terima, karena memukul itu juga ga baik akhirnya ortuku memutuskan dengan jalur hukum"
+    mc "Aku berhentiin ortuku, karena aku ga mau ngerepotin ortuku juga. sebenarnya untuk masalah uang ga masalah \n tapi ga mau bikin repot juga"
+    mg3 "Hiks.. Hikss. selama ini kamu SMP menahan beban besar gitu \n Jadi, itu alasanmu tidak mau berteman dengan yang lainnya"
+    mc "Ya bisa jadi begitu,, Setelah itu kami memutuskan untuk Home School \n Yahh,, aku masih merasa trauma dengan apa yang terjadi"
+    mc "Aku sebenarnya ga mau mengingatnya"
+    mg3 "Maafkan aku hiks hiks membuatmu mengingat kejadian ini"
+    mc "Gapapa, tapi sekarang aku merasa lebih baik karena kalian"
+    mg3 "Terima kasih,, sebenarnya aku hampir sama sepertimu"
+    mg3 "Yeayy,, sudah hampir sampai"
+
+    scene alun-alun_malam
+    mc "Kamu kenapa ?"
+    mg3 "Beli jajan dulu sama minuman terus cari kursi biar enak"
+    mc "Hmm.. Okk"
+    "Setelah itu kami memutuskan bersenang-senang dulu di alun-alun"
+    mg3 "Fuhhh.. Capeknya"
+    mc "Tadi apa yang ingin kamu bilang ?"
+    mg3 "Oiyaa,, Alasan aku sering bernyanyi terus \n Jadi, dulu sewaktu SMP aku artis solo dengan nama artis Deline"
+    mc "Ahh.. aku pernah tau dengan nama itu"
+    mg3 "Aku juga ikut semacam Solo Panduan suara seperti itu lah \n Awalnya baik-baik saja, ga ada masalah sama sekali"
+    mg3 "Tiba-tiba ada suatu kasus, Produserku adalah seorang pedofil parah, yang gila aku ga suka"
+    mg3 "Aku jadi korban dari produser itu awalnya dia hanya meraba-meraba dan makin lama dia mulai ingin memperkosaku"
+    mg3 "Lalu, aku melawan dan lari \n tiba-tiba muncul berita yang tidak benar akhirnya aku dikecam oleh teman-temanku"
+    mg3 "Tetangga sekitarku pun juga begitu \n Yah,, aku baik-baik saja karena masih memiliki panduan suara ini"
+    mg3 "Tapi aku ga menyangka di panduan suara aku juga di bully \n para anggota pria tersebut melakukan sexual harrastment"
+    mg3 "Terus-menerus hingga aku trauma namun sekarang sudah lebih baik tapi masih ada sisa sedikit sebenarnya"
+    mc "Sigh.. kenapa dunia bisa begitu kejam kepada kita ?"
+    mg3 "Mungkin ini sebuah cobaan ?"
+    mc "Bisa jadi hahahaha"
+
+    "Setelah pembicaraan berat kami pun bersenang-senang lagi \n Lalu kami pun pulang kerumah"
+    return 

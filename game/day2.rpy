@@ -70,7 +70,7 @@ label day2_Kirana:
     mom "Ayah ga berangkat kerja juga ?"
     dad "Bentar lagi, berangkat"
 
-    scene gerbang sekolah 
+    scene gerbang_sekolah
     "Hmm.. ada yang mendekatiku mungkin sebaiknya aku diamin saja"
     $ kg = "Ketua Geng Kaya"
     $ ag = "Anggota Gengs Kaya"
@@ -111,7 +111,7 @@ label day2_Kirana:
     mc "Entahlah"
     mg2 "padahal baru 2 hari"
     mc "Hmmm..."
-    mg2 "Mending sekarang kita belajardeh sampai bel berbunyi hahaha"
+    mg2 "Mending sekarang kita belajar deh sampai bel berbunyi hahaha"
     "~Ding Dong~"
     sr "Selamat Pagi anak-anak sudah kah siap untuk belajar hari ini ?"
     sk "Tidak bu!!"
@@ -164,7 +164,7 @@ label day2_Kirana:
     kk "bu apakah sebaiknya di kocok sajaa biar Adil"
     sr "bagaimana apa kalian setuju?"
     sk "Setujuu Bu!! Biar lebih mengenal karakterisitik semuanya bu"
-    "Padahal Aku tidak setuju tapi karen akurang suara apa boleh buat"
+    "Padahal Aku tidak setuju tapi karena kurang suara apa boleh buat"
     kk "Bikin potongan kertas sesuai Absen bu Nanti anak-anak mengambilnya nomor yang diambil akan berkelompok"
     kk "Setelah itu yang sudah mendapatkan kelompok tidak perlu mengambil nomornya lagi bu"
     sr "Tapi nanti anak-anak nomor absen belakang tidak akan kebagian mengambil juga"
@@ -347,9 +347,11 @@ label day2_Kirana:
             "D. Rabies":
                 $ quiz2_score += 0
 
-        "Jawaban : 
-            1. D    3. B    5. D    7. B    9. C
-            2. B    4. D    6. D    8. C    10. A"
+        "Jawaban :
+            \n 
+            1. D \ \ \ \ 3. B \ \ \ \ 5. D \ \ \ \ 7. B \ \ \ \ 9. C
+            \n
+            2. B \ \ \ \ 4. D \ \ \ \ 6. D \ \ \ \ 8. C \ \ \ \ 10. A"
 
         "Nilaiku adalah [quiz2_score]"
 
@@ -370,6 +372,7 @@ label day2_Kirana:
             "Meemberikannya":
                 rr "iya, sini dah, aku coba dulu"
                 mc "Terima Kasih"
+                $ quiz2_score = 0
                 jump quiz2
             "Tidak Ingin Memberikannya":
                 "Anda gagal sebagai murid"
@@ -393,7 +396,7 @@ label day2_Kirana:
     mc "Yaudah Ayo, kutunggu di depan gerbang ya"
     mg2 "Okie"
 
-    scene gerbang sekolah
+    scene gerbang_sekolah_sore
     skce1 "Aduuhh aku bareng siapa ya ?"
     skce1 "Aku ga dijemput lagi mana rumahku jauh"
     mc "Rumahmu dimana ?"
@@ -431,18 +434,18 @@ label day2_Kirana:
     mc "oh ok. kalau gitu Ibu istirahat dulu aja"
     mom "Iyaa"
 
-    scene kamar
+    scene kamar_sore
     mc "Enak banget tidurmu [cat]"
     cat "Fuurr.. Furrr"
     mc "dahlah Aku tidur juga"
 
-    scene kamar malam
+    scene kamar_malam
     cat "Meooow Meeooow"
     mc "Hoaam.. dah bangun kau [cat]"
     cat "Nyaaa~"
     mc "Sudah Malam juga kalau gitu aku siapin makanan untuk makan malam"
 
-    scene dapur
+    scene dapur_malam
     mc "[cat] Makanan mu sudah kusiapin makan sini"
     cat "Nyaaa Nyaa~"
     "Hmm.. Masak apa enaknya ya ? atau aku masak random saja lah"
@@ -469,7 +472,7 @@ label day2_Kirana:
     mom "Ibu ke kamar dulu ya"
     mc "Okie, Biar aku yang beresin semuanya"
 
-    scene kamar malam
+    scene kamar_malam
     mc "Haa.. Leganya. enaknya ngapain ya ?"
     cat "Meooww"
     mc "Eh ada [cat] sini sini tidur bareng aku"
@@ -674,9 +677,11 @@ label day2_Miselia:
             "D. Mempunyai klorofil":
                 $ quiz_fungi2_score += 0
 
-        "Jawaban : 
-            1. D    3. D    5. A    7. B    9. C
-            2. A    4. C    6. A    8. D    10. C"
+        "Jawaban :
+            \n
+            1. D \ \ \ \ 3. D \ \ \ \ 5. A \ \ \ \ 7. B \ \ \ \ 9. C
+            \n
+            2. A \ \ \ \ 4. C \ \ \ \ 6. A \ \ \ \ 8. D \ \ \ \ 10. C"
 
         "Nilaiku adalah [quiz_fungi2_score]"
 
@@ -693,6 +698,7 @@ label day2_Miselia:
         sr "Bagi yang Nilainya jelek bisa mengulang lagi"
         menu:
             "Mengulang Lagi":
+                $ quiz_fungi2_score = 0
                 jump quiz_fungi2
             "Tidak Ingin Mengulang":
                 "Anda gagal sebagai murid"
@@ -704,7 +710,7 @@ label day2_Miselia:
     mg1 "Yauda bareng aku aja gapapa ayo"
     mc " Ok deh makasi ya"
 
-    scene jalan
+    scene jalan_sore
     mg1 "Kok tumben kamu naik angkot tadi berangkatnya ?"
     mc "Iya , bapak ku lagi pergi dan motornya di bawa"
     mg1 "Oalah"
@@ -719,4 +725,373 @@ label day2_Miselia:
 label day2_Airin:
 
     scene kamar 
+    "Sepertinya aku sudah mulai terbiasa dengan pagi hari ini"
+    "Sebaiknya aku mandi dulu"
+
+    scene kamar mandi
+
+    scene kamar
+    "tinggal ganti baju terus siapin tas lalu sarapan dan ngasih makan [cat]"
+
+    scene dapur
+    mom "Pagi, [mcFirst] wihh dah siap saja"
+    mc "hahha iya bu.. Oiya, [dad] kemana bu ? [cat] juga ga kelihatan"
+    mc "Mulai tadi ga kelihatan [dad] sama sekali"
+    mom "[dad] tadi berangkat pagi sepertinya ada pekerjaan banyak dari kantornya"
+    mom "Kalau [cat] lagi makan itu"
+    mc "Dasar [cat] kucari-cari ahhaha ternyata disini dah makan duluan.. ku kelitiki hayooo"
+    cat "Meeoow Meoow Meoww"
+    mc "hahaha.. dah dah lanjut aja makannya"
+    cat "Meooww"
+    mom "Nasinya sudah [mom] siapkan di meja"
+    mc "Terima kasih bu"
+    mom "Bekal ini lagi ibu siapin"
+    mc "Iyaa bu"
+    mc "Kenyangnyaa~"
+    "~Cuci Piring~"
+    mc "Berangkat dulu, bekalnya yang ini kan ?"
+    mom "Iyaa,, bentar ini uang sakumu"
+    $ money += 30000
+    mc "Terima kasih bu"
+    mom "Hati-hati dijalan"
+    mom "Ayo [cat] main sama [mom] Hahahaha"
+
+    scene gerbang_sekolah
+    na "Oee Brooo tungguin"
+    mc "Okk.."
+    na "Tumben ga sambil jalan"
+    mc "Enakan lari saja sih hahha"
+    na "Lah.. Hahhahaha"
     
+    scene kelas
+    "Lebih baik aku belajar saja sembari nunggu bel masuk"
+    "~Ding Dong~"
+    "Umm.. Gada gurunya sepertinya"
+    "~2 Jam kemudian~"
+    "~Ding Dong~"
+    "Ternyata benar emang ga ada gurunya"
+    na "Ikut ke kantin bro ?"
+    mc "Ga,, aku makan disini aja aku bawa bekal soalnya"
+    na "okk kalau gitu mau titip ?"
+    mc "ga usah"
+    na "Okk aku duluan"
+    "~15 Menit kemudian~"
+    mc "Kenyangnyaa Fuuhh.."
+    "~Ding Dong~"
+    sr "Maaf, tadi Bu Senda ada rapat jadi pagi-pagi tidak ada jam pelajaran"
+    sr "Selamat Siang anak-anak sudah kah siap untuk belajar hari ini ?"
+    sk "Tidak bu!!"
+    sr "Kalau gitu tidur aja yaa "
+    wkk "Ihh Bu Senda.. Kami Bercanda bu"
+    sr "Sama Ibu juga Hahahaha"
+    sr "oiyaa anak anak, kali ini ibu akan membentuk kalian kelompok, tapi sebangku aja ya biar gampang"
+    $ kk = "Ketua Kelas"
+    kk "bu apakah sebaiknya di kocok saja biar Adil ?"
+    sr "bagaimana apa kalian setuju?"
+    sk "Setujuu Bu!! Biar lebih mengenal karakterisitik semuanya bu"
+    "Padahal Aku tidak setuju tapi karena kurang suara apa boleh buat"
+    kk "Bikin potongan kertas sesuai Absen bu Nanti anak-anak mengambilnya nomor yang diambil akan berkelompok"
+    kk "Setelah itu yang sudah mendapatkan kelompok tidak perlu mengambil nomornya lagi bu"
+    sr "Tapi nanti anak-anak nomor absen belakang tidak akan kebagian mengambil juga"
+    sr "Aha.. Ibu punya ide kita mulai dari nomor absen awal yang mengambil selanjutnya nomor absen terakhir yang mengambil"
+    sr "Kalau sudah dapat kelompok ga boleh mengambil lagi"
+    sr "Bagaimana anak-anak ?"
+    skco1 "Boleh juga itu bu"
+    sr "Okee.. Laksanakan"
+    sk "Yes Mam"
+    "Ahh Kelompok Merepotkan sekali"
+    "Moga dapat orang yang ga merepotkan"
+    mg3 "Umm.. yang nomor absennya 15"
+    mc "Aku"
+    mg3 "Ohh... okk"
+    na "Wiihh,, sekolompokan sama [mg3_First]"
+    na "Cantik sih hahahha soalnya mulai kemarin kamu lihatin dia mulu jadi kayak ada sesuatu nih hahaha"
+    mc "Ga juga"
+    mc "Btw, Situ sama siapa ?"
+    na "Aku kelompokan sama Meta anjir, kamu tau sendiri ceriwisnya minta ampun kan itu kzl .. "
+    "~Berlanjutlah pemilihan kelompok~" 
+    sr "Sudah dapat kelompoknya masing masing kan ya ?"
+    sr "Kalau gitu silahkan dikerjakan"
+    sk "Baik buu"
+    mg3 "Ayo kerjakan tugasnya bersama"
+    mc "Okk"
+
+    #Initialize score
+    $ quiz2_klasifikasi_score = 0
+
+    label quiz2_klasifikasi:
+
+        "1. Di dalam klasifkasi, jeruk bali (Citrus maxima), jeruk nipis (Citrus aurum tifolia), dan jeruk keprok (Citrus nobilis) termasuk dalam satu kelompok, yaitu pada tingkat …."
+        menu:
+            "A. spesies":
+                $ quiz2_klasifikasi_score += 0
+            "B. genus":
+                $ quiz2_klasifikasi_score += 10
+            "C. familia":
+                $ quiz2_klasifikasi_score += 0
+            "D. ordo":
+                $ quiz2_klasifikasi_score += 0
+
+        "2. Tingkatan takson paling rendah yang menempatkan jagung dan padi dalam satu kedudukan sistematik adalah …."
+        menu:
+            "A. genus":
+                $ quiz2_klasifikasi_score += 0
+            "B. kelas":
+                $ quiz2_klasifikasi_score += 10
+            "C. ordo":
+                $ quiz2_klasifikasi_score += 0
+            "D. familia":
+                $ quiz2_klasifikasi_score += 0 
+
+        "3. Kucing, anjing, dan harimau memiliki kesamaan antara lain struktur gigi dan jenis makanannya. Oleh karena itu, hewan tersebut dikelompokkan dalam satu takson yang sama, yaitu …."
+        menu:
+            "A. familia":
+                $ quiz2_klasifikasi_score += 0
+            "B. flum":
+                $ quiz2_klasifikasi_score += 0
+            "C. ordo":
+                $ quiz2_klasifikasi_score += 10
+            "D. genus":
+                $ quiz2_klasifikasi_score += 0
+
+        "\n \n \n Cara penulisan binomial nomenklatur yang benar adalah …."(multiple=2)
+        "4. Berikut adalah beberapa cara penulisan ilmiah:
+            \n
+            1) Terdiri dari dua kata bahasa Latin atau yang dilatinkan.
+            \n
+            2) Kata pertama dimulai dengan huruf besar, kata kedua dimulai dengan huruf kecil.
+            \n
+            3) Penulisan kata pertama dengan kedua disambung.
+            \n
+            4) Penulisan kata pertama dengan kedua tidak disambung.
+            \n
+            5) Ditulis dengan cetak miring atau digarisbawahi secara terputus.
+            \n
+            6) Nama penemunya tidak boleh dicantumkan." (multiple=2)
+        menu:
+            "A. 1)-2)-3)-5)":
+                $ quiz2_klasifikasi_score += 0
+            "B. 1)-2)-3)-6)":
+                $ quiz2_klasifikasi_score += 0
+            "C. 1)-2)-4)-5)":
+                $ quiz2_klasifikasi_score += 10
+            "D. 2)-3)-5)-6)":
+                $ quiz2_klasifikasi_score += 0
+            
+        "5. Untuk melestarikan keturunannya maka makhluk hidup perlu melakukan.."
+        menu:
+            "A. Perkembangbiakan":
+                $ quiz2_klasifikasi_score += 10
+            "B. Gerak":
+                $ quiz2_klasifikasi_score += 0
+            "C. Perkembangan":
+                $ quiz2_klasifikasi_score += 0
+            "D. Pertumbuhan":
+                $ quiz2_klasifikasi_score += 0
+
+        "6. Faktor dari dalam yang mempengaruhi pertumbuhan dan perkembangan manusia adalah.."
+        menu:
+            "A. Makanan":
+                $ quiz2_klasifikasi_score += 0
+            "B. Cahaya matahari":
+                $ quiz2_klasifikasi_score += 0
+            "C. Gen":
+                $ quiz2_klasifikasi_score += 10
+            "D. Air":
+                $ quiz2_klasifikasi_score += 0
+
+        "7. Hal berikut yang dilakukan oleh semua makhluk hidup kecuali..."
+        menu:
+            "A. Peka terhadap rangsang":
+                $ quiz2_klasifikasi_score += 0
+            "B. Bernapas":
+                $ quiz2_klasifikasi_score += 0
+            "C. Tumbuh":
+                $ quiz2_klasifikasi_score += 0
+            "D. Fotosintesis":
+                $ quiz2_klasifikasi_score += 10
+
+        "8. Zat sisa yang dikeluarkan oleh tumbuhan pada waktu bernapas adalah..."
+        menu:
+            "A. Co2 dan H2O":
+                $ quiz2_klasifikasi_score += 0
+            "B. CO2 dan O2":
+                $ quiz2_klasifikasi_score += 10
+            "C. CO2 dan zat gula":
+                $ quiz2_klasifikasi_score += 0
+            "D. Zat tepung dan O2":
+                $ quiz2_klasifikasi_score += 0
+
+        "9. Pemberian tata nama ganda diatur dalam Kode Internasional yang disebut dengan …. "
+        menu:
+            "A. binomial nomenklatur":
+                $ quiz2_klasifikasi_score += 10
+            "B. pengelompokan":
+                $ quiz2_klasifikasi_score += 0
+            "C. kunci determinasi":
+                $ quiz2_klasifikasi_score += 0
+            "D. klasifikasi":
+                $ quiz2_klasifikasi_score += 0
+
+        "10. Penulisan nama ilmiah yang benar di bawah ini adalah..."
+        menu:
+            "A. rhizopus oligosporus":
+                $ quiz2_klasifikasi_score += 0
+            "B. Rhizopus Oligosporus":
+                $ quiz2_klasifikasi_score += 0
+            "C. Rhizopus oligosporus":
+                $ quiz2_klasifikasi_score += 10
+            "D. rhizopus Oligosporus":
+                $ quiz2_klasifikasi_score += 0
+
+        "Jawaban : 
+            \n
+            1. B \ \ \ \ 3. C \ \ \ \ 5. A \ \ \ \ 7. D \ \ \ \ 9. A
+            \n  
+            2. B \ \ \ \ 4. C \ \ \ \ 6. C \ \ \ \ 8. B \ \ \ \ 10. C"
+
+        "Nilaiku adalah [quiz2_klasifikasi_score]"
+
+    # Check the quiz 1 score
+    if quiz2_klasifikasi_score >= 75:
+        # Win
+        sr "Selamat Bagi yang Nilainya Bagus"
+        sr "Kalian bebas melakukan apa saja sampai waktu pelajaran habis"
+        # Did he win? Yes.
+        #$ quiz2_klasifikasi_win = True
+        #$ quiz2_klasifikasi_lose = False   
+    else:
+        # Lose
+        sr "Bagi yang Nilainya jelek bisa mengulang lagi"
+        menu:
+            "Mengulang Lagi":
+                $ quiz2_klasifikasi_score = 0
+                jump quiz2_klasifikasi
+            "Tidak Ingin Mengulang":
+                "Anda gagal sebagai murid"
+                "~END~"
+                return
+        # Did he win? No.
+        #$ quiz2_klasifikasi_win = False
+        #$ quiz2_klasifikasi_lose = True
+
+    #if quiz2_klasifikasi_win:
+        #jump happylove
+        
+    #if quiz2_klasifikasi_lose:
+        #jump breakup
+    
+    mg3 "Oiyaa, aku boleh tanya ?"
+    mc "Apa itu ?"
+    mg3 "Kemarin, kamu ada di atap sekolah ?"
+    mc "Ga"
+    mg3 "Berarti aku salah orang tapi kamu kenapa selalu pulang akhir ?"
+    mc "Malas karena terlalu ramai"
+    mc "Btw, Kenapa kamu selalu bernyanyi di atap ?"
+    mg3 "Itu ada alasannya"
+    mc "Latihan Eskkul ?"
+    mg3 "Bukan,, ada deh"
+    mc "Soalnya suaramu bagus"
+    mg3 "//// Bisa bisanya hahahah ga ga bagus-bagus amat kok"
+    mc "Ga boleh gitu, tpi kenyataannya emang bagus"
+    mg3 "Aku baru tau loh kalau kita ternyata sekelas"
+    mc "Pasti kamu mengabaikan perkenalan di kelas ya"
+    mg3 "Enak saja, aku merhatikan loh"
+    mc "Tuh,, buktinya"
+    mg3 "Akkhh.. kamu juga"
+    mc "Kok bisa ?"
+    mg3 "Waktu ketemu kok ga tau kalau itu aku sekelas sama kamu"
+    mc "Ummm.. ga, aku sebenarnya sudah tahu hahahaha"
+    mg3 "bohong"
+    mc "Sudah sudah tugasnya dikumpulkan dulu aja"
+    mg3 "Diihh,, mengalihkan pembicaraan"
+    mc "Ini bu tugasnya"
+    sr "Terima kasih [mcFirst]"
+    sr "Semuanya apa sudah ?"
+    sk "Sudah bu"
+    sr "Kalau gitu Bu Senda ke ruang guru. Jangan, ramai ya kalian bebas melakukan apapun tapi jangan ramai tunggu sampai bel pulang"
+    sk "Siapp bu"
+    sr "Ketua Kelas, Kelasnya di atur ya"
+    kk "Iyaa bu"
+    sr "Kalau gitu sekian dari Bu Senda"
+    mg3 "Apa kamu nanti pulang terakhir lagi ?"
+    mc "Iyaa,, Kenapa ?"
+    mg3 "Mau dengarin aku bernyanyi ? Sejujurnya aku sedikit malu hahaha"
+    mc "Boleh.."
+    "~Ding Dong~"
+    "Hmmm.. Mendengarkan dia bernyanyi kah.. Baiklah menunggu kelas sepi saja"
+    na "Bro,, Duluan"
+    mc "Okk"
+    "~20 Menit Kemudian~"
+    "Seperti sudah ga terlalu ramai, Apa aku langsung pulang saja ?"
+    menu:
+        "Mampir ke Atap":
+            "Baiklah, Kalau gitu aku mampir dulu liat dia"
+        "Langsung Pulang":
+            "Kalau gitu aku pulang saja, buang - buang waktu lihat dia lagi"
+            scene kamar_malam
+            "Huwaa,, Capeknya sekolah lebih baik aku tidur saja"
+            "~END~"
+            return
+    scene atap_sore
+    mg3 "Kamu datang beneran yaa hahah"
+    mc "Namanya, diminta datang kalau gitu aku pulang dulu"
+    mg3 "Ehh.. Eh.. tunggu dulu"
+    mg3 "Ihhh... Ngambulan"
+    mc "Ga juga.."
+    mg3 "Aku Mulaii.. dengarkan lohh yaa"
+    mc "Iyaa"
+    "~Mendengarkan~"
+    "Baguss.. Enak didengerin"
+    "~Sudah Mendengarkan~"
+    mg3 "Gimana gimana ?"
+    mc "Hmm.. Bagus.. Jadi tenang pas dengerinnya.."
+    mc "Kamu anak Padsu ?"
+    mg3 "Ahh... bukan.."
+    mc "Terus ? kamu artist idol gitu ?"
+    mg3 "Ahh.. itu ada alasannya, kalau gitu aku pulang dulu"
+    mc "Hmmmm..."
+
+    scene depan rumah
+    mc "Aku Pulang !!"
+
+    scene ruang keluarga
+    mc "Buu.. aku langsung tidur dulu"
+    mom "Iyaa.. jangan lupa makan"
+    mc "Iyaa bu"
+
+    scene kamar_sore
+    "Kenapa dia tiba-tiba langsung pulang ya ? Apa sama sepertiku ? yang dulunya ada masalah"
+    "Dahlah dipikirkan terus-terusan aku bisa jadi pusing"
+
+    scene kamar_malam
+    "Hmm.. Sudah malam kalau gitu aku makan lalu langsung tidur"
+
+    scene dapur_malam
+    mom "Sudah bangun kamu sini makan bareng"
+    mc "Iyaa,, Bu ngomong-ngomong ayah kemana bu ?"
+    mom "Ayah Kerja Lembur jadi bakalan pulang malam"
+    cat "Meoooww"
+    mc "kamu mau tambah [cat] lagi"
+    cat "Meoooww"
+    mc "Dasarr.. hahahah iyaa ini aku kasih lagi"
+    mc "Nanti mau tidur di kamarku ?"
+    cat "Meooww"
+    mc "Oiya, bu ini nasinya ?"
+    mom "Iyaa"
+    mc "Kalau gitu selamat makan"
+    "~Beberapa Menit kemudian~"
+    "Fuuuhh.. Kenyangnya"
+    "~Cuci Piring~"
+    mc "Kalau gitu aku tidur lagi ya bu"
+    mom "Iyaa.."
+    mom "Oiyaa,, di sekolah ga ada sesuatu ?"
+    mc "Ga ada aman-aman saja cuma aku dapat teman"
+    mom "Mereka mengganggu mu ?"
+    mc "Ga bu"
+    mom "Ohh iyaa dah"
+
+    scene kamar_malam
+    "Saatnya tidur lagi pintunya kubuka sedikit saja lah biar [cat] bisa masuk ke kamar"
+
+    jump day3_Airin

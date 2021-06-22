@@ -16,7 +16,7 @@ label day3_Kirana:
     mom "Ini di Meja"
     mc "Iya bu, kalau gitu aku berangkat"
 
-    scene gerbang sekolah
+    scene gerbang_sekolah
     "Tumben ga ada yang manggil untuk bareng ke kelas. Apa Aku kepagian ya berangkatnya ? "
     "Tapi hari ini enak banget sunyi sekali pas masuk ke sekolah"
     
@@ -109,7 +109,7 @@ label day3_Kirana:
     $ nd = "Nindi"
     $ ad = "Ardi"
     mg2 "Ada [nd], aku, [ol], [ad]"
-    mc "Aku aja nih lakinya ? Kalau kelompoknya [na] ada siapa aja ?"
+    mc "Kalau kelompoknya [na] ada siapa aja ?"
     mg2 "Kayaknya sudah 5"
     mc "...."
     mc "Yaudah lah aku masuk kelompokmu aja"
@@ -139,7 +139,7 @@ label day3_Kirana:
     mc "Aku ngikut aja"
     ad "Aku sih ok ok aja"
 
-    scene gerbang
+    scene gerbang_sekolah_siang
     nd "sudah rede semua ini kan ?"
     ad "Tinggal Berangkat aku"
     $ mgol = "Ardana dan Filo"
@@ -399,9 +399,13 @@ label day3_Kirana:
             "D. Lyssavirus":
                 $ quiz3_score += 0
 
-        "Jawaban : 
-            1. A    3. D    5. D    7. A    9. C    11. B   13. D   15. C   17. A   19. C
-            2. C    4. A    6. B    8. D    10. C   12. A   14. C   16. C   18. D   20. B"
+        "Jawaban :
+            \n 
+            1. A \ \ \ \ 4. A \ \ \ \ 7. A \ \ \ \ 10. C \ \ \ \ 13. D \ \ \ \ 16. C \ \ \ \ 19. C 
+            \n
+            2. C \ \ \ \ 5. D \ \ \ \ 8. D \ \ \ \ 11. B \ \ \ \ 14. C \ \ \ \ 17. A \ \ \ \ 20. B
+            \n
+            3. D \ \ \ \ 6. B \ \ \ \ 9. C \ \ \ \ 12. A \ \ \ \ 15. C \ \ \ \ 18. D"
 
         "Nilaiku adalah [quiz3_score]"
 
@@ -423,6 +427,7 @@ label day3_Kirana:
                 ol "Iya, dah. Istirahat dulu aja"
                 mg2 "Iya bener, Istirahat dulu"
                 mg2 "Setelah itu lanjut"
+                $ quiz3_score = 0
                 jump quiz3
             "Nyerah":
                 "Anda gagal sebagai murid"
@@ -451,7 +456,7 @@ label day3_Kirana:
     mc "Heheh maaf maaf"
     ad "Hahahaha ada-ada aja"
     "Meskipun suasananya sempat tegang, tidak buruk juga hal ini ternyata"
-    scene foudcourt sore
+    scene foudcourt_sore
     mg2 "Sudah sore nih, Kuy Pulang"
     mc "Ahh Ok ok"
     mg2 "Kalian ga mau pulang gaes ?"
@@ -470,7 +475,7 @@ label day3_Kirana:
     mm2 "Aku duluan gaes.. Bye Byee"
     all "Okie.. Baibai hati-hati dijalan semuanya"
 
-    scene depan tumah sore hari 
+    scene depan rumah sore hari 
     mc "Terima kasih [mg2_Last]"
     mg2 "Gapapa no problem, aku pulang duluan titip salam ke tante"
     mc "Okk"
@@ -490,7 +495,7 @@ label day3_Kirana:
     mc "[cat] mau ikut tidur ?"
     cat "Meoooww"
 
-    scene kamar 
+    scene kamar_sore
     "Salin Baju dulu lah terus tidur, capek bener"
     "Leganya enaknya kasur ini buat rebahan"
     mc "Kuy tidur disini [cat] soalnya kamu hangat hahaha"
@@ -676,9 +681,11 @@ label day3_Miselia:
             "D. miselium":
                 $ quiz_fungi3_score += 0
 
-        "Jawaban : 
-            1. B    3. C    5. C    7. B    9. A
-            2. D    4. A    6. B    8. C    10. B"
+        "Jawaban :
+            \n 
+            1. B \ \ \ \ 3. C \ \ \ \ 5. C \ \ \ \ 7. B \ \ \ \ 9. A
+            \n
+            2. D \ \ \ \ 4. A \ \ \ \ 6. B \ \ \ \ 8. C \ \ \ \ 10. B"
 
         "Nilaiku adalah [quiz_fungi3_score]"
 
@@ -695,13 +702,14 @@ label day3_Miselia:
         sr "Bagi yang Nilainya jelek bisa mengulang lagi"
         menu:
             "Mengulang Lagi":
+                $ quiz_fungi3_score = 0
                 jump quiz_fungi3
             "Tidak Ingin Mengulang":
                 "Anda gagal sebagai murid"
                 "~END~"
                 return
 
-    scene gerbang sekolah
+    scene gerbang_sekolah_sore
     mt "Eh , kamu pulang sama siapa ?"
     mc "Aku pulang naik angkota met, kenapa ?"
     mt "Oh gapapa , yaudah ayo breng , aku juga mau naik angkot"
@@ -710,3 +718,690 @@ label day3_Miselia:
     jump day4_Miselia
 
 label day3_Airin:
+    scene bg jendela kamar terlihat burung
+    "Sudah Pagi Ternyata, sebaiknya aku bergegas menuju sekolah"
+
+    scene dapur
+    mom "Ehh.. Sudah Mandi Ternyata"
+    mc "Hehhe Iya"
+    mc "[dad] kemana bu ?"
+    mom "[dad]mu berangkat pagi tadi. ibu sudah siapin bekal untuk ayahmu tadi"
+    mc "Kalau gitu aku makan dulu ya bu"
+    mom "Iyaa nak"
+    "Kami pun Makan bersama walaupun [dad] sudah berangkat duluan"
+    mc "Kalau gitu aku ambil tas dulu di kamar"
+    mom "Oiya,, Uang Sangumu sama Bekal ada di meja makan!!"
+    mc "Dimana bu ?"
+    mom "Ini di Meja"
+    mc "Iya bu, kalau gitu aku berangkat"
+    $ money += 15000
+    mc "[cat] Berangkat dulu"
+
+    scene gerbang_sekolah
+    "Tumben ga ada yang manggil untuk bareng ke kelas. Apa Aku kepagian ya berangkatnya ? "
+    "Tapi hari ini enak banget sunyi sekali pas masuk ke sekolah"
+    
+    scene kelas 
+    "Ternyata yang baru datang hanya beberapa saja sepertinya emang kepagian"
+    "Mungkin kalau gitu sebaiknya aku tidur dulu"
+    mg3 "Umm.. Dia tertidur lagi, sering sekali dia tertidur"
+    "~Beberapa Menit Kemudian~"
+    "~Ding Dong~"
+    mg3 "Dia belum bangun sama sekali"
+    mg3 "Hee Bangun.. "
+    mc "Umm.."
+    mg3 "Sudah mau mulai jam pelajarannya.. Bangunn.."
+    mc "Ahh.. sudah masuk ternyata"
+    mg3 "Iyaa.. sana raup dulu"
+    mc "Oh Ok kalau gitu aku raup dulu"
+    na "Cie cie"
+    mc "Apaa ?"
+    na "Gapapa hahahha.. raup dulu lur bentar lagi Bu Senda masuk"
+    mg3 "Hooh Raup dulu sana"
+    mc "Iya Iya.. Kalau gitu aku ke kamar mandi dulu"
+    na "Btw, kamu tiba-tiba akrab sama [mcFirst] pasti ini alasannya [mcFirst] pulangnya lebih lama nih"
+    na "Ciee ciee"
+    mg3 "Ahh.. ga ga bukan apa-apa"
+
+    scene depan kelas 
+    sr "Loh [mcFirst] mau kemana ?"
+    mc "Mau ke kamar mandi bu"
+    sr "Ealah, Iyaa dah sana"
+    mc "Baik bu !!"
+
+    scene kelas
+    sr "Selamat sore anak- anak"
+    kk "Loh, ini masih pagi loh bu.. kok selamat sore sih"
+    sk "hahhahahhahahahhaha"
+    sr "Alhamdulillah brati masih semangat ya, otak nya masih fresh. baik lah langsung saja, ibu mulai, selamat pagi semuanya"
+    sk "Pagi bu"
+    sr "Kalau gitu kita mulai pelajarannya"
+    mc "Permisi bu"
+    sr "Iya Iyaa silahkan duduk"
+    "~Materi Klasifikasi~"
+    "~Ding Dong~"
+    na "Brader ikut ke kantin ga ?"
+    mc "Ohh Okk"
+
+    scene kantin
+    $ wkk = "Wakil Ketua Kelas"
+    $ bl = "Bella"
+    na "Carikan tempat duduk kosong dong ntar aku aja yang mesenin"
+    na "Mau pesen apa ?"
+    mc "Mungkin Bakso aja kali ya"
+    na "Okk dahh, Beli berapa baksonya ?"
+    mc "5000an aja dah cukup"
+    mc "Kalau gitu aku cari bangku yang kosong dulu"
+    "Mungkin sebaiknya duduk disini"
+    na "Hooo.. Duduk disini"
+    kk "Ohh.. kalian ada disini"
+    na "Lohh ada [kk] juga sendirian ? gabung sini sama kita"
+    kk "Boleh-boleh [mcFirst] Ga keberatan kita join juga ?"
+    mc "Silahkan.."
+    kk "Bentar lagi [wkk] dan [bl] kesini.. mereka lagi order soalnya"
+    na "Wiihhh.. bakalan ramai nihh"
+    kk "Heii Kalian sinii"
+    wkk "Ealah,, disini toh loh ada Nada sama [mcFirst] juga"
+    na "Yooo"
+    bl "Lahh,, aku kok ditinggal [wkk]"
+    wkk "Hahahha Maaf-maaf"
+    bl "Jarang loh liat [mcFirst] datang ke kantin"
+    mc "Soalnya aku sering bawa bekal"
+    kk "Hooo.. Pantes saja kamu selalu di kelas meskipun waktunya istirahat"
+    mc "Hahahah"
+    na "Dah dah Skuy makan"
+    bl "Okk dah"
+    "Hmm Ini tidak begitu buruk makan bersama teman-teman andaikan dulu aku waktu smp seperti ini"
+    kk "Ada apa ? [mcFirst] mulai tadi melamun saja"
+    mc "Ahh.. gapapa"
+    "~Kami pun makan bersama setelah itu kami pun langsung kembali ke kelas~"
+    mc "Bentar aku mau beli camilan buat nanti takut habis"
+    na "okk kalau gitu aku duluan balik ke kelas"
+    mc "Mungkin aku bisa membelikannya Sesuatu sebagai rasa terima kasih membangunkanku"
+
+    label minuman:
+        $ sc = 3000
+        $ ss = 3000
+        $ fn = 3000
+        $ ip = 3000
+        $ gm = 4500
+
+        menu:
+            "Susu Coklat":
+                "Harga Rp. [sc],-"
+                menu:
+                    "Aku beli Susu Coklatnya":
+                        kt "Mau Beli Berapa ?"
+                        $ jm = renpy.input("Masukkan Jumlah yang ingin dibeli: ", "", allow="0123456789")
+                        $ jm = int(jm)
+                        $ sct = jm * sc
+                        mc "Beli [jm] Berapa totalnya ? "
+                        kt "Totalnya [sct]"
+
+                        if (money >= sct):
+                            $ money = money - sct
+                            kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                            kt "Mau Tambah apa lagi ?"
+                            menu:
+                                "Makanan":
+                                    jump makanan
+                                "Minuman":
+                                    jump minuman
+                                "Tidak usah":
+                                    kt "Baiklah, kalau gitu"
+                        else:
+                            "Uangku tidak Cukup..."
+                    "Maaf, Tidak jadi..":
+                        kt "Iya Gapapa"
+            "Susu Strawberry":
+                "Harga Rp. [ss],-"
+                menu:
+                    "Aku beli Susu Strawberrynya":
+                        kt "Mau Beli Berapa ?"
+                        $ jm = renpy.input("Masukkan Jumlah yang ingin dibeli: ", "", allow="0123456789")
+                        $ jm = int(jm)
+                        $ sst = jm * ss
+                        mc "Beli [jm] Berapa totalnya ? "
+                        kt "Totalnya [sst]"
+
+                        if (money >= sst):
+                            $ money = money - sst
+                            kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                            kt "Mau Tambah apa lagi ?"
+                            menu:
+                                "Makanan":
+                                    jump makanan
+                                "Minuman":
+                                    jump minuman
+                                "Tidak usah":
+                                    kt "Baiklah, kalau gitu"
+                        else:
+                            "Uangku tidak Cukup..."
+                    "Maaf, Tidak jadi..":
+                        kt "Iya Gapapa"
+            "Floridana":
+                "Harga Rp. [fn],-"
+                menu:
+                    "Aku beli Floridana":
+                        kt "Mau Beli Berapa ?"
+                        $ jm = renpy.input("Masukkan Jumlah yang ingin dibeli: ", "", allow="0123456789")
+                        $ jm = int(jm)
+                        $ fnt = jm * fn
+                        mc "Beli [jm] Berapa totalnya ? "
+                        kt "Totalnya [fnt]"
+
+                        if (money >= fnt):
+                            $ money = money - fnt
+                            kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                            kt "Mau Tambah apa lagi ?"
+                            menu:
+                                "Makanan":
+                                    jump makanan
+                                "Minuman":
+                                    jump minuman
+                                "Tidak usah":
+                                    kt "Baiklah, kalau gitu"
+                        else:
+                            "Uangku tidak Cukup..."
+                    "Maaf, Tidak jadi..":
+                        kt "Iya Gapapa"
+            "GoodMaut":
+                "Harga Rp. [gm],-"
+                menu:
+                    "Aku beli GoodMaut":
+                        kt "Mau Beli Berapa ?"
+                        $ jm = renpy.input("Masukkan Jumlah yang ingin dibeli: ", "", allow="0123456789")
+                        $ jm = int(jm)
+                        $ gmt = jm * gm
+                        mc "Beli [jm] Berapa totalnya ? "
+                        kt "Totalnya [gmt]"
+
+                        if (money >= gmt):
+                            $ money = money - gmt
+                            kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                            kt "Mau Tambah apa lagi ?"
+                            menu:
+                                "Makanan":
+                                    jump makanan
+                                "Minuman":
+                                    jump minuman
+                                "Tidak usah":
+                                    kt "Baiklah, kalau gitu"
+                        else:
+                            "Uangku tidak Cukup..."
+                    "Maaf, Tidak jadi..":
+                        kt "Iya Gapapa"
+            "Ifresh Person":
+                "Harga Rp. [ip],-"
+                menu:
+                    "Aku beli Ifresh Person":
+                        kt "Mau Beli Berapa ?"
+                        $ jm = renpy.input("Masukkan Jumlah yang ingin dibeli: ", "", allow="0123456789")
+                        $ jm = int(jm)
+                        $ ipt = jm * ip
+                        mc "Beli [jm] Berapa totalnya ? "
+                        kt "Totalnya [ipt]"
+
+                        if (money >= ipt):
+                            $ money = money - ipt
+                            kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                            kt "Mau Tambah apa lagi ?"
+                            menu:
+                                "Makanan":
+                                    jump makanan
+                                "Minuman":
+                                    jump minuman
+                                "Tidak usah":
+                                    kt "Baiklah, kalau gitu"
+                        else:
+                            "Uangku tidak Cukup..."
+                    "Maaf, Tidak jadi..":
+                        kt "Iya Gapapa"
+
+    label makanan:
+
+        $ rsp = 3500
+        $ rism = 2000
+        $ mgj = 7000
+        $ ngj = 8000
+        $ rtp = 5000
+        menu:
+            "Roti Sosis Panggang":
+                "Harga Rp. [rsp],-"
+                menu:
+                    "Aku beli Roti Sosisnya":
+                        kt "Mau Beli Berapa bungkus ?"
+                        $ jm = renpy.input("Masukkan Jumlah yang ingin dibeli: ", "", allow="0123456789")
+                        $ jm = int(jm)
+                        $ rspt = jm * rsp
+                        mc "Beli [jm] Berapa totalnya ? "
+                        kt "Totalnya [rspt]"
+
+                        if (money >= rspt):
+                            $ money = money - rspt
+                            kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                            kt "Mau Tambah apa lagi ?"
+                            menu:
+                                "Makanan":
+                                    jump makanan
+                                "Minuman":
+                                    jump minuman
+                                "Tidak usah":
+                                    kt "Baiklah, kalau gitu"
+                        else:
+                            "Uangku tidak Cukup..."
+                    "Maaf, Tidak jadi..":
+                        kt "Iya Gapapa"
+            "Roti Isi Selai Melon":
+                "Harga Rp. [rism],-"
+                menu:
+                    "Aku beli Roti Isi Selai Melonnya":
+                        kt "Mau Beli Berapa bungkus ?"
+                        $ jm = renpy.input("Masukkan Jumlah yang ingin dibeli: ", "", allow="0123456789")
+                        $ jm = int(jm)
+                        $ rismt = jm * rism
+                        mc "Beli [jm] Berapa totalnya ? "
+                        kt "Totalnya [rismt]"
+
+                        if (money >= rismt):
+                            $ money = money - rismt
+                            kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                            kt "Mau Tambah apa lagi ?"
+                            menu:
+                                "Makanan":
+                                    jump makanan
+                                "Minuman":
+                                    jump minuman
+                                "Tidak usah":
+                                    kt "Baiklah, kalau gitu"
+                        else:
+                            "Uangku tidak Cukup..."
+                    "Maaf, Tidak jadi..":
+                        kt "Iya Gapapa"
+            "Mie Goreng Jawa":
+                "Harga Rp. [mgj],-"
+                menu:
+                    "Aku beli Mie Goreng Jawa":
+                        kt "Mau Beli Berapa bungkus ?"
+                        $ jm = renpy.input("Masukkan Jumlah yang ingin dibeli: ", "", allow="0123456789")
+                        $ jm = int(jm)
+                        $ mgjt = jm * mgj
+                        mc "Beli [jm] Berapa totalnya ? "
+                        kt "Totalnya [mgjt]"
+
+                        if (money >= mgjt):
+                            $ money = money - mgjt
+                            kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                            kt "Mau Tambah apa lagi ?"
+                            menu:
+                                "Makanan":
+                                    jump makanan
+                                "Minuman":
+                                    jump minuman
+                                "Tidak usah":
+                                    kt "Baiklah, kalau gitu"
+                        else:
+                            "Uangku tidak Cukup..."
+                    "Maaf, Tidak jadi..":
+                        kt "Iya Gapapa"
+            "Nasi Goreng Jawa":
+                "Harga Rp. [ngj],-"
+                menu:
+                    "Aku beli Nasi Goreng Jawa":
+                        kt "Mau Beli Berapa bungkus ?"
+                        $ jm = renpy.input("Masukkan Jumlah yang ingin dibeli: ", "", allow="0123456789")
+                        $ jm = int(jm)
+                        $ ngjt = jm * ngj
+                        mc "Beli [jm] Berapa totalnya ? "
+                        kt "Totalnya [ngjt]"
+
+                        if (money >= ngjt):
+                            $ money = money - ngjt
+                            kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                            kt "Mau Tambah apa lagi ?"
+                            menu:
+                                "Makanan":
+                                    jump makanan
+                                "Minuman":
+                                    jump minuman
+                                "Tidak usah":
+                                    kt "Baiklah, kalau gitu"
+                        else:
+                            "Uangku tidak Cukup..."
+                    "Maaf, Tidak jadi..":
+                        kt "Iya Gapapa"
+            "Roti isi Pentol":
+                "Harga Rp. [rtp],-"
+                menu:
+                    "Aku beli Roti Isi Pentol":
+                        kt "Mau Beli Berapa bungkus ?"
+                        $ jm = renpy.input("Masukkan Jumlah yang ingin dibeli: ", "", allow="0123456789")
+                        $ jm = int(jm)
+                        $ rtpt = jm * rtp
+                        mc "Beli [jm] Berapa totalnya ? "
+                        kt "Totalnya [rtpt]"
+
+                        if (money >= rtpt):
+                            $ money = money - rtpt
+                            kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                            kt "Mau Tambah apa lagi ?"
+                            menu:
+                                "Makanan":
+                                    jump makanan
+                                "Minuman":
+                                    jump minuman
+                                "Tidak usah":
+                                    kt "Baiklah, kalau gitu"
+                        else:
+                            "Uangku tidak Cukup..."
+                    "Maaf, Tidak jadi..":
+                        kt "Iya Gapapa"
+
+    "~Ding Dong~"
+    "Ternyata sudah Bel Aku harus bergegas"
+
+    scene depan kelas
+    "Huufftt... Hufftt... Hufttt..."
+    "Mungkin ini sudah cukup, sebagai rasa terima kasih membangunkanku"
+    
+    scene kelas
+    mc "Ini sebagai rasa terima kasihku telah membangunkanku tadi"
+    mg3 "Ga usah repot-repot"
+    mc "Gapapa ambil saja.. "
+    mg3 "Baiklah kalau gitu"
+    sr "Selamat malam anak-anak"
+    sk "Lah.. tadi pagi selamat sore sekarang siang selamat malam"
+    sk "Ihh Bu Senda ini"
+    sr "Heheheh Becanda. Ternyata Kalian masih semangat ya"
+    sr "Tumben, Biasanya siang-siang gini dah lesu"
+    sk "Itu mah perasaannya Bu Senda aja kali hehehe"
+    sr "Dasar kalian yaa"
+    sk "hahahahha.. Ampun Bu ampun haha"
+    sr "Sudah Sudah mari kita mulai saja ya"
+    sr "Oiyaa, Seperti kemarin berkelompok lagi ya terus ibu mau rapat lagi kemungkinan sebentar lagi pulang"
+    sr "Sekelompok 4 orang sekelas ini ada 35 orang"
+    sr "Sisanya bisa bikin kelompok sendiri bisa bergabung sama temannya"
+    sr "Tentuin sendiri kelompoknya ya"
+    "Hmm... Kelompok lagi kelompok lagi. sepertinya aku ga menemukan kelompok"
+    mg3 "Mau kelompokan sama aku ?"
+    mc "Bukannya sudah cukup ?"
+    mg3 "tapi kan sisanya boleh bergabung ke kelompok mana pun"
+    mc "Kelompokmu ada siapa aja ?"
+    $ nd = "Nindi"
+    $ st = "Shinta"
+    mg3 "Ada aku, [nd], [skce2], [st]"
+    mc "Aku aja nih lakinya ? Kalau kelompoknya [na] ada siapa aja ?"
+    mg3 "Kayaknya sudah 5"
+    mc "...."
+    mc "Yaudah lah aku masuk kelompokmu aja"
+    mg3 "Okie"
+    sr "Apa Semua sudah dapat kelompok ?"
+    sr "Kalau gitu ini tugasnya"
+    sk "Baik bu.."
+    "~Ding Dong~"
+    sr "Ternyata sudah bel pulang, kalau gitu ibu akhiri saja untuk hari ini"
+    sr "Oiya, Jangan lupa dikerjakan ya"
+    sk "Baik Buu"
+    sr "Kalau gitu Ibu ke ruang guru dulu"
+    sk "Iyaa bu"
+    nd "Mau kerumahnya siapa ? Kerja kelompoknya"
+    mg3 "Dirumahku atau [st] ? Rumahmu juga gapapa sih"
+    nd "Kalau dirumahnya [mcFirst] Bagaimana ?"
+    skce2 "Boleh juga itu"
+    mc "...."
+    mc "Jangan dirumahku soalnya semuanya pada keluar jadi rumahku dikunci"
+    nd "Kamu ga dititpin kunci ?"
+    mc "Ga soalnya setiap pulang sekolah sudah ada dirumah"
+    mc "Berhubung sekarang pulang lebih awal jadi dirumahku ga ada siapa-siapa"
+    mc "Saranku dirumahnya kalian aja"
+    mg3 "Kalau gitu rumahmu aja Nin gimana ?"
+    skce2 "Bagaimana kalau Kerja kelompok di taman kota ?"
+    mg3 "Boleh juga itu"
+    nd "Yaudah kalau gitu di taman kota aja"
+    mc "Aku ngikut aja"
+    st "Aku sih ok ok aja"
+
+    scene gerbang_sekolah_siang
+    nd "sudah rede semua ini kan ?"
+    st "Tinggal Berangkat saja ini"
+    $ mgol = "[mg3_First] dan [skce2]"
+    mgol "Gass dah rede nih"
+    nd "Kalau gitu Joss berangkat kita"
+
+    scene alun-alun
+    skce2 "Yeayy Sudah sampai"
+    nd "Kita kerjain langsung apa pesan sesuatu dulu ?"
+    st "Pesan dulu aja dong di FoodCourtnya sekalian kerjain disana"
+    mc "Aku ngikut aja"
+    mg3 "Yauda, Pesan aja dulu sambil nunggu camilan ama minumannya datang kita kerjain aja"
+
+    scene foodcourt
+    skce2 "Kalian mau pesan apa gaes ?"
+    nd "Aku minumnya pesan Es Jeruk aja"
+    mg3 "Aku pesan jus jambu aja"
+    st "Aku pesan Es Jeruk juga"
+    mc "Milkshake Vanilla"
+    skce2 "Kalau gitu Es Jeruk 2, Jus Jambu 1, Milkshake Vanilla 1"
+    skce2 "Kalau camilannya pesen apa ini ? yang sekiranya bisa dibuat makan bersama"
+    nd "Kalau gitu Kentang Goreng 2 terus Pisang coklat 1"
+    mg3 "Nugget jugaa 2 sama tempe goreng 2"
+    skce2 "Okk dah kalau gitu aku pesanin dulu ya"
+    st "Ehh.. tunggu dulu tambah itu juga Tahu Crispy 1"
+    skce2 "Okie Doki"
+    mc "Jadi, berhubung nunnggu pesanan datang kita kerjakan dulu soal dari Bu Senda"
+    nd "Boleh"
+    mg3 "Yok,, Keluarkan Tugasnya biar cepat selesai"
+    st "Skuy"
+
+    #Initialize score
+    $ quiz3_klasifikasi_score = 0
+
+    label quiz3_klasifikasi:
+
+        "1. Pada taksonomi dari kingdom ke spesies, jumlah makhluk hidup yang berbeda dalam setiap takson akan …."
+        menu:
+            "A. semakin banyak":
+                $ quiz3_klasifikasi_score += 0
+            "B. semakin sedikit":
+                $ quiz3_klasifikasi_score += 10
+            "C. berubah-ubah":
+                $ quiz3_klasifikasi_score += 0
+            "D. tetap":
+                $ quiz3_klasifikasi_score += 0
+
+        "2. Padi memiliki nama ilmiah Oryza sativa. Kata Oryza merupakan petunjuk nama …. "
+        menu:
+            "A. spesies":
+                $ quiz3_klasifikasi_score += 0
+            "B. kelas":
+                $ quiz3_klasifikasi_score += 0
+            "C. familia":
+                $ quiz3_klasifikasi_score += 0
+            "D. genus":
+                $ quiz3_klasifikasi_score += 10 
+
+        "3. Semakin dekat hubungan kekerabatan makhluk hidup, maka akan semakin banyak …. "
+        menu:
+            "A. perbedaan sifat":
+                $ quiz3_klasifikasi_score += 0
+            "B. keragamannya":
+                $ quiz3_klasifikasi_score += 0
+            "C. persamaan sifat":
+                $ quiz3_klasifikasi_score += 10
+            "D. keunikannya  j":
+                $ quiz3_klasifikasi_score += 0
+
+        "4. Kelompok yang memiliki jumlah individu paling banyak adalah …."
+        menu:
+            "A. genus":
+                $ quiz3_klasifikasi_score += 0
+            "B. kelas":
+                $ quiz3_klasifikasi_score += 0
+            "C. spesies":
+                $ quiz3_klasifikasi_score += 10
+            "D. familia":
+                $ quiz3_klasifikasi_score += 0
+            
+        "5. Euglena kurang cocok jika hanya dimasukkan dalam animalia, karena Euglena juga memiliki ciri yang dimiliki oleh Plantae, yaitu …."
+        menu:
+            "A. cara makannya autotrof":
+                $ quiz3_klasifikasi_score += 10
+            "B. selalu bergerak":
+                $ quiz3_klasifikasi_score += 0
+            "C. cara hidup berkoloni":
+                $ quiz3_klasifikasi_score += 0
+            "D. cara makannya heterotrof j":
+                $ quiz3_klasifikasi_score += 0
+
+        "6. Spora pada tumbuhan paku apabila jatuh pada tempat yang cocok akan tumbuh menjadi..."
+        menu:
+            "A. Tumbuhan paku":
+                $ quiz3_klasifikasi_score += 0
+            "B. Generasi sporofit":
+                $ quiz3_klasifikasi_score += 0
+            "C. Protonema":
+                $ quiz3_klasifikasi_score += 0
+            "D. Protalium":
+                $ quiz3_klasifikasi_score += 10
+
+        "7. Berikut ini ciri-ciri tumbuhan lumut Salah satu ciri khas yang membedakan ganggang dengan jamur adalah …. "
+        menu:
+            "A. ganggang tidak berklorofil":
+                $ quiz3_klasifikasi_score += 0
+            "B. jamur tidak berklorofil":
+                $ quiz3_klasifikasi_score += 10
+            "C. jamur berklorofil":
+                $ quiz3_klasifikasi_score += 0
+            "D. ganggang bersel satu":
+                $ quiz3_klasifikasi_score += 0
+
+        "8. Lumut kerak merupakan tumbuhan …. "
+        menu:
+            "A. hasil hidup bersama askiometes dengan ganggang":
+                $ quiz3_klasifikasi_score += 0
+            "B. hasil simbiosis antara jamur dengan lumut ":
+                $ quiz3_klasifikasi_score += 10
+            "C. gabungan antara tumbuhan paku dengan jamur ":
+                $ quiz3_klasifikasi_score += 0
+            "D. hasil hidup bersama antara dua jamur":
+                $ quiz3_klasifikasi_score += 0
+
+        "9. Bagian pada tumbuhan paku yang menghasilkan sel kelamin jantan adalah …. "
+        menu:
+            "A. arkegonium ":
+                $ quiz3_klasifikasi_score += 0
+            "B. protalium ":
+                $ quiz3_klasifikasi_score += 0
+            "C. antheridium ":
+                $ quiz3_klasifikasi_score += 10
+            "D. sporogonium  j":
+                $ quiz3_klasifikasi_score += 0
+
+        "10. Daun tumbuhan paku yang dapat menghasilkan spora disebut daun yang …. "
+        menu:
+            "A. steril":
+                $ quiz3_klasifikasi_score += 0
+            "B. hidup":
+                $ quiz3_klasifikasi_score += 0
+            "C. besar":
+                $ quiz3_klasifikasi_score += 0
+            "D. fertil  j":
+                $ quiz3_klasifikasi_score += 10
+
+        "Jawaban : 
+            \n
+            1. B \ \ \ \ 3. C \ \ \ \ 5. A \ \ \ \ 7. B \ \ \ \ 9. C
+            \n  
+            2. D \ \ \ \ 4. C \ \ \ \ 6. D \ \ \ \ 8. B \ \ \ \ 10. D"
+
+        "Nilaiku adalah [quiz3_klasifikasi_score]"
+
+    # Check the quiz 1 score
+    if quiz3_klasifikasi_score >= 75:
+        # Win
+        # Win
+        "Kemudian makanannya datang, tugasnya pun sudah selesai juga dan aku makan bersama teman kelas"
+        "Aku pikir ini tidak begitu buruk"
+        # Did he win? Yes.
+        #$ quiz3_win = True
+        #$ quiz3_lose = False   
+    else:
+        # Lose
+        "Lumayan susah juga"
+        skce2 "Nyerah nih ?"
+        mc "Terserah, tapi nilainya dapat jelek"
+        menu:
+            "Tidak Menyerah":
+                skce2 "Iya, dah. Istirahat dulu aja"
+                mg3 "Iya bener, Istirahat dulu"
+                mg3 "Setelah itu lanjut"
+                $ quiz3_klasifikasi_score = 0
+                jump quiz3_klasifikasi
+            "Nyerah":
+                "Anda gagal sebagai murid"
+                "~END~"
+                return
+
+    scene foodcourt sore
+    skce2 "Capeknyaa Fuuhh.. Makanannya  ga kerasa tinggal segini hahahha"
+    mc "[mg3_First] Makannya paling banyak nih hahahhaha"
+    mg3 "Enak saja, makanku yang paling dikit tauu!!"
+    mg3 "Kamu itu yang makannya paling banyak"
+    st "Iya bener [mcFirst] yang makannya paling banyak"
+    mc "Padahal ga"
+    nd "Pfffttt.... hahahahhahaha"
+    mg3 "Hahhahaa bisa bisanya"
+    skce2 "dah dah.."
+    nd "Ngomong-ngomong jam berapa ini ?"
+    mg3 "Jam 4 sepertinya.. \n Eh sudah sore saja"
+    st "Ga nyangka kita selama itu hahaha"
+    nd "Hooh"
+    skce2 "Kuy,, habisin makanannya setelah itu pulang"
+    mc "Sekalian, beres-beres dulu aja"
+    skce2 "Iya ya"
+    mg3 "Sudah selesai semua kan ?"
+    nd "Sudah"
+    mg3 "Kuy Pulang.."
+    st "Gass"
+    skce2 "Bye Bye Kalian"
+    nd "Byee.."
+    mg3 "Bye bye"
+
+    scene jalan_sore
+    mc "Maaf, aku merepotkanmu"
+    mg3 "Gapapa, ga masalah kok"
+    mc "Nanti aku turun di daerah sekolah gapapa, rumahku sudah dekat soalnya"
+    mg3 "Gapapa kok sampai rumahmu"
+    mc "Hmm.. Yuadah kalau kamu memaksa"
+
+    scene depan rumah
+    mg3 "Jadi, ini rumahmu sejalur ya dengan rumahku terus dekat sekali dengan sekolah pantas saja kamu sering kulihat jalan kaki kalau pulang"
+    mc "Hahahha Memang dekat.. \n kalau rumahmu dimana ?"
+    mg3 "Tinggal lurus saja, kalau mau jalan kaki bisa sih"
+    mc "Ahh.. okk, mau mampir ?"
+    mg3 "ga usah aku langsungan saja"
+    mc "Yaudah,, kalau gitu aku masuk ke rumah dulu"
+    mc "Hati-hati dijalan"
+    mg3 "Iyaa. sama-sama"
+
+    scene ruang tamu
+    mc "Aku pulang!!"
+    cat "Meooww"
+    mc "Woahh,, [cat] hahahaha"
+
+    scene ruang keluarga
+    mom "Selamat datang"
+    mc "Bu,, Mungkin aku akan skip makan malam ahhah"
+    mom "Loh,, kenapa ? kamu sakit ?"
+    mc "Ga kok bu.. cuma kekenyangan saja tadi makan banyak sekali"
+    mom "hoooo.. syukurlah [mom] kira kamu sakit"
+    mc "ga kok bu Hahahha"
+    mc "Kalau gitu aku tidur dulu ya bu"
+    mom "Iyaa nak.."
+    mom "Kalau mau ikut makan malam nanti Ibu siapkan juga tinggal ambil di kulkas"
+    mc "Iyaa bu hehehhe"
+
+    scene kamar_sore
+    "Saatnya tidur.. Fuuhh"
+
+    jump day4_Airin

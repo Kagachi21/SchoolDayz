@@ -10,7 +10,29 @@ image fungid2 = im.Scale("/Soal/Fungi/Soal_Fungi2.jpg",720,1280)
 image fungid5 = im.Scale("/Soal/Fungi/Soal_Fungi3.jpg",1280,720)
 
 #image BG
+#Pagi
 image sky = "/background/PAGI/SKY.jpg"
+image dapur = "/background/PAGI/DPR.jpg"
+image atap = "/background/PAGI/ATP.jpg"
+image gerbang_sekolah = "/background/PAGI/GS.jpg"
+image kamar = "/background/PAGI/KM.jpg"
+image jalan = "/background/PAGI/KT.jpg"
+
+#Siang
+image atap_siang = "/background/PAGI/ATP.jpg"
+image gerbang_sekolah_siang = "/background/PAGI/GS.jpg"
+
+#Sore
+image atap_sore = "/background/PAGI/ATP.jpg"
+image gerbang_sekolah_sore = "/background/PAGI/GS.jpg"
+image jalan_sore = "/background/PAGI/KT.jpg"
+
+#Malam
+image dapur_malam = "/background/MALAM/DPR.jpg"
+image atap_malam = "/background/MALAM/ATP.jpg"
+image gerbang_sekolah_malam = "/background/MALAM/GS.jpg"
+image kamar_malam = "/background/MALAM/KM.jpg"
+image jalan_malam = "/background/MALAM/KT.jpg"
 
 #Image(Character)
 image mom = im.Scale("/Character/mom/mom.png", 350, 950)
