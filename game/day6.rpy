@@ -23,7 +23,11 @@ label day6_Kirana:
     dad 'Bu Nasinya yang ini ?'
     mom "Iya yah yang itu nasinya"
     mc "Bu aku sudah selsai"
+    play sound cuci_piring
     "~Cuci Piring~"
+    window hide dissolve
+    $ renpy.pause(35.0, hard=True)
+    window show dissolve
     dad "Ga tambah kamu ?"
     mc "Ga, sudah kenyang tadi ambilnya sudah kebanyakan"
     mc "Aku mau bersih-bersih dulu"

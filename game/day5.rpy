@@ -59,7 +59,11 @@ label day5_Kirana:
     cat "Nyaa"
     mom "Ini Uangnya"
     mc "Makasih bu.."
+    play sound cuci_piring
     "~Cuci Piring~"
+    window hide dissolve
+    $ renpy.pause(35.0, hard=True)
+    window show dissolve
     mc "Aku berangkat dulu bu"
     mom "Hati - hati dijalan"
 
@@ -707,7 +711,11 @@ label day5_Airin:
     mom "Dasar.. ayoo makan"
     "Kami pun makan bersama tak lupa dengan [cat] juga"
     mc "Bu Aku sudah selesai.."
+    play sound cuci_piring
     "~Cuci Piring~"
+    window hide dissolve
+    $ renpy.pause(35.0, hard=True)
+    window show dissolve
     mom "Bentar Ibu siapkan bekalnya.."
     dad "Ini uang sangumu"
     $ money += 10000

@@ -63,7 +63,11 @@ label day2_Kirana:
     mc "Aku Cuci piring dulu ya bu setelah itu berangkat langsung"
     mom "Oiya, Bekalnya sudah [mom] siapkan ada disini"
     mc 'Iya bu'
+    play sound cuci_piring
     "~Cuci Piring~"
+    window hide dissolve
+    $ renpy.pause(35.0, hard=True)
+    window show dissolve
     mc "Kalau gitu aku berangkat dulu Ayah Ibu"
     ai "Iyaa Nak hati hati dijalan"
     mc "Okie"
@@ -748,7 +752,11 @@ label day2_Airin:
     mom "Bekal ini lagi ibu siapin"
     mc "Iyaa bu"
     mc "Kenyangnyaa~"
+    play sound cuci_piring
     "~Cuci Piring~"
+    window hide dissolve
+    $ renpy.pause(35.0, hard=True)
+    window show dissolve
     mc "Berangkat dulu, bekalnya yang ini kan ?"
     mom "Iyaa,, bentar ini uang sakumu"
     $ money += 30000
@@ -1082,7 +1090,11 @@ label day2_Airin:
     mc "Kalau gitu selamat makan"
     "~Beberapa Menit kemudian~"
     "Fuuuhh.. Kenyangnya"
+    play sound cuci_piring
     "~Cuci Piring~"
+    window hide dissolve
+    $ renpy.pause(35.0, hard=True)
+    window show dissolve
     mc "Kalau gitu aku tidur lagi ya bu"
     mom "Iyaa.."
     mom "Oiyaa,, di sekolah ga ada sesuatu ?"

@@ -131,14 +131,14 @@ label prolog:
     "Mungkin tidak salahnya harus mencoba untuk berangkat mungkin saja berbeda"
     
     scene dapur with dissolve
-    show dad at left:
+    show dad at left with moveinleft:
         xpos 0.1
         ypos 1.25
         xzoom -1
     dad "Apa kamu sudah menyiapkan semuanya ?"
     mc "....."
     "Awkward, suasananya jadi sunyi"
-    show mom at left:
+    show mom at left with moveinleft:
         xpos 0.1
         ypos 1.15
     show dad:
@@ -146,7 +146,7 @@ label prolog:
         ypos 1.25
         xzoom 1
     mom "Mau tambah lagi ?"
-    show mom at right:
+    show mom at right with moveinright:
         xpos 0.8
         ypos 1.15
         xzoom -1
@@ -159,11 +159,11 @@ label prolog:
     $ renpy.pause(35.0, hard=True)
     window show dissolve
 
-    show mom at left:
+    show mom at left with moveinleft:
         xpos 0.1
         ypos 1.15
     mom "Ga usah, Ibu aja yang cuci piringnya. Kamu berangkat aja"
-    show mom at right:
+    show mom at right with moveinright:
         xpos 0.8
         ypos 1.15
         xzoom -1
@@ -181,13 +181,13 @@ label prolog:
     show dad:
         xpos 0.725
         ypos 0.125
-    show mom at right:
+    show mom at right with moveinright:
         xpos 0.8
         ypos 1.15
         xzoom -1
     $ ai = "[dad]" +" & "+ "[mom]"
     ai "Iya, Hati - hati di jalan"
-    show mom at left:
+    show mom at left with moveinleft:
         xpos 0.1
         ypos 1.15
         xzoom 1
@@ -204,26 +204,26 @@ label prolog:
     mc "...."
     "Aku mendengar suara kucing mungkin berada didalam kerdus"
     mc "Kasihan sekali hidupmu, di buang oleh pemilikmu sendiri! sama sepertiku yang dulu pernah merasakan kesakitan karena kejadian ketika aku masih SMP"
-    show cat 
+    show cat_box
     cat "Meoooowwwww"
-    hide cat
+    hide cat_box
     mc "Kenapa kamu masih bisa tersenyum meskipun sudah dibuang oleh majikanmu. Ataukah hanya diriku saja yang lemah atau tidak sepertimu yang polos tanpa mengetahui dunia ini kejam"
-    show cat
+    show cat_box
     cat "meeoooooo ?"
-    hide cat
-    show cat_happy
+    hide cat_box
+    show cat_box_happy
     mc "Ini aku ada makanan, makan ini saja dulu"
-    hide cat_happy
-    show cat_relived
+    hide cat_box_happy
+    show cat_box_relived
     mc "Hmmm.. mungkin aku bisa merawatmu dirumahku. Jika, aku meminta ijin orang tuaku"
     mc "Setelah pulang sekolah aku akan membawamu kerumahku"
-    hide cat_relived
+    hide cat_box_relived
     mg1 "Hmmm.. siapa laki - laki itu ? seragam yang sama denganku"
     mg1 "Ternyata dia sudah memberimu makanan duluan ya puss"
     mg1 "Syukurlah, aku berangkat dulu ya puss"
-    show cat_relived
+    show cat_box_relived
     cat "Meooow"
-    hide cat_relived
+    hide cat_box_relived
 
     scene gerbang_sekolah with dissolve
     $ misterius_2 = "????"
@@ -240,7 +240,7 @@ label prolog:
             "Hanya terpuruk dan meratapi nasib lalu terjebak dalam masa lalu terus menerus, hingga aku meninggal pun tetap takut akan trauma itu"
             "Mungkin setidaknya mencoba dulu tidak salah juga"
 
-    mg2 "Ahh.. Bukankah itu MC ?"
+    mg2 "Ahh.. Bukankah itu [mcFirst] ?"
     ol "Ada apa ?"
     mg2 "Ahh.. tidak apa-apa, aku hanya melamun saja tadi"
 
@@ -274,7 +274,7 @@ label prolog:
         ypos 1.2
     na "Haii,, banyak orang bersosialisasi. aku lihat kamu mulai tadi diam saja sambil menatap keluar jendela"
     mc "...."
-    show nada_uni at right:
+    show nada_uni at right with moveinright:
         xpos 0.9
         ypos 1.2
     na "Kenapa ga ikut bersosialisasi dengan yang lainnya ?"
@@ -296,7 +296,7 @@ label prolog:
     sr "kalau gitu mari kita semuanya perkenalan, meskipun kalian sudah melakukan perkenalan diawal tadi. Ibu juga ingin mengenal kalian"
     "Setelah itu semua murid mulai memperkenalkan dirinya masing-masing. Sangat Merepotkan sekelas bakalan tau Namaku meskipun sudah ada seorang di kelas ini tau namaku"
     sr "Jangan lupa Berdiri lalu memperkenalkan diri"
-    show bu_senda at right:
+    show bu_senda at right with moveinright:
         xpos 0.9
         ypos 1.2
     show ardana_uniform at center:
@@ -314,7 +314,7 @@ label prolog:
     show bu_senda at center:
         ypos 1.2
     sr "Terima Kasih [mg2_Last] Kalau gitu selanjutnya"
-    show bu_senda at right:
+    show bu_senda at right with moveinright:
         xpos 0.9
         ypos 1.2
     show miselia_uniform at center:
@@ -334,10 +334,10 @@ label prolog:
         ypos 1.2
     sr "Terima Kasih sudah memperkenalkan diri [mg1_First]"
     sr "Kalau gitu selanjutnya"
-    show bu_senda at right:
+    show bu_senda at right with moveinright:
         xpos 0.9
         ypos 1.2
-    show airin_uniform at center:
+    show airin_uni at center:
         ypos 1.2
     mg3 "Namaku Airin Adeline"
     $ misterius_3 = "Airin Adeline"
@@ -347,12 +347,12 @@ label prolog:
             mg3_First,mg3_Last = misterius_3.split(" ")
     mg3 "Hobiku tidak ada"
     mg3 "Sekian"
-    hide airin_uniform with dissolve
+    hide airin_uni with dissolve
     show bu_senda at center:
         ypos 1.2
     sr "Okay, Terima Kasih [mg3_First]"
     sr "Selanjutnya"
-    show bu_senda at right:
+    show bu_senda at right with moveinright:
         xpos 0.9
         ypos 1.2
     mc "Namaku [mc]"
@@ -363,7 +363,7 @@ label prolog:
         ypos 1.2
     sr "Sudah - Sudah, Terima Kasih [mcFirst] Silahkan duduk"
     sr "Selanjutnya"
-    show bu_senda at right:
+    show bu_senda at right with moveinright:
         xpos 0.9
         ypos 1.2
     show nada_uni at center:
@@ -394,7 +394,7 @@ label prolog:
         ypos 1.2
     sr "Ibu lempar bola yang pertama ya, ibu juga sudah menutup mata"
     "tuiing~~"
-    show bu_senda at right:
+    show bu_senda at right with moveinright:
         xpos 0.9
         ypos 1.2
     show nada_uni at center:
@@ -408,7 +408,7 @@ label prolog:
     sr "Sekarang Bola ke dua ibu lempar"
     skce2 "Kyaaa~" with hpunch
     sr "Silahkan Maju kedepan ambil kertas perintahnya 1 saja"
-    show bu_senda at right:
+    show bu_senda at right with moveinright:
         xpos 0.9
         ypos 1.2
     skce2 "Baik bu"
@@ -416,7 +416,7 @@ label prolog:
     show nada_uni at center:
         ypos 1.2
     na "Semoga perintahnya ga aneh-aneh"
-    show nada_uni at right:
+    show nada_uni at right with moveinright:
         xpos 0.9
         ypos 1.2
     skce2 "Perintahnya Menari bu"
@@ -425,14 +425,14 @@ label prolog:
     na "Wahh,, ini mah mudahh. Lagunya biar aku saja yg sediain bu"
     show bu_senda at center:
         ypos 1.2
-    show nada_uni at right:
+    show nada_uni at right with moveinright:
         xpos 0.9
         ypos 1.2
     sr "Oke, kamu boleh duduk sekarang"
     sr "Nada Ayo dimulai"
     show nada_uni at center:
         ypos 1.2
-    show bu_senda at right:
+    show bu_senda at right with moveinright:
         xpos 0.9
         ypos 1.2
     na "Baik, bu"
@@ -482,19 +482,20 @@ label prolog:
     scene kelas_sore
     mc "haa haa haa.. aku menangis ? Mimpi itu lagii"
     mc "Untung aku tidak ketauhan kalau aku tertidur. Ternyata sudah jam pulang juga. aku harus bergegas pulang"
-    
-    scene jalan_sore
     "Bisa-bisanya aku mimpi seperti itu.. \n Haaa.. ternyat aku masih ada trauma sedikit jadi bisa mimpi seperti itu"
+    
+    scene jalan_sore with dissolve
+    "Sepertinya aku ingat sesuatu tapi apa ya ? \n yaudah lah mungkin ingat ketika sampai rumah"
 
     scene kamar_sore with dissolve
     "Astaga ternyata Aku lupa membawa kucingnya. Lebih baik aku meminta izin dulu"
 
     scene dapur_malam with dissolve 
-    mc "Ibu, Ayah, Boleh memlihara kucing ?"
+    mc "Ibu, Ayah, Boleh memelihara kucing ?"
     show dad:
         xpos 0.725
         ypos 0.125
-    show mom at right:
+    show mom at right with moveinright:
         xpos 0.8
         ypos 1.15
         xzoom -1
@@ -505,24 +506,29 @@ label prolog:
         ypos 1.2
     dad "Nanti ayah belikan kandang juga buat kucingnya"
     mc "Okk yah"
+    hide dad with dissolve
     mc "aku sudah selesai makannya"
+    play sound cuci_piring
     "~Cuci Piring~"
+    window hide dissolve
+    $ renpy.pause(35.0, hard=True)
+    window show dissolve
     mc "aku kembali ke kamar dulu"
     show mom at center:
         ypos 1.15
-    show dad at right:
+    show dad at right with moveinright:
         xpos 0.8
         ypos 1.2
     mom "Pa,  aku kaget anak kita setelah sekian lama meminta sesuatu, aku sangat bersyukur anak kita perlahan juga membaik"
     show dad at center:
         ypos 1.2
-    show mom at left:
+    show mom at left with moveinleft:
         xpos 0.1
         ypos 1.15
     dad "Iyaa.. Ma, aku juga sangat bersyukur. Tadi aku juga sampai terharu ma"
     show mom at center:
         ypos 1.15
-    show dad at right:
+    show dad at right with moveinleft:
         xpos 0.8
         ypos 1.2
     mom "iyaa aku juga paa, Mari kita berdoa supaya selalu terjadi hal baik untuk anak kitaa sekarang untuk kedepannya"

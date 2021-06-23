@@ -85,13 +85,6 @@ label day8_Kirana:
     mg2 "Tapppiii"
     sr "Mc tolong bagikan"
 
-
-
-
-
-
-
-
 label day8_Miselia:
 
-label day8_Airin:
+#label day8_Airin:

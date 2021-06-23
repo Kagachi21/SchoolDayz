@@ -23,7 +23,11 @@ label day4_Kirana:
     dad "Loh [mcFirst] sudah bangun langsung makan nih haha"
     mc "Sini Yah sudah jadi makanan ibu"
     dad "Ayah mau cuci muka dulu"
+    play sound cuci_piring
     "~Cuci Piring~"
+    window hide dissolve
+    $ renpy.pause(35.0, hard=True)
+    window show dissolve
     mc "Bu, ada obat pusing ga ?"
     mom "Loh, Kamu sakit ?"
     mc "Agak Pusing saja Heheheh.."
@@ -783,7 +787,11 @@ label day4_Airin:
     "Kami pun sarapan dan bercanda.."
     "Andaikan setiap hari seperti ini tenang dan tentram"
     mom "Ga usah, Ibu aja yang cuci piringnya. Kamu berangkat aja"
+    play sound cuci_piring
     "~Cuci Piring~"
+    window hide dissolve
+    $ renpy.pause(35.0, hard=True)
+    window show dissolve
     mc "Gapapa, bu sudah terlanjur kalau gitu aku berangkat dulu"
     mom "Ini Uang sangumu dan bekalmu"
     $ money += 10000
