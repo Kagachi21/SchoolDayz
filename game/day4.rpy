@@ -1,34 +1,52 @@
 label day4_Kirana:
-    scene bg jendela kamar terlihat burung
+    scene bg jendela kamar terlihat burung with dissolve
     "Ugghh.. pusing sekali dan lapar juga mungkin ini gara-gara aku langsung tidur"
+    
+    scene kamar with dissolve
     "Kipasnya menghadap persis di aku lagi dalam keadaan malam ga makan bisa jadi ini masuk angin"
     "Pasti [cat] sudah keluar kamar duluan dan makan"
     "Lebih Baik aku cuci muka dulu"
 
-    scene kamar mandi 
+    scene kamar mandi with dissolve
     "Ughhh.. aku mandi pakai air panas aja kalau gitu"
 
-    scene kamar 
+    scene kamar with dissolve
+    "Masih tetap pusing.. Ughhh..."
     "Aku pakai seragam aja dulu nanti tinggal makan saja"
 
-    scene dapur
+    scene dapur with dissolve
     mc "[cat] Ternyata dah disini aja kamu hahahha"
     mc "Dasarr haha"
+    show cat at center with moveinbottom:
+        ypos 0.75
     cat "Nyaaa Nya Nyaa"
+    hide cat
     mc "Bu,, aku kenapa ya kok lapar banget ?"
+    show mom at center with dissolve:
+        ypos 1.15
     mom "kamu kan tadi malam ga makan sama sekali"
     mom "langsung tidur kan jadi wajar paginya lapar"
     mom "Ini Makanannya sudah siap juga, bekalnya ada di meja makan juga nanti bawa"
     mc "Iyaa bu. Kalau gitu aku makan dulu bu"
+    show mom at center with moveinright:
+        xpos 0.3
+        ypos 1.15
+    show dad at center with moveinleft:
+        ypos 1.2
     dad "Loh [mcFirst] sudah bangun langsung makan nih haha"
     mc "Sini Yah sudah jadi makanan ibu"
     dad "Ayah mau cuci muka dulu"
+    mc "Aku sudah selesai bu makannya"
+    hide dad with moveoutright
+    hide mom with dissolve
     play sound cuci_piring
     "~Cuci Piring~"
     window hide dissolve
     $ renpy.pause(35.0, hard=True)
     window show dissolve
     mc "Bu, ada obat pusing ga ?"
+    show mom at center with dissolve:
+        ypos 1.15
     mom "Loh, Kamu sakit ?"
     mc "Agak Pusing saja Heheheh.."
     mc "Mungkin gara-gara masuk angin"
@@ -39,18 +57,31 @@ label day4_Kirana:
     mom "Nanti kalau sudah parah langsung ke UKS saja"
     mc "Ahh.. Okk"
     mc "Kalau gitu aku berangkat dulu bu"
+    show mom at center with moveinleft:
+        xpos 0.65
+        ypos 1.15
+        xzoom -1
+    show dad at center with moveinright:
+        ypos 1.2
     dad "Loh sudah mau berangkat aja"
     mc "Iya yah"
+    show mom at center with moveinright:
+        xpos 0.35
+        ypos 1.15
     ai "Kalau gitu hati-hati dijalan nak"
     mc "Iyaa"
+    hide mom with dissolve
+    hide dad with dissolve
 
-    scene jalan
+    scene jalan with dissolve
     "Siall,, aku masih pusing. seharusnya aku tidak usah sekolah dulu"
     "Tapi sudah sampai separuh jalan masa aku pulang"
     "Jika sudah agak parah mungkin aku akan langsung ke UKS"
 
-    scene gerbang sekolah
-    "~Puk~"
+    scene gerbang_sekolah with dissolve
+    "~Puk~" with vpunch
+    show nada_uni at center with dissolve:
+        ypos 1.2
     na "Kok kamu keliatan lesu bro ? agak pucat juga"
     mc "Kayaknya aku masuk angin agak pusing"
     na "Kalau gitu kan ga usah sekolah lur"
@@ -58,39 +89,58 @@ label day4_Kirana:
     mc "Iya juga ya ahhaha"
     na "Nanti taruh tas aja lur di kelas setelah itu langsung ke UKS"
     mc "Oh Ok"
+    hide nada_uni with moveoutleft
 
-    scene kelas
+    scene kelas with dissolve
     mc "Capeknya hufft.."
+    show ardana_uni at center with dissolve:
+        ypos 1.2
     mg2 "Lahh,, kamu kok pucat sekali ?"
     mc "Agak ga enak badan aku"
+    hide ardana_uni
+    show ardana_uni_emosi at center:
+        ypos 1.2
     mg2 "Lah kok masuk sekolah mending gitu ga usah sekolah"
     mc "Nah itu tadi sudah separuh jalan sampai sekolah berhubung naggung jadi ya yaudah sekolah aja"
+    hide ardana_uni_emosi
+    show ardana_uni_cuek at center:
+        ypos 1.2
     mg2 "Astaga,, hmm.."
+    hide ardana_uni_cuek with dissolve
     mc "Kalau gitu aku ke UKS aja sekalian titip tasku ya sama ijinkan ke Bu Senda"
+    show ardana_uni at center with dissolve:
+        ypos 1.2
     mg2 "Okay.. Tenang aja nanti ku ijinin ke Bu Senda"
     mc "Makasih, kalau gitu aku ke UKS dulu"
+    hide ardana_uni with dissolve
     wkk "Mau kemana bro ? eh,, mukamu pucat banget bro"
     mc "ke UKS, dah ga kuat aku. Titip ijinin ke Bu Senda ya"
     wkk "Okk dah"
     
-    scene depan kelas
+    scene depan kelas with dissolve
     "~Ding Dong~"
     "Harus ke UKS ini sudah ga kuat. Astaga, ternyata sudah masuk"
 
-    scene lorong sekolah
+    scene lorong sekolah with dissolve
+    show bu_senda at center with dissolve:
+        ypos 1.2
     sr "Loh, [mcFirst] eh mau kemana ? bentar lagi kelas"
     mc "Saya ijin ke UKS dulu bu"
     sr "Ehhh.. Mukamu pucat, Sana ke UKS istirahat dulu"
     mc "Iya bu"
+    hide bu_senda with dissolve
 
     scene kelas
+    show bu_senda at center with moveinright:
+        ypos 1.2
     sr "Selamat pagi anak-anak. Masih semangat semua kan ?"
     sk "Baik semua bu, masih dong"
     wkk "Oiya bu, [mcFirst] ijin ke UKS soalnya sakit"
     sr "Iyaa, tadi bu Senda ketemu sama [mcFirst] sudah ijin juga"
     sr "Kalau gitu mari kita mulai kelasnya"
+    hide bu_senda with dissolve
 
-    scene uks
+    scene uks with dissolve
     $ iguk = "Ibu Guru UKS"
     mc "Permisi, saya ingin beristirahat dan minta obat"
     iguk "Kamu sakit apa ?"
@@ -108,7 +158,7 @@ label day4_Kirana:
     "Mungkin aku bisa tidur sementara disini"
     "~4 Jam Kemudian Bel Berbunyi~"
     "~Ding Dong~"
-    "Mungkin sudah enakan aku bisa kembali ke kelas"
+    "Sudah enakan kalau gini aku bisa kembali ke kelas"
     mc "Bu saya rasa sudah mendingan ga pusing bu"
     iguk "Yaudah kalau gitu, obatnya bawa juga ya sekalian jaga-jaga"
     iguk "Terus Tehnya dihabisin sudah Ibu sediain juga"
@@ -122,29 +172,45 @@ label day4_Kirana:
     "Nada sama [mg2_Last] pasti lagi ke kantin"
     "Kalau gitu aku tidur dulu aja lah sembari menunggu bell"
     "~Ding Dong~"
+    show nada_uni at center with dissolve:
+        ypos 1.2
     na "Bangun Bre, sudah masukk"
     mc "...."
     na "Sudah enakan ?"
     mc "Sudah sih"
+    show ardana_uni at center with dissolve:
+        xpos 0.4
+        ypos 1.2
+    show nada_uni at center with dissolve:
+        xpos 0.6
+        ypos 1.2
     mg2 "Kalau masih sakit mending langsung pulang aja deh"
     mc "Aman,, Masih kuat"
+    hide nada_uni with moveoutleft
+    hide ardana_uni with dissolve
+    show bu_senda at center with moveinright:
+        ypos 1.2
     sr "Siang anak-anak. Loh [mcFirst] sudah enakan ?"
     mc "Sudah Bu Senda"
-    sr "Yaudah, kalau gitu tapi jangan dipaksaain ya misal mulai sakit langsung pulang aja"
+    sr "Tapi jangan dipaksaain ya misal mulai sakit langsung pulang aja"
     mc "Iya buu"
     sr "Kalau gitu ibu mulai,, dibagi kelompoknya ada 8 kelompok 1 kelompok 4 orang sisanya menyesuaikan ya"
-    sr "Bikin pakai acak nomor acak yaa"
+    sr "Bikin pakai nomor acak yaa"
+    hide bu_senda with dissolve
     "Semoga aku sekelompok dengan orang yang ga merepotkan"
     "~Pemilihan Kelompok~"
-    $ st = Shinta
-    $ bl = Bella
+    $ st = "Shinta"
+    $ bl = "Bella"
     st "Siapa kelompok 4 ?"
     mc "Aku"
     bl "Aku Kelompok 4"
     ad "Aku juga"
+    show bu_senda at center with dissolve:
+        ypos 1.2
     sr "Kalau sudah silahkan duduk bersama dengan kelompoknya. Tugasnya ibu kasih ini dikumpulkan besok sekalian presentasi materi yang dipelajari ya"
     sr "Sekarang silahkan berdiskusi mau dikerjakan disini gapapa"
     sr "Bu Senda tinggal dulu ya"
+    hide bu_senda with moveoutright
     sk "Baik buu"
     st "Mau Kerkel dimana nih ?"
     ad "Di cafe boleh sih"
@@ -160,34 +226,54 @@ label day4_Kirana:
     bl "Iyaa"
     "Yaudahlah tidur aja kalau gitu"
     "~Ding Dong~"
+    show ardana_uni at center with dissolve:
+        ypos 1.2
     mg2 "Bangun.. Sudah Bell Pulang ini"
     mc "Ahh.. sudah pulang ya ?"
     mg2 "Iyaa Ayo Pulangg"
+    hide ardana_uni
+    show ardana_uni_emosi at center:
+        ypos 1.2
     mg2 "Akhh aku mau mampir kerumahmu tapi aku ada kerkel nanti"
     mc "Hahhaa Next time mungkin"
+    hide ardana_uni_emosi
+    show ardana_uni at center:
+        ypos 1.2
     mg2 "Yaudah kuy pulang, tungguin di gerbang sekolah ya"
     mc "Okie"
+    hide ardana_uni with moveoutright
 
     scene gerbang_sekolah_sore
+    show ardana_uni at center with dissolve:
+        ypos 1.2
     mg2 "Skuy berangkat"
     mc "Okk"
+    hide ardana_uni with moveoutleft
 
-    scene jalan_sore
+    scene jalan_sore with dissolve
+    show ardana_uni at center with dissolve:
+        ypos 1.2
     mg2 "Kamu kerja kelompok kapan ?"
     mc "Aku Nanti malam sih, mau ikut ?"
     mg2 "Ngaaak,, cuma tanya aja"
     mc "Okk"
+    hide ardana_uni with dissolve
 
     scene depan rumah
+    show ardana_uni at center with dissolve:
+        ypos 1.2
     mg2 "Sudah ah aku langsung pulang aja"
     mc "Iyaa makasih yaa hati-hati di jalan"
     mg2 "Titip salam ke tante ya"
     mc "Okk dah"
+    hide ardana_uni with moveoutleft
 
     scene ruang tamu 
     mc "Aku Pulang"
     
     scene ruang keluarga 
+    show mom at center with dissolve:
+        ypos 1.2
     mom "Gimana tadi ?"
     mc "Tadi sempat ke UKS sih bu"
     mc "Sekarang sudah mendingan"
@@ -196,15 +282,18 @@ label day4_Kirana:
     mc "Kalau gitu aku langsung tidur aja bu soalnya nanti malam mau kerkel"
     mc "Biar ga tambah parah sakitnya"
     mom "Yaudah kalu gitu"
+    hide mom with dissolve
 
-    scene kamar_sore
-    "Capeknyaa, masih pusing dikit tapi mungkin dibuat tidur mungkin jadi sembuh total"
+    scene kamar_sore with dissolve
+    "Capeknyaa, masih pusing dikit tapi mungkin dibuat tidur jadi sembuh total"
 
-    scene kamar_malam
+    scene kamar_malam with dissolve
     "Hoaam.. sudah malam ternyata lebih baik bersiap dulu buat kerkel"
     
     scene ruang keluarga
     mc "Bu, aku langsung berangkat"
+    show mom at center with dissolve:
+        ypos 1.15
     mom "loh,, loh Ga makan dulu ?"
     mom "Nanti sakit lagi"
     mc "Sudah sembuh bu. Nanti langsung makan di cafe aja bu pas kerkel"
@@ -215,8 +304,12 @@ label day4_Kirana:
     mom "Iya nak Hati-hati"
     mc "Bu aku pinjam motornya"
     mom "Iya nak hati-hati"
+    hide mom with dissolve
 
-    scene cafe_malam
+    scene cafe_malam with dissolve
+    bl "[mcFirst]!!! [mcFirst]!!! [mcFirst]!!! \nSini.. Sinii"
+    mc "Ahh itu dia.. \nGimana anak-anak ?"
+    bl "Bentar aku Telpon dulu"
     "~Telpon~"
     st "Bel maaf ya aku sama ardi gabisa ikut kerja kelompok karna kita udah ada janji pergi sama temen ke mall"
     st "Kalian kerjain aja berdua ya nanti masalah urunan kabarin aja"
@@ -224,6 +317,7 @@ label day4_Kirana:
     bl "Tapi Shin, nanti kalian engga ngerti materinya"
     st "Nanti kan yang presentasi bisa kamu sama si [mcFirst] itu, gausah ribet kan ini Cuma pelajaran biologi"
     bl "Tapi kan Sin, loh malah dimatikan telponnya nih"
+    "~Tutup Telpon~"
     bl "Astagaaa"
     mc "Bentar aku nelpon [ad]"
     bl "Giamana ?"
@@ -238,9 +332,9 @@ label day4_Kirana:
     "Disini muungkin enak tempat duduknya"
     bl "ini menunya, umm aku bingung mau pesan apa ?"
     mc "Kalau gitu aku dulu yang liat menunya"
-    mc "Mungkin aku pesan Jus Strawberry sama Nasi Goreng Bali"
+    mc "Mungkin aku pesan Jus Strawberry sama Nasi Goreng Jawa"
     bl "umm.. mungkin aku ini saja."
-    bl "Yang ngasih ke kasinya aku apa kamu ?"
+    bl "Yang ngasih ke kasirnya aku apa kamu ?"
     mc "Kamu aja"
     bl "Iyaa dah"
     mc "Aku mau ngeluarin tugasnya dulu"
@@ -248,10 +342,12 @@ label day4_Kirana:
     bl "Sudah aku pesanin"
     bl "Kuy Kerjain sembari nunggu pesenan datang"
 
+    "~Soal Hari ke-4~" with dissolve
     #Initialize score
     $ quiz4_score = 0
 
     label quiz4:
+        $ quick_menu = False
 
         "1. Flu burung merupakan jenis penyakit menular yang akibatkan oleh virus yang menjangkit unggas. Penyebab penyakit tersebut masuk dalam golongan virus influenza tipe ….."
         menu:
@@ -297,7 +393,7 @@ label day4_Kirana:
             "D. Peningkatan kadar trombosit":
                 $ quiz4_score += 0
         
-        show virusd4_1
+        show virusd4_1 at truecenter with dissolve
         "5. Perhatikan gambar di diatas!  Nomor 1,2, dan 3 merupakan ..."
         menu:
             "A. DNA, kapsid, ekor":
@@ -308,7 +404,7 @@ label day4_Kirana:
                 $ quiz4_score += 0
             "D. kapsid, RNA, ekor":
                 $ quiz4_score += 0
-        hide virusd4_1
+        hide virusd4_1 with dissolve
 
         "6. Selubung protein penyusun virus dinamakan…."
         menu:
@@ -321,7 +417,8 @@ label day4_Kirana:
             "D. membran":
                 $ quiz4_score += 0
 
-        show virusd4_2
+        show virusd4_2 at center with dissolve:
+            ypos 0.725
         "7. Perhatikan gambar di atas ini. Berdasarkan daur hidup, secara berurutan virus x, y, dan z secara berurutan adalah…."
         menu:
             "A. absorbsi, sintesis, lisis":
@@ -332,7 +429,7 @@ label day4_Kirana:
                 $ quiz4_score += 8
             "D. penetrsi, absorbsi, sintesis":
                 $ quiz4_score += 0
-        hide virusd4_2
+        hide virusd4_2 with dissolve
 
         "8. Berdasarkan sistem klasifikasi, organisme yang menyebabkan AIDS dimasukkan ke kelompok ….."
         menu:
@@ -446,6 +543,7 @@ label day4_Kirana:
     # Check the quiz 1 score
     if quiz4_score_total >= 75:
         # Win
+        $ quick_menu = True
         mc "Yang rangkum buat presentasi siapa ?"
         bl "Kita selesaikan juga hari ini semuanya"
         mc "Okie"
@@ -454,13 +552,11 @@ label day4_Kirana:
         #$ quiz4_lose = False   
     else:
         # Lose
-        bl "Mereka ga ada sama sekali"
         bl "Biar dah ga usah di kerjakan, capek aku"
         bl "Mereka berdua ga ada lagi"
         menu:
             "Semangat":
-                rr "Coba dulu lagi, Nanti kalau misal mentok yaudah tinggal aja"
-                mc 'Terima Kasih'
+                bl "Coba dulu lagi"
                 $ quiz4_score = 0
                 jump quiz4
             "Pulang saja!":
@@ -472,22 +568,26 @@ label day4_Kirana:
     psc "Ini Pesanannya, selamat dinikmati kalau gitu permisi dulu"
     mc "Iya mas, terima kasih"
     bl "Terima Kasih mas"
-    "~Beberapa jam mengerjakan tugas~"
-    bl "Capeknyaa, mereka berdua ga datang juga salah"
+    "~Beberapa jam mengerjakan tugas dan menikmati camilan~"
+    bl "Fuuuhh.. Capeknyaa, mereka berdua ga datang juga salah"
     bl "Coba kalau datang pasti cepat selesai"
-    mc "Kalau gitu aku pulang dulu"
+    mc "Hahaha iyaaa benar"
+    bl "Bisa-bisanya meraka ga datang \nHadeh..."
+    mc "Mungkin ada urusan penting \nOiya.. Kalau gitu aku pulang dulu ya"
     bl "ehh,, tungguin aku juga mau pulang"
     mc "okk dah"
     
-    scene tempat parkir
+    scene tempat parkir with dissolve
     mc "[bl] duluan"
     bl "Iyaa hati hati"
 
     scene depan rumah
+    mc "Aku Pulang"
 
     scene dalam rumah
-    mc "Aku Pulang"
-    dad "Oyii Nak"
+    show dad at center with dissolve:
+        ypos 1.2
+    dad "Oii Nak"
     mc "Loh Ayah sudah pulang ga lembur lagi ?"
     dad "Sudah dong, ga ada job lagi tapi ada sih cuma pengen agak santai juga hari ini"
     mc "Ealah,, okk yah"
@@ -496,6 +596,7 @@ label day4_Kirana:
     mc "Yaudah kalau gitu aku langsung tidur aja"
     dad "Iyaa nak, kalau ga salah [cat] Feliz ada di kamarmu"
     mc "okie yah"
+    hide dad with dissolve
 
     scene kamar_malam
     "Fuuh Capeknyaa, aku mau tidur dulu lah"
@@ -742,7 +843,7 @@ label day4_Miselia:
     jump day5_Miselia
 
 label day4_Airin:
-    scene kamar 
+    scene kamar with dissolve
     "Ugghh.. Bangun-bangun sudah sakit perut saja mungkin karena kemarin aku makannya kebanyakan"
 
     scene kamar mandi
@@ -750,6 +851,8 @@ label day4_Airin:
 
     scene keluarga
     "Leganyaa setelah BAB"
+    show mom at center with dissolve:
+        ypos 1.15
     mom "Loh,, [mcFirst] sudah bangun"
     mc "Iya bu.. "
     mom "[mom] baru selesai belanja buat sarapan.."
@@ -757,26 +860,48 @@ label day4_Airin:
     mom "Iyaa itu ada di depan main sama [cat]"
     mc "hoo.. kalau gitu aku mau mandi ama siap-siap berangkat ke sekolah"
     mom "Iyaa.. [mom] siapkan sarapannya"
+    hide mom with dissolve
 
-    scene kamar mandi
-
-    scene kamar
+    scene kamar with dissolve
     "Sudah siap semuanya kalau gitu tinggal sarapan"
 
-    scene dapur
+    scene dapur with dissolve
+    show mom at center with dissolve:
+        ypos 1.15
     mom "[mcFirst] bisa panggilin [dad] sama [cat] Soalnya sarapannya sudah siap"
     mc "Ohh.. Okk [mom]"
+    hide mom with dissolve
 
     scene depan rumah
     mc "[dad] dan [cat] Makanan sudah siap"
+    show dad at center with dissolve:
+        xpos 0.7
+        ypos 1.2
+    show cat_happy at center with dissolve:
+        ypos 0.775
     dad "Lets go!! ayo [cat]"
     cat "Nyaa Nyaa"
     mc "Lah,, aku malah ditinggal"
+    hide dad with moveoutright
+    hide cat_happy with moveoutright
 
-    scene dapur 
+    scene dapur with dissolve
+    show mom at center with dissolve:
+        ypos 1.15
     mom "Sini sini makanan sudah siap"
     mom "Makananmu juga sudah siap [cat]"
+    show mom at center with moveinright:
+        xpos 0.3
+        ypos 1.15
+    show cat at center with moveinbottom:
+        ypos 0.775
     cat "Nyaa nyaa"
+    hide cat with dissolve
+    show mom at center with moveinleft: 
+        ypos 1.15
+    show dad at center with dissolve:
+        xpos 0.675
+        ypos 1.2
     dad "Hari ini kamu terlihat lebih cerah"
     mc "Ahh.. Aku yah ?"
     dad "Iyaa kamu"
@@ -787,28 +912,58 @@ label day4_Airin:
     "Kami pun sarapan dan bercanda.."
     "Andaikan setiap hari seperti ini tenang dan tentram"
     mom "Ga usah, Ibu aja yang cuci piringnya. Kamu berangkat aja"
+    mc "Gapapa bu.. aku saja"
+    hide mom with dissolve
+    hide dad with dissolve
     play sound cuci_piring
     "~Cuci Piring~"
     window hide dissolve
     $ renpy.pause(35.0, hard=True)
     window show dissolve
-    mc "Gapapa, bu sudah terlanjur kalau gitu aku berangkat dulu"
+    mc "aku berangkat dulu"
+    show mom at center with dissolve:
+        ypos 1.15
     mom "Ini Uang sangumu dan bekalmu"
     $ money += 10000
     mc "Terima Kasih Bu"
+    show mom at center with moveinright:
+        ypos 1.15
+    show dad at center with dissolve:
+        xpos 0.675
+        ypos 1.2
     ai "Hati-hati dijalan"
+    show mom at center with moveinright:
+        xpos 0.3
+        ypos 1.15
+    show dad at center with dissolve:
+        xpos 0.675
+        ypos 1.2
+    show cat at center with moveoutbottom:
+        ypos 0.775
     cat "Nyaaaa"
+    hide cat with dissolve
     dad "Eh,, iyaa aku sebentar lagi masuk jam kerja aku harus bergegas"
+    show cat_angry at center with moveoutbottom:
+        ypos 0.775
     cat "Nyaa hssss"
     dad "Ahh.. maap maap ekormu kena injak"
+    hide cat_angry with dissolve
+    hide dad with moveoutleft
     mom "hahahah.. "
+    hide mom with dissolve
 
-    scene jalan
+
+    scene jalan with dissolve
+    show airin_jalan_uni at center with moveinright:
+        ypos 0.95
     mg3 "[mcFirst]!!! [mcFirst]!!!"
     "Sepertinya ada yang memanggilku"
     mg3 "[mcFirst]!!! [mcFirst]!!! Lahh,, dicuekkin"
+    hide airin_jalan_uni with dissolve
     "Ack.. Ternyata [mg3_First]"
     mc "Aku sempat kaget kukira siapa"
+    show airin_uni at center with dissolve:
+        ypos 1.2
     mg3 "hehehehe"
     mc "Tumben kamu jalan"
     mg3 "Rumahku kan deket juga jadi pengen coba rasanya jalan dari rumah ke sekolah sesekali"
@@ -816,9 +971,19 @@ label day4_Airin:
     mg3 "Ihh.. malah ketawa"
     mc "Oiyaa,, gimana latihan nyanyimu ?"
     mg3 "Hmm.. seperti biasa"
+    hide airin_uni with dissolve
 
     scene gerbang_sekolah
+    show airin_jalan_uni at center with moveinright:
+        xpos 0.7
+        ypos 0.95
+    show nada_uni at center with moveinleft:
+        ypos 1.2
     na "Ciee ciee berangkatnya barengan"
+    hide airin_jalan_uni 
+    show airin_uni at center with moveinright:
+        xpos 0.675
+        ypos 1.2
     mc "Lahh,, ada kamu juga toh"
     na "Hahahhaha"
     mg3 "Soalnya, rumahku agak dekat sama rumah [mcFirst]"
@@ -827,14 +992,22 @@ label day4_Airin:
     mc "...."
     mg3 "Sudah sudah skuy masuk kelas"
     na "Hahahahha iyaa skuy"
+    hide airin_uni with moveoutright
+    hide nada_uni with moveoutright
 
-    scene lorong sekolah
-
-    scene kelas
+    scene kelas with dissolve
+    show airin_uni at center with dissolve:
+        ypos 1.2
     mg3 "Kalau gitu aku duduk dulu di bangkuku"
+    hide airin_uni with dissolve
+    show nada_uni at center with dissolve:
+        ypos 1.2
     na "Iya aku juga"
+    hide nada_uni with dissolve
     "Tinggal menunggu bel sekolah saja"
     "~Ding Dong~"
+    show bu_senda at center with moveinright:
+        ypos 1.2
     sr "Selamat Pagi anak-anak sudah kah siap untuk belajar hari ini ?"
     sk "Tidak bu!!"
     sr "Kalau gitu tidur aja yaa "
@@ -843,24 +1016,37 @@ label day4_Airin:
     sk "Astaga..."
     sr "yaudah kita mulai saja biar cepat selesai setelah itu biar santai-santai sambil nunggu bel istirahat"
     sk "Baiik bu!"
+    show bu_senda at center with moveinleft:
+        xpos 0.7
+        ypos 1.2
     "~Materi Fungi lanjutan~"
     "~Ding Dong~"
-    sr "Sudah bel Anak- anak kalau gitu selamat istirahat anak"
+    show bu_senda at center with moveinright:
+        ypos 1.2
+    sr "Sudah bel Anak - anak kalau gitu selamat istirahat anak"
+    hide bu_senda with moveoutright
     sk "Yeay sudah istirahat"
     wkk "[mcFirst] ga mau ke kantin ?"
+    show nada_uni at center with dissolve:
+        ypos 1.2
     na "Kuy ke Kantin"
     mc "Aku skip dulu aku bawa bekal soalnya"
     wkk "Ohh.. Iya dah kalau gitu kami duluan"
+    hide nada_uni with moveoutright
+    show airin_uni at center with moveinright:
+        ypos 1.2
     mg3 "Mau makan bekal bersama ?"
     skce1 "Aku mau ikutan dong"
     mc "...."
     mg3 "Silahkan.."
+    mc "Eii.. Seharusnya aku itu"
+    mg3 "Hahahahaha"
     skce1 "Makanan kalian enak-enak semua kelihatannya"
     mg3 "hahahah bisa saja.. Semuanya enak semua kok pokok bisa dimakan"
     skce1 "Iyaa juga sih hahaha"
     skce1 "[mcFirst] Aku boleh cobain ga ?"
     mc "Silahkan.."
-    skce1 "EENAKKK SEKALII"
+    skce1 "EENAKKK SEKALII!!"
     skce1 "Ini kamu masak sendiri ?"
     mc "Bukan itu masakan ibuku"
     mg3 "Aku mau coba juga"
@@ -870,13 +1056,19 @@ label day4_Airin:
     mc "Enak,, Kalian masak sendiri ?"
     skce1 "hehehe.. aku masak sendiri"
     mg3 "Aku juga masak sendiri"
+    hide airin_uni with dissolve
     "Kami pun menghabiskan bekal kami sambil berdiskusi dan bercanda"
     "~Ding Dong~"
     skce1 "ternyata sudah Bel.. Kalau gitu aku kembali ke bangku ku dulu"
+    show airin_uni at center with dissolve:
+        ypos 1.2
     mg3 "sama aku juga.. Oiyaa,, nanti kamu free ?"
     mc "Hmm.. iya"
     mg3 "Temenin aku latihan lagi ya"
+    hide airin_uni with moveoutright
     mc "Ohh.. Okk"
+    show bu_senda at center with moveinright:
+        ypos 1.2
     sr "Selamat siang anak-anak"
     sk "Siang buu!!"
     sr "Hoo.. masih semangat.. kalau gitu Ibu kasih soal tolong dikerjakan ya"
@@ -884,11 +1076,14 @@ label day4_Airin:
     sr "Bu Senda mau keruang guru ada rapat"
     sr "Oiya,, lupa ini soalnya dibagi ya"
     sk "Baik bu!!"
+    hide bu_senda with moveoutright
 
+    "~SOAL~" with dissolve
     #Initialize score
     $ quiz4_klasifikasi_score = 0
 
     label quiz4_klasifikasi:
+        $ quick_menu = False
 
         "1. Berikut ini termasuk kelompok tumbuhan tidak berpembuluh, kecuali …."
         menu:
@@ -1011,11 +1206,14 @@ label day4_Airin:
     # Check the quiz 1 score
     if quiz4_klasifikasi_score >= 75:
         # Win
-        # Win
+        $ quick_menu = True
         mc "Akhirnya sudah selesai.."
+        show nada_uni at center with dissolve:
+            ypos 1.2
         na "Hahaha mau main kartu lur ?"
         mc "Rasanya mau tidur saja"
         mc "Oiyaa,, titip nanti kalau sudah mau dikumpulkan"
+        hide nada_uni with dissolve
         # Did he win? Yes.
         #$ quiz4_win = True
         #$ quiz4_lose = False   
@@ -1034,7 +1232,7 @@ label day4_Airin:
     sk "Mantapp sudah selesai.."
     $ ad = "Ardi"
     ad "gass.. main-main skuy"
-    kk "heee.. Jangan ramai-ramai \n Mainnya santuy-santuy saja"
+    kk "heee.. Jangan ramai-ramai \nMainnya santuy-santuy saja"
     sk "Baik Leader Hahahha"
     kk "Dasar kalian ini"
     "~Semuanya yang di kelasku pun bermain kartu ada yang makan camilan, ada yang curhat-curhat~"
@@ -1048,88 +1246,136 @@ label day4_Airin:
     kk "Kalau gitu pulang gaes"
     $ fh = "Farhan"
     fh "gas Pulang"
+    show nada_uni at center with dissolve:
+        ypos 1.2
     na "[mcFirst] oee bangun !! oee bangun !! oee bangun !! lurr bangun!!"
     na "Sigh.. sudah nyenyak tidurnya.. Kalau gitu aku pulang duluan brader"
     na "[mg3_First] titip [mcFirst] ya.. Siapa tau kalau kamu yang bangunin ? jadi bangun beneran hahaha"
+    show nada_uni at center with moveinright:
+        xpos 0.3
+        ypos 1.2
+    show airin_uni at center with dissolve:
+        ypos 1.2
     mg3 "ehh.. Iyaa.. Iyaa.."
     na "Kalau gitu aku duluan"
+    hide nada_uni with moveoutright
     mg3 "Okk"
     mg3 "[mcFirst] Bangun!! katanya mau temani latihan"
     mg3 "Kalau gitu aku tunggu dah. Btw, kok ngantuk juga ya"
     mg3 "Yaudah lah tidur sebentar juga.."
+    hide airin_uni with dissolve
     "~15 Menit Kemudian~"
     mc "Hoamm.. Hmmm.. sudah sepi ?!"
     mc "Loh kok [mg3_First] disini juga ?"
     mc "Oiyaa,, katanya mau temani di atap sekolah tapi kok jadi tidur ?!"
     mc "Bangunn [mg3_First] ayo ktanya mau temani kamu latihan"
+    show airin_uni at center with dissolve:
+        ypos 1.2
     mg3 "Umm... Hoamm... Ehh.. iyaa yaa.."
     mc "Ayooo ke atap"
     mg3 "Umm... Tapi aku masih ngantuk"
-    mc "Raup dulu sana.. \n Aku juga mau raup"
+    mc "Raup dulu sana.. \nAku juga mau raup"
     mg3 "Iyaa iyaa"
+    hide airin_uni with moveoutright
 
     scene toilet sekolah
     "Segarnyaa,, jadi ga ngantuk lagi \n Aku sudah selesai mungkin aku tunggu di luar toilet saja"
 
     scene luar toilet
     mc "Loh kamu sudah selesai ?"
-    mg3 "Sudah dongg \n Kuy ke Atap"
+    show airin_uni at center with dissolve:
+        ypos 1.2
+    mg3 "Sudah dongg \nKuy ke Atap"
     mc "Haii.."
+    hide airin_uni with moveoutleft
 
-    scene atap_sore
+    scene atap_sore with dissolve
     mc "Aku jadi terbiasa sering pergi kesini karenamu Hahhaa"
+    show airin_uni at center with dissolve:
+        ypos 1.2
     mg3 "///// Ehh.. Eh.. Hahahhaha"
     mg3 "Kalau gitu aku mulaii yaa"
     mc "Iyaaa"
+    hide airin_uni with dissolve
     "~Mendengarkan Nyanyian~"
+    show airin_uni at center with dissolve:
+        ypos 1.2
     mg3 "Fuhh.. gimana ?"
     mc "Bagus seperti biasanya ada perkembangan sedikit meskipun aku bukan anak padsu atau sebagainya tapi aku ngerasain lebih bagus sekarang"
     mg3 "Terima kasih hehhe"
     mc "Oiyaa,, ngomong-ngomong kenapa kamu selalu bernyanyi ?"
     mg3 "deg... Deg.. Sigh.. itu ada alasannya"
     mc "Gapapa, kalau kamu ga mau nyeritain aku akan berhenti bertanya"
-    mg3 "Eh.. gapapa kok.. \n Aku ceritain Besok gimana ?"
+    mg3 "Eh.. gapapa kok.. \nAku ceritain Besok gimana ?"
     mc "Boleh.."
     mg3 "Oiyaa, sudah mau sore nih ayoo pulangg!!"
     mc "Iyaa ayoo pulang"
+    hide airin_uni with moveoutleft
 
-    scene jalan_sore
+    scene jalan_sore with dissolve
+    show airin_uni at center with dissolve:
+        ypos 1.2
     mg3 "Ternyata enak ya pulang jalan kaki lebih sehat rasanya hahah meskipun agak kecapekan"
     mc "Soalnya kamu belum terbiasa pulang jalan kaki"
     mg3 "hehehhe.. iyaa benar"
+    hide airin_uni with dissolve
 
     scene depan rumah
     mc "Mau mampir kerumahku dulu ?"
-    mg3 "Ga deh.."
+    show airin_uni at center with dissolve:
+        ypos 1.2
     mg3 "Hmmm.. Okk kalau gitu aku mampir dulu.. sesekali mampir hahaha"
     mc "Hmm... Okk dah"
 
-    scene ruang tamu 
+    scene ruang tamu
     mc "Aku pulang !!!"
+    show cat at center with moveinbottom:
+        ypos 0.775
     cat "Meoowww !!!"
     mc "Haii.. [cat] Aku kelitiki kau"
     cat "Nyaa Nyaa Nyaa Nyaa"
     mc "hahahahah Geli kan"
+    show airin_uni at center with dissolve:
+        xpos 0.7 
+        ypos 1.2
     mg3 "Kamu melihara kucing ?"
     mc "Iyaa kutemukan di jalan sewaktu berangkat sekolah"
     mg3 "Ohh.. Lucu juga ya kucingnya.."
     mc "Tunggu sini yaa"
     mg3 "okk deh"
+    hide cat with dissolve
+    hide airin_uni with dissolve
 
     scene ruang keluarga
     mc "[mom] ada temanku mampir kerumah kita"
-    mom "Selamat datang!! \n Ehh.. ada tamu tohh.. dimana sekarang temanmu?"
+    show mom at center with dissolve:
+        ypos 1.15
+    mom "Selamat datang!! \nEhh.. ada tamu tohh.. dimana sekarang temanmu?"
     mc "Diruang tamu.. \n kalau gitu aku ganti baju dulu ya bu"
     mom "Iyaa nak"
+    hide mom with dissolve
 
     scene ruang tamu 
+    show airin_uni at center with dissolve:
+        ypos 1.2
     mg3 "Gulu Gulu Gulu"
+    show airin_uni at center with dissolve:
+        xpos 0.7
+        ypos 1.2
+    show cat at center with moveinbottom:
+        ypos 0.775
     cat "Nyaa nya nyaa"
+    show mom at center with moveinleft:
+        xpos 0.3
+        ypos 1.15
     mom "Oya Oyaa.. jadi ini temennya [mcFirst]"
     mg3 "Ahh.. Permisi tante"
     mom "Iyaa silahkan.. \n [mcFirst] lagi ganti baju"
     mg3 "Iyaa tante"
     mom "Kalau gitu tante kedalam dulu ya"
+    hide mom with moveoutleft
+    hide airin_uni with dissolve
+    hide cat with dissolve
 
     scene kamar_sore
     mc "Semogaa ga terjadi yang heboh.."

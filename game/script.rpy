@@ -6,7 +6,7 @@
 # SplashScreen.
 label splashscreen:
      scene splash with Dissolve(1.0)
-     $ renpy.movie_cutscene("BGSplash.webm")
+     $ renpy.movie_cutscene("/video/BGSplash.webm")
      pause 1.0
 
      hide animation with dissolve
@@ -299,7 +299,7 @@ label prolog:
     show bu_senda at right with moveinright:
         xpos 0.9
         ypos 1.2
-    show ardana_uniform at center:
+    show ardana_uni at center:
         ypos 1.2
     mg2 "Nama ku Kirana Ardana"
     $ misterius_2 = "Kirana Ardana"
@@ -310,7 +310,7 @@ label prolog:
     mg2 "Kalian Bebas mau manggil aku Kirana, Ardana, Arda, Kiran, Rana, dll"
     mg2 "Rumahku di Jalan Mastrip Nomor 5"
     mg2 "Sekian~"
-    hide ardana_uniform with dissolve
+    hide ardana_uni with dissolve
     show bu_senda at center:
         ypos 1.2
     sr "Terima Kasih [mg2_Last] Kalau gitu selanjutnya"

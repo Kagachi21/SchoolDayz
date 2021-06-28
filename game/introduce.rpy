@@ -31,7 +31,7 @@ label pengenalan:
     $ money += 10000
     show dad at center:
         ypos 1.2
-    show mom at right with moveinright:
+    show mom at right with moveinleft:
         xpos 0.8
         ypos 1.15
         xzoom -1
@@ -238,7 +238,7 @@ label pengenalan:
         ypos 1.2
     mg2 "Aku penasaran, kamu bukannya si [mc] yang dulunya sering dibul--"
     "Bagaimana dia bisa tau ?"
-    $ tmn_mg2 = "Temannya [mg2]"
+    $ tmn_mg2 = "Temannya Ardana"
     ol "Kamu Gpp kan ? Siapa itu tadi na ? minta maafnya kyk ga ikhlas"
     mg2 "Teman Sekelas kita" 
     ol "Ehh.. iyakah ?"

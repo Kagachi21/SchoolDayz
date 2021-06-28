@@ -1,33 +1,53 @@
 label day6_Kirana:
     
-    scene kamar
+    scene kamar with dissolve
     "Hmm.. Sudah pagi ternyata"
     "Oiya, Sekarang hari libur kalau gitu aku bantu orang tuaku"
 
-    scene dapur
+    scene dapur with dissolve
     mc "Pagi bu"
+    show mom at center with dissolve:
+        ypos 1.15
     mom "Pagi [mcFirst] "
     mom "Panggil ayahmu ada didepan rumah, bentar lagi makanan sudah siap"
     mc "ahh.. Okk"
+    hide mom with dissolve
 
-    scene depan rumah
-    mc "Yah, Kuy Makan"
-    mc "Makanannya sudah siap"
+    scene depan rumah with dissolve
+    mc "Yah, Kuy Makan \nMakanannya sudah siap"
+    show dad at center with dissolve:
+        ypos 1.2
     dad "Okk, bentar aku mau cuci tangan dulu"
     mc "Aku makan duluan"
+    hide dad with dissolve
 
-    scene dapur
+    scene dapur with dissolve
+    show mom at center with dissolve:
+        ypos 1.15
     mom "Gimana ayahmu ?"
     mc "Bentar lagi kesini, kalau gitu aku makan duluan bu"
-    dad "Mantapp,, ini"
-    dad 'Bu Nasinya yang ini ?'
+    show mom at center with dissolve:
+        ypos 1.15
+        xzoom -1
+    show dad at center with moveinleft:
+        xpos 0.65
+        ypos 1.2
+    dad "Mantapp,, ini \nBu Nasinya yang ini ?"
     mom "Iya yah yang itu nasinya"
     mc "Bu aku sudah selsai"
+    hide dad with dissolve
+    hide mom with dissolve
     play sound cuci_piring
     "~Cuci Piring~"
     window hide dissolve
     $ renpy.pause(35.0, hard=True)
     window show dissolve
+    show mom at center with dissolve:
+        ypos 1.15
+        xzoom -1
+    show dad at center with dissolve:
+        xpos 0.65
+        ypos 1.2
     dad "Ga tambah kamu ?"
     mc "Ga, sudah kenyang tadi ambilnya sudah kebanyakan"
     mc "Aku mau bersih-bersih dulu"
@@ -37,48 +57,76 @@ label day6_Kirana:
     dad "aku aja kalau gitu"
     mc "Ayah bersihin bagian luar aja"
     dad "Ahh.. Okk"
+    hide dad with dissolve
+    hide mom with dissolve
 
-    scene kamar
+    scene kamar with dissolve
     "Aku bersihkan kamarku dulu setelah itu ruangan lain"
 
-    scene ruang tamu
+    scene ruang tamu with dissolve
+    #
+
+    scene ruang keluarga with dissolve
+    #
+
+    scene kamar mandi with dissolve
+    #
+
+    scene dapur with dissolve
+    #
 
     scene ruang keluarga
-
-    scene kamar mandi
-
-    scene dapur 
-
-    scene ruang keluarga
-    mc "Bu, aku tidur duluan"
+    mc "Bu, sudah aku bersihkan bagian dalamnya \nKalau gitu, aku tidur duluan"
+    show mom at center with dissolve:
+        ypos 1.15
     mom "Iyaa"
     mc "[cat] mana bu ?"
     mom "Kayaknya diluar sama [dad]"
     mc "Ohh.. Okk"
+    hide mom with dissolve
 
-    scene kamar_siang
+    scene kamar_siang with dissolve
     "Siapin baju buat nanti malam sekalian dah"
     "Nanti malam biar langsung berangkat"
     "~Menyiapkan baju~"
     "Done, saatnya tidur"
 
-    scene depan rumah
+    scene depan rumah with dissolve
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "Permisi"
     "~Knock Knock Knock~"
     mg2 "Permisii !!"
     "~Knock Knock Knock~"
     
     scene ruang keluarga
+    show dad at center with dissolve:
+        xpos 0.6
+        ypos 1.2
     dad "Siapa itu bu ?"
     "~Knock Knock Knock~"
+    show mom at center with dissolve:
+        ypos 1.15
     mom "Mungkin tamu"
+    hide dad with dissolve
+    hide mom with moveoutleft
 
-    scene depan rumah 
+    scene depan rumah
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "Permisii !"
     "~Knock Knock Knock~"
+    show ardana_cas at center with moveinright:
+        xpos 0.3
+        ypos 1.2
+    show mom at center with moveinright:
+        ypos 1.15
     mom "Iyaa sebentar"
     mg2 "Halo Tante"
     mom "Oalah, kamu toh"
+    show dad at center with moveinright:
+        xpos 0.65
+        ypos 1.2
     dad "Siapa bu ?"
     mg2 "halo Om"
     dad "Hooo, kamu temannya [mcFirst] yang katanya tante ya"
@@ -93,8 +141,16 @@ label day6_Kirana:
     mg2 "Okk Om Te"
     mg2 "Permisi~"
     ai "Silahkan"
+    hide mom with moveoutright
+    hide dad with moveoutright
+    hide ardana_cas with moveoutright
 
     scene ruang keluarga
+    show dad at center with moveinleft:
+        xpos 0.65
+        ypos 1.2
+    show mom at center with moveinleft:
+        ypos 1.15
     dad "Cantik juga ya bu hahah.. ga nyangka anak kita yang dulunya pendiam dan trauma sosial"
     dad "Tiba-tiba bawa pulang cewe cantik"
     mom "Hahaha.. Ayah bisa aja"
@@ -102,45 +158,70 @@ label day6_Kirana:
     dad "Iya bu, btw, mereka masih temanan ?"
     mom "Iyaa yah, kan ga langsungan pasti masih ada proses kayak kita dulu heheh"
     dad "Ahh.. ibu bisa saja"
+    hide dad with dissolve
+    hide mom with dissolve
 
     scene depan kamar
+    show ardana_cas at center with moveinleft:
+        ypos 1.2
     mg2 "[mcFirst] ayo bangun aku dah sampai ini"
     "~Knock Knock~"
     mg2 "Bangunn !!"
     mg2 "Ihh.. ga mau bangun"
+    hide ardana_cas with dissolve
 
-    scene kamar_malam
+    scene kamar_malam with dissolve
+    show cat at center with moveinbottom:
+        ypos 0.775
     cat "Meoooww Meoooww"
     mc "Ummm.. "
     cat "meoow Meooww"
+    hide cat with moveoutbottom
     mc "Hmmm.. ada apa ? loh kok [cat] bisa disini"
     mc "Ehh,, iyaa lupa ga kututup tadii hahah"
     "Bangun!!~"
     mc "Siapa itu kok ga asing banget ?"
     
-    scene depan kamar
+    scene depan kamar with dissolve
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "Bangun!"
     "~Klek~"
     mg2 "Bang--"
     mc "Apa sih berisik-berisik ? sampai teriak-teriak lagi"
     mc "Loh,, kok tiba-tiba kamu ada disini"
+    hide ardana_cas
+    show ardana_cas_emosi at center:
+        ypos 1.2
     mg2 "Dih.. padahal aku bangunin kamu"
     mg2 "Lah,, kamu lupa ? katanya mau temani aku malam ini"
     mc "Padahal kamu sendiri yang minta temani"
     mg2 "Dasar.. Hmmph"
     mc "Ahh.. Okk klo gitu aku mau salin dulu"
     mg2 "Iyaa.. jangan lama-lama"
+    hide ardana_cas_emosi with moveoutleft
 
     scene ruang keluarga
+    show ardana_cas_emosi at center with moveinleft:
+        ypos 1.2
     mg2 "Ihh.. si [mcFirst]"
+    show mom at center with dissolve:
+        xpos 0.35
+        ypos 1.15
     mom "Kenapa ?"
     mom "Gimana sudah bangun [mcFirst] ?"
     mg2 "Sudah te"
     mg2 "Masa dibangunin jadi marah-marah"
+    show dad at center with dissolve:
+        xpos 0.65
+        ypos 1.2
     dad "Hahahaha"
     mg2 "Ihh.. Om malah ketawa - ketawa"
     dad "Maaf-Maaf, tapi [mcFirst] jarang kayak gitu"
     ai "Terima kasih ya, [mcFirst] jadi lebih mendingan daripada dulu"
+    hide ardana_cas_emosi
+    show ardana_cas at center:
+        ypos 1.2
     mg2 "Ehh... Terima kasih apa om te ?"
     ai "Hahaha,, gapapa terima kasih telah menjadi teman [mcFirst]"
     mg2 "Ealah,, ga masalah te"
@@ -150,27 +231,41 @@ label day6_Kirana:
     mg2 "Kalau gitu aku pamit dulu om te"
     mm2 "Kami Berangkat dulu"
     ai "Iya Hati - Hati dijalan"
+    hide dad with dissolve
+    hide mom with dissolve
+    hide ardana_cas with moveoutleft
 
-    scene jalan_malam
+    scene jalan_malam with dissolve
     mc "Tadi ada apa an emangnya ?"
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "ga ada apa-apa"
     mc "Dih, ga mau cerita"
     mg2 "Biarinnn.. Bwekk"
     mc "Awas saja kamu"
+    hide ardana_cas with dissolve
 
-    scene parkiran mall
+    scene parkiran mall with dissolve
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "Yeayy sudah sampai"
     mc "Kalau gitu aku nunggu disini saja"
     mg2 "Ihh.. ya masuk lah"
     mc "Iya-iya aku masuk juga"
+    hide ardana_cas with dissolve
 
-    scene mall_malam
+    scene mall_malam with dissolve
     mc "Ini kita mau kemana ?"
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "Bantuin pilihin baju jadi kita ke bagian baju dulu"
     mg2 "Soalnya ada promo hehehhe"
     mc "Iya iya ayo kesana"
+    hide ardana_cas with dissolve
 
     scene section baju
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "Lihat-lihat banyak yang promo"
     mg2 "Yang ini bagus tak ?"
     #show Baju
@@ -235,11 +330,15 @@ label day6_Kirana:
     mc "Kalau gitu mau kemana lagi ini ?"
     mg2 "Mampir cafe dulu dong kan aku bilang mau traktir"
     mc "Okk dah"
+    hide ardana_cas with dissolve
 
     scene cafe_malam
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "Mau pesan apa ?"
     mc "Yakult Strawberry aja"
     mg2 "Okk dah kalau gitu"
+    hide ardana_cas with moveoutleft
     kk "Loh ada [mcFirst] juga"
     mc "lahh ada kamu"
     kk "Hahahah ga nyangka ketemu disini"
@@ -257,6 +356,8 @@ label day6_Kirana:
     kk "Okk Kalau gitu selamat bersenang-senang"
     mc "Okk lur"
     "Sepertinya, [mg2_Last] sudah selsai memesan"
+    show ardana_cas at center with moveinleft:
+        ypos 1,2
     mg2 "Tadi kamu ngomong sama siapa ?"
     mc "Aku ngomong sama [kk]"
     mg2 "Ehh.. [kk] ada disini juga"
@@ -320,22 +421,30 @@ label day6_Kirana:
     mg2 "Kalau gitu aku pulang duluan"
     mg2 "Terima kasih [kk]"
     kk "Iya sama-sama hati-hati dijalan"
+    hide ardana_cas with moveoutleft
 
     scene ruang tamu
     mc "Aku Pulang!"
 
     scene ruang keluarga
+    show mom at center with dissolve:
+        ypos 1.15
     mom "Gimana jalan-jalannya ?"
     mc "Ampas"
     mom "Ada apa ?"
     mc "Aku mau tidur duluan aja bu"
     mc "Soalnya capek"
     mom "Iya nak"
+    show dad at center with dissolve:
+        xpos 0.665
+        ypos 1.2
     dad "Ada apa ?"
     mom "Kayaknya ada masalah"
     mom "Aduhh.. sudah mendingan gini jadi ada masalah lagi"
     dad "Semoga anak kita baik-baik saja bu"
     mom "Iyaa yah.. besok mari kita coba dengarkan permasalahannya"
+    hide dad with dissolve
+    hide mom with dissolve
 
     jump day7_Kirana
 
