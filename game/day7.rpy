@@ -331,6 +331,32 @@ label day7_Miselia:
     dn "Sono gih, dasar gembel"
     mc "Ya allah, kenapa ya aku selalu jadi rendahan orang lain, padahal aku gapernah nyari masalah selama ini"
 
+    scene kelas 
+   $ isp = "ispun"
+    mc "Assalamualaikum bu "
+    sr "Dari mana kamu mc kok baru datang"
+    mc "Maaf bu , saya habis dari toilet "
+    sr "Oiya sudah kalo gitu , silahkan kembali duduk di tempatmu.Itu bajumu kok kotor ? kamu abis jatuh ?"
+    mc "Tidak bu , tadi ada anak yang tidak sengaja menjauhkan minumannya di baju saya"
+    isp"Hahaha, palingan juga kejebur got, kan dia kalo sekolah jalan,ga naik motor, kan miskin"
+    sr "Heh ispun kamu tidak boleh begitu!!!! yasudah mc silahkan duduk "
+    mg2 "Kamu mau ke kantin ga ?"
+    mc "Engga ,aku duduk disini aja , lagi gapengen jajan"
+    mg2 "Kenapa emangnya?kamu sakit?"
+    mc "Engga juga, ya emang lagi ga pengen ke kantin aja"
+    mg2 "Oh, yasudah kalo gitu ,aku ke kantin duluan deh ya"
+    mg2 "Kamu mau es teh ? tuh aku beli 2"
+    mc "Iya minum gih , aku engga"
+    sr "Selamat siang anak anak, assalamualaikum wr.wb"
+    isp "Waalaikumsalam wr.wb, selamat siang juga bu"
+    sr "Hari ini kuis ya"
+    mc "Iya buuu"
+
+    "Scene kuis"
+    $ sm = " Semua murid"
+    sr "Oke sudah jam nya pulang , sekarang silahkan beres beres"
+    sm "Baik bu"
+
     jump day8_Miselia
 
  #label day7_Airin:
