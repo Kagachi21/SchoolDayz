@@ -651,7 +651,6 @@ label day2_Miselia:
     mom "Waalaikumsalam, hati hati di jalan ya nak , semangat belajarnya"
 
     scene jalan with dissolve
-
     sa "Naakk, ayo masuk , duduk di depan aja "
     mc "Wahhh,, iya pak , okee dehh"
     sa "Nak, hari ini bapak baru dapet penumpng baru 2 , kamu dan 1 ibu tadi udah turun di pasar gebang"
@@ -664,6 +663,8 @@ label day2_Miselia:
     scene lorong with dissolve
     $ mt = "Meta"
     $ hsn ="Husni"
+    show miselia_uni at center with moveoutbottom:
+         ypos 1.2
     mg1 "MC.. mc... "
     mc "Kamu memanggilku?"
     mg1 "Iyalah, yakali aku manggil pak kebon dengan namamu"
@@ -681,6 +682,9 @@ label day2_Miselia:
     mc "Udah udahh,, gausah ribut. bentar aku kasih bukunya ."
     mt "Heheh makasih ya , maapin aku kalo omonganku kasar tadi"
     mc "iya sama sama "
+    hide miselia_uni with dissolve
+    show bu_senda at center with moveoutbottom:
+        ypos 1.2
     sr "Selamat pagi anak anak, bagaimana kabar hari ini?"
     sk "Pagi buu" 
     sr "Oiyaaaa, hari ini ibu ingat kalo ada tugas rumah , yang ibu berikan 2 hari yang lalu ya ?"
@@ -692,6 +696,9 @@ label day2_Miselia:
     mc "Baik Bu"
     mt "Huuhh untungnya bukan kita mat yang di panggil"
     hsn "Iya met, untung"
+    hide bu_senda with dissolve
+    show miselia_uni at center with dissolve:
+        ypos 1.2
     mg1 "Ayo ke kantin"
     mc "Iya sebentar, aku beresin ini dulu "
 
@@ -700,7 +707,7 @@ label day2_Miselia:
     mc "Kuncinya hanya satu yaitu raji belajar ,udah itu aja"
     mg1 "Hummmm begitu ,boleh gak aku belajar bareng sama kamu"
     mc "Hmm iyadeh tapi nanti aku kabarin ya bisanya kapan hehe"
-
+    hide miselia_uni with dissolve
     "~SOAL~"
     #Initialize score
     $ quiz_fungi2_score = 0
@@ -859,7 +866,8 @@ label day2_Miselia:
                 "Anda gagal sebagai murid"
                 "~END~"
                 return
-    
+    show miselia_uni at center with moveoutbottom:
+        ypos 1.2
     mg1 "Kamu pulang bareng siapa ? "
     mc " Sendiri jalan kaki , kenapa sel?"
     mg1 "Yauda bareng aku aja gapapa ayo"
@@ -874,7 +882,7 @@ label day2_Miselia:
     mc "Udah sampai , makasih ya udah mau nebengin, aku masuk dulu, kamu hati - hati ya"
     mg1 "Oke sama sama , assalamualaikum"
     mc "Waalaikumsalam"
-
+    hide miselia_uni with dissolve
     jump day3_Miselia
 
 label day2_Airin:

@@ -605,7 +605,8 @@ label day3_Kirana:
     jump day4_Kirana
 
 label day3_Miselia:
-
+    show mom at right with moveoutright:
+        ypos 1.2 
     scene kamar with dissolve
     mc  "Huuhh, hari sudah senin lagi"
     mom "Naak.?"
@@ -616,12 +617,16 @@ label day3_Miselia:
     scene depan_rumah with dissolve
     mc " Bu, aku berangkat ke sekolah dulu ya "
     mom "Iya nak , hati hati di jalan ya, sekolah yang pinter"
+    hide mom with dissolve
 
     scene lorong with dissolve
+
     kk"Heh dasar sok kegantengan! awas ya sampek kamu ganggu cewekku lagi"
     mc "Ehh  maksudnya apa ya mas ? emang aku salah apa "
     kk "Halah, sok pura pura gatau lagi ! "
     mc "Beneran mas, saya ga tau apa apa "
+    show miselia_uni at center with moveoutright:
+        ypos 1.2 
     mg1"Heh mau di bawa kemana mc?"
     kk "Kamu bocil jangan ikut campur ya!!! ini urusan aku sama si penggoda ini"
     mg1 "Hehh. ga bisa gitu dong , mc sini ikut aku ke kealas."
@@ -629,13 +634,22 @@ label day3_Miselia:
     mg1"Kamu gapapa bro?emang kamu ada masalah apa sama dia"
     mc "Aku pun juga gatau , ada masalah apa , tiba tiba aku di berhentikan tadi di depan gerbang terus mau di seret ke toilt tadi"
     mg1 "Huhh dasar ya , cari maslaah tu orang , yaudaahh gapapa , bu sendra talagi datag , mendng kita ke kelas"
-    
+    hide miselia with dissolve
+
     scene kelas with dissolve
+    show bu_Senda at center with moveoutright:
+        ypos 1.2 
     sr "Selamat pgi anak2 ,sudah siap memulai pelajaran !"
     sk "Siap bu!"
     sr "Oke kalo begitu buka  bab virus"
-
+    hide bu_senda with dissolve
     "Materi Virus"
+    show miselia_uni at center  with moveinbottom:
+        xpos 0.4
+        ypos 1.2
+    show bu_senda at right with moveoutright:
+        xpos 0.4
+        ypos 1.2
     mg1 "Hey mc apa kamu bisa mengerjakan soal nomor 3?"
     mc "Oohh okey makasih y"
     sr "Anak2 jam ibu sudah selesai , kalo belum selesei diuat pr minggu depan dikumpulkan ya"
@@ -645,16 +659,20 @@ label day3_Miselia:
     mg1 "Huuu kmu ni rajin2 amat padahal dikumpulin minggu depan"
     mc "Seharusnya kita tidak boleh menunda- nunda , selagi bisa sekarang kenapa tidak"
     mg1 "iyeudah terserah lu, aku mau ke kantin dlu laper perutku , makan tuh nomor satu"
-    
+    hide bu_senda with dissolve
+    hide miselia_uni with dissolve
     scene kantin with dissolve
     $ Ik = "Ibu kantin"
+    show miselia_uni at center with moveoutright
+        ypos 1.2
     mg1 "Bk, saya beli tahu koceknya 2 ya pedes semua"
     Ik "iya nak , fi tunggu ya "
 
     scene kelas with dissolve
     mg1 "Nih , aku punya tahu kocek, tadi aku beli 2"
     mc "Wah , terimakassih ya "
-
+    hide miselia_uni with dissolve
+    
     #Initialize score
     $ quiz_fungi3_score = 0
 

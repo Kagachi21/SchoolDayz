@@ -542,6 +542,8 @@ label day5_Kirana:
 label day5_Miselia:
 
     scene kamar with dissolve
+    show mom at center with moveoutright:
+        ypos 1.2 
     mc "Buk, ibukk...."
     mom "Iya naakkk, ada apa ? ibu lagi di dapur ini"
     mc "Itu buk, kepalaku pusing , badanku terus menggigil"
@@ -557,11 +559,13 @@ label day5_Miselia:
     scene ruang_tamu with dissolve
     mc "Bu aku berangkat sekolah dulu ya"
     mom" Iya nak, hati hati ya "
+    hide mom with dissolve
 
     scene jalan with dissolve
+    show miselia_uni at center with moveoutright:
     mg1 "Hei , ayo berangkat bareng aku ke sekolah"
     mc "Oke, makasih ya "
-
+    hide miselia_uni with dissolve
     scene gerbang_sekolah with dissolve
     $ jno = "Jino"
     jno "Stop!!"
@@ -570,6 +574,8 @@ label day5_Miselia:
     mc "Loh, emang aku nglakuin salah apa ?"
     jno "Kamu gatau , kalo misel ini gebetanku ? kok brani brani nya kamu boncengin dia ke sekolah , nyari mati kamu ha???"
     mc "Loh,, sell ini cuman salah paham tolong kamu bilang ke gebetanmu ini "
+    show miselia_uni at center with moveoutright:
+        ypos 1.2
     mg1 "Mas aldo  , kita kan cuman temen , ya seharusnya mas aldo gausa marah marah apalagi pake cara kyak gini dong mas,"
     jno "Ya tapi liat dong , kamu itu kan punya ku"
     mg1 "Udah udah, gausa ribut dan di perpanjang, aku sama mc mau masuk kelas dulu , bentar lagi masuk"
@@ -580,12 +586,15 @@ label day5_Miselia:
     mg1 "Kamu ngasih kado ke sapa? "
     mc "Ke Bu sendra, kamu ke siapa ?"
     mg1 "Ke Pak santoso"
+    hide miselia_uni with dissolve
+    show bu_senda at center with moveoutright:
+        ypos 1.2 
     sr "Hallo selamat pagii anak anak sekalian , bagaimana kabar hari ini ? ssemua sehat?"
     mg1 "Alhamduliilah bu sehat"
     sr "Mc kamu apa baik baik saja ?"
     mc  "Tidak bu , saya baik baik saja hehehe, cuman tadi agak sedikit pusing aja "
     sr "Yaudah , kalo kamu tidak kuat silahkan bisa istirahat di ruang uks ya "
-
+    hide bu_senda with dissolve
     "Materi Virus"
 
     scene ruang guru 
@@ -597,8 +606,10 @@ label day5_Miselia:
     mc "Tok tok tok"
     sr "Iya silahkan masuk aja nak"
     mc "Bu ini saya ada kado buat ibu, sederhana semga ibu suka ya"
+    show bu_senda at center with moveoutright:
+        ypos 1.2
     sr "Wah terimakasih ya nak "
-
+    hide bu_senda with dissolve
     scene kelas with dissolve
 
     "~SOAL~"
@@ -748,6 +759,8 @@ label day5_Miselia:
                 return
 
     scene lorong with dissolve
+    show miselia_uni at center with moveoutright:
+        ypos 1.2
     mg1 "Kamu mau pulang bareng aku ga ?ayo kalo mau"
     mc "Beneran gapapa ta ? ayo deh"
     mg1 "Yauda aku ambil sepedah dulu ya"
@@ -760,11 +773,14 @@ label day5_Miselia:
     scene depan_rumah with dissolve
     mc "Makasih ya sudah nganterin aku"
     mg1 "Iya, sama sama , aku pulang dulu"
-  
+    hide miselia_uni with dissolve
     scene ruang_tamu with dissolve
+    show mom at center with moveoutright:
+        ypos 1.2
     mc "Assalamualaikum bu"
     mom "Waalaikumsalam, sudh pulang nak , sana bersihkan cuci kaki, taruh tas nya di kamar dan langsung ke meja makan ya , ibu udah siapkan makannya"
     mc "Iya buk, terimakasih ya , mc ke kamar dulu"
+    hide mom with dissolve
 
     jump day6_Miselia
 

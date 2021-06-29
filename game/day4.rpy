@@ -605,17 +605,21 @@ label day4_Kirana:
 label day4_Miselia:
 
     scene kamar with dissolve
+    show dad at center with moveoutright:
+        ypos 1.2
     dad "Nak ayo bangun , ini sudah mau jam setengah tujuh loh, kamua pa mau ga sekolah?"
     mc "Hah.. ya allah , udah jam segini aja,Iya pak , aku sekolah"
-
+    hide dad with dissolve
     scene ruang_keluarga with dissolve
+    show mom at center with moveoutright:
+        ypos 1.2
     mc "Paakk,, bukkk aku berangkat sekolah dulu yaaa"
     mom "Loh nak,, kamu apa tidak sarapan dulu ?"
     mc "Engga buk,nanti aku beli di kantin aja "
     mom "Eee tunggu sebentar , ibu bungkusin bekal buat kamu"
     mc "Haduh buukk, ini uda jam berapa gausah deh , biar nanti aku beli aja di kantin"
     dad "Wah terimakasih pak buukk, aku berangkat yaa"
-
+    hide mom with dissolve
     scene jalan with dissolve
     $ brhn = "Burhan"
     brhn "Hahahha, dasar miskin sekolah aja sambil lari"
@@ -625,11 +629,16 @@ label day4_Miselia:
     scene lorong with dissolve
     $ ska ="Siska"
     $ hrln = "Herlin"
+    show miselia_uni at center with with moveinright:
+        ypos 1.2
     mg1 "Kamu kenapa kok mukanya murung gitu , lagi sakit?"
     mc "Engga, gapapa, ini tadi aku kena masalah aja "
     mg1 "Haa. masalah apa ?"
     mc "Gapapa, lupain , ayo kita mending masuk aja, talagi bu sendra kan dateng"
     kk "Loh buu, kok tumben ga bawa buku?"
+    hide miselia_uni with dissolve
+    show bu_senda at center with moveoutright:
+        ypos 1.2
     sr "Iya, hari ini mau mengabarkan sesuatu yang tidak enak"
     kk "Wihh, kenapa buu?"
     sr "Sebelum di mulaii, assalamualaikum wr wb, selamat pagii anak anak sekalian"
@@ -654,9 +663,11 @@ label day4_Miselia:
     hrln "Pembelaan terosss" 
     mc "Sudah stop, jangan ribut ribut!!"
     mc "Udahh, kalian gausah ribut, terserah kalian mau gimana , aku cuman ngingetin"
-
+    hide bu_senda with dissolve
     "Materi virus"
     mc "Ayo kita ke kantin"
+    show miselia_uni at center with moveoutright:
+        ypos 1.2
     mg1 "Tuumben kamu ngajak aku duluan"
     mc "Kamu mau ikut beneran apa ga?"
     mg1 "Iya iya ayo"
@@ -673,10 +684,10 @@ label day4_Miselia:
     mc "Engga pembrani juga, bukannya sok jagoan sih , cuman aku mau menghargai bu sendra selaku guru gitu loh"
     mg1 "Iya aku paham, tapi malah anak anak yang menerimanya berbeda"
 
+    hide miselia_uni with dissolve
     scene kelas with dissolve
     $ sml ="Samsul"
     $ udn ="Udin"
-    
     mc "Rek, ini ada titipan materi buat jam sekarang aku share di grup wa, dan disitu ada tugasnya untuk di kumpulkan besok"
     wkk "Haa, ada tugas lagi? anjirrr"
     mc "Iya rek, itu sudah aku share ,terimakasih"
@@ -826,7 +837,8 @@ label day4_Miselia:
                 "Anda gagal sebagai murid"
                 "~END~"
                 return
-
+    show miselia_uni at center with moveoutleft:
+        ypos 1.2
     mg1 "Kamu pulang sama siapa ?"
     mc "Gaada, aku jalan kaki, ayahku lembur"
     mg1 "Yauda ayo aku tebengin sampai depan rumahmu"
@@ -835,7 +847,7 @@ label day4_Miselia:
     scene depan_rumah with dissolve 
     mc "Makasih ya sudah mau nebengin aku, Hati -hati"
     mg1 "yauda aku pulang dulu ya"
-
+    hide miselia_uni with dissolve
     jump day5_Miselia
 
 label day4_Airin:
