@@ -332,7 +332,7 @@ label day7_Miselia:
     mc "Ya allah, kenapa ya aku selalu jadi rendahan orang lain, padahal aku gapernah nyari masalah selama ini"
 
     scene kelas 
-   $ isp = "ispun"
+    $ isp = "ispun"
     mc "Assalamualaikum bu "
     sr "Dari mana kamu mc kok baru datang"
     mc "Maaf bu , saya habis dari toilet "
