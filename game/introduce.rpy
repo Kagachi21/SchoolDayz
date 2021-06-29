@@ -17,19 +17,19 @@ label pengenalan:
         xpos 0.8
         ypos 1.15
         xzoom -1
-    show dad at center:
+    show dad_uni at center:
         ypos 1.2
     dad "Iyaa benar, ta-tapii Ayah ga bisa lihat langsung karena nanti pulang kerjanya malam"
     mc "Iyaa, terima kasih Ayah Ibuu"
     mc "aku sudah selesai, aku langsung berangkat"
-    show dad at right with moveinright:
+    show dad_uni at right with moveinright:
         xpos 0.8
         ypos 1.2
     show mom at center:
         ypos 1.15
     mom "Ini uang sangu mu"
     $ money += 10000
-    show dad at center:
+    show dad_uni at center:
         ypos 1.2
     show mom at right with moveinleft:
         xpos 0.8
@@ -37,11 +37,12 @@ label pengenalan:
         xzoom -1
     dad "Iya hati - hati dijalan"
     hide mom with dissolve
-    hide dad with dissolve
+    hide dad_uni with dissolve
 
-    scene depan mini market
-    "Mungkin disini ada makanan kucing juga"
-    scene mini market 
+    scene depan_store with dissolve
+    "Kayaknya disini ada makanan kucing"
+
+    scene store with dissolve 
     ks "Selamat Datang di Alkamart"
     "kayaknya ada di bagian sini"
     ks "Mau tambah kak ? sekalian pulsa, ini ada diskon juga beli 1 Kariroti gratis 1 susu Ultraman"
@@ -60,56 +61,56 @@ label pengenalan:
     "Ternyata sudah ada seseorang yang memberi makanan kucing"
     "Apa itu Majikannya ? Seragamnya sama denganku"
     "Kalau gitu aku ga perlu mengganggunya"
-    show miselia_uniform at center:
+    show miselia_uni at center with moveinright:
         ypos 1.2 
     mg1 "Heii,,, Tunggu sebentar" 
     mg1 "Heii Jangan diabaikann, Sini duluuu"
     mg1 "hmmphh!!"
-    show miselia_uniform at right with moveinright:
+    show miselia_uni at right with moveinleft:
         xpos 0.9
         ypos 1.2
     mc "Ada Apa ? sudah lepaskan ga usah menarik bajuku"
     mc "aku ga akan kemana-mana"
-    show miselia_uniform at center:
+    show miselia_uni at center with moveinright:
         ypos 1.2
     mg1 "Hehehehehehe.. maaf"
     mg1 "Kamu orang yang kemarin memberi makan ke kucing ini kan ?"
-    show miselia_uniform at right with moveinright:
+    show miselia_uni at right with moveinleft:
         xpos 0.9
         ypos 1.2
     mc "Entahlah.."
-    show miselia_uniform at center:
+    show miselia_uni at center with moveinright:
         ypos 1.2
     mg1 "Kemarin, aku melihatmu setelah memberi makanan ke kucing ini"
     mg1 "Apa Kamu suka Kucing juga ?"
-    show miselia_uniform at right with moveinright:
+    show miselia_uni at right with moveinleft:
         xpos 0.9
         ypos 1.2
     mc "...."
     mc "Kalau ga penting aku duluan"
-    show miselia_uniform at center:
+    show miselia_uni at center with moveinright:
         ypos 1.2
     mg1 "Tunggu Bentar, kamu kyknya sekelas denganku aku lupaa namamu"
     mg1 "ummm.. aha aku ingatt. Loh loh sudah hilangg"
     mg1 "humph Dasar. Tunggu aku kan kita sekelas"
     mg1 "Tunggu akuu!!! [mcFirst]"
-    hide miselia_uniform with moveoutleft
+    hide miselia_uni with moveoutleft
 
     scene gerbang_sekolah with dissolve
     show nada_uni at center with zoomin:
         ypos 1.2
     na "Oeee [mcFirst], wihhh dahh akrab aja nih sama [mg1_First]"
     na "Kalian dah jadiann yaa ? Baru Masukk sekolahh sudah jadian aja Hebat"
-    show nada_uni at right with moveinright:
+    show nada_uni at right with moveinleft:
         xpos 0.9
         ypos 1.2
     mc "...."
-    show miselia_uniform at center:
+    show miselia_uni at center with dissolve:
         ypos 1.2
     mg1 "ehhh.. Ngg-ngg-gaakk akuu ga pacaran Bukan pa-pacarkuu !"
     show nada_uni at center with moveinright:
         ypos 1.2
-    show miselia_uniform at right with moveinleft:
+    show miselia_uni at right with moveinleft:
         xpos 0.9
         ypos 1.2
     na "ajarin dongg [mcFirst] hehhehe"
@@ -122,9 +123,9 @@ label pengenalan:
     $ tg = "Nada" +" & "+ mg1_First
     tg "Tungguin akuu !!!"
     hide nada_uni with moveoutleft
-    hide miselia_uniform with moveoutleft
+    hide miselia_uni with moveoutleft
 
-    scene kelas 
+    scene kelas with dissolve
     show bu_senda at center with moveinright:
         ypos 1.2
     sr "Selamat Pagi Anak-anak, Untuk saat ini ibu ga akan langsung terjun ke pelajaran"
@@ -142,7 +143,7 @@ label pengenalan:
     sk "Iyaa buu"
     hide bu_senda with moveoutright
 
-    scene kantin
+    scene kantin with dissolve
     "Ramai sekali kupikir ga bakalan terlalu ramai kayak gini"
     "Mungkin Lebih baik aku melihat Menunya dulu"
 
@@ -316,7 +317,7 @@ label pengenalan:
     mc "Weh.. Ternyata aku tidurnya kelebihan"
     mc "Lebih baik langsung ke kelas aja"
 
-    scene lorong sekolah with dissolve
+    scene lorong_siang with dissolve
     "Ternyata belum ada gurunya"
 
     scene kelas with dissolve
@@ -359,13 +360,13 @@ label pengenalan:
     "Kayaknya sudah sepi ini sekolah, sebaiknya aku pulang dan membawa kucing itu"
     "Moga aja ada"
 
-    scene lorong sekolah with dissolve
+    scene lorong_sore with dissolve
     "Ahh.. Ada Suara Nyanyian"
     "Suara siapa itu ?"
     "Sepertinya datangnya dari atas mungkin ada di atap sekolah"
     "Aku penasaran. Mungkin aku akan coba ke atap"
 
-    scene atap_sore
+    scene atap_sore with dissolve
     "Wahh... "
     show airin_jalan_uni at center with moveinright
     hide airin_jalan_uni
@@ -399,24 +400,24 @@ label pengenalan:
     mg3 "...."
     hide airin_uni with moveoutright
 
-    scene depan rumah
+    scene depan_rumah_sore with dissolve
     "ahh.. aku hampir lupa membawa kucing ituu"
     "Sebaiknya aku kembali dan melihatnya"
 
     scene jalan_sore with dissolve
     mc "Ternyata kamu masih ada kukira tadi sudah dibawa oleh cewe tadi pagi"
-    show cat_box with moveinbottom
+    show cat_box at truecenter with moveinbottom
     cat "meooow ??"
     hide cat_box with moveoutbottom
     mc "kalau gitu ikut kerumahku ya"
-    show cat_box_relived with moveinbottom
+    show cat_box_relived at truecenter with moveinbottom
     cat "Meoowww"
     hide cat_box_relived with dissolve
 
-    scene depan rumah
+    scene depan_rumah_sore with dissolve
     mc "Aku pulang.."
 
-    scene ruang keluarga
+    scene ruang_keluarga_sore with dissolve
     "Ternyata sudah dibelikan kandangnya"
     mc "tunggu sini, aku ganti baju dulu"
     mc "setelah itu aku memandikanmu"
@@ -427,7 +428,7 @@ label pengenalan:
     cat "meoow ?"
     hide cat with dissolve
 
-    scene kamar mandi
+    scene kamar_mandi with dissolve
     mc "akkhh,, kau tidak suka air yaa. Susah sekali memandikanmu"
     show cat_angry at center with vpunch:
         ypos 0.85
@@ -444,7 +445,7 @@ label pengenalan:
     mc "Sepertinya kamu tau apa yang kuucapkan"
     hide cat_happy with dissolve
 
-    scene dapur_sore
+    scene dapur_sore with dissolve
     mc "ini makananmu, kau pasti suka kan"
     show cat_happy at center:
         ypos 0.75
@@ -506,18 +507,18 @@ label pengenalan:
     mom "Habiskan dulu makananmu"
     hide mom with dissolve
 
-    scene kamar_sore
+    scene kamar_sore with dissolve
     "benar, juga kalau tidak ada nama kurang enak klo manggil kucingnya"
     "sebaiknya aku tidur dulu mungkin bisa dapet ide"
     "~Beberapa jam kemudian~"
     
-    scene kamar_malam
+    scene kamar_malam with dissolve
     mc "Hoaamm,, Jam berapa ini ?"
     mc "sebaiknya aku cuci muka dulu lalu ke tempat makan"
 
-    scene kamar mandi
+    scene kamar_mandi with dissolve
 
-    scene dapur_malam
+    scene dapur_malam with dissolve
     mc "Ayah masih belum pulang"
     show mom at center with moveinright:
         ypos 1.15
@@ -573,7 +574,7 @@ label pengenalan:
     hide mom with dissolve
 
     "~Esok Paginya~"
-    scene kamar
+    scene kamar with dissolve
     "Apa ini berat di perutku ?"
     mc "...."
     mc "Ternyata [cat]"
@@ -586,24 +587,24 @@ label pengenalan:
     hide cat with moveoutbottom
     mc "Ayo kita ke ruang makan dulu"
 
-    scene dapur
-    show dad at center:
+    scene dapur with dissolve
+    show dad_uni at center:
         ypos 1.2
     dad "kalian sudah bangun ya"
-    show dad at right with moveinleft:
+    show dad_uni at right with moveinleft:
         xpos 0.8
         ypos 1.2
     show mom at center with moveinright:
         ypos 1.15
     mom "Sini makan dulu sudah ibu siapkan semuanya"
-    show dad at center:
+    show dad_uni at center:
         ypos 1.2
     show mom at right with moveinleft:
         xpos 0.8
         ypos 1.15
         xzoom -1
     dad "Ayah dengar dari ibu kucingnya kamu kasih nama [cat] ya ?"
-    show dad at right with moveinleft:
+    show dad_uni at right with moveinleft:
         xpos 0.8
         ypos 1.2
     show mom at right with moveinleft:
@@ -611,13 +612,13 @@ label pengenalan:
         ypos 1.15
         xzoom -1
     mc "Iya"
-    show dad at center:
+    show dad_uni at center:
         ypos 1.2
     hide mom with dissolve
     dad "Nama yang baguss Ayah juga suka arti namanya juga bagus"
     mc "...."
     dad "Felizz Menggemaskann :3"
-    show dad at right with moveinleft:
+    show dad_uni at right with moveinleft:
         xpos 0.8
         ypos 1.2
     show cat_happy at center:
@@ -625,7 +626,7 @@ label pengenalan:
     cat "Meeeoooww ^-^' ?"
     mc "aku sudah selesai"
     hide cat_happy with dissolve
-    hide dad with dissolve
+    hide dad_uni with dissolve
     play sound cuci_piring
     "~Cuci Piring~"
     window hide dissolve
@@ -635,12 +636,12 @@ label pengenalan:
     show mom at center with moveinright:
         xpos 0.5
         ypos 1.15
-    show dad at center:
+    show dad_uni at center:
         xpos 0.6
         ypos 1.2
     ai "Iyaaa"
 
-    scene depan rumah
+    scene depan_rumah with dissolve
     mc "Aku berangkat dulu"
     show mom at center with moveinright:
         ypos 1.15
@@ -649,28 +650,28 @@ label pengenalan:
     show mom at center with moveinright:
         xpos 0.5
         ypos 1.15
-    show dad at center:
+    show dad_uni at center:
         xpos 0.6
         ypos 1.2
     ai "iya nakk hati-hati dijalann"
     hide mom with dissolve
-    hide dad with dissolve
+    hide dad_uni with dissolve
     show cat at center with moveoutbottom:
         ypos 0.85
     cat "Nyaa~ :')"
-    show dad at center:
+    show dad_uni at center:
         xpos 0.6
         ypos 1.2
     hide cat with dissolve
     dad "Kalau gitu aku berangkat juga bu"
-    show dad at right with moveinleft:
+    show dad_uni at right with moveinleft:
         xpos 0.8
         ypos 1.2
     show mom at center with moveinright:
         ypos 1.15
     mom "Iyaa yahh"
     mom "Hati - hati dijalan"
-    hide dad with moveoutleft
+    hide dad_uni with moveoutleft
     mom "[cat] main sama ibu aja dirumah yaa"
     show mom at right with moveinleft:
         xpos 0.9
@@ -684,17 +685,17 @@ label pengenalan:
 
 label pemilihan:
     
-    scene sky
+    scene sky with dissolve
 
     window hide dissolve
 
     $ renpy.choice_for_skipping()
     
-    show screen gotoKirana
+    show screen gotoKirana with dissolve
 
-    show screen gotoMiselia
+    show screen gotoMiselia with dissolve
 
-    show screen gotoAirin
+    show screen gotoAirin with dissolve
 
     $ renpy.pause(hard=True)
 

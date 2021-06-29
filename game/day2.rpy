@@ -5,19 +5,19 @@ label day2_Kirana:
     "~Suara Kentut~"
     "Aakkhh.. perutku sakit seperti gara-gara kemarin makan terlalu banyak"
 
-    scene ruang keluarga with dissolve
+    scene ruang_keluarga with dissolve
     "Haa.. Leganyaa!!"
     "Hmm.. ada yang bersihin motor"
 
-    scene depan rumah with dissolve
+    scene depan_rumah with dissolve
     mc "Ayah pagi-pagi udah rajin aja nih hehhe"
-    show dad at center with dissolve:
+    show dad_cas at center with dissolve:
         ypos 1.2
     dad "loh, nakkk sudah bangun, kok tumben kamu ga bangkong"
     mc "kan tiap pagi emang bangun pagi kan hhaha"
     mc "kalau gitu aku mandi terus siap siap dulu buat berangkat sekolah"
     dad "Iyaa nak"
-    hide dad with dissolve
+    hide dad_cas with dissolve
 
     scene dapur with dissolve
     show mom at center with dissolve:
@@ -26,10 +26,10 @@ label day2_Kirana:
     hide mom with dissolve
 
     scene depan_rumah with dissolve
-    show dad at center with dissolve:
+    show dad_cas at center with dissolve:
         ypos 1.2
     dad "Iyaa Bu.."
-    hide dad with dissolve
+    hide dad_cas with dissolve
 
     scene kamar_mandi with dissolve
     mc "Iyaa"
@@ -40,7 +40,7 @@ label day2_Kirana:
         ypos 1.15
     mom "Sudah selesai siapin untuk ke sekolah ?"
     mc "Sudah bu"
-    show dad at center with dissolve:
+    show dad_cas at center with dissolve:
         xpos 0.6
         ypos 1.2
     dad "[mcFirst] Sini [mom] sudah selesai masak nih, enak lohh!! ayo makan"
@@ -72,7 +72,7 @@ label day2_Kirana:
     dad "Soalnya [dad] kemarin waktu pulang langsung main sama [cat]"
     dad "Ibu juga ikutan hehehe"
     mc "Pagi [cat] makanmu lahap bener"
-    show dad at center with moveinleft:
+    show dad_cas at center with moveinleft:
         xpos 0.8
         ypos 1.2
     show mom at center with moveinleft:
@@ -86,7 +86,7 @@ label day2_Kirana:
     mom "Oiya, Bekalnya sudah [mom] siapkan ada disini"
     mc 'Iya bu'
     hide mom with dissolve
-    hide dad with dissolve
+    hide dad_cas with dissolve
     hide cat_happy with dissolve
     play sound cuci_piring
     "~Cuci Piring~"
@@ -96,7 +96,7 @@ label day2_Kirana:
     mc "Kalau gitu aku berangkat dulu Ayah Ibu"
     show mom at center with dissolve:
         ypos 1.15
-    show dad at center with dissolve:
+    show dad_cas at center with dissolve:
         xpos 0.6
         ypos 1.2
     ai "Iyaa Nak hati hati dijalan"
@@ -104,7 +104,7 @@ label day2_Kirana:
     mom "Ayah ga berangkat kerja juga ?"
     dad "Bentar lagi, berangkat"
     hide mom with dissolve
-    hide dad with dissolve
+    hide dad_cas with dissolve
 
     scene gerbang_sekolah with dissolve
     "Hmm.. ada yang mendekatiku mungkin sebaiknya aku diamin saja"
@@ -128,7 +128,7 @@ label day2_Kirana:
     kg "Hei,, kalian mengabaikanku yaa awas aja kalian dasar kaum miskin"
     hide nada_uni with moveoutleft
 
-    scene lorong
+    scene lorong with dissolve
     show ardana_uni at center with moveinright:
         ypos 1.2
     mg2 "Ada [mcFirst], aku kesana dulu gaes"
@@ -155,7 +155,7 @@ label day2_Kirana:
     hide ardana_uni with moveoutleft
     hide nada_uni with moveoutleft
 
-    scene kelas
+    scene kelas with dissolve
     show nada_uni at center with moveinright:
         xpos 0.7
         ypos 1.2
@@ -332,6 +332,7 @@ label day2_Kirana:
     rr "Serah serah aku lah"
     mc "...."
 
+    "~SOAL~" with dissolve
     #Initialize score
     $ quiz2_score = 0
 
@@ -556,10 +557,10 @@ label day2_Kirana:
     hide ardana_uni with moveoutleft
     mc "oh ok"
 
-    scene depan rumah 
+    scene depan_rumah_sore 
     mc "Aku Pulang !"
 
-    scene ruang keluarga 
+    scene ruang_keluarga_sore with dissolve 
     mc "Ibu Kenapa keliatannya letih banget"
     show mom at center with dissolve:
         ypos 1.15
@@ -572,7 +573,7 @@ label day2_Kirana:
     mom "Iyaa"
     hide mom with moveoutleft
 
-    scene kamar_sore
+    scene kamar_sore with dissolve
     mc "Enak banget tidurmu [cat]"
     show cat at center with dissolve:
         ypos 0.8
@@ -580,7 +581,7 @@ label day2_Kirana:
     mc "dahlah Aku tidur juga"
     hide cat with dissolve
 
-    scene kamar_malam
+    scene kamar_malam with dissolve
     show cat at center with dissolve:
         ypos 0.8
     cat "Meooow Meeooow"
@@ -589,7 +590,7 @@ label day2_Kirana:
     mc "Sudah Malam juga kalau gitu aku siapin makanan untuk makan malam"
     hide cat with moveoutleft
 
-    scene dapur_malam
+    scene dapur_malam with dissolve
     mc "[cat] Makanan mu sudah kusiapin makan sini"
     show cat at center with dissolve:
         ypos 0.8
@@ -622,7 +623,7 @@ label day2_Kirana:
     hide mom with moveoutleft
     mc "Okie, Biar aku yang beresin semuanya"
 
-    scene kamar_malam
+    scene kamar_malam with dissolve
     mc "Haa.. Leganya. enaknya ngapain ya ?"
     show cat at center with moveoutbottom:
         ypos 0.8
@@ -636,7 +637,7 @@ label day2_Kirana:
 
 label day2_Miselia:
 
-    scene ruang keluarga
+    scene ruang_keluarga with dissolve
     mom "Nak, ayo makan"
     mc "iya bu sebentar, aku ambil tas dulu"
     mc "Bu, bapak sekarang apa udah sampe jogja ?"
@@ -649,7 +650,7 @@ label day2_Miselia:
     mc "Iya buu, kalo begitu aku pamit berangkat ke sekolah dulu ya, assalamualaikum"
     mom "Waalaikumsalam, hati hati di jalan ya nak , semangat belajarnya"
 
-    scene angkot
+    scene jalan with dissolve
 
     sa "Naakk, ayo masuk , duduk di depan aja "
     mc "Wahhh,, iya pak , okee dehh"
@@ -660,7 +661,7 @@ label day2_Miselia:
     sa "Wah sudah sampai nak , yasudah silahkan belajar , yang semangat semoga sukses biar ndak ajdi kayak bapak hehehe"
     mc "Waduh pak ,bapak juga sukses , terimakasih pak , aku masuk kedalam dulu ya , bapak hati hat di jalan, semoga makin banyak penumpang ya "
 
-    scene lorong
+    scene lorong with dissolve
     $ mt = "Meta"
     $ hsn ="Husni"
     mg1 "MC.. mc... "
@@ -694,12 +695,13 @@ label day2_Miselia:
     mg1 "Ayo ke kantin"
     mc "Iya sebentar, aku beresin ini dulu "
 
-    scene kantin
+    scene kantin with dissolve
     mg1 "Hey mc kamu kok hebat bgt gmn si kok bisa dpt nilai tertinggi ?"
     mc "Kuncinya hanya satu yaitu raji belajar ,udah itu aja"
     mg1 "Hummmm begitu ,boleh gak aku belajar bareng sama kamu"
     mc "Hmm iyadeh tapi nanti aku kabarin ya bisanya kapan hehe"
 
+    "~SOAL~"
     #Initialize score
     $ quiz_fungi2_score = 0
 
@@ -863,12 +865,12 @@ label day2_Miselia:
     mg1 "Yauda bareng aku aja gapapa ayo"
     mc " Ok deh makasi ya"
 
-    scene jalan_sore
+    scene jalan_sore with dissolve
     mg1 "Kok tumben kamu naik angkot tadi berangkatnya ?"
     mc "Iya , bapak ku lagi pergi dan motornya di bawa"
     mg1 "Oalah"
 
-    scene rumah
+    scene rumah with dissolve
     mc "Udah sampai , makasih ya udah mau nebengin, aku masuk dulu, kamu hati - hati ya"
     mg1 "Oke sama sama , assalamualaikum"
     mc "Waalaikumsalam"
@@ -881,7 +883,7 @@ label day2_Airin:
     "Sepertinya aku sudah mulai terbiasa dengan pagi hari ini"
     "Sebaiknya aku mandi dulu"
 
-    scene kamar mandi with dissolve
+    scene kamar_mandi with dissolve
     "Segarnyaa mandi pagi"
 
     scene kamar with dissolve
@@ -927,7 +929,7 @@ label day2_Airin:
     mom "Ayo [cat] main sama [mom] Hahahaha"
     hide mom with dissolve
 
-    scene gerbang_sekolah
+    scene gerbang_sekolah with dissolve
     show nada_uni at center with dissolve:
         ypos 1.2
     na "Oee Brooo tungguin"
@@ -937,7 +939,7 @@ label day2_Airin:
     na "Lah.. Hahhahaha"
     hide nada_uni with dissolve
     
-    scene kelas
+    scene kelas with dissolve
     "Lebih baik aku belajar saja sembari nunggu bel masuk"
     "~Ding Dong~"
     "Umm.. Gada gurunya sepertinya"
@@ -1008,6 +1010,7 @@ label day2_Airin:
     hide airin_uni with dissolve
     mc "Okk"
 
+    "~SOAL~"
     #Initialize score
     $ quiz2_klasifikasi_score = 0
 
@@ -1241,7 +1244,7 @@ label day2_Airin:
             "Baiklah, Kalau gitu aku mampir dulu liat dia"
         "Langsung Pulang":
             "Kalau gitu aku pulang saja, buang - buang waktu lihat dia lagi"
-            scene kamar_malam
+            scene kamar_malam with dissolve
             "Huwaa,, Capeknya sekolah lebih baik aku tidur saja"
             "~END~"
             return
@@ -1277,10 +1280,10 @@ label day2_Airin:
     hide airin_jalan_uni with moveoutleft
     mc "Hmmmm..."
 
-    scene depan rumah
+    scene depan_rumah_sore with dissolve
     mc "Aku Pulang !!"
 
-    scene ruang keluarga
+    scene ruang_keluarga_sore with dissolve
     mc "Buu.. aku langsung tidur dulu"
     show mom at center with dissolve:
         ypos 1.2
@@ -1288,14 +1291,14 @@ label day2_Airin:
     hide mom with dissolve
     mc "Iyaa bu"
 
-    scene kamar_sore
+    scene kamar_sore with dissolve
     "Kenapa dia tiba-tiba langsung pulang ya ? Apa sama sepertiku ? yang dulunya ada masalah"
     "Dahlah dipikirkan terus-terusan aku bisa jadi pusing"
 
-    scene kamar_malam
+    scene kamar_malam with dissolve
     "Hmm.. Sudah malam kalau gitu aku makan lalu langsung tidur"
 
-    scene dapur_malam
+    scene dapur_malam with dissolve
     show mom at center with dissolve:
         ypos 1.2
     mom "Sudah bangun kamu sini makan bareng"
@@ -1338,7 +1341,7 @@ label day2_Airin:
     mom "Ohh iyaa dah"
     hide mom with dissolve
 
-    scene kamar_malam
+    scene kamar_malam with dissolve
     "Saatnya tidur lagi pintunya kubuka sedikit saja lah biar [cat] bisa masuk ke kamar"
 
     jump day3_Airin

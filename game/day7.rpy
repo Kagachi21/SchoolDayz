@@ -1,6 +1,6 @@
 label day7_Kirana:
 
-    scene kamar
+    scene kamar with dissolve
     "Haa.. kemarin benar benar heboh tak kusangka bisa sampai segitunya"
     "Grup di Hp pun ramai masih membahas jalan-jalan ke pantai"
     "Hmmm.. Anak-anak ternyata masih belum tau kejadian kemarin"
@@ -25,13 +25,16 @@ label day7_Kirana:
     na "Di alun alun"
     mc "Okk"
 
-    scene kamar mandi
-
-    scene dapur
+    scene dapur with dissolve
+    show mom at center with dissolve:
+        ypos 1.15
     mom "Kamu mau kemana ?"
     mc "Berangkat jalan-jalan"
     mom "Kamu gapapa ?"
     mc "Gapapa bu, cuma kemarin terjadi yaa agak gimana gitu ?"
+    show dad_uni at center with dissolve:
+        xpos 0.665
+        ypos 1.2
     dad "Cerita aja gapapa"
     dad "[ai] selalu mendengarkanmu"
     mc "Sigh.. Jadi kemarin setelah dari mall pergi ke cafenya"
@@ -45,35 +48,55 @@ label day7_Kirana:
     mc "hahah Iya bu"
     dad "Kalau gitu kita makan aja"
     mc "Okie Selamat makan"
+    hide dad_uni with dissolve
+    hide mom with dissolve
 
-    scene depan rumah
+    scene depan_rumah
+    show mom at center with dissolve:
+        ypos 1.15
+    show dad_uni at center with dissolve:
+        xpos 0.665
+        ypos 1.2
     dad "Hadapi saja terobos.. Anak Ayah kuat sudah lebih baik daripada yang dulu"
     mom "Abaikan saja klo ada yang mengganggumu"
     mc "Terima kasih yah bu, kalau gitu aku berangkat"
     ai "Iyaa hati-hati nak"
+    hide dad_uni with dissolve
+    hide mom with dissolve
 
-    scene alun-alun
+    scene central_park with dissolve
+    show nada_cas at center with dissolve:
+        ypos 1.2
     na "Oeee oeee [mcFirst]"
     mg2 "...."
     kk "Sudahlah, [mg2_Last]"
     mc "Ini aku yang terakhir apa gimana ?"
     na "Ga, nunggu [skce1] dan [ol]"
+    hide nada_cas with dissolve
     mc "Ah..okk"
     wkk "Kalau gitu kita tunggu di FoodCourt aja kuy"
     skco2 "Gass kan"
     kk "Eii.. bilang dulu ke [skce1] dan [ol] nanti kita ke FoodCourt mereka nyariin"
     wkk "Ehh,,, Iyaa yaa ahhaha"
     wkk "Oiyaa,, [mg2_Last] kabarin [ol] aku kabarin si [skce1]"
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "Iyaa ya kukabarin"
+    hide ardana_cas with dissolve
     mc "....."
 
-    scene foodcourt
+    scene foodcourt with dissolve
     kk "Kalian pesan apa ?"
+    show nada_cas at center with dissolve:
+        ypos 1.2
     na "Aku Jus mangga aja"
     mc "Aku Es Jeruk"
     wkk "Milkshake Oreo"
     skco2 "Es Coklat"
     kk "Okk.. Kalau kamu na ?"
+    show ardana_cas at center with dissolve:
+        xpos 0.6
+        ypos 1.2
     mg2 "Terserah dah"
     kk "Okk random yaa"
     mg2 "Jus Jambu aja dah"
@@ -107,14 +130,18 @@ label day7_Kirana:
     skce1 "Aku juga sudah makan"
     na "Kalau gitu gass kita berangkat"
     wkk "Let's Goo"
+    hide nada_cas with moveoutleft
+    hide ardana_cas with moveoutleft
 
-    scene parkir
+    scene parkir with dissolve
     ol "Yeay,, Akhirnya sampai juga"
     wkk "Mantap emang"
 
-    scene pantai
+    scene pantai with dissolve
     bl "Segarnya aroma pantai ini"
     bl "Kita foto dulu atau gimana ?"
+    show nada_cas at center with dissolve:
+        ypos 1.2
     na "Ganti baju dulu lahh, tapi klo mau foto duluan sih gapapa"
     bl "Mending kita foto duluan saja jadi ada Awal datang sama akhir"
     skce1 "Boleh itu gass keun"
@@ -123,17 +150,24 @@ label day7_Kirana:
     kk "Aku ga sabar mau basah-basahan hahahah"
     bl "Sudah siap kan ?"
     na "Sudah lah"
+    hide nada_cas with moveoutleft
     play sound ambil_foto
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "Okk dah kalau gitu skuy ganti baju.. main basah-basahan kita"
     bl "Yuukk!!"
     skce1 "Tunggu akuu!!"
     ol "Aku juga mau ikut oee"
+    hide ardana_cas with moveoutright
     wkk "[kk] kamu ga ikut mereka ganti baju ?"
     kk "Aku pake baju ini aja sudah aman kok"
+    show nada_cas at center with dissolve:
+        ypos 1.2
     na "Wihhh.. Segarnya airnya kuy renang [mcFirst]"
     mc "Okk wait buka baju"
     mc "Gass"
     skco2 "Aku juga ikutan oee"
+    hide nada_cas with moveoutleft
     kk "Kamu ga ikut renang ama mereka ?"
     wkk "Bentar lagi, kita bahas dulu cara dekatin mereka berdua lagi"
     kk "Kamu tauu ?"
@@ -145,28 +179,43 @@ label day7_Kirana:
     wkk "Boleh juga idenya bisaa nihh dicobaa"
     wkk "yaudah aku kesana dulu mau bilang ke anak-anak suruh ikut aku misal [mg2_Last] sudah datang"
     wkk "Yuhuuuu.. Sea I'm coming"
+    show nada_cas at center with dissolve:
+        ypos 1.2
     na "Hahah segar kan"
+    hide nada_cas with dissolve
     kk "Enaknya lihat mereka"
+    show ardana_cas at center with moveinright:
+        ypos 1.2
     mg2 "[kk] kamu ga renang ?"
     kk "Aku jaga barang-barang dulu"
     kk "Sana dah kalau mau renang nanti gantian yang jaga hehehe"
     mg2 "Kenapa, ga kita berdua saja yang jaga ?"
     kk "Aku aja cukup sana main dulu sambil dinginkan kepalamu itu"
     mg2 "Okie [kk]"
+    hide ardana_cas with moveoutleft
     ol "Kami duluann [kk]"
     kk "Iyaa"
 
-    scene air pantai
+    scene pantai with dissolve
     wkk "Kuy kuy ntr lagi ikut aku, explore kita"
     skco2 "Gasskeun"
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "Mainn duluan nih bocah hahahha"
+    show nada_cas at center with dissolve:
+        xpos 0.35
+        ypos 1.2
     na "Sini kau"
     "~cepyar~"
     mg2 "Awas kau nada"
+    hide ardana_cas with moveoutleft
     na "Pfft,, serbu para ciwi-ciwi gaes"
+    hide nada_cas with moveoutright
     skco2 "Lets goo"
     wkk "Kuyy kitaa kaburr pergii"
     mc "Lahh ?"
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "...."
     mc "...."
     ol "yang lain mana ?"
@@ -177,8 +226,9 @@ label day7_Kirana:
     mc "Gyahhh.. Blurp~ Blurp~"
     $ all_girls = "[ol], [mg2_Last], [skce1], dan [bl]"
     all_girls "HAhahhahaha"
+    hide ardana_cas with dissolve
 
-    scene pantai
+    scene pantai with dissolve
     kk "Kayaknya berjalan lancarr.."
     wkk "yoo"
     kk "Astaga, kaget aku"
@@ -186,12 +236,12 @@ label day7_Kirana:
     kk "Kelihatannya lancar sih"
     wkk "Hahah benar kan syukurlah kalau mendingan"
 
-    scene air pantai
+    scene pantai with dissolve
     "Aku rasa hari fokus bersenang-senang saja lah meskipun ada beberapa problem sama [mg2_Last]"
     "Ga begitu buruk juga, jadi gini rasanya ada teman yang ngesupport juga"
     "Kami pun bergantian yang menjaga barang, bermain di pantai hingga sore pun menyenangkan"
 
-    scene pantai sore
+    scene pantai_sore with dissolve
     bl "Kuy foto lagi, foto kenangan diakhir mengunjungi pantai"
     kk "Gas gas berangkat"
     wkk "[ol]... [ol].... ppstt nanti pulang sama yang lainnya aja"
@@ -203,24 +253,35 @@ label day7_Kirana:
     bl "1... 2... 3..."
     skce1 "Cepat sini lari lari"
     play sound ambil_foto
+    show nada_cas at center with dissolve:
+        ypos 1.2
     na "Yokk,, pulang yok pulang"
+    hide nada_cas with moveoutleft
 
-    scene parkir
+    scene parkir with dissolve
     wkk "[mg2_Last] pulangmu bareng [mcFirst]"
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "Lah,, kenapa ?"
     mc "...."
     wkk "Soalnya aku langsung pulang beda arah juga kan"
     mg2 "hnnggh.. iya dehh"
+    hide ardana_cas with dissolve
     wkk "[mcFirst] kamu ga amasalh kan ?"
     mc "Iya gapapa"
     wkk "ppstt psst... [kk]"
     kk "Apa ?"
     wkk "Giamana mantap kan idenya ?"
     kk "Boleh-boleh"
+    show nada_cas at center with dissolve:
+        ypos 1.2
     na "kalau gitu skuy Pulang"
+    hide nada_cas with dissolve
     mc "...."
 
-    scene jalan
+    scene jalan_sore with dissolve
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "[mcFirst] Maaf Yaa yang kemarin"
     mc "Hahh !?"
     mg2 "Maaff yang Kemarin"
@@ -234,20 +295,24 @@ label day7_Kirana:
     mc "...."
     mc "dah dah.. kita baikan ?"
     mg2 "Huum Hehehhe"
+    hide ardana_cas with dissolve
 
-    scene rumah mg2
+    scene depan_rumah_kirana_sore with dissolve
     mc "Ini rumahmu kan ?"
+    show ardana_cas at center with dissolve:
+        ypos 1.2
     mg2 "Iyaa.. mau mampir ?"
     mc "Ga usah aku pulang dulu aja"
     mg2 "Iyaa.. Hati-hati dijalan yaa"
     mc "Hooh.. iyaa"
     mg2 "bai bai"
+    hide ardana_cas with dissolve
 
-    scene depan rumah
-
-    scene ruang tamu
+    scene ruang_tamu_sore with dissolve
     mc "Aku Pulangg"
     play sound laridilorong
+    show mom at center with moveinright:
+        ypos 1.15
     mom "Gimana kamu gapapa ?"
     mc "Aman buu,, ada Nada juga"
     mom "Syukurlahh"
@@ -256,13 +321,14 @@ label day7_Kirana:
     mc "ohh.. Iya udah aku mau tidur dulu ya bu"
     mc "aku agak capek bu hehhe"
     mom "Iyaa.."
+    hide mom with dissolve
 
-    scene kamar
+    scene kamar_sore with dissolve
     "Huuu Capeknyaaa"
     "Hmm... Kitaa jadi baikan huh"
     "Dahlah aku tidur aja"
 
-    scene kamar malam
+    scene kamar_malam with dissolve
     play sound telpon
     "Huhh. siapa ini ?"
     "Ahh.. [mg2_Last]"
@@ -278,16 +344,21 @@ label day7_Kirana:
     mc "Bai"
     "Huu ? kalau gitu aku tidur lagi aja capek beneran ternyata"
 
+    "~Bonus~"
+    scene sky with dissolve
+    "Kami berdua pun jadian dan lulus bersama lalu bekerja di tempat bersama"
+    "Kami Berdua juga Menikah dan hidup bahagia"
+
 label day7_Miselia:
 
-    scene kamar
+    scene kamar with dissolve
     mc "Astaghfirullah, sekarang hari senin kah? aku lupa kalo sekarang sekolah"
     mom "Nak, kamu ini sekarang hari senin loh, kamu kok bangunnya siang, apa ga ikut upcara?"
     mc "Aku lupa buk, ku kira sekarang hari minggu , ternyata senin"
     mom "Yasudah segera mandi , ibu siapkan sarapan dulu"
     mc "Iya bukk , aku mandi dulu"
 
-    scene ruang keluarga
+    scene ruang_keluarga with dissolve
     mom "Nak , kali ini ibu tidak masak daging, karena sekarang harga daging melunjak pesat di pasar , mahal banget, makan sama telur aja ya"
     mc "Iyabu, tidakmasalah, yang penting yang masak tu ibu, hehhe"
     mom "Ah kamu ini , sana cepat sarapan, keburu telat nanti"
@@ -295,12 +366,12 @@ label day7_Miselia:
     mom "ya nak , ibu selalu mendoakan kamu , supaya jadi orang yang sukses berguna bagi keluarga, nusa dan bangsa"
     mc "Yauda bu , makasi ya , assalamualaikum"
 
-    scene jalan
+    scene jalan with dissolve
     mc "Ya Allah, aku sebenernya pengen banget punya sepeda motor, biar bisa brangkat sekolah, ga harus naik angkot ataupun jalan kaki seperti ini"
     kk "Heii , dasar miskin sekolah kok jalan kaki hahha ini udah jaman SMA bre gamalu apa hahha"
     mc "Astaghfirullah haladzim"
 
-    scene lorong kelas 
+    scene lorong with dissolve
     $ mln = "Melin"
     mln "Astaga , maaf ya aku ga sengaja"
     mc "Duhh..iyaaa gapapa deh kalo kamu ga sengaja "
@@ -317,11 +388,11 @@ label day7_Miselia:
     mc "Udah stop, gapapa aku sel, udahhh sekarang mending kita jalan ke kelas aja ayo"
     mln "Sekali lagi aku minta maaf ya mc"
     
-    scene depan kelas 
+    scene lorong with dissolve
     mc "Misel, tolong taruh kan tas ku dulu ya, aku mau ke toilet dulu untuk membersihkan baju ku ini "
     mg1 "Iya deh,sana buruan "
 
-    scene toilet
+    scene toilet with dissolve
     $ dn = "Dani"
     $ ags = "Agus"
     dn "Adudu ada adekelas yang sok tampan ini gengs, enaknya kita apain ya?"
@@ -330,32 +401,6 @@ label day7_Miselia:
     mc "Permisi kak , saya mau lewat "
     dn "Sono gih, dasar gembel"
     mc "Ya allah, kenapa ya aku selalu jadi rendahan orang lain, padahal aku gapernah nyari masalah selama ini"
-
-    scene kelas 
-    $ isp = "ispun"
-    mc "Assalamualaikum bu "
-    sr "Dari mana kamu mc kok baru datang"
-    mc "Maaf bu , saya habis dari toilet "
-    sr "Oiya sudah kalo gitu , silahkan kembali duduk di tempatmu.Itu bajumu kok kotor ? kamu abis jatuh ?"
-    mc "Tidak bu , tadi ada anak yang tidak sengaja menjauhkan minumannya di baju saya"
-    isp"Hahaha, palingan juga kejebur got, kan dia kalo sekolah jalan,ga naik motor, kan miskin"
-    sr "Heh ispun kamu tidak boleh begitu!!!! yasudah mc silahkan duduk "
-    mg2 "Kamu mau ke kantin ga ?"
-    mc "Engga ,aku duduk disini aja , lagi gapengen jajan"
-    mg2 "Kenapa emangnya?kamu sakit?"
-    mc "Engga juga, ya emang lagi ga pengen ke kantin aja"
-    mg2 "Oh, yasudah kalo gitu ,aku ke kantin duluan deh ya"
-    mg2 "Kamu mau es teh ? tuh aku beli 2"
-    mc "Iya minum gih , aku engga"
-    sr "Selamat siang anak anak, assalamualaikum wr.wb"
-    isp "Waalaikumsalam wr.wb, selamat siang juga bu"
-    sr "Hari ini kuis ya"
-    mc "Iya buuu"
-
-    "Scene kuis"
-    $ sm = " Semua murid"
-    sr "Oke sudah jam nya pulang , sekarang silahkan beres beres"
-    sm "Baik bu"
 
     jump day8_Miselia
 
