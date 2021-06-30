@@ -449,8 +449,14 @@ label day6_Kirana:
     jump day7_Kirana
 
 label day6_Miselia:
-
+    
     scene ruang_keluarga with dissolve
+    show mom at center with moveoutright:
+        xpos 0.4
+        ypos 1.2
+    show dad at center with moveoutright:
+        xpos 0.4
+        ypos 1.2
     mc "Wah ibu , sudah mateng aja nih"
     mom "Iya nak , nanti sarapan dulu ya , sana mandi dulu"
     mc "Bu,terimakasih ya sudah memasakan mc makanan yang enak enak setiap pagi"
@@ -462,12 +468,16 @@ label day6_Miselia:
     mom"Alhamdulillah , syukurlah kalo kamu suka nak"
     mc"Bu , aku beraangkat dulu ya , alhamdulillah sudah kenyang , jadi bikin tambah semangat buat belajar hehe"
     mom "Kamu ini bisa aja , yasudah hati hati di jalan ya nak , yang rajin semangat ya. kalau adaapa apa wa ibu ya"
+    hide mom with dissolve
+    hide dad with dissolve
 
     scene jalan with dissolve
     sa "Nak , sini duduk di depan aja , masih ada bangku kosong khusus buat kamu "
     mc "Baik pak"
 
     scene lorong with dissolve
+    show miselia_uni at center with moveoutright:
+        ypos 1.2
     mg1 "Mc...."
     mc "Hei .. iya , kamu kok tumben brangkatnya siang?"
     mg1 "Iya , aku dianterin sama mama ku tadi , macet tau di Mastrip"
@@ -480,17 +490,23 @@ label day6_Miselia:
     mg1 "Iya sama aku juga sudah kok"
     sr "Selamat pagi anak anak, bagaimana kabar hari ini ? semoga baik baik saja ya"
     kk "Pagi bu, Alhamdulillah sehat bu"
+
+    hide miselia_uni with dissolve
+    show bu_senda at center with moveoutright:
+        ypos 1.2 
     sr "Oh iya , kemaren ibu meminta untuk merangkum materi virus ya ? apa sudah siap untuk di presentasikan?"
     sk "Sudah bu"
     sr "Kalau begitu ibu tunjukk,, mmm kali ini yang maju Mc ya !"
     mc "Baik bu sendra"
-
+    hide bu_senda with dissolve
     "Materi presentasi virus"
-
+    show miselia_uni at center moveoutright:
     mg1 "Mc kamu mau ke kantin ga ? ayo bareng kalo mau"
     mc "Iya bentar , aku beresin barangku dulu"
-
+    hide miselia_uni with dissolve
     scene kantin with dissolve
+    show miselia_uni at center with moveoutright:
+        ypos 1.2
     mc "Kamu mau beli apa ? minum apa makanan?"
     mg1 "Aku mau beli minuman aja deh di kantinya Bu nunung"
     mc "Oh yaudah aku beli pentol dulu ya"
@@ -501,26 +517,32 @@ label day6_Miselia:
     mg1 "Hahaha, iya kalo kamu , gatau mager aja tu kalo disuruh belajar"
     mc "Eh ayo balik ke kelas , tar lagi bel nih"
     mg1 "Iya ayo"
-
+    hide miselia_uni with dissolve
     scene kelas with dissolve
+    show bu_senda at center with moveoutright:
+        ypos 1.2
     sr "Selamat siang , Assalamualaikum wr. wb"
     sk "Selamat siang bu,Waalaikumsalam wr.wb"
     sr "Anak anak , hari ini Bu sendra akan memberikan kuis ya"
     st "Waduh bu, saya belum belajar kok sudah kuis lagi"
     sr "Hei sinta , namanya latihan kerjakan sendiri sendiri ya , jangan ada yang nyonto"
     st "Iya buuuu"
-
+    hide bu_senda 
     "Kuis Virus"
     sr "Okey , karen waktunya sudah habis , dan sudah menunjukkan waktu pulang, silahkan berkemas kemas ya , hai hati di jlan , dan selamat siang aasalamualaikum wr.wb"
     sk "Iya buu, waalaikumsalam wr.wb"
 
     scene lorong with dissolve
+    show miselia_uni at center with moveinbottom:
+        ypos 1.2
     mg1 "Kamu mau pulang bareng aku ?"
     mc "Engga sel aku di jemput sama bapakku kok, makasih tawarannya ya"
     mg1"Oalah, yauda deh kalo gitu aku duuluan ke parkiran ya"
     mc "Iyaa kamu hti hati ya "
-
+    hide miselia_uni with dissolve
     scene jalan with dissolve
+    show dad_cas at center moveinbottom:
+        ypos 1.2
     dad "Gimana sekolah kamu nak?"
     mc "Alhamdulillah pak, lancar tadi"    
     dad "Apa kamu masih sering di jaili nak sama orang lain?"
@@ -530,7 +552,7 @@ label day6_Miselia:
     dad "Kamu mau es degan ga ?"
     mc "Boleh pak, bungkus aja sekalian buat ibu juga "
     dad "Oke yasudah ayo kita beli"
-
+    hide dad with dissolve
     scene foodcourt with dissolve
     $ ij = "Ibu penjual degan"
     dad "Buk , bungkus es degan nya 3 ya "
@@ -539,15 +561,24 @@ label day6_Miselia:
     ij "Oke nak"
 
     scene jalan with dissolve
+    show dad_cas at center with moveinright:
+        ypos 1.2
     mc "Ayo pak kita jalan"
     dad "Oke nak"
-
+    hide dad_cas with dissolve
     scene ruang_keluarga with dissolve 
+    show dad_cas at center with moveinright:
+        xpos 0.4
+        ypos .2
+    show mom at center with moveinright:
+        xpos 0.4
+        ypos 1.2
     mom "Wah kalian bungkus apa ini ?"
     mc "Itu buk, tadi ayah kepengen es degan , jdi bungkus deh"
     dad "Loh , kok ayah orang kamu gitu lo yang pengen hehehe"
     mom "Sudah- sudah , mending kalian segera gantui baju, biar ibu yang nyiapin es degannya"
-
+    hide dad_cas with dissolve
+    hide mom with dissolve
     jump day7_Miselia
 
 label day6_Airin:
