@@ -352,6 +352,8 @@ label day7_Kirana:
 label day7_Miselia:
 
     scene kamar with dissolve
+    show mom at center with moveinright:
+        ypos 1.2
     mc "Astaghfirullah, sekarang hari senin kah? aku lupa kalo sekarang sekolah"
     mom "Nak, kamu ini sekarang hari senin loh, kamu kok bangunnya siang, apa ga ikut upcara?"
     mc "Aku lupa buk, ku kira sekarang hari minggu , ternyata senin"
@@ -365,7 +367,7 @@ label day7_Miselia:
     mc "Bu aku berangkat sekolah dulu ya , minta doanya semoga hari ini di beri kelancaran dan kemudahan untuk belajar"
     mom "ya nak , ibu selalu mendoakan kamu , supaya jadi orang yang sukses berguna bagi keluarga, nusa dan bangsa"
     mc "Yauda bu , makasi ya , assalamualaikum"
-
+    hide mom with dissolve
     scene jalan with dissolve
     mc "Ya Allah, aku sebenernya pengen banget punya sepeda motor, biar bisa brangkat sekolah, ga harus naik angkot ataupun jalan kaki seperti ini"
     kk "Heii , dasar miskin sekolah kok jalan kaki hahha ini udah jaman SMA bre gamalu apa hahha"
@@ -389,9 +391,11 @@ label day7_Miselia:
     mln "Sekali lagi aku minta maaf ya mc"
     
     scene lorong with dissolve
+    show miselia_uni at center with moveinright:
+        ypos 1.2
     mc "Misel, tolong taruh kan tas ku dulu ya, aku mau ke toilet dulu untuk membersihkan baju ku ini "
     mg1 "Iya deh,sana buruan "
-
+    hide miselia_uni with dissolve
     scene toilet with dissolve
     $ dn = "Dani"
     $ ags = "Agus"
@@ -401,7 +405,50 @@ label day7_Miselia:
     mc "Permisi kak , saya mau lewat "
     dn "Sono gih, dasar gembel"
     mc "Ya allah, kenapa ya aku selalu jadi rendahan orang lain, padahal aku gapernah nyari masalah selama ini"
+    kk "Heii , dasar miskin sekolah kok jalan kaki hahha ini udah jaman SMA bre gamalu apa hahha"
+    mc "Astaghfirullah haladzim"
+    scene kelas
+    $ isp = "Ispun"
+    show bu_senda t center with moveinright:
+        ypos 1.2
+    mc "Assalamualaikum Bu"
+    sr "Dari mana kamu,kok baru datang"
+    mc "Maaf bu saya habis dari toilet"
+    sr "Ya sudah silahkan duduk. Itu bajumu kok kotor ? kac mu abis jatuh ?"
+    mc "Baik bu, tadi ada anak yang tidak sengaja menjauhkan minumannya di baju saya"
+    isp "Hahaha, palingan juga kejebur got, kan dia kalo sekolah jalan"
+    sr "Heh ispun kamu tidak boleh begitu, yasudah mc silahkan duduk"
+    hide bu_senda with dissolve
 
+    "Materi"
+    show miselia_uni at center with moveinright:
+        ypos 1.2
+    mg1"Kamu mau ke kantin ga ?"
+    mc "Engga ,aku duduk disini aja , lagi gapengen jajan"
+    mg1"Kenapa emangnya?kamu sakit?"
+    mc "Engga juga, ya emang lagi ga pengen ke kantin aja"
+    mg1"Oh, yasudah kalo gitu ,aku ke kantin duluan deh ya "
+    mg1 "Kamu mau es teh ? tuh aku beli 2"
+    mc "Iya minum gih , aku engga"
+    hide miselia_uni with dissolve
+    show bu_senda at center with moveinright:
+        ypos 1.2
+    sr "Selamat siang anak anak, assalamualaikum wr.wb"
+    sk "Waalaikumsalam wr.wb, selamat siang juga bu"
+    sr "Hari ini kuis ya"
+    mc "ya bu"
+    hide bu_senda with dissolve
+    "kuis"
+    scene lorong
+    $ adt = "Adit"
+    adt "Heh , kamu anak kampung !"
+    mc "Iya , ada apa kak, kaka memanggilku?"
+    adt "Yaiya lah, siapa lagi di sini yang anak kampung?"
+    scene gerbang sekolah
+    mg1"Kamu pulang sama siapa ?"
+    mc "AKu jalan kaki aja "
+    mg1"Oh yasudah kalo gitu aku duluan ya.. see u"
+    mc "Oke hati hati"
     jump day8_Miselia
 
  #label day7_Airin:
