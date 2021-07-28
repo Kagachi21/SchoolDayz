@@ -86,7 +86,7 @@ define gui.title_text_color = u'#000000'
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/BG/BG School.jpg"
+define gui.main_menu_background = im.Scale("gui/BG/BG School.jpg",1920,1080)
 define gui.game_menu_background = "gui/game_menu.png"
 
 ## The color of the main menu.

@@ -94,6 +94,7 @@ define mg3_Last = ""
 define na = Character("[sahabat]")
 define sr = Character('[guru]')
 define ol = Character('[tmn_mg2]')
+define al = Character("Fila")
 define skco1 = Character("Murid Laki-laki 1")
 define skce1 = Character("Murid Perempuan 1")
 define skco2 = Character("Murid Laki-laki 2")
@@ -112,7 +113,6 @@ default money = 0
 
 # The game starts here.
 label start:
-    stop music fadeout 1.0
     #Input Type Biasa
     #$ mcFirst = renpy.input("What is your first name ?", length=30) or "default name"
     #$ mcLast = renpy.input("What is your last name ?", length=30) or "default surname"
@@ -121,15 +121,23 @@ label start:
     scene sky with dissolve
     call screen test
     $ mc = Character(mcFirst +" "+mcLast, image="mc")
-
+    stop music fadeout 1.0
     jump prolog 
     
 label prolog:
+
+    play music pagi fadein 1.0
+    play sound burung_pagi fadein 1.0
     scene kamar with dissolve
     "Hari yang sangat ku tidak sukai, yaitu hari pertama sekolah. Diriku seperti sebuah wadah yang tidak ada isinya. Apakah hari pertama sekolah akan lancar - lancar saja? Aku tidak yakin, atau akan menjadi seperti dulu ketika aku masih Sekolah Menengah Pertama"
+    stop sound fadeout 1.0
+    play sound burung_terbang fadein 1.0
+    window hide dissolve
+    pause 3.0
+    window show dissolve
     "Pengalaman yang buruk sekali dan inginku berhenti sekolah, bahkan aku tidak ingin mengingatnya lagi kenangan yang buruk itu. Tapi, kenapa masih saja teringat ? apa yang tuhan inginkan kepadaku hingga selalu memberikanku ingatan buruk tersebut"
     "Mungkin tidak salahnya harus mencoba untuk berangkat mungkin saja berbeda"
-    
+
     scene dapur with dissolve
     show dad_uni at left with moveinleft:
         xpos 0.1
@@ -154,10 +162,13 @@ label prolog:
     hide dad_uni with dissolve
     hide mom with dissolve
     play sound cuci_piring
+    $ _skipping = False
     "~Cuci Piring~"
     window hide dissolve
     $ renpy.pause(35.0, hard=True)
+    stop sound fadeout 1.0
     window show dissolve
+    $ _skipping = True
 
     show mom at left with moveinleft:
         xpos 0.1
@@ -170,8 +181,8 @@ label prolog:
     mc "....."
     mc "Gapapa, sudah selesai"
     mom "Oiya, Bekalnya sudah ibu siapkan juga, jangan lupa dibawa ya"
+    mom "Ini uang sangu mu"
     $ money += 10000 
-    mom "Ini uang sangu mu %(money)d"
     mc "...."
     mc "Iya"
     hide mom with dissolve
@@ -196,6 +207,10 @@ label prolog:
     mom "iya pa, kita harus percaya dan berdoa untuk anak kita."
     hide dad_uni with dissolve
     hide mom with dissolve
+
+    stop music fadeout 1.0
+
+    play music jalan_jalan fadein 1.0
 
     scene jalan with dissolve
     $ kucing = "Kucing"
@@ -254,8 +269,8 @@ label prolog:
     scene lorong with dissolve
     $ misterius_3 = "????"
     "Bruuukk" with vpunch
-    show airin_kaget_uni at truecenter with dissolve:
-        ypos 0.5
+    show airin_kaget_uni at center with dissolve:
+        ypos 1.2
     mg3 "Kyaaaa"
     hide airin_kaget_uni with dissolve
     mc "Ahh.. kamu tidak apa - apa ? Apakah ada yang terluka ? Maaf, Aku tadi tidak melihat jalannya"
@@ -263,6 +278,7 @@ label prolog:
     mg3 "Ahh.. tidak apa-apa. Aku tidak ada yang terluka sama sekali. Maaf, aku tadi juga tidak fokus kedepan"
     mc "Tidak apa-apa"
     hide airin_jalan_uni with dissolve
+
 
     scene kelas with dissolve
     $ sahabat = "????"
@@ -423,6 +439,15 @@ label prolog:
     show nada_uni at center with moveinright:
         ypos 1.2
     na "Wahh,, ini mah mudahh. Lagunya biar aku saja yg sediain bu"
+    play music dance fadein 1.0
+    $ _skipping = False
+    "~Dance~"
+    window hide dissolve
+    $ renpy.pause(35.0, hard=True)
+    stop music fadeout 1.0
+    window show dissolve
+    $ _skipping = True
+    play music jalan_jalan2 fadein 1.0
     show bu_senda at center with dissolve:
         ypos 1.2
     show nada_uni at right with moveinleft:
@@ -440,7 +465,9 @@ label prolog:
     hide nada_uni with dissolve
     "Setelah, Nada menari di depan dan duduk. Permainan dilanjutkan ada murid yang menyanyi, Menari, lawak, dll."
     "Hingga kelas ini menjadi heboh. Bel istirahat pun berbunyi"
-    "~Ding - Dong~"
+    play sound bel_sekolah fadein 1.0
+    "~Ding Dong~"
+    stop sound fadeout 1.0
     show bu_senda at center with dissolve:
         ypos 1.2
     sr "Ya, Bel istirahat sudah berbunyi, sampai jumpa lagi di lain waktu"
@@ -448,6 +475,10 @@ label prolog:
     hide bu_senda with moveoutright
     mc "Untunglah aku tidak kena bola yang dilempar. aku ingin tetap diam dan tidak bersosialisasi. haaa.."
     mc "ahhh.. aku ngantuk sebaiknya aku tidur saja"
+
+    stop music fadeout 1.0
+
+    play music bertengkar fadein 1.0
 
     scene kelas_BnW with dissolve
     pb "Diaa belum datang, kasih paku payung di tempat duduknya cepat"
@@ -478,7 +509,13 @@ label prolog:
     mc "Buku ku tidak ada, mungkin ada di tempat sampah"
     mc "Ternyata ada di-"
 
+    stop music fadeout 1.0
+    play music jalan_jalan2 fadein 1.0
+
+    play sound bel_sekolah fadein 1.0
     "~Ding Dong~"
+    stop sound fadeout 1.0
+
     scene kelas_sore with dissolve
     mc "haa haa haa.. aku menangis ? Mimpi itu lagii"
     mc "Untung aku tidak ketauhan kalau aku tertidur. Ternyata sudah jam pulang juga. aku harus bergegas pulang"
@@ -486,6 +523,10 @@ label prolog:
     
     scene jalan_sore with dissolve
     "Sepertinya aku ingat sesuatu tapi apa ya ? \n yaudah lah mungkin ingat ketika sampai rumah"
+
+    stop music fadeout 1.0
+
+    play music sore fadein 1.0
 
     scene kamar_sore with dissolve
     "Astaga ternyata Aku lupa membawa kucingnya. Lebih baik aku meminta izin dulu"
@@ -509,10 +550,13 @@ label prolog:
     hide dad_cas with dissolve
     mc "aku sudah selesai makannya"
     play sound cuci_piring
+    $ _skipping = False
     "~Cuci Piring~"
     window hide dissolve
     $ renpy.pause(35.0, hard=True)
+    stop sound fadeout 1.0
     window show dissolve
+    $ _skipping = True
     mc "aku kembali ke kamar dulu"
     show mom at center:
         ypos 1.15
@@ -533,6 +577,8 @@ label prolog:
         ypos 1.2
     mom "iyaa aku juga paa, Mari kita berdoa supaya selalu terjadi hal baik untuk anak kitaa sekarang untuk kedepannya"
     ai "Aamiin"
+
+    stop music fadeout 1.0
 
     jump pengenalan
 

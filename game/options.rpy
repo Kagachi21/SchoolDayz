@@ -29,8 +29,7 @@ define config.version = "1.0"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
-""")
+define gui.about = _p("Project ini dibuat untuk memenuhi Tugas Akhir Program Studi Management Informatika Jurusan Teknologi Informasi Politeknik Negeri Jember. Dibuat Oleh Tim SchoolDayz Projects:")
 
 
 ## A short name for the game used for executables and directories in the built
@@ -149,7 +148,7 @@ define config.save_directory = "SchoolDayz-1620407288"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "icon.png"
 
 
 ## Build configuration #########################################################

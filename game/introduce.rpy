@@ -1,7 +1,14 @@
 label pengenalan:
 
+    play music pagi fadein 1.0
+    play sound burung_pagi fadein 1.0
     scene kamar with dissolve
     "Seperti biasanya pagi yang cerah sekali, cuaca yang paling aku benci"
+    stop sound fadeout 1.0
+    play sound burung_terbang fadein 1.0
+    window hide dissolve
+    pause 3.0
+    window show dissolve
     "Harus pergi ke sekolah dan berinteraksi dengan lainnya"
     "Tapi aku sudah memilih jalan ini mau tidak mau ya harus lanjut meskipun terpaksa"
     "Oiya, Kucing yang kemarin apa baik - baik saja ya ? aku  lupa membawa kucing kemarin pulang kerumah"
@@ -28,7 +35,7 @@ label pengenalan:
     show mom at center:
         ypos 1.15
     mom "Ini uang sangu mu"
-    $ money += 10000
+    $ money += 25000
     show dad_uni at center:
         ypos 1.2
     show mom at right with moveinleft:
@@ -38,6 +45,13 @@ label pengenalan:
     dad "Iya hati - hati dijalan"
     hide mom with dissolve
     hide dad_uni with dissolve
+
+    stop music fadeout 1.0
+
+    play music jalan_jalan fadein 1.0
+
+    scene jalan with dissolve
+    mc "Oiyaa,, Makanan Kucing jangan sampai lupa"
 
     scene depan_store with dissolve
     "Kayaknya disini ada makanan kucing"
@@ -118,7 +132,9 @@ label pengenalan:
     na "ayo ayo ajarinn.."
     mc "Dia bukan pacarku, aku ga punya sama sekali"
     na "heee Dingin seperti biasaa hahhahaha"
-    "~Ding Dong~~"
+    play sound bel_sekolah fadein 1.0
+    "~Ding Dong~"
+    stop sound fadeout 1.0
     mc "Bell Sudah Berbunyi itu"
     $ tg = "Nada" +" & "+ mg1_First
     tg "Tungguin akuu !!!"
@@ -135,7 +151,23 @@ label pengenalan:
     show bu_senda at right with moveinleft:
         xpos 0.9
         ypos 1.2
-    "~Sesi Pengenalan Pelajaran~"
+    $ _skipping = False
+    "~Sesi Pengenalan Pelajaran Virus~"
+    window hide dissolve
+    stop music fadeout 1.0
+    #Video Virus
+    show virus behind sr at center with dissolve:
+        xpos 0.3
+        ypos 0.6
+    $ renpy.pause(11.5, hard=True)
+    hide virus with dissolve
+    window show dissolve
+    $ _skipping = True
+    play music jalan_jalan fadein 1.0
+    play sound bel_sekolah fadein 1.0
+    "~Ding Dong~"
+    stop sound fadeout 1.0
+
     show bu_senda at center with moveinright:
         ypos 1.2
     sr "Waktunya sudah habis anak-anak"
@@ -166,8 +198,37 @@ label pengenalan:
                     if (money >= rspt):
                         $ money = money - rspt
                         kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                        "Aku sudah dapat yang ku mau tinggal pergi ke atap sekolah aja"
+                        show ardana_uni at center with hpunch:
+                            ypos 1.2
+                        "Brakk ~"
+                        hide ardana_uni with dissolve
+                        show ardana_uni_emosi at center:
+                            ypos 1.2
+                        mg2 "Hati-hati kalau jalan, untung tidak tumpah minumanku"
+                        mc "Maaf.."
+                        hide ardana_uni_emosi with dissolve
+                        show ardana_uni at center:
+                            ypos 1.2
+                        mg2 "Aku penasaran, kamu bukannya si [mc] yang dulunya sering dibul--"
+                        "Bagaimana dia bisa tau ?"
+                        $ tmn_mg2 = "Temannya Ardana"
+                        ol "Kamu Gpp kan ? Siapa itu tadi na ? minta maafnya kyk ga ikhlas"
+                        mg2 "Teman Sekelas kita" 
+                        ol "Ehh.. iyakah ?"
+                        mg2 "Iyaa.. Biarin aja.. Aku gapapa kok"
+                        hide ardana_uni with dissolve
+
+                        "Sepertinya orang tadi satu sekolah denganku dulu"
+                        "Kalau ga satu sekolah ga mungkin dia bisa tau"
+                        "...."
+                        "Mending aku habiskan dulu makanan yang ku beli tadi"
+                        "Kayaknya makan diatas Atap Sekolah Enak"
                     else:
                         "Uangku tidak Cukup..."
+                        mc "Maaf, Bu Tidak jadi.. Uangku tidak cukup"
+                        kt "Iyaa Gapapa"
+                        "Kalau gitu aku ke atap saja lah tidur-tiduran"
                 "Maaf, Tidak jadi..":
                     kt "Iya Gapapa"
         "Roti Isi Selai Melon":
@@ -184,8 +245,37 @@ label pengenalan:
                     if (money >= rismt):
                         $ money = money - rismt
                         kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                        "Aku sudah dapat yang ku mau tinggal pergi ke atap sekolah aja"
+                        show ardana_uni at center with hpunch:
+                            ypos 1.2
+                        "Brakk ~"
+                        hide ardana_uni with dissolve
+                        show ardana_uni_emosi at center:
+                            ypos 1.2
+                        mg2 "Hati-hati kalau jalan, untung tidak tumpah minumanku"
+                        mc "Maaf.."
+                        hide ardana_uni_emosi with dissolve
+                        show ardana_uni at center:
+                            ypos 1.2
+                        mg2 "Aku penasaran, kamu bukannya si [mc] yang dulunya sering dibul--"
+                        "Bagaimana dia bisa tau ?"
+                        $ tmn_mg2 = "Temannya Ardana"
+                        ol "Kamu Gpp kan ? Siapa itu tadi na ? minta maafnya kyk ga ikhlas"
+                        mg2 "Teman Sekelas kita" 
+                        ol "Ehh.. iyakah ?"
+                        mg2 "Iyaa.. Biarin aja.. Aku gapapa kok"
+                        hide ardana_uni with dissolve
+
+                        "Sepertinya orang tadi satu sekolah denganku dulu"
+                        "Kalau ga satu sekolah ga mungkin dia bisa tau"
+                        "...."
+                        "Mending aku habiskan dulu makanan yang ku beli tadi"
+                        "Kayaknya makan diatas Atap Sekolah Enak"
                     else:
                         "Uangku tidak Cukup..."
+                        mc "Maaf, Bu Tidak jadi.. Uangku tidak cukup"
+                        kt "Iyaa Gapapa"
+                        "Kalau gitu aku ke atap saja lah tidur-tiduran"
                 "Maaf, Tidak jadi..":
                     kt "Iya Gapapa"
         "Mie Goreng Jawa":
@@ -202,8 +292,37 @@ label pengenalan:
                     if (money >= mgjt):
                         $ money = money - mgjt
                         kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                        "Aku sudah dapat yang ku mau tinggal pergi ke atap sekolah aja"
+                        show ardana_uni at center with hpunch:
+                            ypos 1.2
+                        "Brakk ~"
+                        hide ardana_uni with dissolve
+                        show ardana_uni_emosi at center:
+                            ypos 1.2
+                        mg2 "Hati-hati kalau jalan, untung tidak tumpah minumanku"
+                        mc "Maaf.."
+                        hide ardana_uni_emosi with dissolve
+                        show ardana_uni at center:
+                            ypos 1.2
+                        mg2 "Aku penasaran, kamu bukannya si [mc] yang dulunya sering dibul--"
+                        "Bagaimana dia bisa tau ?"
+                        $ tmn_mg2 = "Temannya Ardana"
+                        ol "Kamu Gpp kan ? Siapa itu tadi na ? minta maafnya kyk ga ikhlas"
+                        mg2 "Teman Sekelas kita" 
+                        ol "Ehh.. iyakah ?"
+                        mg2 "Iyaa.. Biarin aja.. Aku gapapa kok"
+                        hide ardana_uni with dissolve
+
+                        "Sepertinya orang tadi satu sekolah denganku dulu"
+                        "Kalau ga satu sekolah ga mungkin dia bisa tau"
+                        "...."
+                        "Mending aku habiskan dulu makanan yang ku beli tadi"
+                        "Kayaknya makan diatas Atap Sekolah Enak"
                     else:
                         "Uangku tidak Cukup..."
+                        mc "Maaf, Bu Tidak jadi.. Uangku tidak cukup"
+                        kt "Iyaa Gapapa"
+                        "Kalau gitu aku ke atap saja lah tidur-tiduran"
                 "Maaf, Tidak jadi..":
                     kt "Iya Gapapa"
         "Nasi Goreng Jawa":
@@ -220,41 +339,45 @@ label pengenalan:
                     if (money >= ngjt):
                         $ money = money - ngjt
                         kt "Terima kasih sudah membeli, Ini Kembaliannya %(money)d"
+                        "Aku sudah dapat yang ku mau tinggal pergi ke atap sekolah aja"
+                        show ardana_uni at center with hpunch:
+                            ypos 1.2
+                        "Brakk ~"
+                        hide ardana_uni with dissolve
+                        show ardana_uni_emosi at center:
+                            ypos 1.2
+                        mg2 "Hati-hati kalau jalan, untung tidak tumpah minumanku"
+                        mc "Maaf.."
+                        hide ardana_uni_emosi with dissolve
+                        show ardana_uni at center:
+                            ypos 1.2
+                        mg2 "Aku penasaran, kamu bukannya si [mc] yang dulunya sering dibul--"
+                        "Bagaimana dia bisa tau ?"
+                        $ tmn_mg2 = "Temannya Ardana"
+                        ol "Kamu Gpp kan ? Siapa itu tadi na ? minta maafnya kyk ga ikhlas"
+                        mg2 "Teman Sekelas kita" 
+                        ol "Ehh.. iyakah ?"
+                        mg2 "Iyaa.. Biarin aja.. Aku gapapa kok"
+                        hide ardana_uni with dissolve
+
+                        "Sepertinya orang tadi satu sekolah denganku dulu"
+                        "Kalau ga satu sekolah ga mungkin dia bisa tau"
+                        "...."
+                        "Mending aku habiskan dulu makanan yang ku beli tadi"
+                        "Kayaknya makan diatas Atap Sekolah Enak"
                     else:
                         "Uangku tidak Cukup..."
+                        mc "Maaf, Bu Tidak jadi.. Uangku tidak cukup"
+                        kt "Iyaa Gapapa"
+                        "Kalau gitu aku ke atap saja lah tidur-tiduran"
                 "Maaf, Tidak jadi..":
                     kt "Iya Gapapa"
 
-    "Aku sudah dapat yang ku mau tinggal pergi ke atap sekolah aja"
-    show ardana_uni at center with hpunch:
-        ypos 1.2
-    "Brakk ~"
-    hide ardana_uni with dissolve
-    show ardana_uni_emosi at center:
-        ypos 1.2
-    mg2 "Hati-hati kalau jalan, untung tidak tumpah minumanku"
-    mc "Maaf.."
-    hide ardana_uni_emosi with dissolve
-    show ardana_uni at center:
-        ypos 1.2
-    mg2 "Aku penasaran, kamu bukannya si [mc] yang dulunya sering dibul--"
-    "Bagaimana dia bisa tau ?"
-    $ tmn_mg2 = "Temannya Ardana"
-    ol "Kamu Gpp kan ? Siapa itu tadi na ? minta maafnya kyk ga ikhlas"
-    mg2 "Teman Sekelas kita" 
-    ol "Ehh.. iyakah ?"
-    mg2 "Iyaa.. Biarin aja.. Aku gapapa kok"
-    hide ardana_uni with dissolve
-
-    "Sepertinya orang tadi satu sekolah denganku dulu"
-    "Kalau ga satu sekolah ga mungkin dia bisa tau"
-    "...."
-    "Mending aku habiskan dulu makanan yang ku beli tadi"
-    "Kayaknya makan diatas Atap Sekolah Enak"
-
     scene atap with dissolve
     "Tenangnya di atap sekolah"
+    play sound bel_sekolah fadein 1.0
     "~Ding Dong~"
+    stop sound fadeout 1.0
     "Saatnya aku masuk kelas huh"
 
     scene kelas with dissolve
@@ -266,8 +389,23 @@ label pengenalan:
     show bu_senda at right with moveinleft:
         xpos 0.9
         ypos 1.2
-    "~Sesi Pengenalan Pelajaran ke 2~"
+    $ _skipping = False
+    "~Sesi Pengenalan Pelajaran Fungi~"
+    window hide dissolve
+    stop music fadeout 1.0
+    #Video Fungi
+    show fungi behind sr at center with dissolve:
+        xpos 0.3
+        ypos 0.6
+        zoom 0.5
+    $ renpy.pause(11.5, hard=True)
+    hide fungi with dissolve
+    window show dissolve
+    $ _skipping = True
+    play music jalan_jalan2 fadein 1.0
+    play sound bel_sekolah fadein 1.0
     "~Ding Dong~"
+    stop sound fadeout 1.0
     show bu_senda at center with moveinright:
         ypos 1.2       
     sr "Waktunya sudah habis anak-anak"
@@ -278,6 +416,8 @@ label pengenalan:
     "Aku harus tidur dimana ?"
     menu:
         "Atap Sekolah":
+            stop music fadeout 1.0
+            play music kesepian fadein 1.0
             scene atap_siang with dissolve
             "Begitu Tenang dan sejuk"
             "Kalau gitu aku tidur disini sampai Bel Berbunyi"
@@ -288,8 +428,8 @@ label pengenalan:
                 ypos 1.2
             mg3 "Kayaknya dia tertidur pulas"
             hide airin_uni
-            show airin_kaget_uni at truecenter:
-                ypos 0.5
+            show airin_kaget_uni at center:
+                ypos 1.2
             mg3 "Bangunn.. "
             mg3 "Bangunn...."
             hide airin_kaget_uni
@@ -298,39 +438,47 @@ label pengenalan:
             mg3 "Sepertinya Beneran pulas tidurnya"
             hide airin_uni
             "Seperti ada orang yang memanggilku, mungkin aku salah dengar"
+            play sound bel_sekolah fadein 1.0
+            "~Ding Dong~"
+            stop sound fadeout 1.0
+            show airin_uni at center:
+                ypos 1.2
+            mg3 "Ahh.. sudah bell masuk ternyata"
+            mg3 "Dia tidurnya nyenyak, apa sebaiknya kubangunkan ya ?"
+            hide airin_uni
+            show airin_jalan_uni at center
+            mg3 "aku sebaiknya langsung ke kelas aja "
+            hide airin_jalan_uni with moveoutleft
+
+            "10 Menit setelah bell berbunyi"
+            mc "Hoamm.. Jam berapa ini ?"
+            mc "Weh.. Ternyata aku tidurnya kelebihan"
+            mc "Lebih baik langsung ke kelas aja"
+
+            scene lorong_siang with dissolve
+            "Ternyata belum ada gurunya"
+
+            scene kelas with dissolve
+            show nada_uni at center with moveinright:
+                ypos 1.2
+            na "Dari mana aja brader ?"
+            show nada_uni at right with moveinleft:
+                xpos 0.9
+                ypos 1.2
+            mc "atap"
+            na "Weh.. ngapain ?"
+            mc "Tidur"
+            hide nada_uni with moveoutleft
+
+            stop music fadeout 1.0
             
         "Kelas":
             mc "Kalau gitu aku tidur disini aja sampai Bel Berbunyi"
+            play sound bel_sekolah fadein 1.0
+            "~Ding Dong~"
+            stop sound fadeout 1.0
+    play music jalan_jalan2 fadein 1.0
 
-    "~Ding Dong~"
-    show airin_uni at center:
-                ypos 1.2
-    mg3 "Ahh.. sudah bell masuk ternyata"
-    mg3 "Dia tidurnya nyenyak, apa sebaiknya kubangunkan ya ?"
-    hide airin_uni
-    show airin_jalan_uni at center
-    mg3 "aku sebaiknya langsung ke kelas aja "
-    hide airin_jalan_uni with moveoutleft
-
-    "10 Menit setelah bell berbunyi"
-    mc "Hoamm.. Jam berapa ini ?"
-    mc "Weh.. Ternyata aku tidurnya kelebihan"
-    mc "Lebih baik langsung ke kelas aja"
-
-    scene lorong_siang with dissolve
-    "Ternyata belum ada gurunya"
-
-    scene kelas with dissolve
-    show nada_uni at center with moveinright:
-        ypos 1.2
-    na "Dari mana aja brader ?"
-    show nada_uni at right with moveinleft:
-        xpos 0.9
-        ypos 1.2
-    mc "atap"
-    na "Weh.. ngapain ?"
-    mc "Tidur"
-    hide nada_uni with moveoutleft
     show bu_senda at center with moveinright:
         ypos 1.2
     sr "Siang anak-anak, mari kita mulai saja ya biar cepat selesai"
@@ -340,8 +488,23 @@ label pengenalan:
     show bu_senda at right with moveinleft:
         xpos 0.9
         ypos 1.2
-    "Sesi Pengenalan Materi ke 3"
+    $ _skipping = False
+    "Sesi Pengenalan Materi Klasifikasi"
+    window hide dissolve
+    stop music fadeout 1.0
+    #Video Klasifikasi
+    show klasifikasi behind sr at center with dissolve:
+        xpos 0.3
+        ypos 0.6
+        zoom 0.5
+    $ renpy.pause(12.0, hard=True)
+    hide klasifikasi with dissolve
+    window show dissolve
+    $ _skipping = True
+    play music jalan_jalan2 fadein 1.0
+    play sound bel_sekolah fadein 1.0
     "~Ding Dong~"
+    stop sound fadeout 1.0
     show bu_senda at center with moveinright:
         ypos 1.2
     sr "Waktunya sudah habis anak-anak"
@@ -360,6 +523,9 @@ label pengenalan:
     "Kayaknya sudah sepi ini sekolah, sebaiknya aku pulang dan membawa kucing itu"
     "Moga aja ada"
 
+    stop music fadeout 1.0
+
+    play music nyanyi fadein 1.0
     scene lorong_sore with dissolve
     "Ahh.. Ada Suara Nyanyian"
     "Suara siapa itu ?"
@@ -370,17 +536,19 @@ label pengenalan:
     "Wahh... "
     show airin_jalan_uni at center with moveinright
     hide airin_jalan_uni
-    show airin_kaget_uni at truecenter:
-        ypos 0.5
-    mg3 "aahh.. kamu melihatnya kan ?"
+    show airin_kaget_uni at center:
+        ypos 1.2
+    stop music fadeout 1.0
+    play music istirahat fadein 1.0
+    mg3 "aahh.. kamu melihat aku bernyanyi kan ?"
     hide airin_kaget_uni
     show airin_uni at left with moveinleft:
         xpos 0.7
         ypos 1.2
-    mc "iyaa.. aku melihatnya, suaramu bagus"
+    mc "iyaa.. aku melihat dan mendengarnya, suaramu bagus"
     hide airin_uni
-    show airin_kaget_uni at truecenter with vpunch:
-        ypos 0.5
+    show airin_kaget_uni at center with vpunch:
+        ypos 1.2
     mg3 "AWAWAAWAWAWAWA"
     hide airin_kaget_uni
     show airin_uni at center:
@@ -399,6 +567,9 @@ label pengenalan:
     mg3 "ahh.. tunggu.."
     mg3 "...."
     hide airin_uni with moveoutright
+    stop music fadeout 1.0
+
+    play music jalan_jalan2 fadein 1.0
 
     scene depan_rumah_sore with dissolve
     "ahh.. aku hampir lupa membawa kucing ituu"
@@ -413,6 +584,10 @@ label pengenalan:
     show cat_box_relived at truecenter with moveinbottom
     cat "Meoowww"
     hide cat_box_relived with dissolve
+
+    stop music fadeout 1.0
+
+    play music sore fadein 1.0
 
     scene depan_rumah_sore with dissolve
     mc "Aku pulang.."
@@ -429,6 +604,7 @@ label pengenalan:
     hide cat with dissolve
 
     scene kamar_mandi with dissolve
+    play sound mandi fadein 1.0
     mc "akkhh,, kau tidak suka air yaa. Susah sekali memandikanmu"
     show cat_angry at center with vpunch:
         ypos 0.85
@@ -444,6 +620,7 @@ label pengenalan:
     cat "Meooww ^_^"
     mc "Sepertinya kamu tau apa yang kuucapkan"
     hide cat_happy with dissolve
+    stop sound fadeout 1.0
 
     scene dapur_sore with dissolve
     mc "ini makananmu, kau pasti suka kan"
@@ -517,6 +694,9 @@ label pengenalan:
     mc "sebaiknya aku cuci muka dulu lalu ke tempat makan"
 
     scene kamar_mandi with dissolve
+    play sound mandi fadein 1.0
+    "Segarnyaa.. Fyuhhhh~~"
+    stop sound fadeout 1.0
 
     scene dapur_malam with dissolve
     mc "Ayah masih belum pulang"
@@ -573,8 +753,26 @@ label pengenalan:
     mom "Iyaa.. nanti biar ibu yang cuci piringnya"
     hide mom with dissolve
 
-    "~Esok Paginya~"
+    stop music fadeout 1.0
+
+    play music pagi fadein 1.0
+
+    window hide dissolve
+    scene sky2 with dissolve
+    show day1 at center with dissolve:
+        ypos 0.55
+    with dissolve
+    with Pause(3)
+    play sound burung_pagi fadein 1.0
+    hide day1 with dissolve
+    window show dissolve
+
     scene kamar with dissolve
+    stop sound fadeout 1.0
+    play sound burung_terbang fadein 1.0
+    window hide dissolve
+    pause 3.0
+    window show dissolve
     "Apa ini berat di perutku ?"
     mc "...."
     mc "Ternyata [cat]"
@@ -628,10 +826,13 @@ label pengenalan:
     hide cat_happy with dissolve
     hide dad_uni with dissolve
     play sound cuci_piring
+    $ _skipping = False
     "~Cuci Piring~"
     window hide dissolve
     $ renpy.pause(35.0, hard=True)
+    stop sound fadeout 1.0
     window show dissolve
+    $ _skipping = True
     mc "aku mau bersiap siap berangkat sekolah"
     show mom at center with moveinright:
         xpos 0.5
@@ -683,9 +884,20 @@ label pengenalan:
     hide mom with moveoutright
     hide cat_happy with moveoutright
 
+    stop music fadeout 1.0
+
+    play music jalan_jalan fadein 1.0
+
+    jump pemilihan
+
+    return
+
 label pemilihan:
     
     scene sky with dissolve
+
+    show text "{color=#000000}{size=120}Heroine{/size}{/color}" with Dissolve(1.0):
+        ypos 0.1
 
     window hide dissolve
 
@@ -698,6 +910,8 @@ label pemilihan:
     show screen gotoAirin with dissolve
 
     $ renpy.pause(hard=True)
+
+    return
 
     #z = renpy.input("Please enter a NUMBER: ")
     #$ z = renpy.input("", "", allow="0123456789")

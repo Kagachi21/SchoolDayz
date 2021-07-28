@@ -311,10 +311,12 @@ screen navigation():
         spacing gui.navigation_spacing
 
         if main_menu:
+            if persistent.completed :
+                textbutton _("Credits") action ShowMenu("credits")
             if renpy.get_screen("preferences") is None:
                 if renpy.get_screen("load") is None:
                     if renpy.get_screen("about") is None:
-                        if renpy.get_screen("help") is None:
+                        if renpy.get_screen("help") is None:                                
                             textbutton _("Start") action Start()
         else:
 
@@ -334,12 +336,12 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
-
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
             textbutton _("Keymaps") action ShowMenu("help")
+
+        textbutton _("About") action ShowMenu("about")
 
         if renpy.variant("pc"):
 
@@ -553,7 +555,7 @@ screen about():
 
             ## gui.about is usually set in options.rpy.
             if gui.about:
-                text "[gui.about!t]\n"
+                text "[gui.about!t] \n\nHernando Farazi Herrera - E31182235 \nNina Ardana - E31180941 \nMichel Meirisca Heniaty - E31182133 \n\nTerimaKasih yang sudah mendukung kami sampai saat ini \n\nSemoga Kalian Menyukai Hasil Kerja kami ^_^"
 
             #text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
@@ -736,6 +738,7 @@ screen preferences():
                     textbutton _("Unseen Text") action Preference("skip", "toggle")
                     textbutton _("After Choices") action Preference("after choices", "toggle")
                     textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    textbutton _("Seen Messages") action Preference("skip", "seen")
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
@@ -775,14 +778,14 @@ screen preferences():
                                 textbutton _("Test") action Play("sound", config.sample_sound)
 
 
-                    if config.has_voice:
-                        label _("Voice Volume")
+                    #if config.has_voice:
+                        #label _("Voice Volume")
 
-                        hbox:
-                            bar value Preference("voice volume")
+                        #hbox:
+                            #bar value Preference("voice volume")
 
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
+                            #if config.sample_voice:
+                                #textbutton _("Test") action Play("voice", config.sample_voice)
 
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
@@ -967,7 +970,7 @@ screen help():
 
     default device = "keyboard"
 
-    use game_menu(_("Help"), scroll="viewport"):
+    use game_menu(_("Keymaps"), scroll="viewport"):
 
         style_prefix "help"
 

@@ -6,134 +6,169 @@ image virusd4_1 = im.Scale("/Soal/Soal_virus.jpg",1280,720)
 image virusd4_2 = im.Scale("/Soal/Soal_virus1.jpg",1280,720)
 image virusd5 = im.Scale("/Soal/soal_virusd5.jpg",1280,720)
 image fungid1 = im.Scale("/Soal/Fungi/Soal_Fungi1.jpg",1280,720)
-image fungid2 = im.Scale("/Soal/Fungi/Soal_Fungi2.jpg",720,1280)
-image fungid5 = im.Scale("/Soal/Fungi/Soal_Fungi3.jpg",1280,720)
+image fungid2 = im.Scale("/Soal/Fungi/Soal_Fungi2.jpg",700,1000)
+image fungid5 = im.Scale("/Soal/Fungi/Soal_Fungi3.jpg",1280,600)
+
+#Image Hari
+image day1 = Text("{size=160}Hari ke 1{/size}", text_align=0.5, color="#000000")
+image day2 = Text("{size=160}Hari ke 2{/size}", text_align=0.5, color="#000000")
+image day3 = Text("{size=160}Hari ke 3{/size}", text_align=0.5, color="#000000")
+image day4 = Text("{size=160}Hari ke 4{/size}", text_align=0.5, color="#000000")
+image day5 = Text("{size=160}Hari ke 5{/size}", text_align=0.5, color="#000000")
+image day6 = Text("{size=160}Hari ke 6{/size}", text_align=0.5, color="#000000")
+image day7 = Text("{size=160}Hari ke 7{/size}", text_align=0.5, color="#000000")
 
 #image BG
-image aula = "/background/AULA.png"
-image kelas_BnW = "/background/KLH.jpg"
-image uks_BnW = "/background/UKSH.jpg"
+image aula = im.Scale("/background/AULA.png",1920,1080)
+image kelas_BnW = im.Scale("/background/KLH.jpg",1920,1080)
+image uks_BnW = im.Scale("/background/UKSH.jpg",1920,1080)
 #Pagi
-image sky = "/background/PAGI/SKY.jpg"
-image atap = "/background/PAGI/ATP.jpg"
-image gerbang_sekolah = "/background/PAGI/GS.jpg"
-image kamar = "/background/PAGI/KM.jpg"
-image jalan = "/background/PAGI/KT.jpg"
-image lorong = "/background/PAGI/LR.png"
-image mall = "/background/PAGI/MALL.png"
-image ruang_keluarga = "/background/PAGI/RK.png"
-image parkir = "/background/PAGI/PK.jpg"
-image depan_store = "/background/PAGI/MM.jpg"
-image store = "/background/PAGI/DMM.jpg"
-image uks = "/background/PAGI/UKS.jpg"
-image kantin = "/background/PAGI/KN.jpg"
-image pantai = "/background/PAGI/PT.jpg"
-image kamar_mandi = "/background/PAGI/BT.jpg"
-image central_park = "/background/PAGI/CP.jpg"
-image cafe = "/background/PAGI/CF.png"
-image ruang_tamu = "/background/PAGI/RT.jpg"
-image kelas = "/background/PAGI/KL.jpg"
-image foodcourt = "/background/PAGI/FC.jpg"
-image depan_toilet = "/background/PAGI/DT.jpg"
-image toilet = "/background/PAGI/T.png"
-image depan_rumah = "/background/PAGI/DR.png"
-image depan_rumah_airin = "/background/PAGI/DRA.png"
-image depan_rumah_kirana = "/background/PAGI/DRK.jpg"
+image sky = im.Scale("/background/PAGI/SKY.jpg",1920,1080)
+image sky2 = im.Scale("/background/PAGI/PG.png",1920,1080)
+image atap = im.Scale("/background/PAGI/ATP.jpg",1920,1080)
+image gerbang_sekolah = im.Scale("/background/PAGI/GS.jpg",1920,1080)
+image kamar = im.Scale("/background/PAGI/KM.jpg",1920,1080)
+image jalan = im.Scale("/background/PAGI/KT.jpg",1920,1080)
+image lorong = im.Scale("/background/PAGI/LR.png",1920,1080)
+image mall = im.Scale("/background/PAGI/MALL.png",1920,1080)
+image ruang_keluarga = im.Scale("/background/PAGI/RK.png",1920,1080)
+image parkir = im.Scale("/background/PAGI/PK.jpg",1920,1080)
+image depan_store = im.Scale("/background/PAGI/MM.jpg",1920,1080)
+image store = im.Scale("/background/PAGI/DMM.jpg",1920,1080)
+image dapur = im.Scale("/background/PAGI/DPR.jpg",1920,1080)
+image uks = im.Scale("/background/PAGI/UKS.jpg",1920,1080)
+image kantin = im.Scale("/background/PAGI/KN.jpg",1920,1080)
+image pantai = im.Scale("/background/PAGI/PT.jpg",1920,1080)
+image kamar_mandi = im.Scale("/background/PAGI/BT.jpg",1920,1080)
+image central_park = im.Scale("/background/PAGI/CP.jpg",1920,1080)
+image cafe = im.Scale("/background/PAGI/CF.png",1920,1080)
+image ruang_tamu = im.Scale("/background/PAGI/RT.jpg",1920,1080)
+image kelas = im.Scale("/background/PAGI/KL.jpg",1920,1080)
+image foodcourt = im.Scale("/background/PAGI/FC.jpg",1920,1080)
+image depan_toilet = im.Scale("/background/PAGI/DT.jpg",1920,1080)
+image toilet = im.Scale("/background/PAGI/T.png",1920,1080)
+image depan_rumah = im.Scale("/background/PAGI/DR.png",1920,1080)
+image depan_rumah_airin = im.Scale("/background/PAGI/DRA.png",1920,1080)
+image depan_rumah_kirana = im.Scale("/background/PAGI/DRK.jpg",1920,1080)
 
 #Siang
-image depan_toilet_siang = "/background/SIANG/DT.jpg"
-image toilet_siang = "/background/SIANG/T.png"
-image ruang_tamu_siang = "/background/SIANG/RT.jpg"
-image kelas_siang = "/background/SIANG/KL.jpg"
-image foodcourt_siang = "/background/SIANG/FC.jpg"
-image central_park_siang = "/background/SIANG/CP.jpg"
-image cafe_siang = "/background/SIANG/CF.png"
-image pantai_siang = "/background/SIANG/PT.jpg"
-image kantin_siang = "/background/SIANG/KN.jpg"
-image uks_siang = "/background/SIANG/UKS.jpg"
-image parkir_siang = "/background/SIANG/PK.jpg"
-image jalan_siang = "/background/SIANG/KT.jpg"
-image dapur_siang = "/background/SIANG/DPR.jpg"
-image atap_siang = "/background/SIANG/ATP.jpg"
-image gerbang_sekolah_siang = "/background/SIANG/GS.jpg"
-image kamar_siang = "/background/SIANG/KM.jpg"
-image lorong_siang = "/background/SIANG/LR.jpg"
-image mall_siang = "/background/SIANG/MALL.jpg"
-image ruang_keluarga_siang = "/background/SIANG/RK.jpg"
-image depan_rumah_siang = "/background/SIANG/DR.png"
-image depan_rumah_airin_siang = "/background/SIANG/DRA.png"
-image depan_rumah_kirana_siang = "/background/SIANG/DRK.jpg"
+image depan_toilet_siang = im.Scale("/background/SIANG/DT.jpg",1920,1080)
+image toilet_siang = im.Scale("/background/SIANG/T.jpg",1920,1080)
+image ruang_tamu_siang = im.Scale("/background/SIANG/RT.jpg",1920,1080)
+image kelas_siang = im.Scale("/background/SIANG/KL.jpg",1920,1080)
+image foodcourt_siang = im.Scale("/background/SIANG/FC.jpg",1920,1080)
+image central_park_siang = im.Scale("/background/SIANG/CP.jpg",1920,1080)
+image cafe_siang = im.Scale("/background/SIANG/CF.jpg",1920,1080)
+image pantai_siang = im.Scale("/background/SIANG/PT.jpg",1920,1080)
+image kantin_siang = im.Scale("/background/SIANG/KN.jpg",1920,1080)
+image uks_siang = im.Scale("/background/SIANG/UKS.jpg",1920,1080)
+image parkir_siang = im.Scale("/background/SIANG/PK.jpg",1920,1080)
+image jalan_siang = im.Scale("/background/SIANG/KT.jpg",1920,1080)
+image dapur_siang = im.Scale("/background/SIANG/DPR.jpg",1920,1080)
+image atap_siang = im.Scale("/background/SIANG/ATP.jpg",1920,1080)
+image gerbang_sekolah_siang = im.Scale("/background/SIANG/GS.jpg",1920,1080)
+image kamar_siang = im.Scale("/background/SIANG/KM.jpg",1920,1080)
+image lorong_siang = im.Scale("/background/SIANG/LR.jpg",1920,1080)
+image mall_siang = im.Scale("/background/SIANG/MALL.jpg",1920,1080)
+image ruang_keluarga_siang = im.Scale("/background/SIANG/RK.jpg",1920,1080)
+image depan_rumah_siang = im.Scale("/background/SIANG/DR.jpg",1920,1080)
+image depan_rumah_airin_siang = im.Scale("/background/SIANG/DRA.png",1920,1080)
+image depan_rumah_kirana_siang = im.Scale("/background/SIANG/DRK.jpg",1920,1080)
 
 #Sore
-image depan_toilet_sore = "/background/SORE/DT.jpg"
-image toilet_sore = "/background/SORE/T.png"
-image ruang_tamu_sore = "/background/SORE/RT.jpg"
-image kelas_sore = "/background/SORE/KL.jpg"
-image foodcourt_sore = "/background/SORE/FC.jpg"
-image central_park_sore = "/background/SORE/CP.jpg"
-image cafe_sore = "/background/SORE/CF.png"
-image kantin_sore = "/background/SORE/KN.jpg"
-image uks_sore = "/background/SORE/UKS.jpg"
-image parkir_sore = "/background/SORE/PK.jpg"
-image dapur_sore = "/background/SORE/DPR.jpg"
-image atap_sore = "/background/SORE/ATP.jpg"
-image gerbang_sekolah_sore = "/background/SORE/GS.jpg"
-image jalan_sore = "/background/SORE/KT.jpg"
-image kamar_sore = "/background/SORE/KM.jpg"
-image lorong_sore = "/background/SORE/LR.jpg"
-image mall_sore = "/background/SORE/MALL.png"
-image ruang_keluarga_sore = "/background/SORE/RK.jpg"
-image pantai_sore = "/background/SORE/PT.jpg"
-image depan_rumah_sore = "/background/SORE/DR.png"
-image depan_rumah_airin_sore = "/background/SORE/DRA.png"
-image depan_rumah_kirana_sore = "/background/SORE/DRK.jpg"
+image depan_toilet_sore = im.Scale("/background/SORE/DT.jpg",1920,1080)
+image toilet_sore = im.Scale("/background/SORE/T.jpg",1920,1080)
+image ruang_tamu_sore = im.Scale("/background/SORE/RT.jpg",1920,1080)
+image kelas_sore = im.Scale("/background/SORE/KL.jpg",1920,1080)
+image foodcourt_sore = im.Scale("/background/SORE/FC.jpg",1920,1080)
+image central_park_sore = im.Scale("/background/SORE/CP.jpg",1920,1080)
+image cafe_sore = im.Scale("/background/SORE/CF.jpg",1920,1080)
+image kantin_sore = im.Scale("/background/SORE/KN.jpg",1920,1080)
+image uks_sore = im.Scale("/background/SORE/UKS.jpg",1920,1080)
+image parkir_sore = im.Scale("/background/SORE/PK.jpg",1920,1080)
+image dapur_sore = im.Scale("/background/SORE/DPR.jpg",1920,1080)
+image atap_sore = im.Scale("/background/SORE/ATP.jpg",1920,1080)
+image gerbang_sekolah_sore = im.Scale("/background/SORE/GS.jpg",1920,1080)
+image jalan_sore = im.Scale("/background/SORE/KT.jpg",1920,1080)
+image kamar_sore = im.Scale("/background/SORE/KM.jpg",1920,1080)
+image lorong_sore = im.Scale("/background/SORE/LR.jpg",1920,1080)
+image mall_sore = im.Scale("/background/SORE/MALL.png",1920,1080)
+image ruang_keluarga_sore = im.Scale("/background/SORE/RK.jpg",1920,1080)
+image pantai_sore = im.Scale("/background/SORE/PT.jpg",1920,1080)
+image depan_rumah_sore = im.Scale("/background/SORE/DR.jpg",1920,1080)
+image depan_rumah_airin_sore = im.Scale("/background/SORE/DRA.jpg",1920,1080)
+image depan_rumah_kirana_sore = im.Scale("/background/SORE/DRK.jpg",1920,1080)
 
 #Malam
-image depan_toilet_malam = "/background/MALAM/DT.jpg"
-image toilet_malam = "/background/MALAM/T.png"
-image ruang_tamu_malam = "/background/MALAM/RT.jpg"
-image kelas = "/background/MALAM/KL.jpg"
-image foodcourt_malam = "/background/MALAM/FC.jpg"
-image pantai_malam = "/background/MALAM/PT.jpg"
-image kantin_malam = "/background/MALAM/KN.jpg"
-image uks_malam = "/background/MALAM/UKS.jpg"
-image dapur_malam = "/background/MALAM/DPR.jpg"
-image atap_malam = "/background/MALAM/ATP.jpg"
-image gerbang_sekolah_malam = "/background/MALAM/GS.jpg"
-image kamar_malam = "/background/MALAM/KM.jpg"
-image jalan_malam = "/background/MALAM/KT.jpg"
-image lorong_malam = "/background/MALAM/LR.jpg"
-image mall_malam = "/background/MALAM/MALL.png"
-image ruang_keluarga_malam = "/background/MALAM/RK.jpg"
-image section_baju_malam = "/background/MALAM/SB.jpg"
-image parkiran_mall_malam = "/background/MALAM/IPK.jpg"
-image kamar_mandi_malam = "/background/MALAM/BT.jpg"
-image central_park_malam = "/background/MALAM/CP.jpg"
-image cafe_malam = "/background/MALAM/CF.jpg"
-image depan_rumah_malam = "/background/MALAM/DR.png"
-image depan_rumah_airin_malam = "/background/MALAM/DRA.png"
-image depan_rumah_kirana_malam = "/background/MALAM/DRK.jpg"
+image sky_malam = im.Scale("/background/MALAM/ML.png",1920,1080)
+image parkir_malam = im.Scale("/background/MALAM/PK.jpg",1920,1080)
+image depan_toilet_malam = im.Scale("/background/MALAM/DT.jpg",1920,1080)
+image toilet_malam = im.Scale("/background/MALAM/T.jpg",1920,1080)
+image ruang_tamu_malam = im.Scale("/background/MALAM/RT.jpg",1920,1080)
+image kelas_malam = im.Scale("/background/MALAM/KL.jpg",1920,1080)
+image foodcourt_malam = im.Scale("/background/MALAM/FC.jpg",1920,1080)
+image pantai_malam = im.Scale("/background/MALAM/PT.jpg",1920,1080)
+image kantin_malam = im.Scale("/background/MALAM/KN.jpg",1920,1080)
+image uks_malam = im.Scale("/background/MALAM/UKS.jpg",1920,1080)
+image dapur_malam = im.Scale("/background/MALAM/DPR.jpg",1920,1080)
+image atap_malam = im.Scale("/background/MALAM/ATP.jpg",1920,1080)
+image gerbang_sekolah_malam = im.Scale("/background/MALAM/GS.jpg",1920,1080)
+image kamar_malam = im.Scale("/background/MALAM/KM.jpg",1920,1080)
+image jalan_malam = im.Scale("/background/MALAM/KT.jpg",1920,1080)
+image lorong_malam = im.Scale("/background/MALAM/LR.jpg",1920,1080)
+image mall_malam = im.Scale("/background/MALAM/MALL.png",1920,1080)
+image ruang_keluarga_malam = im.Scale("/background/MALAM/RK.jpg",1920,1080)
+image section_baju_malam = im.Scale("/background/MALAM/SB.jpg",1920,1080)
+image parkiran_mall_malam = im.Scale("/background/MALAM/IPK.jpg",1920,1080)
+image kamar_mandi_malam = im.Scale("/background/MALAM/BT.jpg",1920,1080)
+image central_park_malam = im.Scale("/background/MALAM/CP.jpg",1920,1080)
+image cafe_malam = im.Scale("/background/MALAM/CF.jpg",1920,1080)
+image depan_rumah_malam = im.Scale("/background/MALAM/DR.jpg",1920,1080)
+image depan_rumah_airin_malam = im.Scale("/background/MALAM/DRA.jpg",1920,1080)
+image depan_rumah_kirana_malam = im.Scale("/background/MALAM/DRK.jpg",1920,1080)
 
 #Image(Character)
 image mom = im.Scale("/Character/mom/mom.png", 400, 1050)
 image dad_uni = im.Scale("/Character/dad/dad_uni.png", 625, 1181)
 image dad_cas = im.Scale("/Character/dad/dad_cas.png", 625, 1181)
+
+#Cat
 image cat_angry = im.Scale("/Character/Feliz/angry_cat.png", 350, 650)
 image cat_happy = im.Scale("/Character/Feliz/happy_cat.png", 300, 450)
 image cat = im.Scale("/Character/Feliz/cat.png", 350, 650)
 image cat_box = im.Scale("/Character/Feliz/cat_box1.png", 350, 650)
 image cat_box_happy = im.Scale("/Character/Feliz/cat_box2.png", 350, 650)
 image cat_box_relived = im.Scale("/Character/Feliz/cat_box3.png", 350, 650)
+
+#Ardana
 image ardana_cas = im.Scale("/Character/ardana/ardana_cas.png", 625, 1100)
+image ardana_cas_emosi = im.Scale("/Character/ardana/ardana_casual_emosi.png", 625, 1100)
 image ardana_uni = im.Scale("/Character/ardana/ardana_uni.png", 625, 1100)
 image ardana_uni_emosi = im.Scale("/Character/ardana/ardana_uni_emosi.png", 625, 1100)
 image ardana_uni_cuek = im.Scale("/Character/ardana/ardana_uni_cuek.png", 625, 1100)
-image miselia_casual = im.Scale("/Character/miselia/miselia_cas.png", 625, 1100)
+image ardana_alma = im.Scale("/Character/ardana/ardana_uni_alma.png", 625, 1100)
+image ardana_alma_emosi = im.Scale("/Character/ardana/ardana_uni_alma_emosi.png", 625, 1100)
+image ardana_alma_cuek = im.Scale("/Character/ardana/ardana_uni_alma_cuek.png", 625, 1100)
+
+#Miselia
+image miselia_cas = im.Scale("/Character/miselia/miselia_cas.png", 625, 1100)
 image miselia_uni = im.Scale("/Character/miselia/miselia_uni.png", 625, 1100)
-image airin_casual = "/Character/airin/airin_cas.png"
+image miselia_uni_emosi = im.Scale("/Character/miselia/marah_miselia_uni.png", 625, 1100)
+image miselia_uni_cuek = im.Scale("/Character/miselia/sinis_miselia_uni.png", 625, 1100)
+image miselia_alma = im.Scale("/Character/miselia/miselia_uni_alma.png", 625, 1100)
+image miselia_alma_emosi = im.Scale("/Character/miselia/miselia_uni_alma_emosi.png", 625, 1100)
+image miselia_alma_cuek = im.Scale("/Character/miselia/miselia_uni_alma_cuek.png", 625, 1100)
+
+#Airin
+image airin_casual = im.Scale("/Character/airin/airin_cas.png", 625, 1100)
 image airin_uni = im.Scale("/Character/airin/airin_uni.png", 625, 1100)
-image airin_kaget_uni = "/Character/prolog/airin_kaget_uni.png"
+image airin_kaget_uni = im.Scale("/Character/airin/airin_kaget_uni.png", 625, 1100)
 image airin_jalan_uni = "/Character/prolog/airin_jalan_uni.png"
+image airin_alma = im.Scale("/Character/airin/airin_uni_alma.png", 625, 1100)
+image airin_kaget_alma = im.Scale("/Character/airin/airin_uni_alma_kaget.png", 625, 1100)
+
+#NAda dan Bu Senda
 image nada_uni = im.Scale("/Character/sahabat/Nada_uni.png", 700, 1181)
 image nada_cas = im.Scale("/Character/sahabat/Nada_Casual.png", 700, 1181)
+image nada_alma = im.Scale("/Character/sahabat/nada_uni_alma.png", 700, 1181)
 image bu_senda = im.Scale("/Character/Bu_Senda/senda.png", 625, 1181)
