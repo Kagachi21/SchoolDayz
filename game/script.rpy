@@ -33,7 +33,7 @@ init:
         is button
         yalign 1.0
         key_events True
-        xysize (500, 50)
+        xysize (600, 50)
         
     python:
         class MyInputValue(InputValue):
@@ -60,15 +60,15 @@ screen test():
         has vbox
         spacing 15
 
-        text "{size=+5}First Name :"
-        $ input = Input(value=MyInputValue("mcFirst", "Entry your Name..."), style="my_input", length=30)
+        text "{size=+5}Nama Depan(FirstName) :"
+        $ input = Input(value=MyInputValue("mcFirst", ""), style="my_input", length=30)
         button:
             style "input_button"
             action input.enable
             add input
                 
-        text "{size=+5}Last Name :"
-        $ input = Input(value=MyInputValue("mcLast", "Entry your Surname..."), style="my_input", length=30)
+        text "{size=+5}Nama Belakang(LastName) :"
+        $ input = Input(value=MyInputValue("mcLast", ""), style="my_input", length=30)
         button:
             style "input_button"
             action input.enable
@@ -101,6 +101,7 @@ define skco2 = Character("Murid Laki-laki 2")
 define skce2 = Character("Murid Perempuan 2")
 define ks = Character("Kasir Alkamart")
 define kt = Character("Ibu Kantin")
+define pe = Character("Kepala Sekolah")
 
 #Masa Lalu
 define pb = Character('Pembully')
@@ -165,7 +166,7 @@ label prolog:
     $ _skipping = False
     "~Cuci Piring~"
     window hide dissolve
-    $ renpy.pause(35.0, hard=True)
+    $ renpy.pause(15.0, hard=True)
     stop sound fadeout 1.0
     window show dissolve
     $ _skipping = True
@@ -260,11 +261,18 @@ label prolog:
     mg2 "Ahh.. tidak apa-apa, aku hanya melamun saja tadi"
 
     scene aula with dissolve
+    show pak_eli_kepsek at center with dissolve:
+        ypos 1.2
+    pe "Selamat Pagi\nBapak dan Ibu Guru serta staf Tata Laksana yang kami hormati"
+    pe "Serta anak-anakku sekalian seluruh siswa sekolah disini yang bapak cintai"
+    pe "Untuk kalian semua kelas X, bapak ucapkan selamat datang kepada kalian semua"
+    pe "Kalian sudah resmi menjadi bagian dari warga SMAN 05 Jember. Semoga kalian memiliki semangat belajar yang sungguh-sungguh di sekolah ini, karena disiplin tinggi menjadi Ekalogi di SMA 05 Jember"
     "Ceramah dari kepala sekolah, dan ketua Osis sangat membosankan. banyak orang yang mengabaikan dan bercanda gurau"
     "Ada beberapa murid dengan tampang yang pernah dibully dan ada juga murid - murid si pembully"
     "Kenapa hidup ini selalu ada yang namanya pembully dan korban bullying ? Apakah ini sudah takdir hukum dunia ini ?"
     mc "Ceramah dari kepala sekolah, dan ketua Osis ini sangat membosankan."
     mc "Hmmm.. Aku ingin segera pulang"
+    hide pak_eli_kepsek with dissolve
 
     scene lorong with dissolve
     $ misterius_3 = "????"
@@ -443,7 +451,7 @@ label prolog:
     $ _skipping = False
     "~Dance~"
     window hide dissolve
-    $ renpy.pause(35.0, hard=True)
+    $ renpy.pause(10.0, hard=True)
     stop music fadeout 1.0
     window show dissolve
     $ _skipping = True
@@ -553,7 +561,7 @@ label prolog:
     $ _skipping = False
     "~Cuci Piring~"
     window hide dissolve
-    $ renpy.pause(35.0, hard=True)
+    $ renpy.pause(15.0, hard=True)
     stop sound fadeout 1.0
     window show dissolve
     $ _skipping = True

@@ -829,7 +829,7 @@ label pengenalan:
     $ _skipping = False
     "~Cuci Piring~"
     window hide dissolve
-    $ renpy.pause(35.0, hard=True)
+    $ renpy.pause(15.0, hard=True)
     stop sound fadeout 1.0
     window show dissolve
     $ _skipping = True

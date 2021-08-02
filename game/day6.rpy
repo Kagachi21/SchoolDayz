@@ -57,7 +57,7 @@ label day6_Kirana:
     $ _skipping = False
     "~Cuci Piring~"
     window hide dissolve
-    $ renpy.pause(35.0, hard=True)
+    $ renpy.pause(15.0, hard=True)
     stop sound fadeout 1.0
     window show dissolve
     $ _skipping = True
@@ -921,7 +921,7 @@ label day6_Airin:
     play music nyanyi fadein 1.0
     "~Mendengarkan Nyanyian~"
     window hide dissolve
-    $ renpy.pause(35.0, hard=True)
+    $ renpy.pause(15.0, hard=True)
     window show dissolve
     $ _skipping = True
     stop music fadeout 1.0

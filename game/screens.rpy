@@ -27,7 +27,7 @@ style gui_text:
 
 style button:
     properties gui.button_properties("button")
-    #activate_sound "/audio/ClickSound/title_decide01.ogg"
+    activate_sound "/audio/ClickSound/clicksound.mp3"
 
 style button_text is gui_text:
     properties gui.text_properties("button")
@@ -238,7 +238,7 @@ style choice_vbox:
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
-    #activate_sound "/audio/ClickSound/title_decide01.ogg"
+    activate_sound "/audio/ClickSound/clicksound.mp3"
 
 style choice_button_text is default:
     properties gui.button_text_properties("choice_button")
@@ -262,15 +262,15 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Kembali") action Rollback()
-            textbutton _("Riwayat") action ShowMenu('history')
-            textbutton _("Lompati") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Otomatis") action Preference("auto-forward", "toggle")
-            textbutton _("Simpan") action ShowMenu('save')
-            textbutton _("Lanjut") action ShowMenu('load')
-            textbutton _("Simpan Cepat") action QuickSave()
-            textbutton _("Lanjut Cepat") action QuickLoad()
-            textbutton _("Pengaturan") action ShowMenu('preferences')
+            textbutton _("Back") action Rollback()
+            textbutton _("History") action ShowMenu('history')
+            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("Auto") action Preference("auto-forward", "toggle")
+            textbutton _("Save") action ShowMenu('save')
+            textbutton _("Load") action ShowMenu('load')
+            textbutton _("Q.Save") action QuickSave()
+            textbutton _("Q.Load") action QuickLoad()
+            textbutton _("Prefs") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -285,7 +285,7 @@ style quick_button_text is button_text
 
 style quick_button:
     properties gui.button_properties("quick_button")
-    #activate_sound "/audio/ClickSound/title_decide01.ogg"
+    activate_sound "/audio/ClickSound/clicksound.mp3"
 
 style quick_button_text:
     properties gui.button_text_properties("quick_button")
@@ -320,34 +320,34 @@ screen navigation():
                             textbutton _("Start") action Start()
         else:
 
-            textbutton _("Riwayat") action ShowMenu("history")
+            textbutton _("History") action ShowMenu("history")
 
-            textbutton _("Simpan Permainan") action ShowMenu("save")
+            textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Lanjut Permainan") action ShowMenu("load")
+        textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Pengaturan") action ShowMenu("preferences")
+        textbutton _("Preferences") action ShowMenu("preferences")
 
         if _in_replay:
 
-            textbutton _("Berhenti Mengulang") action EndReplay(confirm=True)
+            textbutton _("End Replay") action EndReplay(confirm=True)
 
         elif not main_menu:
 
-            textbutton _("Menu Utama") action MainMenu()
+            textbutton _("Main Menu") action MainMenu()
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Bantuan") action ShowMenu("help")
+            textbutton _("Keymaps") action ShowMenu("help")
 
-        textbutton _("Tentang") action ShowMenu("about")
+        textbutton _("About") action ShowMenu("about")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Keluar") action Quit(confirm=True)
+            textbutton _("Quit") action Quit(confirm=True)
 
 
 style navigation_button is gui_button
@@ -387,10 +387,10 @@ screen main_menu():
         xalign .95
         yalign .85
         spacing 10
-        textbutton _("Mulai Permainan") action Start()
-        textbutton _("Melanjutkan Permainan") action ShowMenu("load")
-        textbutton _("Tambahan") action ShowMenu("preferences")
-        textbutton _("Keluar") action Quit(confirm=True)
+        textbutton _("New Game") action Start()
+        textbutton _("Load Game") action ShowMenu("load")
+        textbutton _("Extra") action ShowMenu("preferences")
+        textbutton _("Quit") action Quit(confirm=True)
 
 style main_menu_vbox is vbox
 style main_menu_text is gui_text
@@ -467,7 +467,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     use navigation
 
-    textbutton _("Kembali ke Game"):
+    textbutton _("Return"):
         style "return_button"
 
         action Return()
@@ -581,19 +581,19 @@ screen save():
 
     tag menu
 
-    use file_slots(_("Simpan Permainan"))
+    use file_slots(_("Save"))
 
 
 screen load():
 
     tag menu
 
-    use file_slots(_("Lanjut Permainan"))
+    use file_slots(_("Load"))
 
 
 screen file_slots(title):
 
-    default page_name_value = FilePageNameInputValue(pattern=_("Halaman {}"), auto=_("Otomatis Simpan"), quick=_("Simpan Cepat"))
+    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
 
     use game_menu(title):
 
@@ -710,7 +710,7 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Pengaturan"), scroll="viewport"):
+    use game_menu(_("Preferences"), scroll="viewport"):
 
         vbox:
 
@@ -721,24 +721,30 @@ screen preferences():
 
                     vbox:
                         style_prefix "radio"
-                        label _("Mode Tampilan")
+                        label _("Display")
                         textbutton _("Window") action Preference("display", "window")
                         textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
                 vbox:
+                    style_prefix "check"
+                    label _("Language")
+                    textbutton "English" action Language(None)
+                    textbutton "Indonesia" action Language("indonesia")
+                    
+                vbox:
                     style_prefix "radio"
-                    label _("Sisi Kembali")
-                    textbutton _("Nonaktif") action Preference("rollback side", "disable")
-                    textbutton _("Kiri") action Preference("rollback side", "left")
-                    textbutton _("Kanan") action Preference("rollback side", "right")
+                    label _("Rollback Side")
+                    textbutton _("Disable") action Preference("rollback side", "disable")
+                    textbutton _("Left") action Preference("rollback side", "left")
+                    textbutton _("Right") action Preference("rollback side", "right")
 
                 vbox:
                     style_prefix "check"
-                    label _("Lompati")
-                    textbutton _("Belum Terlihat") action Preference("skip", "toggle")
-                    textbutton _("Setelah pilihan") action Preference("after choices", "toggle")
-                    textbutton _("Transisi") action InvertSelected(Preference("transitions", "toggle"))
-                    textbutton _("Terlihat") action Preference("skip", "seen")
+                    label _("Skip")
+                    textbutton _("Unseen Text") action Preference("skip", "toggle")
+                    textbutton _("After Choices") action Preference("after choices", "toggle")
+                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    textbutton _("Seen Messages") action Preference("skip", "seen")
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
@@ -751,11 +757,11 @@ screen preferences():
 
                 vbox:
 
-                    label _("Kecepatan Teks")
+                    label _("Text Speed")
 
                     bar value Preference("text speed")
 
-                    label _("Waktu Maju tomatis")
+                    label _("Auto-Forward Time")
 
                     bar value Preference("auto-forward time")
 
@@ -790,7 +796,7 @@ screen preferences():
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
 
-                        textbutton _("Bisukan Semua"):
+                        textbutton _("Mute All"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
 
@@ -881,7 +887,7 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    use game_menu(_("Riwayat"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
+    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
 
         style_prefix "history"
 
@@ -970,7 +976,7 @@ screen help():
 
     default device = "keyboard"
 
-    use game_menu(_("Bantuan"), scroll="viewport"):
+    use game_menu(_("Keymaps"), scroll="viewport"):
 
         style_prefix "help"
 
@@ -997,100 +1003,100 @@ screen keyboard_help():
 
     hbox:
         label _("Enter")
-        text _("Dialog tingkat lanjut dan mengaktifkan antarmuka.")
+        text _("Advances dialogue and activates the interface.")
 
     hbox:
-        label _("Spasi")
-        text _("Dialog tingkat lanjut tanpa memilih pilihan.")
+        label _("Space")
+        text _("Advances dialogue without selecting choices.")
 
     hbox:
-        label _("Tombol Panah")
-        text _("Navigasi di antarmuka")
+        label _("Arrow Keys")
+        text _("Navigate the interface.")
 
     hbox:
         label _("Escape")
-        text _("Akses menu permainan.")
+        text _("Accesses the game menu.")
 
     hbox:
         label _("Ctrl")
-        text _("Lompati dialog ketika di tahan.")
+        text _("Skips dialogue while held down.")
 
     hbox:
         label _("Tab")
-        text _("Nyala/Matikan lompati dialog.")
+        text _("Toggles dialogue skipping.")
 
     hbox:
         label _("Page Up")
-        text _("Putar mundur ke dialog sebelumnya.")
+        text _("Rolls back to earlier dialogue.")
 
     hbox:
         label _("Page Down")
-        text _("Putar maju ke dialog berikut.")
+        text _("Rolls forward to later dialogue.")
 
     hbox:
         label "H"
-        text _("Sembunyikan antarmuka.")
+        text _("Hides the user interface.")
 
     hbox:
         label "S"
-        text _("Ambiil tangkapan layar.")
+        text _("Takes a screenshot.")
 
     hbox:
         label "V"
-        text _("Nyalakan assisten {a=https://www.renpy.org/l/voicing}suara-sendiri{/a}")
+        text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
 
 
 screen mouse_help():
 
     hbox:
-        label _("Klik Kiri")
-        text _("Dialog tingkat lanjut dan mengaktifkan antarmuka.")
+        label _("Left Click")
+        text _("Advances dialogue and activates the interface.")
 
     hbox:
-        label _("Klik Tengah")
-        text _("Sembunyikan antarmuka.")
+        label _("Middle Click")
+        text _("Hides the user interface.")
 
     hbox:
-        label _("Klik Kanan")
-        text _("Akses menu permainan.")
+        label _("Right Click")
+        text _("Accesses the game menu.")
 
     hbox:
-        label _("Roda Mouse Atas\nKlik Arah Rollback")
-        text _("Putar mundur ke dialog sebelumnya.")
+        label _("Mouse Wheel Up\nClick Rollback Side")
+        text _("Rolls back to earlier dialogue.")
 
     hbox:
-        label _("Roda Mouse Bawah")
-        text _("Putar maju ke dialog berikut.")
+        label _("Mouse Wheel Down")
+        text _("Rolls forward to later dialogue.")
 
 
 screen gamepad_help():
 
     hbox:
-        label _("Trigger Kanan\nA/Tombol Bawah")
-        text _("Dialog tingkat lanjut dan mengaktifkan antarmuka.")
+        label _("Right Trigger\nA/Bottom Button")
+        text _("Advances dialogue and activates the interface.")
 
     hbox:
-        label _("Trigger Kiri\nBahu Kiri")
-        text _("Putar mundur ke dialog sebelumnya.")
+        label _("Left Trigger\nLeft Shoulder")
+        text _("Rolls back to earlier dialogue.")
 
     hbox:
-        label _("Pundak Kanan")
-        text _("Putar maju ke dialog berikut.")
+        label _("Right Shoulder")
+        text _("Rolls forward to later dialogue.")
 
 
     hbox:
-        label _("D-Pad, Stick")
-        text _("Navigasi di antarmuka")
+        label _("D-Pad, Sticks")
+        text _("Navigate the interface.")
 
     hbox:
-        label _("Mulai, Panduan")
-        text _("Akses menu permainan.")
+        label _("Start, Guide")
+        text _("Accesses the game menu.")
 
     hbox:
-        label _("Y/Tombol Atas")
-        text _("Sembunyikan antarmuka.")
+        label _("Y/Top Button")
+        text _("Hides the user interface.")
 
-    textbutton _("Kalibrasi") action GamepadCalibrate()
+    textbutton _("Calibrate") action GamepadCalibrate()
 
 
 style help_button is gui_button

@@ -167,8 +167,9 @@ image airin_jalan_uni = "/Character/prolog/airin_jalan_uni.png"
 image airin_alma = im.Scale("/Character/airin/airin_uni_alma.png", 625, 1100)
 image airin_kaget_alma = im.Scale("/Character/airin/airin_uni_alma_kaget.png", 625, 1100)
 
-#NAda dan Bu Senda
+#NAda dan Bu Senda dan Kepala Sekolah
 image nada_uni = im.Scale("/Character/sahabat/Nada_uni.png", 700, 1181)
 image nada_cas = im.Scale("/Character/sahabat/Nada_Casual.png", 700, 1181)
 image nada_alma = im.Scale("/Character/sahabat/nada_uni_alma.png", 700, 1181)
 image bu_senda = im.Scale("/Character/Bu_Senda/senda.png", 625, 1181)
+image pak_eli_kepsek = im.Scale("/Character/pak_eli.png", 625, 1225)

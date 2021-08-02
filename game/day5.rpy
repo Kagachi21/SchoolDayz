@@ -113,7 +113,7 @@ label day5_Kirana:
     $ _skipping = False
     "~Cuci Piring~"
     window hide dissolve
-    $ renpy.pause(35.0, hard=True)
+    $ renpy.pause(15.0, hard=True)
     stop sound fadeout 1.0
     window show dissolve
     $ _skipping = True
@@ -775,7 +775,7 @@ label day5_Miselia:
     $ _skipping = False
     "~Cuci Piring~"
     window hide dissolve
-    $ renpy.pause(35.0, hard=True)
+    $ renpy.pause(15.0, hard=True)
     stop sound fadeout 1.0
     window show dissolve
     $ _skipping = True
@@ -1207,7 +1207,7 @@ label day5_Airin:
     $ _skipping = False
     "~Cuci Piring~"
     window hide dissolve
-    $ renpy.pause(35.0, hard=True)
+    $ renpy.pause(15.0, hard=True)
     stop sound fadeout 1.0
     window show dissolve
     $ _skipping = True
